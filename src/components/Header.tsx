@@ -46,8 +46,23 @@ export default function Header({ breadcrumbs = [] }: { breadcrumbs?: BreadcrumbI
             </span>
           ))}
         </nav>
-        {/* 테마 전환 버튼 */}
-        <ThemeToggle />
+        {/* 우측 — 브랜드 링크 + 테마 전환 */}
+        <div className="flex items-center gap-3 shrink-0">
+          {/* 노모어매뉴얼 브랜드 링크 — 항상 노출 */}
+          <a
+            href="https://youtube.com/@nomore_manual"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="nmm-brand-link flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold"
+          >
+            {/* 유튜브 아이콘 */}
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.7 15.5V8.5l6.3 3.5-6.3 3.5z"/>
+            </svg>
+            노모어매뉴얼
+          </a>
+          <ThemeToggle />
+        </div>
       </div>
     </header>
   )

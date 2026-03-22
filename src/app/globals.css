@@ -66,6 +66,22 @@ body {
   border-radius: 0 6px 6px 0;
 }
 
+/* ── 헤더 브랜드 링크 — 노모어매뉴얼 */
+.nmm-brand-link {
+  background: var(--accent-soft);
+  color: var(--accent-text);
+  border: 1px solid var(--accent-text);
+  letter-spacing: -0.01em;
+  opacity: 0.85;
+  transition: opacity 0.15s, background 0.15s;
+  text-decoration: none;
+}
+.nmm-brand-link:hover {
+  opacity: 1;
+  background: var(--accent-text);
+  color: #fff;
+}
+
 /* ── 브레드크럼 링크 ── */
 .breadcrumb-link {
   color: var(--text-muted);
