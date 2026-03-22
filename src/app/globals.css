@@ -91,11 +91,22 @@ body {
   border-bottom: 1px solid var(--border); /* 섹션 구분선 */
 }
 .markdown-body h3 {
-  font-size: 1.05rem;
-  font-weight: 600;
-  margin-top: 1.5rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.15rem;        /* 1.05rem → 1.15rem (본문과 더 뚜렷한 차이) */
+  font-weight: 700;           /* 600 → 700 */
+  margin-top: 2.25rem;        /* 1.5rem → 2.25rem (위 섹션과 충분한 여백) */
+  margin-bottom: 0.75rem;     /* 0.5rem → 0.75rem */
   color: var(--text-primary);
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid var(--border); /* h2처럼 구분선 추가 */
+}
+/* h4 — 소제목 (방법 1, 방법 2 등), 악센트 색상으로 시각 구분 */
+.markdown-body h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 1.75rem;
+  margin-bottom: 0.5rem;
+  color: var(--accent-text);
+  letter-spacing: -0.01em;
 }
 .markdown-body p {
   font-size: 15px;
@@ -103,15 +114,68 @@ body {
   color: var(--text-secondary);
   margin-bottom: 1rem;
 }
-.markdown-body ul, .markdown-body ol {
+.markdown-body ul {
   padding-left: 1.5rem;
   margin-bottom: 1rem;
 }
-.markdown-body li {
+.markdown-body ul > li {
   font-size: 15px;
   line-height: 1.75;
   color: var(--text-secondary);
   margin-bottom: 0.25rem;
+}
+/* 순서 있는 리스트(단계별 절차) — 카드 박스 스타일 */
+.markdown-body ol {
+  padding-left: 0;
+  margin-bottom: 1.25rem;
+  list-style: none;
+  counter-reset: ol-counter;
+}
+.markdown-body ol > li {
+  counter-increment: ol-counter;
+  position: relative;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent-text);
+  border-radius: 0 8px 8px 0;
+  padding: 0.75rem 1rem 0.75rem 2.75rem; /* 왼쪽에 번호 공간 */
+  margin-bottom: 0.5rem;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+/* 번호 뱃지 */
+.markdown-body ol > li::before {
+  content: counter(ol-counter);
+  position: absolute;
+  left: 0.75rem;
+  top: 0.75rem;
+  width: 1.35rem;
+  height: 1.35rem;
+  background: var(--accent-text);
+  color: #fff;
+  border-radius: 50%;
+  font-size: 11px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  text-align: center;
+}
+/* ol 안에 중첩된 ul — 카드 스타일 해제 */
+.markdown-body ol > li ul {
+  padding-left: 1.25rem;
+  margin-top: 0.35rem;
+  margin-bottom: 0;
+}
+.markdown-body ol > li ul > li {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 14px;
+  margin-bottom: 0.15rem;
+  list-style: disc;
 }
 /* 코드 블록 — 다크 배경 고정, 글자색도 밝게 고정 */
 .markdown-body pre {
@@ -155,21 +219,36 @@ body {
   text-decoration: underline;
   text-underline-offset: 2px;
 }
-/* 테이블 */
+/* 테이블 — 헤더 악센트 강조 */
 .markdown-body table {
   width: 100%;
   border-collapse: collapse;
   margin-bottom: 1.25rem;
   font-size: 14px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--border);
 }
 .markdown-body th, .markdown-body td {
   border: 1px solid var(--border);
-  padding: 8px 12px;
+  padding: 9px 13px;
   text-align: left;
 }
 .markdown-body th {
-  background: var(--bg-secondary);
-  font-weight: 600;
+  background: var(--accent-soft);  /* bg-secondary → accent-soft */
+  color: var(--accent-text);
+  font-weight: 700;
+  border-color: var(--border);
+}
+.markdown-body tr:nth-child(even) td {
+  background: var(--bg-secondary); /* 줄무늬 — 가독성 향상 */
+}
+
+/* 수평선 — 섹션 구분 (넉넉한 여백) */
+.markdown-body hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 2.5rem 0;
 }
 
 /* ── 사례/비유 박스 — 왼쪽 악센트 라인 ── */
