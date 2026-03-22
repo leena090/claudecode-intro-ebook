@@ -113,7 +113,7 @@ body {
   color: var(--text-secondary);
   margin-bottom: 0.25rem;
 }
-/* 코드 블록 — 다크 배경으로 고정 */
+/* 코드 블록 — 다크 배경 고정, 글자색도 밝게 고정 */
 .markdown-body pre {
   background: var(--bg-code);
   border-radius: 10px;
@@ -121,6 +121,10 @@ body {
   overflow-x: auto;
   margin-bottom: 1.25rem;
   border: 1px solid var(--border);
+}
+.markdown-body pre code {
+  color: #e2e8f0; /* 코드 블록 내 글자는 항상 밝은 색 (배경이 다크이므로) */
+  background: transparent;
 }
 .markdown-body code {
   font-family: 'JetBrains Mono', 'Fira Code', monospace;

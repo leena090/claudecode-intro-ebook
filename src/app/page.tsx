@@ -93,7 +93,7 @@ export default function HomePage() {
         <div className="flex justify-center mb-2">
           <PixelLogo size="sm" />
         </div>
-        <p>© 2024 노모어매뉴얼 · Claude Code 입문 가이드</p>
+        <p>© 2026 노모어매뉴얼 · Claude Code 입문 가이드</p>
       </footer>
     </div>
   )
