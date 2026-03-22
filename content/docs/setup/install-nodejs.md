@@ -1,14 +1,31 @@
 ---
 title: "Step 1: Node.js 설치하기"
-description: "클로드코드가 실행되려면 필요한 기반 프로그램 Node.js를 설치하는 방법"
+description: "npm 설치 방식을 사용할 때 필요한 Node.js 설치 방법"
 tags: ["설치", "Node.js", "준비"]
 category: "setup"
 order: 2
+lastUpdated: "2026-03-22"
+---
+
+## ⭐ 중요: Node.js 설치 필요 여부
+
+### Native Install을 사용하면 Node.js 불필요!
+
+**최신 설치 방법(Native Install)을 사용한다면 아래 단계를 건너뛰어도 됩니다:**
+- macOS/Linux: `curl -fsSL https://claude.ai/install.sh | bash`
+- Windows: `winget install Anthropic.ClaudeCode`
+
+→ 이미 설치했다면 바로 사용 가능합니다! 🎉
+
+### npm 방식만 Node.js 필요
+
+**npm 설치 방식**을 사용할 계획이라면 아래를 읽고 설치하세요.
+
 ---
 
 ## Node.js가 뭔가요?
 
-JavaScript 실행 환경입니다. 클로드코드가 동작하기 위해 필요한 **기반 프로그램**으로, 설치 후 특별히 쓸 일은 없습니다. 마치 앱이 실행되려면 Windows가 필요한 것처럼, 클로드코드가 실행되려면 Node.js가 필요한 거죠.
+JavaScript 실행 환경입니다. npm을 통해 클로드코드를 설치할 때 필요한 **기반 프로그램**입니다. 설치 후 특별히 쓸 일은 없습니다. 마치 앱이 실행되려면 Windows가 필요한 것처럼, npm 설치 방식은 Node.js가 필요한 거죠.
 
 ---
 

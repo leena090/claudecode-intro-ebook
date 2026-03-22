@@ -3,3 +3,4 @@ qa-screenshots/
 overflow-report.json
 .env
 .vercel/
+.vercel

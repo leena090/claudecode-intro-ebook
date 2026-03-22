@@ -1,0 +1,1243 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>클로드코드 입문 — 노모어매뉴얼</title>
+  <meta name="description" content="Claude Code를 처음 접하는 비개발자를 위한 완벽 입문 가이드">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- 뷰포트 래퍼 -->
+<div id="viewer">
+  <!-- 슬라이드 스테이지 (1280×720) -->
+  <div id="stage">
+
+    <!-- ════════════════════════════════════════════════
+         SLIDE 01 — 표지 (D타입: 풀 비주얼)
+         ════════════════════════════════════════════════ -->
+    <div class="slide slide-type-d" id="slide-01">
+      <!-- 배경 그리드 -->
+      <div class="bg-grid"></div>
+      <!-- 보라 글로우 — 슬라이드 상단에만 위치 (오버플로우 방지) -->
+      <div class="bg-glow" style="width:500px;height:500px;background:rgba(124,58,237,0.12);top:-80px;left:-80px;"></div>
+      <!-- 시안 글로우 — 하단 경계 안에 위치 (오버플로우 방지) -->
+      <div class="bg-glow" style="width:400px;height:400px;background:rgba(6,182,212,0.08);bottom:40px;right:-60px;"></div>
+
+      <div style="position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;gap:28px;padding:60px;">
+        <!-- 로고 아이콘 -->
+        <div style="width:88px;height:88px;background:linear-gradient(135deg,#7c3aed,#06b6d4);border-radius:20px;display:flex;align-items:center;justify-content:center;font-size:42px;box-shadow:0 0 40px rgba(124,58,237,0.4);">
+          🤖
+        </div>
+
+        <!-- 메인 타이틀 -->
+        <div style="text-align:center;">
+          <div style="font-size:13px;letter-spacing:4px;text-transform:uppercase;color:#06b6d4;font-weight:700;margin-bottom:16px;">노모어매뉴얼 × Anthropic</div>
+          <h1 style="font-size:72px;font-weight:900;line-height:1.1;background:linear-gradient(135deg,#f1f5f9 30%,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">
+            클로드코드 입문
+          </h1>
+          <p style="font-size:22px;color:#94a3b8;margin-top:14px;font-weight:400;">
+            코딩 몰라도 OK — AI와 함께 일하는 법
+          </p>
+        </div>
+
+        <!-- 태그 배지들 -->
+        <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;">
+          <span class="badge badge-purple">🤖 Claude Code 완전 입문</span>
+          <span class="badge badge-cyan">💻 설치부터 실전까지</span>
+          <span class="badge badge-green">✅ 비개발자 맞춤</span>
+        </div>
+
+        <!-- 하단 브랜딩 -->
+        <div style="position:absolute;bottom:32px;left:50%;transform:translateX(-50%);">
+          <div class="brand-tag">nomore manual · 2026</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════
+         SLIDE 02 — 목차 (B타입)
+         ════════════════════════════════════════════════ -->
+    <div class="slide" id="slide-02">
+      <div class="slide-header">
+        <div class="slide-eyebrow">Table of Contents</div>
+        <h2 class="slide-title">무엇을 배우나요? <span class="accent">📖</span></h2>
+      </div>
+      <div class="slide-body">
+        <div class="col-2" style="align-items:start;">
+          <!-- 왼쪽 컬럼 -->
+          <div style="display:flex;flex-direction:column;gap:10px;">
+            <div class="card" style="display:flex;align-items:center;gap:14px;padding:14px 16px;">
+              <div class="icon-wrap icon-cyan">🎯</div>
+              <div>
+                <div style="font-size:11px;color:#06b6d4;font-weight:700;letter-spacing:1px;">PART 1</div>
+                <div style="font-size:15px;font-weight:600;">클로드코드 이해하기</div>
+                <div style="font-size:12px;color:#64748b;margin-top:2px;">무엇인지, 왜 쓰는지</div>
+              </div>
+            </div>
+            <div class="card" style="display:flex;align-items:center;gap:14px;padding:14px 16px;">
+              <div class="icon-wrap icon-purple">⚙️</div>
+              <div>
+                <div style="font-size:11px;color:#a78bfa;font-weight:700;letter-spacing:1px;">PART 2</div>
+                <div style="font-size:15px;font-weight:600;">설치 & 첫 실행</div>
+                <div style="font-size:12px;color:#64748b;margin-top:2px;">3단계로 완성하는 설치법</div>
+              </div>
+            </div>
+            <div class="card" style="display:flex;align-items:center;gap:14px;padding:14px 16px;">
+              <div class="icon-wrap icon-green">💬</div>
+              <div>
+                <div style="font-size:11px;color:#34d399;font-weight:700;letter-spacing:1px;">PART 3</div>
+                <div style="font-size:15px;font-weight:600;">기본 사용법</div>
+                <div style="font-size:12px;color:#64748b;margin-top:2px;">화면 이해 & 첫 대화</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 오른쪽 컬럼 -->
+          <div style="display:flex;flex-direction:column;gap:10px;">
+            <div class="card" style="display:flex;align-items:center;gap:14px;padding:14px 16px;">
+              <div class="icon-wrap icon-amber">🚀</div>
+              <div>
+                <div style="font-size:11px;color:#f59e0b;font-weight:700;letter-spacing:1px;">PART 4</div>
+                <div style="font-size:15px;font-weight:600;">실전 활용 3가지</div>
+                <div style="font-size:12px;color:#64748b;margin-top:2px;">파일작성·설명·오류해결</div>
+              </div>
+            </div>
+            <div class="card" style="display:flex;align-items:center;gap:14px;padding:14px 16px;">
+              <div class="icon-wrap icon-cyan">💡</div>
+              <div>
+                <div style="font-size:11px;color:#06b6d4;font-weight:700;letter-spacing:1px;">PART 5</div>
+                <div style="font-size:15px;font-weight:600;">팁 & FAQ</div>
+                <div style="font-size:12px;color:#64748b;margin-top:2px;">꼭 알아야 할 핵심 지식</div>
+              </div>
+            </div>
+            <div class="card" style="display:flex;align-items:center;gap:14px;padding:14px 16px;">
+              <div class="icon-wrap icon-purple">🗺️</div>
+              <div>
+                <div style="font-size:11px;color:#a78bfa;font-weight:700;letter-spacing:1px;">PART 6</div>
+                <div style="font-size:15px;font-weight:600;">다음 단계 로드맵</div>
+                <div style="font-size:12px;color:#64748b;margin-top:2px;">배운 후 어디로 갈까?</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════
+         SLIDE 03 — 클로드코드가 뭔가요? (B타입)
+         ════════════════════════════════════════════════ -->
+    <div class="slide" id="slide-03">
+      <div class="slide-header">
+        <div class="slide-eyebrow">PART 1 · 클로드코드 이해하기</div>
+        <h2 class="slide-title">클로드코드가 <span class="accent">뭔가요?</span></h2>
+        <p class="slide-subtitle">AI 비서가 내 컴퓨터에서 직접 일해주는 도구</p>
+      </div>
+      <div class="slide-body">
+        <div class="col-6-4" style="align-items:start;">
+          <!-- 왼쪽: 설명 -->
+          <div style="display:flex;flex-direction:column;gap:14px;">
+            <div class="highlight-box">
+              <div style="font-size:13px;color:#a78bfa;font-weight:700;margin-bottom:8px;">한 줄 정의</div>
+              <div style="font-size:16px;line-height:1.6;">터미널(명령 창)에서 실행하는 <strong>AI 코딩 도우미</strong>입니다.<br>대화하듯 요청하면 파일을 만들고, 코드를 짜고, 오류를 고쳐줍니다.</div>
+            </div>
+
+            <div class="list-item">
+              <div class="list-bullet">1</div>
+              <div><strong style="color:#f1f5f9;">Claude AI 기반</strong> — Anthropic이 만든 가장 뛰어난 AI 모델 탑재</div>
+            </div>
+            <div class="list-item">
+              <div class="list-bullet">2</div>
+              <div><strong style="color:#f1f5f9;">내 컴퓨터에서 직접 작업</strong> — 파일 읽기·쓰기·수정 전부 가능</div>
+            </div>
+            <div class="list-item">
+              <div class="list-bullet">3</div>
+              <div><strong style="color:#f1f5f9;">코딩 지식 불필요</strong> — "이런 파일 만들어줘"만 하면 됩니다</div>
+            </div>
+            <div class="list-item">
+              <div class="list-bullet">4</div>
+              <div><strong style="color:#f1f5f9;">무한 확장 가능</strong> — 웹 검색, 이미지 생성, 배포까지 연결 가능</div>
+            </div>
+          </div>
+
+          <!-- 오른쪽: 비유 카드 -->
+          <div style="display:flex;flex-direction:column;gap:12px;">
+            <div class="card card-accent" style="text-align:center;padding:20px 16px;">
+              <div style="font-size:40px;margin-bottom:12px;">🧑‍💻</div>
+              <div style="font-size:13px;font-weight:700;color:#a78bfa;margin-bottom:6px;">ChatGPT vs 클로드코드</div>
+              <div class="divider"></div>
+              <div style="font-size:12px;color:#94a3b8;line-height:1.7;margin-top:10px;">
+                <span style="color:#f59e0b;">ChatGPT</span>는 대화만 해요<br>
+                <span style="color:#a78bfa;">클로드코드</span>는 <strong>직접 일해요</strong>
+              </div>
+            </div>
+            <div class="card card-cyan" style="text-align:center;padding:16px;">
+              <div style="font-size:30px;margin-bottom:8px;">🏠</div>
+              <div style="font-size:12px;color:#67e8f9;font-weight:700;margin-bottom:4px;">비유하자면...</div>
+              <div style="font-size:12px;color:#94a3b8;line-height:1.6;">
+                ChatGPT = 전화로 조언해주는 전문가<br>
+                클로드코드 = 집에 와서 직접 고쳐주는 기술자
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════
+         SLIDE 04 — 나에게 필요할까요? (B타입)
+         ════════════════════════════════════════════════ -->
+    <div class="slide" id="slide-04">
+      <div class="slide-header">
+        <div class="slide-eyebrow">PART 1 · 클로드코드 이해하기</div>
+        <h2 class="slide-title">나에게 <span class="accent">필요한 도구</span>일까요?</h2>
+        <p class="slide-subtitle">이런 분들께 특히 추천합니다</p>
+      </div>
+      <div class="slide-body">
+        <div class="col-3" style="align-items:start;">
+          <!-- 카드 1 -->
+          <div class="card" style="display:flex;flex-direction:column;gap:12px;height:100%;">
+            <div style="text-align:center;font-size:48px;margin-bottom:4px;">📝</div>
+            <div style="font-size:16px;font-weight:700;text-align:center;color:#a78bfa;">문서·글 작업자</div>
+            <div class="divider"></div>
+            <div style="font-size:13px;color:#94a3b8;line-height:1.7;">
+              보고서, 기획서, 블로그 글을<br>자동으로 작성·편집<br><br>
+              엑셀 데이터 정리,<br>여러 파일 한번에 변환
+            </div>
+            <div class="badge badge-cyan" style="align-self:center;">✅ 강력 추천</div>
+          </div>
+
+          <!-- 카드 2 -->
+          <div class="card" style="display:flex;flex-direction:column;gap:12px;height:100%;">
+            <div style="text-align:center;font-size:48px;margin-bottom:4px;">💼</div>
+            <div style="font-size:16px;font-weight:700;text-align:center;color:#34d399;">소상공인·1인 창업자</div>
+            <div class="divider"></div>
+            <div style="font-size:13px;color:#94a3b8;line-height:1.7;">
+              홈페이지·랜딩페이지 직접 제작<br>
+              상품 소개 자동 작성<br><br>
+              SNS 콘텐츠 대량 생산,<br>고객 응대 자동화
+            </div>
+            <div class="badge badge-green" style="align-self:center;">✅ 강력 추천</div>
+          </div>
+
+          <!-- 카드 3 -->
+          <div class="card" style="display:flex;flex-direction:column;gap:12px;height:100%;">
+            <div style="text-align:center;font-size:48px;margin-bottom:4px;">🎓</div>
+            <div style="font-size:16px;font-weight:700;text-align:center;color:#f59e0b;">AI 배우고 싶은 분</div>
+            <div class="divider"></div>
+            <div style="font-size:13px;color:#94a3b8;line-height:1.7;">
+              코딩 없이 AI 도구 직접 만들기<br>
+              나만의 자동화 시스템 구축<br><br>
+              개발자 없이 앱·웹 제작,<br>업무 자동화 파이프라인
+            </div>
+            <div class="badge badge-amber" style="align-self:center;">✅ 강력 추천</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════
+         SLIDE 05 — 설치 전 준비물 (A타입)
+         ════════════════════════════════════════════════ -->
+    <div class="slide" id="slide-05">
+      <div class="slide-header">
+        <div class="slide-eyebrow">PART 2 · 설치 & 첫 실행</div>
+        <h2 class="slide-title">설치 전 <span class="accent">준비물 체크리스트</span></h2>
+        <p class="slide-subtitle">3가지만 확인하면 준비 완료!</p>
+      </div>
+      <div class="slide-body">
+        <div class="col-2" style="align-items:start;">
+          <div style="display:flex;flex-direction:column;gap:12px;">
+            <!-- 준비물 1 -->
+            <div class="card" style="display:flex;align-items:center;gap:16px;padding:16px 20px;">
+              <div style="font-size:36px;">💻</div>
+              <div style="flex:1;">
+                <div style="font-size:16px;font-weight:700;">컴퓨터 (Windows / Mac)</div>
+                <div style="font-size:13px;color:#64748b;margin-top:3px;">노트북도 OK · 태블릿은 불가</div>
+              </div>
+              <div class="badge badge-green">✓ 확인</div>
+            </div>
+
+            <!-- 준비물 2 -->
+            <div class="card" style="display:flex;align-items:center;gap:16px;padding:16px 20px;">
+              <div style="font-size:36px;">🌐</div>
+              <div style="flex:1;">
+                <div style="font-size:16px;font-weight:700;">인터넷 연결</div>
+                <div style="font-size:13px;color:#64748b;margin-top:3px;">다운로드 & AI 통신에 필요</div>
+              </div>
+              <div class="badge badge-green">✓ 확인</div>
+            </div>
+
+            <!-- 준비물 3 -->
+            <div class="card card-accent" style="display:flex;align-items:center;gap:16px;padding:16px 20px;">
+              <div style="font-size:36px;">🔑</div>
+              <div style="flex:1;">
+                <div style="font-size:16px;font-weight:700;">Anthropic 계정</div>
+                <div style="font-size:13px;color:#a78bfa;margin-top:3px;">claude.ai 무료 가입 가능</div>
+              </div>
+              <div class="badge badge-purple">★ 필수</div>
+            </div>
+          </div>
+
+          <!-- 오른쪽: 비용 안내 -->
+          <div style="display:flex;flex-direction:column;gap:12px;">
+            <div class="card card-green" style="padding:20px;">
+              <div style="font-size:13px;font-weight:700;color:#34d399;margin-bottom:12px;">💰 비용은?</div>
+              <div class="list-item" style="margin-bottom:10px;">
+                <div style="font-size:18px;">🆓</div>
+                <div style="font-size:14px;">Claude 계정 <strong style="color:#34d399;">무료</strong> 가입 가능</div>
+              </div>
+              <div class="list-item" style="margin-bottom:10px;">
+                <div style="font-size:18px;">💳</div>
+                <div style="font-size:14px;">Claude Code는 <strong style="color:#f59e0b;">API 사용량</strong>만큼 과금</div>
+              </div>
+              <div class="list-item">
+                <div style="font-size:18px;">📊</div>
+                <div style="font-size:14px;">일반 사용 시 <strong style="color:#34d399;">월 $10~20</strong> 수준</div>
+              </div>
+            </div>
+            <div class="highlight-box" style="padding:14px 16px;">
+              <div style="font-size:12px;color:#94a3b8;line-height:1.7;">
+                💡 <strong style="color:#f1f5f9;">Max Plan</strong>도 있습니다<br>
+                월 $100 무제한 사용 플랜<br>
+                헤비 유저에게 경제적
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════
+         SLIDE 06 — Step 1: Node.js 설치 (C타입)
+         ════════════════════════════════════════════════ -->
+    <div class="slide" id="slide-06">
+      <div class="slide-header">
+        <div class="slide-eyebrow">PART 2 · 설치 Step 1</div>
+        <h2 class="slide-title"><span class="accent">Node.js</span> 설치하기</h2>
+        <p class="slide-subtitle">클로드코드가 실행되려면 Node.js가 먼저 필요해요</p>
+      </div>
+      <div class="slide-body">
+        <div class="col-2" style="align-items:start;">
+          <!-- 왼쪽: 설치 방법 -->
+          <div style="display:flex;flex-direction:column;gap:12px;">
+            <div class="card card-accent" style="padding:14px 16px;">
+              <div style="font-size:12px;color:#a78bfa;font-weight:700;margin-bottom:8px;">🤔 Node.js가 뭔가요?</div>
+              <div style="font-size:14px;color:#94a3b8;line-height:1.6;">
+                JavaScript 실행 환경입니다. 클로드코드가 동작하기 위해 필요한 <strong style="color:#f1f5f9;">기반 프로그램</strong>으로, 설치 후 특별히 쓸 일은 없습니다.
+              </div>
+            </div>
+
+            <div style="font-size:13px;font-weight:700;color:#67e8f9;margin-top:4px;">📥 설치 방법</div>
+
+            <div class="list-item">
+              <div class="step-num">1</div>
+              <div><strong>nodejs.org</strong> 접속 → LTS 버전 다운로드 클릭</div>
+            </div>
+            <div class="list-item">
+              <div class="step-num">2</div>
+              <div>다운로드된 설치파일 실행 → Next 연타</div>
+            </div>
+            <div class="list-item">
+              <div class="step-num">3</div>
+              <div>설치 완료 후 아래 명령어로 확인</div>
+            </div>
+
+            <!-- 터미널 확인 -->
+            <div class="terminal">
+              <div class="terminal-titlebar">
+                <div class="terminal-dot" style="background:#ef4444;"></div>
+                <div class="terminal-dot" style="background:#f59e0b;"></div>
+                <div class="terminal-dot" style="background:#10b981;"></div>
+                <div class="terminal-title">터미널 / 명령 프롬프트</div>
+              </div>
+              <div class="terminal-body">
+                <div><span class="code-prompt">$</span> <span class="code-cmd">node --version</span></div>
+                <div style="color:#34d399;">v22.14.0 &nbsp;<span style="color:#64748b;"># 이렇게 나오면 성공!</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 오른쪽: 팁 -->
+          <div style="display:flex;flex-direction:column;gap:12px;">
+            <div class="card" style="padding:16px;">
+              <div style="font-size:12px;color:#f59e0b;font-weight:700;margin-bottom:10px;">⚠️ 터미널이 뭔가요?</div>
+              <div style="font-size:13px;color:#94a3b8;line-height:1.7;">
+                명령어를 입력하는 검은 창입니다.<br><br>
+                <span style="color:#f1f5f9;font-weight:600;">Windows:</span> 검색창에 "cmd" 입력<br>
+                <span style="color:#f1f5f9;font-weight:600;">Mac:</span> Spotlight에서 "터미널" 검색
+              </div>
+            </div>
+
+            <div class="card card-green" style="padding:16px;">
+              <div style="font-size:12px;color:#34d399;font-weight:700;margin-bottom:10px;">✅ 이미 설치됐는지 확인</div>
+              <div class="terminal" style="background:#06110d;">
+                <div class="terminal-body" style="padding:12px 14px;">
+                  <div><span class="code-prompt">$</span> <span class="code-cmd">node -v</span></div>
+                  <div style="color:#64748b;"># 버전 숫자가 나오면 이미 설치됨</div>
+                  <div style="color:#64748b;"># 오류가 나오면 새로 설치 필요</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════
+         SLIDE 07 — Step 2: 클로드코드 설치 (C타입)
+         ════════════════════════════════════════════════ -->
+    <div class="slide" id="slide-07">
+      <div class="slide-header">
+        <div class="slide-eyebrow">PART 2 · 설치 Step 2</div>
+        <h2 class="slide-title"><span class="accent">Claude Code</span> 설치하기</h2>
+        <p class="slide-subtitle">명령어 한 줄이면 설치 완료!</p>
+      </div>
+      <div class="slide-body">
+        <div class="col-2" style="align-items:start;">
+          <!-- 왼쪽: 설치 명령 -->
+          <div style="display:flex;flex-direction:column;gap:14px;">
+            <div style="font-size:14px;color:#94a3b8;line-height:1.7;">
+              터미널을 열고 아래 명령어를 <strong style="color:#f1f5f9;">그대로 복사·붙여넣기</strong> 하세요.
+            </div>
+
+            <!-- 핵심 설치 명령어 -->
+            <div class="terminal">
+              <div class="terminal-titlebar">
+                <div class="terminal-dot" style="background:#ef4444;"></div>
+                <div class="terminal-dot" style="background:#f59e0b;"></div>
+                <div class="terminal-dot" style="background:#10b981;"></div>
+                <div class="terminal-title">터미널 — 설치 명령어</div>
+              </div>
+              <div class="terminal-body">
+                <div style="color:#64748b;"># 1단계: 클로드코드 설치</div>
+                <div><span class="code-prompt">$</span> <span class="code-cmd">npm install -g @anthropic-ai/claude-code</span></div>
+                <div style="margin-top:10px;color:#64748b;"># 2단계: 설치 확인</div>
+                <div><span class="code-prompt">$</span> <span class="code-cmd">claude --version</span></div>
+                <div style="color:#34d399;">1.x.x &nbsp;<span style="color:#64748b;"># 버전이 나오면 성공!</span></div>
+              </div>
+            </div>
+
+            <div class="highlight-box" style="padding:12px 16px;">
+              <div style="font-size:13px;line-height:1.7;">
+                <strong style="color:#a78bfa;">npm</strong>은 Node.js 설치 시 자동으로 같이 설치됩니다.<br>
+                <span style="color:#64748b;">"글로벌 설치(-g)"란 어느 폴더에서나 사용 가능하다는 뜻이에요.</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 오른쪽: 트러블슈팅 -->
+          <div style="display:flex;flex-direction:column;gap:10px;">
+            <div style="font-size:13px;font-weight:700;color:#f59e0b;">⚠️ 오류 났을 때</div>
+
+            <div class="card" style="padding:12px 14px;">
+              <div style="font-size:12px;color:#ef4444;font-weight:700;margin-bottom:6px;">🔴 permission denied 오류</div>
+              <div class="terminal" style="background:#110806;">
+                <div class="terminal-body" style="padding:10px 12px;font-size:12px;">
+                  <div style="color:#64748b;"># Mac/Linux — 앞에 sudo 붙이기</div>
+                  <div><span class="code-prompt">$</span> <span class="code-cmd">sudo npm install -g @anthropic-ai/claude-code</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card" style="padding:12px 14px;">
+              <div style="font-size:12px;color:#f59e0b;font-weight:700;margin-bottom:6px;">🟡 Windows 보안 오류</div>
+              <div class="terminal" style="background:#110e06;">
+                <div class="terminal-body" style="padding:10px 12px;font-size:12px;">
+                  <div style="color:#64748b;"># PowerShell 관리자 권한으로 실행</div>
+                  <div style="color:#67e8f9;">Set-ExecutionPolicy RemoteSigned -Scope CurrentUser</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card card-green" style="padding:12px 14px;">
+              <div style="font-size:12px;color:#34d399;font-weight:700;margin-bottom:4px;">💡 그래도 안 되면?</div>
+              <div style="font-size:12px;color:#94a3b8;line-height:1.6;">claude.ai에서 클로드에게 오류 메시지를 복사해서 물어보세요! AI가 직접 해결책을 알려줍니다.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════
+         SLIDE 08 — Step 3: 첫 실행 & 로그인 (C타입)
+         ════════════════════════════════════════════════ -->
+    <div class="slide" id="slide-08">
+      <div class="slide-header">
+        <div class="slide-eyebrow">PART 2 · 설치 Step 3</div>
+        <h2 class="slide-title">첫 실행 & <span class="accent">로그인하기</span></h2>
+        <p class="slide-subtitle">한 번만 하면 이후에는 자동 로그인!</p>
+      </div>
+      <div class="slide-body">
+        <div class="col-2" style="align-items:start;">
+          <!-- 왼쪽: 실행 순서 -->
+          <div style="display:flex;flex-direction:column;gap:12px;">
+            <div class="list-item">
+              <div class="step-num">1</div>
+              <div>
+                <strong>작업 폴더로 이동</strong>
+                <div class="terminal" style="margin-top:6px;">
+                  <div class="terminal-body" style="padding:10px 14px;">
+                    <div style="color:#64748b;"># 바탕화면의 "내작업" 폴더로 이동 예시</div>
+                    <div><span class="code-prompt">$</span> <span class="code-cmd">cd Desktop/내작업</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="list-item">
+              <div class="step-num">2</div>
+              <div>
+                <strong>클로드코드 실행</strong>
+                <div class="terminal" style="margin-top:6px;">
+                  <div class="terminal-body" style="padding:10px 14px;">
+                    <div><span class="code-prompt">$</span> <span class="code-cmd">claude</span></div>
+                    <div style="color:#a78bfa;">? How would you like to authenticate? </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="list-item">
+              <div class="step-num">3</div>
+              <div>
+                <strong>로그인 방법 선택</strong>
+                <div style="font-size:13px;color:#94a3b8;margin-top:4px;">① Claude.ai 계정으로 로그인 (추천)<br>② API Key로 로그인</div>
+              </div>
+            </div>
+
+            <div class="list-item">
+              <div class="step-num">4</div>
+              <div>
+                <strong>브라우저에서 인증</strong>
+                <div style="font-size:13px;color:#94a3b8;margin-top:4px;">자동으로 브라우저가 열리면 허용 버튼 클릭!</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 오른쪽: 성공 화면 -->
+          <div style="display:flex;flex-direction:column;gap:12px;">
+            <div style="font-size:13px;font-weight:700;color:#34d399;">✅ 로그인 성공 화면</div>
+            <div class="terminal" style="flex:1;">
+              <div class="terminal-titlebar">
+                <div class="terminal-dot" style="background:#ef4444;"></div>
+                <div class="terminal-dot" style="background:#f59e0b;"></div>
+                <div class="terminal-dot" style="background:#10b981;"></div>
+                <div class="terminal-title">Claude Code — 실행 화면</div>
+              </div>
+              <div class="terminal-body" style="font-size:12px;">
+                <div style="color:#a78bfa;">  ██████╗██╗      █████╗ ██╗   ██╗██████╗ ███████╗</div>
+                <div style="color:#a78bfa;">  ██╔════╝██║     ██╔══██╗██║   ██║██╔══██╗██╔════╝</div>
+                <div style="color:#06b6d4;margin-top:4px;">  ✓ Logged in as yourname@email.com</div>
+                <div style="color:#64748b;margin-top:8px;">  Working in: /Desktop/내작업</div>
+                <div style="margin-top:10px;color:#34d399;">  Claude Code 준비 완료!</div>
+                <div style="margin-top:10px;color:#94a3b8;">  > <span style="animation:blink 1s infinite;">█</span></div>
+              </div>
+            </div>
+            <div class="card card-accent" style="padding:12px 14px;">
+              <div style="font-size:12px;color:#a78bfa;font-weight:700;margin-bottom:4px;">💡 팁</div>
+              <div style="font-size:12px;color:#94a3b8;">로그인은 최초 1회만! 이후에는 claude 명령어만 입력하면 바로 시작됩니다.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════
+         SLIDE 09 — 화면 구조 이해하기 (C타입)
+         ════════════════════════════════════════════════ -->
+    <div class="slide" id="slide-09">
+      <div class="slide-header">
+        <div class="slide-eyebrow">PART 3 · 기본 사용법</div>
+        <h2 class="slide-title">화면 구조 <span class="accent">이해하기</span></h2>
+        <p class="slide-subtitle">딱 3개 영역만 알면 됩니다</p>
+      </div>
+      <div class="slide-body">
+        <div class="col-6-4" style="align-items:start;">
+          <!-- 왼쪽: 인터페이스 다이어그램 -->
+          <div class="ui-diagram">
+            <div class="ui-diagram-bar">
+              <div class="terminal-dot" style="background:#ef4444;width:10px;height:10px;border-radius:50%;"></div>
+              <div class="terminal-dot" style="background:#f59e0b;width:10px;height:10px;border-radius:50%;"></div>
+              <div class="terminal-dot" style="background:#10b981;width:10px;height:10px;border-radius:50%;"></div>
+              <span style="margin-left:8px;">Claude Code — 화면 구조</span>
+            </div>
+            <div class="ui-diagram-body">
+              <!-- 영역 A: 상단 정보 -->
+              <div style="background:rgba(124,58,237,0.1);border:1px solid rgba(124,58,237,0.3);border-radius:8px;padding:10px 12px;margin-bottom:10px;">
+                <div style="color:#a78bfa;font-size:11px;font-weight:700;margin-bottom:6px;">① 상단 상태 표시</div>
+                <div style="color:#64748b;font-size:11px;">
+                  Working in: /Desktop/내작업 &nbsp;|&nbsp; claude-opus-4-5 &nbsp;|&nbsp; auto
+                </div>
+              </div>
+
+              <!-- 영역 B: 대화 히스토리 -->
+              <div style="background:rgba(6,182,212,0.08);border:1px solid rgba(6,182,212,0.2);border-radius:8px;padding:10px 12px;margin-bottom:10px;min-height:120px;">
+                <div style="color:#67e8f9;font-size:11px;font-weight:700;margin-bottom:8px;">② 대화 내역 영역</div>
+                <div style="color:#94a3b8;font-size:11px;line-height:1.8;">
+                  <span style="color:#a78bfa;">[나]</span> 안녕하세요, 파이썬 코드 작성 도와줘<br>
+                  <span style="color:#67e8f9;">[Claude]</span> 네, 어떤 기능을 만들고 싶으신가요?
+                </div>
+              </div>
+
+              <!-- 영역 C: 입력창 -->
+              <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.15);border-radius:8px;padding:10px 12px;">
+                <div style="color:#34d399;font-size:11px;font-weight:700;margin-bottom:6px;">③ 명령 입력창 (프롬프트)</div>
+                <div style="font-size:11px;color:#94a3b8;">
+                  &gt; 여기에 요청사항을 입력하세요... <span style="color:#f1f5f9;">█</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 오른쪽: 각 영역 설명 -->
+          <div style="display:flex;flex-direction:column;gap:12px;">
+            <div class="card" style="padding:14px 16px;">
+              <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+                <span class="badge badge-purple">①</span>
+                <strong style="font-size:14px;">상단 상태 표시</strong>
+              </div>
+              <div style="font-size:12px;color:#94a3b8;line-height:1.6;">현재 폴더 위치, 사용 중인 AI 모델, 권한 모드를 보여줍니다</div>
+            </div>
+
+            <div class="card" style="padding:14px 16px;">
+              <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+                <span class="badge badge-cyan">②</span>
+                <strong style="font-size:14px;">대화 내역 영역</strong>
+              </div>
+              <div style="font-size:12px;color:#94a3b8;line-height:1.6;">나와 AI의 대화 기록이 순서대로 쌓입니다. 이전 내용을 참고하며 작업해요</div>
+            </div>
+
+            <div class="card" style="padding:14px 16px;">
+              <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+                <span class="badge badge-green">③</span>
+                <strong style="font-size:14px;">명령 입력창</strong>
+              </div>
+              <div style="font-size:12px;color:#94a3b8;line-height:1.6;">요청사항을 한국어로 자유롭게 입력하고 Enter를 누르면 됩니다!</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════
+         SLIDE 10 — 첫 번째 대화 해보기 (B타입)
+         ════════════════════════════════════════════════ -->
+    <div class="slide" id="slide-10">
+      <div class="slide-header">
+        <div class="slide-eyebrow">PART 3 · 기본 사용법</div>
+        <h2 class="slide-title">첫 번째 대화 <span class="accent">해보기</span></h2>
+        <p class="slide-subtitle">이렇게 말하면 AI가 바로 실행합니다</p>
+      </div>
+      <div class="slide-body">
+        <div class="col-2" style="align-items:start;">
+          <!-- 왼쪽: 대화 예시 -->
+          <div style="display:flex;flex-direction:column;gap:10px;">
+            <div style="font-size:13px;font-weight:700;color:#a78bfa;margin-bottom:2px;">💬 예시 대화 — 파일 만들기</div>
+            <div class="chat-bubble-wrap">
+              <div class="chat-bubble chat-user">
+                <div class="chat-label" style="color:#a78bfa;">나</div>
+                안녕하세요! "hello.txt"라는 파일을 만들고<br>"안녕하세요, 클로드코드!"라고 내용을 써줘
+              </div>
+
+              <div class="chat-bubble chat-claude">
+                <div class="chat-label" style="color:#67e8f9;">Claude Code</div>
+                <div style="color:#34d399;margin-bottom:6px;">✓ hello.txt 파일을 생성했습니다</div>
+                <div style="font-size:12px;color:#94a3b8;">
+                  📄 hello.txt<br>
+                  <span style="color:#f1f5f9;">안녕하세요, 클로드코드!</span><br><br>
+                  작업 완료! 현재 폴더에서 파일을 확인하실 수 있습니다.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 오른쪽: 다양한 요청 예시 -->
+          <div style="display:flex;flex-direction:column;gap:10px;">
+            <div style="font-size:13px;font-weight:700;color:#67e8f9;margin-bottom:2px;">🗂️ 이런 것들을 요청해보세요</div>
+
+            <div class="card" style="padding:12px 14px;">
+              <div style="font-size:11px;color:#f59e0b;font-weight:700;margin-bottom:6px;">📝 파일 & 폴더 작업</div>
+              <div style="font-size:12px;color:#94a3b8;line-height:1.8;">
+                "현재 폴더의 파일 목록 알려줘"<br>
+                "index.html 파일 만들어줘"<br>
+                "images 폴더 만들어줘"
+              </div>
+            </div>
+
+            <div class="card" style="padding:12px 14px;">
+              <div style="font-size:11px;color:#34d399;font-weight:700;margin-bottom:6px;">🔍 파일 내용 확인</div>
+              <div style="font-size:12px;color:#94a3b8;line-height:1.8;">
+                "readme.txt 내용 보여줘"<br>
+                "이 코드가 뭐 하는 건지 설명해줘"<br>
+                "오류가 있는지 확인해줘"
+              </div>
+            </div>
+
+            <div class="card" style="padding:12px 14px;">
+              <div style="font-size:11px;color:#a78bfa;font-weight:700;margin-bottom:6px;">✏️ 내용 수정</div>
+              <div style="font-size:12px;color:#94a3b8;line-height:1.8;">
+                "이 파일의 제목을 '안녕하세요'로 바꿔줘"<br>
+                "영어로 번역해줘"<br>
+                "맞춤법 오류 고쳐줘"
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════
+         SLIDE 11 — 기본 명령어 5가지 (A타입)
+         ════════════════════════════════════════════════ -->
+    <div class="slide" id="slide-11">
+      <div class="slide-header">
+        <div class="slide-eyebrow">PART 3 · 기본 사용법</div>
+        <h2 class="slide-title">꼭 알아야 할 <span class="accent">기본 명령어 5가지</span></h2>
+        <p class="slide-subtitle">슬래시(/) 명령어로 더 빠르게 제어할 수 있어요</p>
+      </div>
+      <div class="slide-body">
+        <div class="col-2" style="align-items:start;gap:12px;">
+          <div style="display:flex;flex-direction:column;gap:10px;">
+            <!-- 명령 1 -->
+            <div class="card" style="display:flex;align-items:center;gap:14px;padding:14px 16px;">
+              <div style="font-family:var(--font-mono);font-size:16px;font-weight:700;color:#a78bfa;min-width:90px;">/help</div>
+              <div>
+                <div style="font-size:14px;font-weight:600;">도움말 보기</div>
+                <div style="font-size:12px;color:#64748b;">사용 가능한 모든 명령어 목록 확인</div>
+              </div>
+            </div>
+
+            <!-- 명령 2 -->
+            <div class="card" style="display:flex;align-items:center;gap:14px;padding:14px 16px;">
+              <div style="font-family:var(--font-mono);font-size:16px;font-weight:700;color:#67e8f9;min-width:90px;">/clear</div>
+              <div>
+                <div style="font-size:14px;font-weight:600;">대화 초기화</div>
+                <div style="font-size:12px;color:#64748b;">이전 대화 내용을 지우고 새로 시작</div>
+              </div>
+            </div>
+
+            <!-- 명령 3 -->
+            <div class="card" style="display:flex;align-items:center;gap:14px;padding:14px 16px;">
+              <div style="font-family:var(--font-mono);font-size:16px;font-weight:700;color:#34d399;min-width:90px;">/status</div>
+              <div>
+                <div style="font-size:14px;font-weight:600;">현재 상태 확인</div>
+                <div style="font-size:12px;color:#64748b;">사용 중인 모델·비용 현황 표시</div>
+              </div>
+            </div>
+          </div>
+
+          <div style="display:flex;flex-direction:column;gap:10px;">
+            <!-- 명령 4 -->
+            <div class="card" style="display:flex;align-items:center;gap:14px;padding:14px 16px;">
+              <div style="font-family:var(--font-mono);font-size:16px;font-weight:700;color:#f59e0b;min-width:90px;">/compact</div>
+              <div>
+                <div style="font-size:14px;font-weight:600;">대화 압축</div>
+                <div style="font-size:12px;color:#64748b;">대화가 길어질 때 요약해서 비용 절약</div>
+              </div>
+            </div>
+
+            <!-- 명령 5 -->
+            <div class="card" style="display:flex;align-items:center;gap:14px;padding:14px 16px;">
+              <div style="font-family:var(--font-mono);font-size:16px;font-weight:700;color:#ef4444;min-width:90px;">Ctrl+C</div>
+              <div>
+                <div style="font-size:14px;font-weight:600;">작업 중지</div>
+                <div style="font-size:12px;color:#64748b;">AI가 실행 중인 작업을 즉시 멈춤</div>
+              </div>
+            </div>
+
+            <!-- 종료 방법 -->
+            <div class="highlight-box" style="padding:14px 16px;">
+              <div style="font-size:13px;font-weight:700;color:#a78bfa;margin-bottom:6px;">💡 종료하려면?</div>
+              <div style="font-size:13px;color:#94a3b8;line-height:1.7;">
+                <span style="font-family:var(--font-mono);color:#f1f5f9;">/exit</span> 입력 또는 <span style="font-family:var(--font-mono);color:#f1f5f9;">Ctrl+D</span> 누르기<br>
+                다시 시작할 때: 터미널에서 <span style="font-family:var(--font-mono);color:#67e8f9;">claude</span> 입력
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════
+         SLIDE 12 — 실전① 파일 작성 요청 (B타입)
+         ════════════════════════════════════════════════ -->
+    <div class="slide" id="slide-12">
+      <div class="slide-header">
+        <div class="slide-eyebrow">PART 4 · 실전 활용</div>
+        <h2 class="slide-title">실전 ① <span class="accent">파일 작성 요청</span></h2>
+        <p class="slide-subtitle">아이디어를 말하면 파일로 만들어줍니다</p>
+      </div>
+      <div class="slide-body">
+        <div class="col-2" style="align-items:start;">
+          <!-- 왼쪽: 대화 예시 -->
+          <div style="display:flex;flex-direction:column;gap:10px;">
+            <div style="font-size:13px;font-weight:700;color:#a78bfa;margin-bottom:2px;">💬 실전 예시 — 블로그 HTML 만들기</div>
+            <div class="chat-bubble-wrap">
+              <div class="chat-bubble chat-user">
+                <div class="chat-label" style="color:#a78bfa;">나</div>
+                "나의 첫 번째 블로그"라는 제목의 간단한 HTML 파일 만들어줘. 소개글도 넣어줘.
+              </div>
+
+              <div class="chat-bubble chat-claude">
+                <div class="chat-label" style="color:#67e8f9;">Claude Code</div>
+                <div style="font-size:12px;color:#34d399;margin-bottom:4px;">✓ blog.html 생성 완료</div>
+                <div class="code-block" style="font-size:11px;padding:8px 12px;margin-top:4px;">
+                  <span style="color:#64748b;">&lt;!DOCTYPE html&gt;</span><br>
+                  <span style="color:#67e8f9;">&lt;html&gt;</span><br>
+                  &nbsp;&nbsp;<span style="color:#67e8f9;">&lt;h1&gt;</span><span style="color:#f59e0b;">나의 첫 번째 블로그</span><span style="color:#67e8f9;">&lt;/h1&gt;</span><br>
+                  &nbsp;&nbsp;<span style="color:#67e8f9;">&lt;p&gt;</span>안녕하세요...<span style="color:#67e8f9;">&lt;/p&gt;</span><br>
+                  <span style="color:#67e8f9;">&lt;/html&gt;</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 오른쪽: 다양한 활용 -->
+          <div style="display:flex;flex-direction:column;gap:10px;">
+            <div style="font-size:13px;font-weight:700;color:#67e8f9;margin-bottom:2px;">📁 이런 파일들을 만들 수 있어요</div>
+
+            <div class="card" style="padding:12px 14px;display:flex;gap:12px;align-items:flex-start;">
+              <div style="font-size:24px;">🌐</div>
+              <div>
+                <div style="font-size:13px;font-weight:700;margin-bottom:3px;">웹페이지 (HTML/CSS)</div>
+                <div style="font-size:12px;color:#64748b;">랜딩페이지, 포트폴리오, 소개 페이지</div>
+              </div>
+            </div>
+
+            <div class="card" style="padding:12px 14px;display:flex;gap:12px;align-items:flex-start;">
+              <div style="font-size:24px;">📊</div>
+              <div>
+                <div style="font-size:13px;font-weight:700;margin-bottom:3px;">데이터 파일 (CSV/JSON)</div>
+                <div style="font-size:12px;color:#64748b;">상품 목록, 고객 데이터, 설정 파일</div>
+              </div>
+            </div>
+
+            <div class="card" style="padding:12px 14px;display:flex;gap:12px;align-items:flex-start;">
+              <div style="font-size:24px;">📝</div>
+              <div>
+                <div style="font-size:13px;font-weight:700;margin-bottom:3px;">문서 파일 (Markdown/TXT)</div>
+                <div style="font-size:12px;color:#64748b;">README, 기획서, 회의록 템플릿</div>
+              </div>
+            </div>
+
+            <div class="card" style="padding:12px 14px;display:flex;gap:12px;align-items:flex-start;">
+              <div style="font-size:24px;">⚙️</div>
+              <div>
+                <div style="font-size:13px;font-weight:700;margin-bottom:3px;">자동화 스크립트 (Python)</div>
+                <div style="font-size:12px;color:#64748b;">파일 정리, 데이터 처리, 반복 작업</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════
+         SLIDE 13 — 실전② 코드 설명 요청 (B타입)
+         ════════════════════════════════════════════════ -->
+    <div class="slide" id="slide-13">
+      <div class="slide-header">
+        <div class="slide-eyebrow">PART 4 · 실전 활용</div>
+        <h2 class="slide-title">실전 ② <span class="accent">코드 설명 요청</span></h2>
+        <p class="slide-subtitle">코드를 몰라도 AI가 쉽게 설명해줍니다</p>
+      </div>
+      <div class="slide-body">
+        <div class="col-2" style="align-items:start;">
+          <!-- 왼쪽: 대화 예시 -->
+          <div style="display:flex;flex-direction:column;gap:10px;">
+            <div style="font-size:13px;font-weight:700;color:#a78bfa;margin-bottom:2px;">💬 실전 예시 — 코드 이해하기</div>
+            <div class="chat-bubble-wrap">
+              <div class="chat-bubble chat-user">
+                <div class="chat-label" style="color:#a78bfa;">나</div>
+                app.py 파일을 열어서 이게 뭐 하는 코드인지 쉽게 설명해줘. 초등학생도 이해할 수 있게!
+              </div>
+
+              <div class="chat-bubble chat-claude">
+                <div class="chat-label" style="color:#67e8f9;">Claude Code</div>
+                <div style="font-size:12px;color:#94a3b8;line-height:1.7;">
+                  app.py를 읽어봤어요! 🎉<br><br>
+                  이 코드는 <strong style="color:#f1f5f9;">"숫자 계산기"</strong>예요.<br>
+                  • 사용자가 숫자 2개를 입력하면<br>
+                  • 더하기, 빼기, 곱하기를 해서<br>
+                  • 결과를 화면에 보여줘요!<br><br>
+                  마치 계산기 앱처럼 동작하는 거예요 😊
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 오른쪽: 활용 팁 -->
+          <div style="display:flex;flex-direction:column;gap:10px;">
+            <div style="font-size:13px;font-weight:700;color:#67e8f9;margin-bottom:2px;">🎯 이렇게 요청해보세요</div>
+
+            <div class="card card-accent" style="padding:14px 16px;">
+              <div style="font-size:12px;font-weight:700;color:#a78bfa;margin-bottom:8px;">📖 이해를 위한 요청</div>
+              <div style="font-size:12px;color:#94a3b8;line-height:1.9;">
+                "이 코드가 무슨 일을 하는지 설명해줘"<br>
+                "이 함수가 왜 필요한지 알려줘"<br>
+                "비개발자도 이해할 수 있게 설명해줘"
+              </div>
+            </div>
+
+            <div class="card card-cyan" style="padding:14px 16px;">
+              <div style="font-size:12px;font-weight:700;color:#67e8f9;margin-bottom:8px;">🔍 구조 파악을 위한 요청</div>
+              <div style="font-size:12px;color:#94a3b8;line-height:1.9;">
+                "이 프로젝트 폴더 구조 설명해줘"<br>
+                "어떤 파일이 어떤 역할을 하는지"<br>
+                "핵심 파일이 뭔지 알려줘"
+              </div>
+            </div>
+
+            <div class="highlight-box" style="padding:12px 14px;">
+              <div style="font-size:12px;line-height:1.7;">
+                💡 <strong style="color:#f1f5f9;">남이 만든 코드도 OK!</strong><br>
+                <span style="color:#64748b;">GitHub에서 받은 오픈소스 코드도 붙여넣으면 설명해줍니다</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════
+         SLIDE 14 — 실전③ 오류 해결 요청 (B타입)
+         ════════════════════════════════════════════════ -->
+    <div class="slide" id="slide-14">
+      <div class="slide-header">
+        <div class="slide-eyebrow">PART 4 · 실전 활용</div>
+        <h2 class="slide-title">실전 ③ <span class="accent">오류 해결 요청</span></h2>
+        <p class="slide-subtitle">빨간 오류 메시지? 그냥 복사해서 붙여넣으세요</p>
+      </div>
+      <div class="slide-body">
+        <div class="col-2" style="align-items:start;">
+          <!-- 왼쪽: 대화 예시 -->
+          <div style="display:flex;flex-direction:column;gap:10px;">
+            <div style="font-size:13px;font-weight:700;color:#a78bfa;margin-bottom:2px;">💬 실전 예시 — 오류 해결</div>
+            <div class="chat-bubble-wrap">
+              <div class="chat-bubble chat-user">
+                <div class="chat-label" style="color:#a78bfa;">나</div>
+                <div style="margin-bottom:6px;">코드 실행하니까 이런 오류가 나요. 고쳐줘:</div>
+                <div class="code-block" style="font-size:11px;padding:8px 10px;border-color:rgba(239,68,68,0.3);">
+                  <span style="color:#ef4444;">ModuleNotFoundError:</span><br>
+                  No module named 'requests'
+                </div>
+              </div>
+
+              <div class="chat-bubble chat-claude">
+                <div class="chat-label" style="color:#67e8f9;">Claude Code</div>
+                <div style="font-size:12px;color:#94a3b8;line-height:1.7;">
+                  <span style="color:#f59e0b;">원인:</span> requests 라이브러리가 설치 안 됨<br><br>
+                  <span style="color:#34d399;">해결 중...</span>
+                  <div class="code-block" style="font-size:11px;padding:6px 10px;margin:6px 0;background:#06110d;">
+                    <span class="code-prompt">$</span> <span style="color:#67e8f9;">pip install requests</span>
+                  </div>
+                  설치 완료! 이제 다시 실행해보세요 ✅
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 오른쪽: 오류 대처법 -->
+          <div style="display:flex;flex-direction:column;gap:10px;">
+            <div style="font-size:13px;font-weight:700;color:#ef4444;margin-bottom:2px;">🚨 오류 유형별 대처법</div>
+
+            <div class="card" style="padding:12px 14px;border-color:rgba(239,68,68,0.2);">
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+                <span style="color:#ef4444;font-size:16px;">🔴</span>
+                <strong style="font-size:13px;">빨간 오류 (Error)</strong>
+              </div>
+              <div style="font-size:12px;color:#94a3b8;line-height:1.6;">오류 메시지 전체를 복사해서<br>"이 오류 고쳐줘" 붙여넣기</div>
+            </div>
+
+            <div class="card" style="padding:12px 14px;border-color:rgba(245,158,11,0.2);">
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+                <span style="color:#f59e0b;font-size:16px;">🟡</span>
+                <strong style="font-size:13px;">예상과 다른 결과</strong>
+              </div>
+              <div style="font-size:12px;color:#94a3b8;line-height:1.6;">"원하는 결과"와 "실제 결과"를<br>함께 설명해주면 정확히 수정해줘요</div>
+            </div>
+
+            <div class="card" style="padding:12px 14px;border-color:rgba(16,185,129,0.2);">
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+                <span style="color:#10b981;font-size:16px;">🟢</span>
+                <strong style="font-size:13px;">예방적 검토</strong>
+              </div>
+              <div style="font-size:12px;color:#94a3b8;line-height:1.6;">"이 코드에 문제가 있는지 검토해줘"<br>실행 전 미리 오류 찾기</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════
+         SLIDE 15 — 유용한 팁 7가지 (A타입)
+         ════════════════════════════════════════════════ -->
+    <div class="slide" id="slide-15">
+      <div class="slide-header">
+        <div class="slide-eyebrow">PART 5 · 팁 & FAQ</div>
+        <h2 class="slide-title">꼭 알아야 할 <span class="accent">유용한 팁 7가지</span></h2>
+      </div>
+      <div class="slide-body">
+        <div class="col-2" style="align-items:start;gap:12px;">
+          <div style="display:flex;flex-direction:column;gap:9px;">
+            <div class="card" style="display:flex;gap:12px;align-items:flex-start;padding:12px 14px;">
+              <span class="badge badge-purple" style="flex-shrink:0;margin-top:1px;">Tip 1</span>
+              <div>
+                <div style="font-size:14px;font-weight:700;margin-bottom:3px;">구체적으로 요청할수록 좋아요</div>
+                <div style="font-size:12px;color:#64748b;">"파일 만들어줘" ✗ → "blog.html 파일을 만들되 파란 배경, 흰 글씨로 만들어줘" ✓</div>
+              </div>
+            </div>
+
+            <div class="card" style="display:flex;gap:12px;align-items:flex-start;padding:12px 14px;">
+              <span class="badge badge-cyan" style="flex-shrink:0;margin-top:1px;">Tip 2</span>
+              <div>
+                <div style="font-size:14px;font-weight:700;margin-bottom:3px;">한국어로 편하게 말하세요</div>
+                <div style="font-size:12px;color:#64748b;">영어 필요 없어요. 완전한 한국어로 대화해도 완벽히 이해합니다</div>
+              </div>
+            </div>
+
+            <div class="card" style="display:flex;gap:12px;align-items:flex-start;padding:12px 14px;">
+              <span class="badge badge-green" style="flex-shrink:0;margin-top:1px;">Tip 3</span>
+              <div>
+                <div style="font-size:14px;font-weight:700;margin-bottom:3px;">마음에 안 들면 바로 수정 요청</div>
+                <div style="font-size:12px;color:#64748b;">"색을 빨간색으로 바꿔줘", "더 짧게 써줘" 등 이어서 요청 가능</div>
+              </div>
+            </div>
+
+            <div class="card" style="display:flex;gap:12px;align-items:flex-start;padding:12px 14px;">
+              <span class="badge badge-amber" style="flex-shrink:0;margin-top:1px;">Tip 4</span>
+              <div>
+                <div style="font-size:14px;font-weight:700;margin-bottom:3px;">작업 전 백업 습관 들이기</div>
+                <div style="font-size:12px;color:#64748b;">중요한 파일은 미리 복사해두세요. AI도 실수할 수 있습니다</div>
+              </div>
+            </div>
+          </div>
+
+          <div style="display:flex;flex-direction:column;gap:9px;">
+            <div class="card" style="display:flex;gap:12px;align-items:flex-start;padding:12px 14px;">
+              <span class="badge badge-purple" style="flex-shrink:0;margin-top:1px;">Tip 5</span>
+              <div>
+                <div style="font-size:14px;font-weight:700;margin-bottom:3px;">/clear로 새 주제 시작하기</div>
+                <div style="font-size:12px;color:#64748b;">다른 작업을 시작할 때 /clear로 이전 대화를 지우면 더 정확해요</div>
+              </div>
+            </div>
+
+            <div class="card" style="display:flex;gap:12px;align-items:flex-start;padding:12px 14px;">
+              <span class="badge badge-cyan" style="flex-shrink:0;margin-top:1px;">Tip 6</span>
+              <div>
+                <div style="font-size:14px;font-weight:700;margin-bottom:3px;">올바른 폴더에서 시작하기</div>
+                <div style="font-size:12px;color:#64748b;">작업 폴더로 이동(cd)한 후 claude 실행 — 파일 경로 오류를 방지해요</div>
+              </div>
+            </div>
+
+            <div class="card" style="display:flex;gap:12px;align-items:flex-start;padding:12px 14px;">
+              <span class="badge badge-green" style="flex-shrink:0;margin-top:1px;">Tip 7</span>
+              <div>
+                <div style="font-size:14px;font-weight:700;margin-bottom:3px;">Ctrl+C로 언제든 멈출 수 있어요</div>
+                <div style="font-size:12px;color:#64748b;">AI가 잘못된 방향으로 가고 있으면 즉시 중단하고 다시 요청하세요</div>
+              </div>
+            </div>
+
+            <div class="highlight-box" style="padding:12px 14px;">
+              <div style="font-size:12px;line-height:1.7;color:#94a3b8;">
+                🌟 <strong style="color:#f1f5f9;">가장 중요한 팁</strong><br>
+                틀려도 괜찮아요! 반복해서 요청하면 점점 더 나아집니다.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════
+         SLIDE 16 — FAQ (A타입)
+         ════════════════════════════════════════════════ -->
+    <div class="slide" id="slide-16">
+      <div class="slide-header">
+        <div class="slide-eyebrow">PART 5 · 팁 & FAQ</div>
+        <h2 class="slide-title">자주 묻는 질문 <span class="accent">FAQ</span></h2>
+      </div>
+      <div class="slide-body">
+        <div class="col-2" style="align-items:start;">
+          <div style="display:flex;flex-direction:column;gap:4px;">
+            <div class="faq-item">
+              <div class="faq-q">ChatGPT랑 다른 게 뭔가요?</div>
+              <div class="faq-a">ChatGPT는 대화만 합니다. 클로드코드는 실제로 내 컴퓨터 파일을 읽고 만들고 수정까지 합니다. 실행 능력이 핵심 차이입니다.</div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="faq-item">
+              <div class="faq-q">인터넷이 없으면 못 쓰나요?</div>
+              <div class="faq-a">네, 인터넷 연결이 필요합니다. AI 모델이 Anthropic 서버에서 동작하기 때문에 클라우드 연결이 필수입니다.</div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="faq-item">
+              <div class="faq-q">내 파일이 외부로 유출되나요?</div>
+              <div class="faq-a">대화 내용은 Anthropic 서버로 전송됩니다. 민감한 개인정보나 기업 기밀은 입력하지 않는 것이 좋습니다.</div>
+            </div>
+          </div>
+
+          <div style="display:flex;flex-direction:column;gap:4px;">
+            <div class="faq-item">
+              <div class="faq-q">월 얼마나 나오나요?</div>
+              <div class="faq-a">사용량에 따라 다르지만 일반적으로 월 $5~20 수준입니다. Max Plan($100/월)은 무제한 사용 가능합니다.</div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="faq-item">
+              <div class="faq-q">코딩을 전혀 모르는데 배울 수 있나요?</div>
+              <div class="faq-a">네! 한국어로 요청하면 AI가 모든 코딩을 대신 해줍니다. 코드를 이해하지 않아도 원하는 결과물을 만들 수 있습니다.</div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="faq-item">
+              <div class="faq-q">윈도우, 맥 모두 사용 가능한가요?</div>
+              <div class="faq-a">네, Windows와 Mac 모두 동일하게 사용 가능합니다. 설치 방법도 동일합니다.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════
+         SLIDE 17 — 다음 단계 로드맵 (B타입)
+         ════════════════════════════════════════════════ -->
+    <div class="slide" id="slide-17">
+      <div class="slide-header">
+        <div class="slide-eyebrow">PART 6 · 다음 단계</div>
+        <h2 class="slide-title">클로드코드 <span class="accent">마스터 로드맵</span></h2>
+        <p class="slide-subtitle">입문 이후 이렇게 성장해 가세요</p>
+      </div>
+      <div class="slide-body">
+        <div class="col-2" style="align-items:start;">
+          <!-- 왼쪽: 로드맵 -->
+          <div style="display:flex;flex-direction:column;gap:8px;">
+            <div class="roadmap-step">
+              <div class="roadmap-num">1</div>
+              <div>
+                <div style="font-size:14px;font-weight:700;color:#34d399;">✅ 지금 여기 — 입문 완료!</div>
+                <div style="font-size:12px;color:#64748b;margin-top:3px;">설치, 기본 사용법, 파일 작업, 오류 해결</div>
+              </div>
+            </div>
+
+            <div class="roadmap-step" style="border-color:rgba(124,58,237,0.3);">
+              <div class="roadmap-num" style="background:linear-gradient(135deg,#7c3aed,#a78bfa);">2</div>
+              <div>
+                <div style="font-size:14px;font-weight:700;color:#a78bfa;">🚀 초급 — 실전 프로젝트</div>
+                <div style="font-size:12px;color:#64748b;margin-top:3px;">나만의 웹사이트, 자동화 스크립트, 데이터 처리</div>
+              </div>
+            </div>
+
+            <div class="roadmap-step">
+              <div class="roadmap-num" style="background:linear-gradient(135deg,#06b6d4,#67e8f9);">3</div>
+              <div>
+                <div style="font-size:14px;font-weight:700;color:#67e8f9;">⚡ 중급 — MCP & 확장</div>
+                <div style="font-size:12px;color:#64748b;margin-top:3px;">웹 검색 연동, Notion 연동, 이미지 생성 자동화</div>
+              </div>
+            </div>
+
+            <div class="roadmap-step">
+              <div class="roadmap-num" style="background:linear-gradient(135deg,#f59e0b,#fbbf24);">4</div>
+              <div>
+                <div style="font-size:14px;font-weight:700;color:#f59e0b;">🏆 고급 — 에이전트 시스템</div>
+                <div style="font-size:12px;color:#64748b;margin-top:3px;">AI 팀 구성, 완전 자동화 파이프라인 구축</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 오른쪽: 추천 다음 학습 -->
+          <div style="display:flex;flex-direction:column;gap:10px;">
+            <div style="font-size:13px;font-weight:700;color:#a78bfa;">📚 다음에 배워볼 것들</div>
+
+            <div class="card card-accent" style="padding:14px 16px;">
+              <div style="font-size:12px;color:#a78bfa;font-weight:700;margin-bottom:8px;">🔧 MCP 서버 연동</div>
+              <div style="font-size:12px;color:#94a3b8;line-height:1.7;">외부 서비스(Notion, Gmail, Google Calendar)를 Claude Code와 연결해 자동화 수준을 대폭 끌어올리기</div>
+            </div>
+
+            <div class="card card-cyan" style="padding:14px 16px;">
+              <div style="font-size:12px;color:#67e8f9;font-weight:700;margin-bottom:8px;">🌐 Vercel 배포</div>
+              <div style="font-size:12px;color:#94a3b8;line-height:1.7;">만든 웹사이트를 인터넷에 무료로 공개하는 방법 (Vercel, GitHub Pages)</div>
+            </div>
+
+            <div class="card card-green" style="padding:14px 16px;">
+              <div style="font-size:12px;color:#34d399;font-weight:700;margin-bottom:8px;">🤖 에이전트 팀 운영</div>
+              <div style="font-size:12px;color:#94a3b8;line-height:1.7;">여러 AI를 동시에 운영해서 복잡한 작업을 자동으로 처리하는 시스템 구축</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════
+         SLIDE 18 — 마무리 (D타입: 풀 비주얼)
+         ════════════════════════════════════════════════ -->
+    <div class="slide slide-type-d" id="slide-18">
+      <!-- 배경 효과 -->
+      <div class="bg-grid"></div>
+      <!-- slide-18 글로우 — 슬라이드 범위 내로 수정 (오버플로우 방지) -->
+      <div class="bg-glow" style="width:500px;height:500px;background:rgba(124,58,237,0.1);top:-60px;right:-80px;"></div>
+      <div class="bg-glow" style="width:400px;height:400px;background:rgba(6,182,212,0.08);bottom:40px;left:-60px;"></div>
+
+      <div style="position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;gap:24px;padding:60px;max-width:800px;">
+        <!-- 완료 아이콘 -->
+        <div style="width:80px;height:80px;background:linear-gradient(135deg,#10b981,#06b6d4);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:36px;box-shadow:0 0 40px rgba(16,185,129,0.3);">
+          🎉
+        </div>
+
+        <!-- 메인 메시지 -->
+        <div style="text-align:center;">
+          <h2 style="font-size:52px;font-weight:900;line-height:1.1;background:linear-gradient(135deg,#f1f5f9,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">
+            클로드코드 입문<br>완료!
+          </h2>
+          <p style="font-size:18px;color:#94a3b8;margin-top:16px;line-height:1.7;">
+            이제 AI와 함께 일하는 첫 발을 내딛었습니다.<br>
+            두려워하지 말고, 직접 써보세요!
+          </p>
+        </div>
+
+        <!-- 핵심 메시지 -->
+        <div class="highlight-box" style="padding:16px 24px;text-align:center;max-width:480px;">
+          <div style="font-size:15px;line-height:1.8;color:#f1f5f9;">
+            <strong style="color:#a78bfa;">"코딩을 모른다"</strong>는 이제 핑계가 아닙니다.<br>
+            AI에게 말하면 됩니다. <strong style="color:#67e8f9;">오늘부터 바로</strong> 시작하세요!
+          </div>
+        </div>
+
+        <!-- 배지들 -->
+        <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;">
+          <span class="badge badge-green">✅ 18슬라이드 수료</span>
+          <span class="badge badge-purple">🤖 Claude Code 입문자</span>
+        </div>
+
+        <!-- 노모어매뉴얼 -->
+        <div style="margin-top:8px;text-align:center;">
+          <div class="brand-tag">Made with ❤️ by NOMORE MANUAL</div>
+          <div style="font-size:12px;color:#475569;margin-top:4px;">노모어매뉴얼 · 코딩 몰라도 창업할 수 있는 세상</div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /stage -->
+</div><!-- /viewer -->
+
+<!-- 진행바 -->
+<div id="progress-bar"></div>
+
+<!-- 슬라이드 카운터 -->
+<div id="slide-counter">1 / 18</div>
+
+<!-- 네비게이션 버튼 -->
+<button class="nav-btn" id="btn-prev" title="이전 (←)">&#8592;</button>
+<button class="nav-btn" id="btn-next" title="다음 (→)">&#8594;</button>
+
+<!-- 메인 JS -->
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,199 @@
+1:"$Sreact.fragment"
+2:I[22016,["/_next/static/chunks/01xlw8hd842-c.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/0rh3w3etjkm_t.js"],""]
+9:I[22530,["/_next/static/chunks/01xlw8hd842-c.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/0rh3w3etjkm_t.js"],"default"]
+c:I[97367,["/_next/static/chunks/01xlw8hd842-c.js","/_next/static/chunks/0d3shmwh5_nmn.js"],"OutletBoundary"]
+d:"$Sreact.suspense"
+0:{"rsc":["$","$1","c",{"children":[["$","div",null,{"className":"min-h-screen","style":{"background":"var(--bg-primary)"},"children":[["$","header",null,{"className":"sticky top-0 z-50 h-14 border-b","style":{"background":"var(--bg-primary)","borderColor":"var(--border)","backdropFilter":"blur(8px)"},"children":["$","div",null,{"className":"max-w-7xl mx-auto px-5 sm:px-8 h-14 flex items-center justify-between gap-4","children":[["$","nav",null,{"className":"flex items-center gap-2 text-sm min-w-0 overflow-hidden","children":[["$","$L2",null,{"href":"/","className":"flex items-center gap-2 shrink-0","children":["$","svg",null,{"width":18,"height":13,"viewBox":"0 0 14 10","fill":"none","style":{"imageRendering":"pixelated"},"children":[[null,null,["$","rect","2-0",{"x":2,"y":0,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","3-0",{"x":3,"y":0,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","4-0",{"x":4,"y":0,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","5-0",{"x":5,"y":0,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","6-0",{"x":6,"y":0,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","7-0",{"x":7,"y":0,"width":1,"height":1,"fill":"#DA7756"}],null,null,null,null,null,null],[null,["$","rect","1-1",{"x":1,"y":1,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","2-1",{"x":2,"y":1,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","3-1",{"x":3,"y":1,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","4-1",{"x":4,"y":1,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","5-1",{"x":5,"y":1,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","6-1",{"x":6,"y":1,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","7-1",{"x":7,"y":1,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","8-1",{"x":8,"y":1,"width":1,"height":1,"fill":"#DA7756"}],null,null,null,null,null],[["$","rect","0-2",{"x":0,"y":2,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","1-2",{"x":1,"y":2,"width":1,"height":1,"fill":"#DA7756"}],null,["$","rect","3-2",{"x":3,"y":2,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","4-2",{"x":4,"y":2,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","5-2",{"x":5,"y":2,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","6-2",{"x":6,"y":2,"width":1,"height":1,"fill":"#DA7756"}],null,["$","rect","8-2",{"x":8,"y":2,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","9-2",{"x":9,"y":2,"width":1,"height":1,"fill":"#DA7756"}],null,null,null,null],[["$","rect","0-3",{"x":0,"y":3,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","1-3",{"x":1,"y":3,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","2-3",{"x":2,"y":3,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","3-3",{"x":3,"y":3,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","4-3",{"x":4,"y":3,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","5-3",{"x":5,"y":3,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","6-3",{"x":6,"y":3,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","7-3",{"x":7,"y":3,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","8-3",{"x":8,"y":3,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","9-3",{"x":9,"y":3,"width":1,"height":1,"fill":"#DA7756"}],null,null,null,null],[["$","rect","0-4",{"x":0,"y":4,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","1-4",{"x":1,"y":4,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","2-4",{"x":2,"y":4,"width":1,"height":1,"fill":"#DA7756"}],null,["$","rect","4-4",{"x":4,"y":4,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","5-4",{"x":5,"y":4,"width":1,"height":1,"fill":"#DA7756"}],null,["$","rect","7-4",{"x":7,"y":4,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","8-4",{"x":8,"y":4,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","9-4",{"x":9,"y":4,"width":1,"height":1,"fill":"#DA7756"}],null,null,null,null],[["$","rect","0-5",{"x":0,"y":5,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","1-5",{"x":1,"y":5,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","2-5",{"x":2,"y":5,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","3-5",{"x":3,"y":5,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","4-5",{"x":4,"y":5,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","5-5",{"x":5,"y":5,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","6-5",{"x":6,"y":5,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","7-5",{"x":7,"y":5,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","8-5",{"x":8,"y":5,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","9-5",{"x":9,"y":5,"width":1,"height":1,"fill":"#DA7756"}],null,null,null,null],[null,["$","rect","1-6",{"x":1,"y":6,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","2-6",{"x":2,"y":6,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","3-6",{"x":3,"y":6,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","4-6",{"x":4,"y":6,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","5-6",{"x":5,"y":6,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","6-6",{"x":6,"y":6,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","7-6",{"x":7,"y":6,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","8-6",{"x":8,"y":6,"width":1,"height":1,"fill":"#DA7756"}],null,null,null,null,null],[null,null,["$","rect","2-7",{"x":2,"y":7,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","3-7",{"x":3,"y":7,"width":1,"height":1,"fill":"#DA7756"}],null,null,["$","rect","6-7",{"x":6,"y":7,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","7-7",{"x":7,"y":7,"width":1,"height":1,"fill":"#DA7756"}],null,null,null,null,null,null],[null,null,null,["$","rect","3-8",{"x":3,"y":8,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","4-8",{"x":4,"y":8,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","5-8",{"x":5,"y":8,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","6-8",{"x":6,"y":8,"width":1,"height":1,"fill":"#DA7756"}],null,null,null,null,null,null,null],[null,null,null,null,["$","rect","4-9",{"x":4,"y":9,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","5-9",{"x":5,"y":9,"width":1,"height":1,"fill":"#DA7756"}],null,null,null,null,null,null,null,null]]}]}],["$","$L2",null,{"href":"/","className":"font-semibold text-[15px] shrink-0","style":{"color":"var(--text-primary)"},"children":"Claude Code 입문"}],["$L3","$L4"]]}],"$L5"]}]}],"$L6"]}],["$L7"],"$L8"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"KFrc90-lbyzSgm9uDXLE6"}
+3:["$","span","0",{"className":"flex items-center gap-2 min-w-0","children":[["$","span",null,{"style":{"color":"var(--border)","fontSize":"16px"},"children":"/"}],["$","$L2",null,{"href":"/docs/reference","className":"breadcrumb-link shrink-0","children":"레퍼런스"}]]}]
+4:["$","span","1",{"className":"flex items-center gap-2 min-w-0","children":[["$","span",null,{"style":{"color":"var(--border)","fontSize":"16px"},"children":"/"}],["$","span",null,{"className":"font-medium truncate","style":{"color":"var(--text-primary)","fontSize":"14px"},"children":"전체 슬래시 커맨드 목록"}]]}]
+5:["$","$L9",null,{}]
+a:T2bca,<blockquote>
+<p>📅 최종 업데이트: 2026년 3월 22일</p>
+</blockquote>
+<h2>📋 전체 슬래시 커맨드 목록</h2>
+<p>Claude Code에서 사용 가능한 모든 슬래시(/) 명령어를 정렬하여 표시합니다. 원하는 기능을 빠르게 찾으세요.</p>
+<hr>
+<h2>🔤 알파벳 순서로 정렬된 전체 명령어</h2>
+<p>| # | 명령어 | 카테고리 | 설명 | 사용 빈도 |
+|---|--------|---------|------|----------|
+| 1 | <code>/branch</code> | 세션 관리 | 대화 분기하기 | ⭐⭐⭐ |
+| 2 | <code>/clear</code> | 세션 관리 | 대화 초기화 | ⭐⭐⭐⭐⭐ |
+| 3 | <code>/color</code> | 설정 | 색상 커스터마이징 | ⭐⭐ |
+| 4 | <code>/commit</code> | 특수 기능 | Git 커밋 메시지 생성 | ⭐⭐⭐ |
+| 5 | <code>/compact</code> | 파일 &#x26; 코드 | 대화 압축 | ⭐⭐⭐⭐⭐ |
+| 6 | <code>/config</code> | 설정 | 설정 보기 &#x26; 변경 | ⭐⭐⭐⭐ |
+| 7 | <code>/context</code> | 정보 확인 | 컨텍스트 정보 보기 | ⭐⭐⭐ |
+| 8 | <code>/cost</code> | 정보 확인 | 비용 내역 상세 보기 | ⭐⭐⭐⭐ |
+| 9 | <code>/diff</code> | 파일 &#x26; 코드 | 파일 변경사항 비교 | ⭐⭐⭐⭐⭐ |
+| 10 | <code>/doctor</code> | 정보 확인 | 시스템 진단 | ⭐⭐⭐ |
+| 11 | <code>/effort</code> | 특수 기능 | 작업량 조절 | ⭐⭐⭐ |
+| 12 | <code>/exit</code> | 세션 관리 | 세션 종료 | ⭐⭐⭐⭐⭐ |
+| 13 | <code>/export</code> | 파일 &#x26; 코드 | 파일 내보내기 | ⭐⭐⭐⭐ |
+| 14 | <code>/fast</code> | 특수 기능 | 빠른 모드 활성화 | ⭐⭐⭐ |
+| 15 | <code>/help</code> | 정보 확인 | 도움말 보기 | ⭐⭐⭐⭐⭐ |
+| 16 | <code>/init</code> | 특수 기능 | 프로젝트 초기화 | ⭐⭐⭐⭐ |
+| 17 | <code>/language</code> | 설정 | 사용 언어 설정 | ⭐⭐⭐ |
+| 18 | <code>/memory</code> | 파일 &#x26; 코드 | 기억 관리 | ⭐⭐⭐ |
+| 19 | <code>/model</code> | 설정 | AI 모델 선택 | ⭐⭐⭐⭐ |
+| 20 | <code>/permissions</code> | 설정 | 권한 설정 | ⭐⭐⭐ |
+| 21 | <code>/plan</code> | 특수 기능 | 프로젝트 계획 수립 | ⭐⭐⭐⭐ |
+| 22 | <code>/pr</code> | 특수 기능 | PR 자동 생성 | ⭐⭐⭐ |
+| 23 | <code>/rename</code> | 세션 관리 | 세션 이름 변경 | ⭐⭐⭐ |
+| 24 | <code>/resume</code> | 세션 관리 | 이전 대화 재개 | ⭐⭐⭐ |
+| 25 | <code>/review</code> | 특수 기능 | 코드 리뷰 받기 | ⭐⭐⭐⭐ |
+| 26 | <code>/rewind</code> | 세션 관리 | 이전 상태로 돌아가기 | ⭐⭐⭐⭐ |
+| 27 | <code>/sandbox</code> | 특수 기능 | 격리 환경에서 실행 | ⭐⭐⭐ |
+| 28 | <code>/stats</code> | 정보 확인 | 종합 통계 보기 | ⭐⭐⭐ |
+| 29 | <code>/status</code> | 정보 확인 | 현재 상태 확인 | ⭐⭐⭐⭐⭐ |
+| 30 | <code>/theme</code> | 설정 | 화면 테마 선택 | ⭐⭐⭐⭐ |
+| 31 | <code>/usage</code> | 정보 확인 | 사용량 통계 보기 | ⭐⭐⭐ |
+| 32 | <code>/voice</code> | 특수 기능 | 음성 모드 시작 | ⭐⭐⭐ |
+| 33 | <code>/copy</code> | 파일 &#x26; 코드 | 코드 복사 | ⭐⭐⭐⭐⭐ |</p>
+<hr>
+<h2>📁 카테고리별로 정렬된 명령어</h2>
+<h3>🔄 세션 관리 (6개)</h3>
+<p>대화와 세션을 제어하는 명령어들입니다.</p>
+<p>| 명령어 | 설명 | 자세한 문서 |
+|--------|------|-----------|
+| <code>/clear</code> | 대화 모두 지우기 | <a href="../commands/session-commands.md">세션 관리 명령어</a> |
+| <code>/resume</code> | 이전 대화 재개 | <a href="../commands/session-commands.md">세션 관리 명령어</a> |
+| <code>/rename</code> | 세션 이름 변경 | <a href="../commands/session-commands.md">세션 관리 명령어</a> |
+| <code>/branch</code> | 대화 분기하기 | <a href="../commands/session-commands.md">세션 관리 명령어</a> |
+| <code>/rewind</code> | 이전 상태로 돌아가기 | <a href="../commands/session-commands.md">세션 관리 명령어</a> |
+| <code>/exit</code> | 세션 종료 | <a href="../commands/session-commands.md">세션 관리 명령어</a> |</p>
+<h3>⚙️ 설정 관리 (6개)</h3>
+<p>Claude Code를 커스터마이징하는 명령어들입니다.</p>
+<p>| 명령어 | 설명 | 자세한 문서 |
+|--------|------|-----------|
+| <code>/config</code> | 설정 보기 &#x26; 변경 | <a href="../commands/config-commands.md">설정 관련 명령어</a> |
+| <code>/model</code> | AI 모델 선택 | <a href="../commands/config-commands.md">설정 관련 명령어</a> |
+| <code>/permissions</code> | 권한 설정 | <a href="../commands/config-commands.md">설정 관련 명령어</a> |
+| <code>/theme</code> | 화면 테마 선택 | <a href="../commands/config-commands.md">설정 관련 명령어</a> |
+| <code>/color</code> | 색상 커스터마이징 | <a href="../commands/config-commands.md">설정 관련 명령어</a> |
+| <code>/language</code> | 사용 언어 설정 | <a href="../commands/config-commands.md">설정 관련 명령어</a> |</p>
+<h3>ℹ️ 정보 확인 (7개)</h3>
+<p>상태, 비용, 통계를 확인하는 명령어들입니다.</p>
+<p>| 명령어 | 설명 | 자세한 문서 |
+|--------|------|-----------|
+| <code>/status</code> | 현재 상태 확인 | <a href="../commands/info-commands.md">정보 확인 명령어</a> |
+| <code>/cost</code> | 비용 내역 상세 보기 | <a href="../commands/info-commands.md">정보 확인 명령어</a> |
+| <code>/usage</code> | 사용량 통계 보기 | <a href="../commands/info-commands.md">정보 확인 명령어</a> |
+| <code>/stats</code> | 종합 통계 보기 | <a href="../commands/info-commands.md">정보 확인 명령어</a> |
+| <code>/context</code> | 컨텍스트 정보 보기 | <a href="../commands/info-commands.md">정보 확인 명령어</a> |
+| <code>/doctor</code> | 시스템 진단 | <a href="../commands/info-commands.md">정보 확인 명령어</a> |
+| <code>/help</code> | 도움말 보기 | <a href="../commands/info-commands.md">정보 확인 명령어</a> |</p>
+<h3>📁 파일 &#x26; 코드 (5개)</h3>
+<p>파일 작업과 코드 관리 명령어들입니다.</p>
+<p>| 명령어 | 설명 | 자세한 문서 |
+|--------|------|-----------|
+| <code>/diff</code> | 파일 변경사항 비교 | <a href="../commands/file-commands.md">파일 &#x26; 코드 명령어</a> |
+| <code>/copy</code> | 코드 복사 | <a href="../commands/file-commands.md">파일 &#x26; 코드 명령어</a> |
+| <code>/export</code> | 파일 내보내기 | <a href="../commands/file-commands.md">파일 &#x26; 코드 명령어</a> |
+| <code>/compact</code> | 대화 압축 | <a href="../commands/file-commands.md">파일 &#x26; 코드 명령어</a> |
+| <code>/memory</code> | 기억 관리 | <a href="../commands/file-commands.md">파일 &#x26; 코드 명령어</a> |</p>
+<h3>🎯 특수 기능 (9개)</h3>
+<p>고급 기능과 전문가용 명령어들입니다.</p>
+<p>| 명령어 | 설명 | 자세한 문서 |
+|--------|------|-----------|
+| <code>/init</code> | 프로젝트 초기화 | <a href="../commands/special-commands.md">특수 명령어</a> |
+| <code>/plan</code> | 프로젝트 계획 수립 | <a href="../commands/special-commands.md">특수 명령어</a> |
+| <code>/fast</code> | 빠른 모드 활성화 | <a href="../commands/special-commands.md">특수 명령어</a> |
+| <code>/voice</code> | 음성 모드 시작 | <a href="../commands/special-commands.md">특수 명령어</a> |
+| <code>/effort</code> | 작업량 조절 | <a href="../commands/special-commands.md">특수 명령어</a> |
+| <code>/sandbox</code> | 격리 환경에서 실행 | <a href="../commands/special-commands.md">특수 명령어</a> |
+| <code>/pr</code> | PR 자동 생성 | <a href="../commands/special-commands.md">특수 명령어</a> |
+| <code>/review</code> | 코드 리뷰 받기 | <a href="../commands/special-commands.md">특수 명령어</a> |
+| <code>/commit</code> | Git 커밋 메시지 생성 | <a href="../commands/special-commands.md">특수 명령어</a> |</p>
+<hr>
+<h2>🎯 상황별 필수 명령어</h2>
+<h3>시작할 때</h3>
+<ul>
+<li><code>/help</code> — 무엇을 할 수 있는지 알아보기</li>
+<li><code>/status</code> — 현재 상태 확인</li>
+<li><code>/init</code> — 새 프로젝트 시작</li>
+</ul>
+<h3>작업 중일 때</h3>
+<ul>
+<li><code>/diff</code> — 변경사항 확인</li>
+<li><code>/compact</code> — 토큰 절약</li>
+<li><code>/copy</code> — 코드 복사</li>
+<li><code>/review</code> — 코드 검토</li>
+</ul>
+<h3>비용/성능 확인할 때</h3>
+<ul>
+<li><code>/status</code> — 빠른 확인</li>
+<li><code>/cost</code> — 상세 비용</li>
+<li><code>/usage</code> — 통계</li>
+<li><code>/context</code> — 메모리 상태</li>
+</ul>
+<h3>문제가 생겼을 때</h3>
+<ul>
+<li><code>/doctor</code> — 진단</li>
+<li><code>/rewind</code> — 되돌리기</li>
+<li><code>/sandbox</code> — 안전 테스트</li>
+</ul>
+<h3>마칠 때</h3>
+<ul>
+<li><code>/commit</code> — 커밋 메시지</li>
+<li><code>/pr</code> — PR 생성</li>
+<li><code>/exit</code> — 종료</li>
+</ul>
+<hr>
+<h2>💡 명령어 선택 가이드</h2>
+<p><strong>"무엇을 해야 할지 모를 때?"</strong></p>
+<pre><code class="language-bash">/help
+</code></pre>
+<p><strong>"지금까지 얼마나 썼을까?"</strong></p>
+<pre><code class="language-bash">/status     (빠른 확인)
+/cost       (상세 확인)
+</code></pre>
+<p><strong>"코드를 확인하고 싶을 때?"</strong></p>
+<pre><code class="language-bash">/diff       (변경사항 비교)
+/review     (코드 검토)
+</code></pre>
+<p><strong>"대화가 너무 길어졌을 때?"</strong></p>
+<pre><code class="language-bash">/context    (메모리 확인)
+/compact    (토큰 절약)
+</code></pre>
+<p><strong>"실수했을 때?"</strong></p>
+<pre><code class="language-bash">/rewind     (되돌리기)
+</code></pre>
+<p><strong>"새 프로젝트를 시작할 때?"</strong></p>
+<pre><code class="language-bash">/init       (초기화)
+/plan       (계획 수립)
+</code></pre>
+<hr>
+<h2>📞 빠른 참고</h2>
+<h3>자주 쓰는 3가지</h3>
+<ol>
+<li><strong><code>/clear</code></strong> — 새로운 주제 시작</li>
+<li><strong><code>/status</code></strong> — 상태 확인</li>
+<li><strong><code>/help</code></strong> — 명령어 확인</li>
+</ol>
+<h3>꼭 알아야 할 5가지</h3>
+<ol>
+<li><strong><code>/clear</code></strong> — 대화 초기화</li>
+<li><strong><code>/status</code></strong> — 사용 현황</li>
+<li><strong><code>/diff</code></strong> — 변경사항 확인</li>
+<li><strong><code>/copy</code></strong> — 코드 복사</li>
+<li><strong><code>/exit</code></strong> — 종료</li>
+</ol>
+<h3>실수 방지 3가지</h3>
+<ol>
+<li><strong><code>/diff</code></strong> — 확인 후 수락</li>
+<li><strong><code>/rewind</code></strong> — 잘못된 방향 복구</li>
+<li><strong><code>/sandbox</code></strong> — 위험한 코드 테스트</li>
+</ol>
+<hr>
+<h2>다음 단계</h2>
+<p>모든 슬래시 명령어를 알았습니다!</p>
+<p>다음으로 배울 내용:</p>
+<ul>
+<li><strong>CLI 플래그 레퍼런스</strong> — 터미널 옵션들</li>
+<li><strong>키보드 단축키</strong> — 빠른 입력 방법</li>
+</ul>
+6:["$","div",null,{"className":"max-w-7xl mx-auto px-5 sm:px-8 py-8 flex gap-10","children":[["$","aside",null,{"className":"hidden lg:block w-60 shrink-0","children":["$","div",null,{"className":"sticky top-20","children":[["$","div",null,{"className":"flex items-center gap-2 mb-4","children":[["$","div",null,{"className":"icon-box w-6 h-6 rounded-md text-sm","children":"📖"}],["$","h3",null,{"className":"text-xs font-semibold uppercase tracking-wider","style":{"color":"var(--text-muted)"},"children":"레퍼런스"}]]}],["$","nav",null,{"className":"space-y-0.5","children":[["$","$L2","all-commands",{"href":"/docs/reference/all-commands","className":"sidebar-link sidebar-link-active","children":"전체 슬래시 커맨드 목록"}],["$","$L2","all-cli-flags",{"href":"/docs/reference/all-cli-flags","className":"sidebar-link ","children":"전체 CLI 플래그 목록"}],["$","$L2","keyboard-shortcuts",{"href":"/docs/reference/keyboard-shortcuts","className":"sidebar-link ","children":"키보드 단축키 모음"}]]}],["$","div",null,{"className":"mt-4 pt-3","style":{"borderTop":"1px solid var(--border)"},"children":["$","$L2",null,{"href":"/docs/reference","className":"breadcrumb-link flex items-center gap-1 text-xs","children":[["$","svg",null,{"className":"w-3 h-3","fill":"none","viewBox":"0 0 24 24","strokeWidth":1.5,"stroke":"currentColor","children":["$","path",null,{"strokeLinecap":"round","strokeLinejoin":"round","d":"M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"}]}],"전체 목록"]}]}]]}]}],["$","main",null,{"className":"min-w-0 flex-1 max-w-3xl","children":[["$","div",null,{"className":"mb-8","children":[["$","h1",null,{"className":"text-2xl sm:text-[1.75rem] font-bold mb-2.5","style":{"color":"var(--text-primary)","letterSpacing":"-0.015em"},"children":"전체 슬래시 커맨드 목록"}],["$","p",null,{"className":"text-base","style":{"color":"var(--text-secondary)"},"children":"Claude Code의 모든 슬래시 명령어 완벽 레퍼런스"}],["$","div",null,{"className":"flex flex-wrap gap-1.5 mt-4","children":[["$","span","레퍼런스",{"className":"text-xs px-2.5 py-1 rounded-lg font-medium","style":{"background":"var(--accent-soft)","color":"var(--accent-text)"},"children":"레퍼런스"}],["$","span","명령어",{"className":"text-xs px-2.5 py-1 rounded-lg font-medium","style":{"background":"var(--accent-soft)","color":"var(--accent-text)"},"children":"명령어"}],["$","span","전체목록",{"className":"text-xs px-2.5 py-1 rounded-lg font-medium","style":{"background":"var(--accent-soft)","color":"var(--accent-text)"},"children":"전체목록"}]]}]]}],["$","div",null,{"className":"markdown-body","dangerouslySetInnerHTML":{"__html":"$a"}}],"$Lb"]}]]}]
+7:["$","script","script-0",{"src":"/_next/static/chunks/0rh3w3etjkm_t.js","async":true}]
+8:["$","$Lc",null,{"children":["$","$d",null,{"name":"Next.MetadataOutlet","children":"$@e"}]}]
+b:["$","div",null,{"className":"mt-12 pt-6 flex items-center justify-between","style":{"borderTop":"1px solid var(--border)"},"children":[["$","$L2",null,{"href":"/docs/reference","className":"breadcrumb-link flex items-center gap-2 text-sm","children":[["$","svg",null,{"className":"w-3.5 h-3.5","fill":"none","viewBox":"0 0 24 24","strokeWidth":1.5,"stroke":"currentColor","children":["$","path",null,{"strokeLinecap":"round","strokeLinejoin":"round","d":"M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"}]}],"레퍼런스 목록으로"]}],["$","div",null,{"className":"flex items-center gap-2 text-xs","style":{"color":"var(--text-muted)"},"children":[["$","svg",null,{"width":18,"height":13,"viewBox":"0 0 14 10","fill":"none","style":{"imageRendering":"pixelated"},"children":[[null,null,["$","rect","2-0",{"x":2,"y":0,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","3-0",{"x":3,"y":0,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","4-0",{"x":4,"y":0,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","5-0",{"x":5,"y":0,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","6-0",{"x":6,"y":0,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","7-0",{"x":7,"y":0,"width":1,"height":1,"fill":"#DA7756"}],null,null,null,null,null,null],[null,["$","rect","1-1",{"x":1,"y":1,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","2-1",{"x":2,"y":1,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","3-1",{"x":3,"y":1,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","4-1",{"x":4,"y":1,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","5-1",{"x":5,"y":1,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","6-1",{"x":6,"y":1,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","7-1",{"x":7,"y":1,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","8-1",{"x":8,"y":1,"width":1,"height":1,"fill":"#DA7756"}],null,null,null,null,null],[["$","rect","0-2",{"x":0,"y":2,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","1-2",{"x":1,"y":2,"width":1,"height":1,"fill":"#DA7756"}],null,["$","rect","3-2",{"x":3,"y":2,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","4-2",{"x":4,"y":2,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","5-2",{"x":5,"y":2,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","6-2",{"x":6,"y":2,"width":1,"height":1,"fill":"#DA7756"}],null,["$","rect","8-2",{"x":8,"y":2,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","9-2",{"x":9,"y":2,"width":1,"height":1,"fill":"#DA7756"}],null,null,null,null],[["$","rect","0-3",{"x":0,"y":3,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","1-3",{"x":1,"y":3,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","2-3",{"x":2,"y":3,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","3-3",{"x":3,"y":3,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","4-3",{"x":4,"y":3,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","5-3",{"x":5,"y":3,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","6-3",{"x":6,"y":3,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","7-3",{"x":7,"y":3,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","8-3",{"x":8,"y":3,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","9-3",{"x":9,"y":3,"width":1,"height":1,"fill":"#DA7756"}],null,null,null,null],[["$","rect","0-4",{"x":0,"y":4,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","1-4",{"x":1,"y":4,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","2-4",{"x":2,"y":4,"width":1,"height":1,"fill":"#DA7756"}],null,["$","rect","4-4",{"x":4,"y":4,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","5-4",{"x":5,"y":4,"width":1,"height":1,"fill":"#DA7756"}],null,["$","rect","7-4",{"x":7,"y":4,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","8-4",{"x":8,"y":4,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","9-4",{"x":9,"y":4,"width":1,"height":1,"fill":"#DA7756"}],null,null,null,null],[["$","rect","0-5",{"x":0,"y":5,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","1-5",{"x":1,"y":5,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","2-5",{"x":2,"y":5,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","3-5",{"x":3,"y":5,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","4-5",{"x":4,"y":5,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","5-5",{"x":5,"y":5,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","6-5",{"x":6,"y":5,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","7-5",{"x":7,"y":5,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","8-5",{"x":8,"y":5,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","9-5",{"x":9,"y":5,"width":1,"height":1,"fill":"#DA7756"}],null,null,null,null],[null,["$","rect","1-6",{"x":1,"y":6,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","2-6",{"x":2,"y":6,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","3-6",{"x":3,"y":6,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","4-6",{"x":4,"y":6,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","5-6",{"x":5,"y":6,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","6-6",{"x":6,"y":6,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","7-6",{"x":7,"y":6,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","8-6",{"x":8,"y":6,"width":1,"height":1,"fill":"#DA7756"}],null,null,null,null,null],[null,null,["$","rect","2-7",{"x":2,"y":7,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","3-7",{"x":3,"y":7,"width":1,"height":1,"fill":"#DA7756"}],null,null,["$","rect","6-7",{"x":6,"y":7,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","7-7",{"x":7,"y":7,"width":1,"height":1,"fill":"#DA7756"}],null,null,null,null,null,null],[null,null,null,["$","rect","3-8",{"x":3,"y":8,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","4-8",{"x":4,"y":8,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","5-8",{"x":5,"y":8,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","6-8",{"x":6,"y":8,"width":1,"height":1,"fill":"#DA7756"}],null,null,null,null,null,null,null],[null,null,null,null,["$","rect","4-9",{"x":4,"y":9,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","5-9",{"x":5,"y":9,"width":1,"height":1,"fill":"#DA7756"}],null,null,null,null,null,null,null,null]]}],["$","span",null,{"children":"도움이 되셨나요?"}]]}]]}]
+e:null

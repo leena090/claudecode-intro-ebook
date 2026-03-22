@@ -9,8 +9,18 @@ export const CATEGORIES: Record<string, { title: string; description: string; ic
   setup: { title: '설치 & 시작', description: '설치하고 첫 실행까지 완료합니다', icon: '⚙️', order: 2 },
   basics: { title: '기본 사용법', description: 'UI 이해와 필수 명령어를 익힙니다', icon: '📚', order: 3 },
   practice: { title: '실습', description: '실제 작업을 따라 해봅니다', icon: '💻', order: 4 },
-  tips: { title: '팁 & FAQ', description: '유용한 팁과 자주 묻는 질문', icon: '💡', order: 5 },
-  next: { title: '다음 단계', description: '더 깊이 학습하는 로드맵', icon: '🗺️', order: 6 },
+  // 신규 카테고리: 슬래시 커맨드 완전 가이드
+  commands: { title: '슬래시 커맨드', description: '/ 명령어로 Claude Code를 자유자재로 제어합니다', icon: '⌨️', order: 5 },
+  // 신규 카테고리: CLAUDE.md, hooks, MCP 설정
+  config: { title: '설정 & 커스터마이징', description: 'CLAUDE.md, hooks, MCP로 나만의 환경을 만듭니다', icon: '🔧', order: 6 },
+  // 신규 카테고리: 에이전트 팀, 자동화, 원격 제어
+  advanced: { title: '고급 기능', description: '에이전트 팀, 자동화, 원격 제어를 배웁니다', icon: '🚀', order: 7 },
+  // 기존 카테고리: order 5→8로 변경
+  tips: { title: '팁 & FAQ', description: '유용한 팁과 자주 묻는 질문', icon: '💡', order: 8 },
+  // 기존 카테고리: order 6→9로 변경
+  next: { title: '다음 단계', description: '더 깊이 학습하는 로드맵', icon: '🗺️', order: 9 },
+  // 신규 카테고리: 전체 명령어, CLI 플래그, 단축키 목록
+  reference: { title: '레퍼런스', description: '전체 명령어, CLI 플래그, 단축키 목록', icon: '📖', order: 10 },
 }
 
 // 문서 메타데이터 인터페이스

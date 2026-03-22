@@ -4,11 +4,46 @@ description: "명령어 한 줄로 완료하는 클로드코드 설치 방법"
 tags: ["설치", "Claude Code", "npm"]
 category: "setup"
 order: 3
+lastUpdated: "2026-03-22"
 ---
 
-## 설치 방법
+## ⭐ 권장 설치 방법: Native Install (최신)
 
-터미널을 열고 아래 명령어를 **그대로 복사·붙여넣기** 하세요.
+현재 **가장 간단하고 빠른** 설치 방법입니다. Node.js 설치 없이 바로 사용할 수 있습니다.
+
+### macOS / Linux (권장)
+
+터미널을 열고 아래 명령어 입력:
+
+```bash
+curl -fsSL https://claude.ai/install.sh | bash
+```
+
+설치 완료되면:
+
+```bash
+claude --version
+```
+
+### Windows (PowerShell)
+
+관리자 권한으로 PowerShell을 열고 입력:
+
+```bash
+winget install Anthropic.ClaudeCode
+```
+
+또는:
+
+```bash
+choco install claude-code
+```
+
+---
+
+## 기존 설치 방법: npm (선택사항)
+
+Node.js가 이미 설치되어 있다면 npm으로도 설치 가능합니다.
 
 ### 1단계: 클로드코드 설치
 

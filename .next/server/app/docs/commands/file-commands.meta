@@ -1,0 +1,17 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/docs/layout,_N_T_/docs/[category]/layout,_N_T_/docs/[category]/[slug]/layout,_N_T_/docs/[category]/[slug]/page,_N_T_/docs/commands/file-commands"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/docs/$d$category/$d$slug/__PAGE__",
+    "/docs/$d$category/$d$slug",
+    "/docs/$d$category",
+    "/docs",
+    "/_index",
+    "/_head"
+  ]
+}

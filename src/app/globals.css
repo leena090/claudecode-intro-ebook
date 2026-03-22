@@ -191,3 +191,37 @@ body {
   background: var(--accent-soft);
   color: var(--accent-text);
 }
+
+/* ── 필기 노트 스타일 주석 박스 ── */
+.note-circle {
+  background: var(--accent-soft);
+  border: 1.5px solid var(--accent-text);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  margin: 1rem 0;
+  font-size: 14px;
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+.note-star {
+  background: rgba(255, 215, 0, 0.08);
+  border: 1.5px solid #d4a017;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  margin: 1rem 0;
+  font-size: 14px;
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+.markdown-body mark {
+  background: rgba(255, 235, 59, 0.35);
+  color: var(--text-primary);
+  padding: 1px 4px;
+  border-radius: 3px;
+}
+[data-theme="dark"] .note-star {
+  background: rgba(255, 215, 0, 0.05);
+}
+[data-theme="dark"] .markdown-body mark {
+  background: rgba(255, 235, 59, 0.2);
+}

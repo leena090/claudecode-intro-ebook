@@ -1,0 +1,254 @@
+1:"$Sreact.fragment"
+2:I[39756,["/_next/static/chunks/01xlw8hd842-c.js","/_next/static/chunks/0d3shmwh5_nmn.js"],"default"]
+3:I[37457,["/_next/static/chunks/01xlw8hd842-c.js","/_next/static/chunks/0d3shmwh5_nmn.js"],"default"]
+5:I[97367,["/_next/static/chunks/01xlw8hd842-c.js","/_next/static/chunks/0d3shmwh5_nmn.js"],"OutletBoundary"]
+6:"$Sreact.suspense"
+9:I[97367,["/_next/static/chunks/01xlw8hd842-c.js","/_next/static/chunks/0d3shmwh5_nmn.js"],"ViewportBoundary"]
+b:I[97367,["/_next/static/chunks/01xlw8hd842-c.js","/_next/static/chunks/0d3shmwh5_nmn.js"],"MetadataBoundary"]
+d:I[68027,["/_next/static/chunks/01xlw8hd842-c.js","/_next/static/chunks/0d3shmwh5_nmn.js"],"default",1]
+:HL["/_next/static/chunks/013qeg2ztbwy9.css","style"]
+:HL["https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css","style"]
+:HL["https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap","style"]
+0:{"P":null,"c":["","docs","commands","file-commands"],"q":"","i":false,"f":[[["",{"children":["docs",{"children":[["category","commands","d",null],{"children":[["slug","file-commands","d",null],{"children":["__PAGE__",{}]}]}]}]},"$undefined","$undefined",16],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/013qeg2ztbwy9.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/_next/static/chunks/01xlw8hd842-c.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/_next/static/chunks/0d3shmwh5_nmn.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"ko","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","meta",null,{"name":"viewport","content":"width=device-width, initial-scale=1, user-scalable=yes"}],["$","link",null,{"href":"https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css","rel":"stylesheet"}],["$","link",null,{"href":"https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap","rel":"stylesheet"}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"\n            (function() {\n              var theme = localStorage.getItem('theme');\n              if (theme === 'dark') document.documentElement.setAttribute('data-theme', 'dark');\n            })();\n          "}}]]}],["$","body",null,{"children":["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]]}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":["$L4",[["$","script","script-0",{"src":"/_next/static/chunks/0rh3w3etjkm_t.js","async":true,"nonce":"$undefined"}]],["$","$L5",null,{"children":["$","$6",null,{"name":"Next.MetadataOutlet","children":"$@7"}]}]]}],{},null,false,null]},null,false,"$@8"]},null,false,"$@8"]},null,false,null]},null,false,null],["$","$1","h",{"children":[null,["$","$L9",null,{"children":"$La"}],["$","div",null,{"hidden":true,"children":["$","$Lb",null,{"children":["$","$6",null,{"name":"Next.Metadata","children":"$Lc"}]}]}],null]}],false]],"m":"$undefined","G":["$d",[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/013qeg2ztbwy9.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]]],"S":true,"h":null,"s":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"KFrc90-lbyzSgm9uDXLE6"}
+e:[]
+8:"$We"
+f:I[22016,["/_next/static/chunks/01xlw8hd842-c.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/0rh3w3etjkm_t.js"],""]
+4:["$","div",null,{"className":"min-h-screen","style":{"background":"var(--bg-primary)"},"children":[["$","header",null,{"className":"sticky top-0 z-50 h-14 border-b","style":{"background":"var(--bg-primary)","borderColor":"var(--border)","backdropFilter":"blur(8px)"},"children":["$","div",null,{"className":"max-w-7xl mx-auto px-5 sm:px-8 h-14 flex items-center justify-between gap-4","children":[["$","nav",null,{"className":"flex items-center gap-2 text-sm min-w-0 overflow-hidden","children":[["$","$Lf",null,{"href":"/","className":"flex items-center gap-2 shrink-0","children":["$","svg",null,{"width":18,"height":13,"viewBox":"0 0 14 10","fill":"none","style":{"imageRendering":"pixelated"},"children":[[null,null,["$","rect","2-0",{"x":2,"y":0,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","3-0",{"x":3,"y":0,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","4-0",{"x":4,"y":0,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","5-0",{"x":5,"y":0,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","6-0",{"x":6,"y":0,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","7-0",{"x":7,"y":0,"width":1,"height":1,"fill":"#DA7756"}],null,null,null,null,null,null],[null,["$","rect","1-1",{"x":1,"y":1,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","2-1",{"x":2,"y":1,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","3-1",{"x":3,"y":1,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","4-1",{"x":4,"y":1,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","5-1",{"x":5,"y":1,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","6-1",{"x":6,"y":1,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","7-1",{"x":7,"y":1,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","8-1",{"x":8,"y":1,"width":1,"height":1,"fill":"#DA7756"}],null,null,null,null,null],[["$","rect","0-2",{"x":0,"y":2,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","1-2",{"x":1,"y":2,"width":1,"height":1,"fill":"#DA7756"}],null,["$","rect","3-2",{"x":3,"y":2,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","4-2",{"x":4,"y":2,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","5-2",{"x":5,"y":2,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","6-2",{"x":6,"y":2,"width":1,"height":1,"fill":"#DA7756"}],null,["$","rect","8-2",{"x":8,"y":2,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","9-2",{"x":9,"y":2,"width":1,"height":1,"fill":"#DA7756"}],null,null,null,null],[["$","rect","0-3",{"x":0,"y":3,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","1-3",{"x":1,"y":3,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","2-3",{"x":2,"y":3,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","3-3",{"x":3,"y":3,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","4-3",{"x":4,"y":3,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","5-3",{"x":5,"y":3,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","6-3",{"x":6,"y":3,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","7-3",{"x":7,"y":3,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","8-3",{"x":8,"y":3,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","9-3",{"x":9,"y":3,"width":1,"height":1,"fill":"#DA7756"}],null,null,null,null],[["$","rect","0-4",{"x":0,"y":4,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","1-4",{"x":1,"y":4,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","2-4",{"x":2,"y":4,"width":1,"height":1,"fill":"#DA7756"}],null,["$","rect","4-4",{"x":4,"y":4,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","5-4",{"x":5,"y":4,"width":1,"height":1,"fill":"#DA7756"}],null,["$","rect","7-4",{"x":7,"y":4,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","8-4",{"x":8,"y":4,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","9-4",{"x":9,"y":4,"width":1,"height":1,"fill":"#DA7756"}],null,null,null,null],[["$","rect","0-5",{"x":0,"y":5,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","1-5",{"x":1,"y":5,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","2-5",{"x":2,"y":5,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","3-5",{"x":3,"y":5,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","4-5",{"x":4,"y":5,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","5-5",{"x":5,"y":5,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","6-5",{"x":6,"y":5,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","7-5",{"x":7,"y":5,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","8-5",{"x":8,"y":5,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","9-5",{"x":9,"y":5,"width":1,"height":1,"fill":"#DA7756"}],null,null,null,null],[null,["$","rect","1-6",{"x":1,"y":6,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","2-6",{"x":2,"y":6,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","3-6",{"x":3,"y":6,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","4-6",{"x":4,"y":6,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","5-6",{"x":5,"y":6,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","6-6",{"x":6,"y":6,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","7-6",{"x":7,"y":6,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","8-6",{"x":8,"y":6,"width":1,"height":1,"fill":"#DA7756"}],null,null,null,null,null],[null,null,["$","rect","2-7",{"x":2,"y":7,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","3-7",{"x":3,"y":7,"width":1,"height":1,"fill":"#DA7756"}],null,null,["$","rect","6-7",{"x":6,"y":7,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","7-7",{"x":7,"y":7,"width":1,"height":1,"fill":"#DA7756"}],null,null,null,null,null,null],[null,null,null,["$","rect","3-8",{"x":3,"y":8,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","4-8",{"x":4,"y":8,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","5-8",{"x":5,"y":8,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","6-8",{"x":6,"y":8,"width":1,"height":1,"fill":"#DA7756"}],null,null,null,null,null,null,null],[null,null,null,null,["$","rect","4-9",{"x":4,"y":9,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","5-9",{"x":5,"y":9,"width":1,"height":1,"fill":"#DA7756"}],null,null,null,null,null,null,null,null]]}]}],["$","$Lf",null,{"href":"/","className":"font-semibold text-[15px] shrink-0","style":{"color":"var(--text-primary)"},"children":"Claude Code 입문"}],[["$","span","0",{"className":"flex items-center gap-2 min-w-0","children":["$L10","$L11"]}],"$L12"]]}],"$L13"]}]}],"$L14"]}]
+15:I[22530,["/_next/static/chunks/01xlw8hd842-c.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/0rh3w3etjkm_t.js"],"default"]
+10:["$","span",null,{"style":{"color":"var(--border)","fontSize":"16px"},"children":"/"}]
+11:["$","$Lf",null,{"href":"/docs/commands","className":"breadcrumb-link shrink-0","children":"슬래시 커맨드"}]
+12:["$","span","1",{"className":"flex items-center gap-2 min-w-0","children":[["$","span",null,{"style":{"color":"var(--border)","fontSize":"16px"},"children":"/"}],["$","span",null,{"className":"font-medium truncate","style":{"color":"var(--text-primary)","fontSize":"14px"},"children":"파일 & 코드 명령어"}]]}]
+13:["$","$L15",null,{}]
+16:T201a,<blockquote>
+<p>📅 최종 업데이트: 2026년 3월 22일</p>
+</blockquote>
+<h2>파일 &#x26; 코드 명령어란?</h2>
+<p>Claude Code로 파일을 만들고, 수정하고, 관리할 때 사용하는 명령어들입니다. 효율성을 높이고 실수를 줄이는 데 도움이 됩니다.</p>
+<hr>
+<h2>파일 &#x26; 코드 명령어 5가지</h2>
+<h3>1️⃣ <code>/diff</code> — 파일 변경사항 비교하기</h3>
+<pre><code class="language-bash">/diff
+</code></pre>
+<p><strong>역할:</strong> 이전 파일과 현재 파일의 차이점을 시각적으로 표시</p>
+<div class="note-circle">
+○ 코드 수정 전후를 명확하게 비교할 수 있습니다
+</div>
+<p><strong>사용 예시:</strong></p>
+<pre><code class="language-bash">> 파일을 수정해줘
+(AI가 파일 수정)
+> /diff
+(무엇이 바뀌었는지 보여줌)
+</code></pre>
+<p><strong>표시되는 내용:</strong></p>
+<ul>
+<li>빨간색 <code>-</code> : 삭제된 부분</li>
+<li>초록색 <code>+</code> : 추가된 부분</li>
+<li>회색 부분 : 변경되지 않은 부분</li>
+</ul>
+<p><strong>사용 이유:</strong></p>
+<ul>
+<li>실수 방지 (수정 전에 확인)</li>
+<li>변경 내용 명확히 파악</li>
+<li>필요 시 수정 요청 가능</li>
+</ul>
+<hr>
+<h3>2️⃣ <code>/copy</code> — 코드 복사하기</h3>
+<pre><code class="language-bash">/copy "파일명.확장자"
+</code></pre>
+<p><strong>역할:</strong> Claude Code가 생성한 코드를 클립보드에 복사</p>
+<p><mark>다른 에디터(VS Code 등)에 붙여넣을 때 매우 유용합니다</mark></p>
+<p><strong>사용 예시:</strong></p>
+<pre><code class="language-bash">> HTML 코드 만들어줘
+(AI가 index.html 생성)
+> /copy "index.html"
+(클립보드에 복사됨)
+> Ctrl+V로 붙여넣기
+</code></pre>
+<p><strong>편의성:</strong></p>
+<ul>
+<li>한 번에 전체 코드 복사</li>
+<li>복사 실수 방지</li>
+<li>여러 파일 동시 복사 가능</li>
+</ul>
+<hr>
+<h3>3️⃣ <code>/export</code> — 파일 내보내기 (다운로드)</h3>
+<pre><code class="language-bash">/export "파일명.확장자"
+</code></pre>
+<p><strong>역할:</strong> Claude Code에서 생성한 파일을 내 컴퓨터에 다운로드</p>
+<p><strong>사용 예시:</strong></p>
+<pre><code class="language-bash">> 웹사이트 코드 만들어줘
+(AI가 여러 파일 생성)
+> /export "index.html"
+> /export "style.css"
+> /export "script.js"
+(각 파일이 다운로드됨)
+</code></pre>
+<p><strong>활용 방법:</strong></p>
+<ol>
+<li>Claude Code에서 파일 생성</li>
+<li><code>/export</code>로 다운로드</li>
+<li>내 컴퓨터에서 사용</li>
+<li>파일 수정 후 다시 업로드해서 도움받기</li>
+</ol>
+<p><strong>여러 파일 한 번에 내보내기:</strong></p>
+<pre><code class="language-bash">/export all
+(모든 파일을 한 번에 다운로드)
+</code></pre>
+<hr>
+<h3>4️⃣ <code>/compact</code> — 대화 압축하기</h3>
+<pre><code class="language-bash">/compact
+</code></pre>
+<p><strong>역할:</strong> 길어진 대화를 요약으로 변환해서 토큰 절약</p>
+<div class="note-star">
+★ 비용을 크게 절감할 수 있는 매우 유용한 명령어입니다
+</div>
+<p><strong>언제 사용할까?</strong></p>
+<ul>
+<li>대화가 50번 이상 반복되었을 때</li>
+<li>비용이 걱정될 때</li>
+<li>응답이 느려졌을 때 (메모리 압박)</li>
+</ul>
+<p><strong>사용 예시:</strong></p>
+<pre><code class="language-bash">> 파이썬 배우기 (대화 30번)
+> /compact
+(오래된 내용을 요약으로 변환)
+> 자, 이제 다음 주제로 진행해줄래?
+(새로운 대화 시작, 토큰 사용량 ↓)
+</code></pre>
+<p><strong>압축 효과:</strong></p>
+<ul>
+<li>토큰 사용량 30~50% 감소</li>
+<li>응답 속도 향상</li>
+<li>AI가 필수 내용만 기억</li>
+</ul>
+<p><strong>주의:</strong></p>
+<ul>
+<li>압축 후에도 대화 맥락은 유지됩니다</li>
+<li>오래된 세부사항은 일부 손실될 수 있습니다</li>
+</ul>
+<hr>
+<h3>5️⃣ <code>/memory</code> — 기억 관리하기</h3>
+<pre><code class="language-bash">/memory
+</code></pre>
+<p><strong>역할:</strong> AI가 기억해야 할 중요한 정보를 등록하고 관리</p>
+<p><strong>활용 사례:</strong></p>
+<pre><code class="language-bash">/memory add "내 이름: 김철수"
+/memory add "직업: 프로그래머"
+/memory add "관심사: Python, 웹개발"
+</code></pre>
+<p>그러면 다음 대화에서:</p>
+<pre><code class="language-bash">> 안녕하세요
+(AI 응답) "안녕하세요, 철수님! Python 웹개발 관련해서 도와드릴게요."
+</code></pre>
+<p><strong>메모리 확인:</strong></p>
+<pre><code class="language-bash">/memory list
+(등록된 모든 정보 확인)
+</code></pre>
+<p><strong>메모리 삭제:</strong></p>
+<pre><code class="language-bash">/memory delete "내 이름: 김철수"
+</code></pre>
+<p><strong>활용 팁:</strong></p>
+<ul>
+<li>개인 정보 (이름, 직업, 관심사)</li>
+<li>프로젝트 특수 정보</li>
+<li>자주 반복되는 설정</li>
+</ul>
+<hr>
+<h2>🛠️ 파일 작업 실전 예시</h2>
+<h3>예시 1: 웹사이트 만들기</h3>
+<pre><code class="language-bash">Step 1: 요청
+> HTML 웹사이트 만들어줘
+
+Step 2: 확인
+> /diff
+(변경사항 확인)
+
+Step 3: 복사
+> /copy "index.html"
+> /copy "style.css"
+
+Step 4: 내 컴퓨터에서 사용
+(VS Code 등에 붙여넣기)
+
+Step 5: 추가 수정
+> 이 부분을 다르게 해줄래?
+
+Step 6: 내보내기
+> /export "index.html"
+(수정된 파일 다운로드)
+</code></pre>
+<h3>예시 2: 대화 길어질 때</h3>
+<pre><code class="language-bash">Step 1: Python 배우기 (대화 30번)
+
+Step 2: 비용 확인
+> /status
+(토큰 많이 사용됨)
+
+Step 3: 압축하기
+> /compact
+
+Step 4: 새로운 주제
+> 자 이제 JavaScript 배워봅시다
+(더 저렴하게 계속 진행)
+</code></pre>
+<hr>
+<h2>💡 쉽게 이해하기</h2>
+<h3>파일 명령어를 문서 작성으로 비유하면?</h3>
+<p>Claude Code의 파일 명령어는 **문서 작성 프로그램(MS Word 같은 것)**과 유사합니다:</p>
+<ul>
+<li><strong><code>/diff</code></strong> = 변경사항 추적 (Track Changes) 기능</li>
+<li><strong><code>/copy</code></strong> = Ctrl+C (복사)</li>
+<li><strong><code>/export</code></strong> = 다른 형식으로 저장 (PDF, Word 등)</li>
+<li><strong><code>/compact</code></strong> = 문서 압축 (용량 줄이기)</li>
+<li><strong><code>/memory</code></strong> = 저장된 서식/템플릿 기억</li>
+</ul>
+<h3>예를 들어...</h3>
+<p><strong>상황 1: 코드를 확인하고 싶을 때</strong></p>
+<pre><code class="language-bash">> HTML 코드 만들어줘
+(AI가 100줄의 코드 생성)
+> 뭐가 바뀌었는지 정확히 보고 싶은데...
+/diff
+→ 정확한 변경사항이 화면에 표시됨
+</code></pre>
+<p><strong>상황 2: 코드를 내 에디터에 붙여넣고 싶을 때</strong></p>
+<pre><code class="language-bash">> 파이썬 함수 만들어줘
+(AI가 코드 생성)
+> 이걸 내 VS Code에 붙여넣고 싶어
+/copy "function.py"
+→ 클립보드에 복사, Ctrl+V로 붙여넣기
+</code></pre>
+<p><strong>상황 3: 마지막으로 작업한 파일을 다운로드하고 싶을 때</strong></p>
+<pre><code class="language-bash">> /export "website.html"
+→ 내 컴퓨터의 Downloads 폴더에 저장됨
+</code></pre>
+<hr>
+<h2>파일 명령어 활용 팁</h2>
+<h3>Tip 1: 수정 전에 항상 /diff로 확인</h3>
+<pre><code class="language-bash">> 이 부분 고쳐줘
+(수정 결과)
+> /diff
+(먼저 확인 후 수락)
+</code></pre>
+<h3>Tip 2: 대화가 길어지면 자주 /compact</h3>
+<pre><code class="language-bash">> (대화 20번 후)
+> /compact
+(비용 절감 + 응답 속도 ↑)
+</code></pre>
+<h3>Tip 3: 중요한 정보는 /memory에 저장</h3>
+<pre><code class="language-bash">/memory add "프로젝트명: 쇼핑몰"
+/memory add "기술스택: React + Node.js"
+(다음 대화에서 자동 인지)
+</code></pre>
+<hr>
+<h2>다음 단계</h2>
+<p>파일 &#x26; 코드 명령어를 배웠습니다!</p>
+<p>다음으로 배울 명령어:</p>
+<ul>
+<li><strong>특수 명령어</strong> — 고급 기능들 알아보기</li>
+<li><strong>전체 참고 자료</strong> — 모든 명령어와 단축키 모음</li>
+</ul>
+14:["$","div",null,{"className":"max-w-7xl mx-auto px-5 sm:px-8 py-8 flex gap-10","children":[["$","aside",null,{"className":"hidden lg:block w-60 shrink-0","children":["$","div",null,{"className":"sticky top-20","children":[["$","div",null,{"className":"flex items-center gap-2 mb-4","children":[["$","div",null,{"className":"icon-box w-6 h-6 rounded-md text-sm","children":"⌨️"}],["$","h3",null,{"className":"text-xs font-semibold uppercase tracking-wider","style":{"color":"var(--text-muted)"},"children":"슬래시 커맨드"}]]}],["$","nav",null,{"className":"space-y-0.5","children":[["$","$Lf","commands-overview",{"href":"/docs/commands/commands-overview","className":"sidebar-link ","children":"슬래시 커맨드란?"}],["$","$Lf","session-commands",{"href":"/docs/commands/session-commands","className":"sidebar-link ","children":"세션 관리 명령어"}],["$","$Lf","config-commands",{"href":"/docs/commands/config-commands","className":"sidebar-link ","children":"설정 관련 명령어"}],["$","$Lf","info-commands",{"href":"/docs/commands/info-commands","className":"sidebar-link ","children":"정보 확인 명령어"}],["$","$Lf","file-commands",{"href":"/docs/commands/file-commands","className":"sidebar-link sidebar-link-active","children":"파일 & 코드 명령어"}],["$","$Lf","special-commands",{"href":"/docs/commands/special-commands","className":"sidebar-link ","children":"특수 명령어"}]]}],["$","div",null,{"className":"mt-4 pt-3","style":{"borderTop":"1px solid var(--border)"},"children":["$","$Lf",null,{"href":"/docs/commands","className":"breadcrumb-link flex items-center gap-1 text-xs","children":[["$","svg",null,{"className":"w-3 h-3","fill":"none","viewBox":"0 0 24 24","strokeWidth":1.5,"stroke":"currentColor","children":["$","path",null,{"strokeLinecap":"round","strokeLinejoin":"round","d":"M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"}]}],"전체 목록"]}]}]]}]}],["$","main",null,{"className":"min-w-0 flex-1 max-w-3xl","children":[["$","div",null,{"className":"mb-8","children":[["$","h1",null,{"className":"text-2xl sm:text-[1.75rem] font-bold mb-2.5","style":{"color":"var(--text-primary)","letterSpacing":"-0.015em"},"children":"파일 & 코드 명령어"}],["$","p",null,{"className":"text-base","style":{"color":"var(--text-secondary)"},"children":"파일 작업과 코드 관리를 효율적으로 하는 명령어들"}],["$","div",null,{"className":"flex flex-wrap gap-1.5 mt-4","children":[["$","span","파일",{"className":"text-xs px-2.5 py-1 rounded-lg font-medium","style":{"background":"var(--accent-soft)","color":"var(--accent-text)"},"children":"파일"}],["$","span","코드",{"className":"text-xs px-2.5 py-1 rounded-lg font-medium","style":{"background":"var(--accent-soft)","color":"var(--accent-text)"},"children":"코드"}],["$","span","작업효율",{"className":"text-xs px-2.5 py-1 rounded-lg font-medium","style":{"background":"var(--accent-soft)","color":"var(--accent-text)"},"children":"작업효율"}],["$","span","명령어",{"className":"text-xs px-2.5 py-1 rounded-lg font-medium","style":{"background":"var(--accent-soft)","color":"var(--accent-text)"},"children":"명령어"}]]}]]}],["$","div",null,{"className":"markdown-body","dangerouslySetInnerHTML":{"__html":"$16"}}],"$L17"]}]]}]
+17:["$","div",null,{"className":"mt-12 pt-6 flex items-center justify-between","style":{"borderTop":"1px solid var(--border)"},"children":[["$","$Lf",null,{"href":"/docs/commands","className":"breadcrumb-link flex items-center gap-2 text-sm","children":[["$","svg",null,{"className":"w-3.5 h-3.5","fill":"none","viewBox":"0 0 24 24","strokeWidth":1.5,"stroke":"currentColor","children":["$","path",null,{"strokeLinecap":"round","strokeLinejoin":"round","d":"M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"}]}],"슬래시 커맨드 목록으로"]}],["$","div",null,{"className":"flex items-center gap-2 text-xs","style":{"color":"var(--text-muted)"},"children":[["$","svg",null,{"width":18,"height":13,"viewBox":"0 0 14 10","fill":"none","style":{"imageRendering":"pixelated"},"children":[[null,null,["$","rect","2-0",{"x":2,"y":0,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","3-0",{"x":3,"y":0,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","4-0",{"x":4,"y":0,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","5-0",{"x":5,"y":0,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","6-0",{"x":6,"y":0,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","7-0",{"x":7,"y":0,"width":1,"height":1,"fill":"#DA7756"}],null,null,null,null,null,null],[null,["$","rect","1-1",{"x":1,"y":1,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","2-1",{"x":2,"y":1,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","3-1",{"x":3,"y":1,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","4-1",{"x":4,"y":1,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","5-1",{"x":5,"y":1,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","6-1",{"x":6,"y":1,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","7-1",{"x":7,"y":1,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","8-1",{"x":8,"y":1,"width":1,"height":1,"fill":"#DA7756"}],null,null,null,null,null],[["$","rect","0-2",{"x":0,"y":2,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","1-2",{"x":1,"y":2,"width":1,"height":1,"fill":"#DA7756"}],null,["$","rect","3-2",{"x":3,"y":2,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","4-2",{"x":4,"y":2,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","5-2",{"x":5,"y":2,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","6-2",{"x":6,"y":2,"width":1,"height":1,"fill":"#DA7756"}],null,["$","rect","8-2",{"x":8,"y":2,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","9-2",{"x":9,"y":2,"width":1,"height":1,"fill":"#DA7756"}],null,null,null,null],[["$","rect","0-3",{"x":0,"y":3,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","1-3",{"x":1,"y":3,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","2-3",{"x":2,"y":3,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","3-3",{"x":3,"y":3,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","4-3",{"x":4,"y":3,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","5-3",{"x":5,"y":3,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","6-3",{"x":6,"y":3,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","7-3",{"x":7,"y":3,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","8-3",{"x":8,"y":3,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","9-3",{"x":9,"y":3,"width":1,"height":1,"fill":"#DA7756"}],null,null,null,null],[["$","rect","0-4",{"x":0,"y":4,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","1-4",{"x":1,"y":4,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","2-4",{"x":2,"y":4,"width":1,"height":1,"fill":"#DA7756"}],null,["$","rect","4-4",{"x":4,"y":4,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","5-4",{"x":5,"y":4,"width":1,"height":1,"fill":"#DA7756"}],null,["$","rect","7-4",{"x":7,"y":4,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","8-4",{"x":8,"y":4,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","9-4",{"x":9,"y":4,"width":1,"height":1,"fill":"#DA7756"}],null,null,null,null],[["$","rect","0-5",{"x":0,"y":5,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","1-5",{"x":1,"y":5,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","2-5",{"x":2,"y":5,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","3-5",{"x":3,"y":5,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","4-5",{"x":4,"y":5,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","5-5",{"x":5,"y":5,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","6-5",{"x":6,"y":5,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","7-5",{"x":7,"y":5,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","8-5",{"x":8,"y":5,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","9-5",{"x":9,"y":5,"width":1,"height":1,"fill":"#DA7756"}],null,null,null,null],[null,["$","rect","1-6",{"x":1,"y":6,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","2-6",{"x":2,"y":6,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","3-6",{"x":3,"y":6,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","4-6",{"x":4,"y":6,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","5-6",{"x":5,"y":6,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","6-6",{"x":6,"y":6,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","7-6",{"x":7,"y":6,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","8-6",{"x":8,"y":6,"width":1,"height":1,"fill":"#DA7756"}],null,null,null,null,null],[null,null,["$","rect","2-7",{"x":2,"y":7,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","3-7",{"x":3,"y":7,"width":1,"height":1,"fill":"#DA7756"}],null,null,["$","rect","6-7",{"x":6,"y":7,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","7-7",{"x":7,"y":7,"width":1,"height":1,"fill":"#DA7756"}],null,null,null,null,null,null],[null,null,null,["$","rect","3-8",{"x":3,"y":8,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","4-8",{"x":4,"y":8,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","5-8",{"x":5,"y":8,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","6-8",{"x":6,"y":8,"width":1,"height":1,"fill":"#DA7756"}],null,null,null,null,null,null,null],[null,null,null,null,["$","rect","4-9",{"x":4,"y":9,"width":1,"height":1,"fill":"#DA7756"}],["$","rect","5-9",{"x":5,"y":9,"width":1,"height":1,"fill":"#DA7756"}],null,null,null,null,null,null,null,null]]}],["$","span",null,{"children":"도움이 되셨나요?"}]]}]]}]
+a:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+7:null
+c:[["$","title","0",{"children":"Claude Code 입문 — 노모어매뉴얼"}],["$","meta","1",{"name":"description","content":"비개발자도 이해하는 Claude Code 완전 입문 가이드"}]]
