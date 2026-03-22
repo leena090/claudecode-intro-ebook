@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///Users/mylee/Desktop/claudecode-intro-ebook/src/app/docs/layout.tsx"],"sourcesContent":["// ── 문서 섹션 공통 레이아웃 ──\n// 사이드바+콘텐츠 2컬럼 구조는 각 페이지에서 직접 구성\nexport default function DocsLayout({ children }: { children: React.ReactNode }) {\n  return <>{children}</>\n}\n"],"names":["DocsLayout","children"],"mappings":"AAAA,sBAAsB;AACtB,iCAAiC;;;;;;;AAClB,SAASA,WAAW,EAAEC,QAAQ,EAAiC;IAC5E,qBAAO;kBAAGA;;AACZ"}}]
-}
