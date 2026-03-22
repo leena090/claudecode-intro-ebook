@@ -56,11 +56,14 @@ body {
 }
 .sidebar-link:hover { background: var(--accent-soft); color: var(--text-primary); }
 
-/* 현재 활성화된 사이드바 링크 */
+/* 현재 활성화된 사이드바 링크 — 왼쪽 인디케이터 바 + 배경 */
 .sidebar-link-active {
+  border-left: 2.5px solid var(--accent-text);
   background: var(--sidebar-active-bg);
   color: var(--accent-text);
   font-weight: 600;
+  padding-left: 8px; /* 보더 두께 시각 보정 */
+  border-radius: 0 6px 6px 0;
 }
 
 /* ── 브레드크럼 링크 ── */
@@ -115,14 +118,27 @@ body {
   margin-bottom: 1rem;
 }
 .markdown-body ul {
-  padding-left: 1.5rem;
+  padding-left: 0.25rem;
   margin-bottom: 1rem;
+  list-style: none;
 }
 .markdown-body ul > li {
   font-size: 15px;
   line-height: 1.75;
   color: var(--text-secondary);
   margin-bottom: 0.25rem;
+  position: relative;
+  padding-left: 1.25rem;
+}
+/* 악센트 색상 커스텀 불릿 — 브랜드 일관성 */
+.markdown-body ul > li::before {
+  content: "•";
+  color: var(--accent-text);
+  font-weight: 700;
+  font-size: 1.1em;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 /* 순서 있는 리스트(단계별 절차) — 카드 박스 스타일 */
 .markdown-body ol {
@@ -205,14 +221,21 @@ body {
 /* 인용문 — 악센트 왼쪽 보더 */
 .markdown-body blockquote {
   border-left: 3px solid var(--accent-text);
-  padding: 0.75rem 1rem;
-  margin: 1rem 0;
-  background: var(--accent-soft);
-  border-radius: 0 8px 8px 0;
+  padding: 1rem 1.25rem;
+  margin: 1.25rem 0;
+  background: var(--bg-secondary); /* accent-soft → bg-secondary: 더 차분한 배경 */
+  border-radius: 0 10px 10px 0;
 }
 .markdown-body blockquote p {
   margin: 0;
+  color: var(--text-secondary); /* text-primary → text-secondary: 본문과 자연스럽게 어울림 */
+  font-size: 14.5px;
+  line-height: 1.7;
+}
+/* 볼드 텍스트 — text-primary 강제 (부모 secondary 상속 차단) */
+.markdown-body strong {
   color: var(--text-primary);
+  font-weight: 700;
 }
 .markdown-body a {
   color: var(--accent-text);
@@ -243,11 +266,23 @@ body {
 .markdown-body tr:nth-child(even) td {
   background: var(--bg-secondary); /* 줄무늬 — 가독성 향상 */
 }
+/* 테이블 행 호버 — 인터랙티브 느낌 */
+.markdown-body tr:hover td {
+  background: var(--accent-soft);
+  transition: background 0.15s;
+}
 
-/* 수평선 — 섹션 구분 (넉넉한 여백) */
+/* 수평선 — 그라데이션 페이드 (중앙 강조, 양끝 투명) */
 .markdown-body hr {
   border: none;
-  border-top: 1px solid var(--border);
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--border) 20%,
+    var(--border) 80%,
+    transparent
+  );
   margin: 2.5rem 0;
 }
 
