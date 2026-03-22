@@ -3,8 +3,8 @@ title: "VS Code & IDE에서 사용하기"
 description: "코드 에디터에 설치해서 개발하면서 Claude Code 사용하기"
 category: "setup"
 order: 6
-tags: ["설치", "VS Code", "IDE", "확장", "플러그인"]
-lastUpdated: "2026-03-22"
+tags: ["설치", "VS Code", "IDE", "확장", "플러그인", "Antigravity"]
+lastUpdated: "2026-03-23"
 ---
 
 ## IDE에서 Claude Code 사용의 장점
@@ -24,6 +24,7 @@ lastUpdated: "2026-03-22"
 |-----|----------|-------|------|
 | **VS Code** | ⭐ 매우 쉬움 | ⭐⭐⭐ | 가장 인기, 초보자 추천 |
 | **Cursor** | ⭐ 기본 내장 | ⭐⭐⭐ | Claude Code 기본 내장 |
+| **Antigravity** | ⭐ 매우 쉬움 | ⭐⭐⭐ | 구글 기반 AI 코딩 도구, 설치 불필요 |
 | **JetBrains** | ⭐⭐ 쉬움 | ⭐⭐ | 전문가용 (IntelliJ 등) |
 | **Sublime Text** | ⭐⭐ 쉬움 | ⭐ | 간단한 에디터 |
 
@@ -134,7 +135,60 @@ VS Code가 아직 없다면:
 
 ---
 
-## 3️⃣ JetBrains IDE (IntelliJ, PyCharm, WebStorm 등)
+## 3️⃣ Antigravity (구글 AI 코딩 도구)
+
+**Antigravity는 Google이 만든 AI 기반 코딩 도구입니다.** 별도 설치 없이 브라우저에서 바로 사용할 수 있습니다.
+
+<div class="note-circle">
+○ Antigravity = "구글판 AI 코딩 도구" — 설치 없이 브라우저에서 코딩
+</div>
+
+### Step 1: 접속
+
+1. **브라우저 열기**
+   - Chrome, Safari 등 아무 브라우저 사용 가능
+
+2. **주소창에 입력**
+   ```
+   https://antigravityai.org
+   ```
+
+3. **Google 계정으로 로그인**
+   - 기존 구글 계정 그대로 사용
+   - 별도 가입 불필요
+
+### Step 2: 프로젝트 만들기
+
+1. **새 프로젝트 클릭**
+   - 화면의 "New Project" 또는 "+" 버튼
+
+2. **사용할 언어/프레임워크 선택**
+   - Python, JavaScript, HTML 등 선택
+
+3. **파일 만들기**
+   - 좌측 파일 트리에서 새 파일 추가
+
+### Step 3: AI와 함께 코딩
+
+```
+코드 입력 → 오른쪽 AI 패널에 질문 입력
+→ AI가 수정 제안 → 수락/거부 선택
+```
+
+**Antigravity 주요 기능:**
+- ✅ 구글 계정으로 즉시 로그인
+- ✅ 설치 없이 브라우저에서 실행
+- ✅ Google 인프라 기반 — 안정적
+- ✅ AI가 코드 자동 완성 + 설명 제공
+- ✅ 비개발자도 자연어로 앱 만들기 가능
+
+<div class="note-star">
+★ 코딩을 처음 시작하는 분이라면 Antigravity를 먼저 경험해보세요. 구글 계정만 있으면 5분 안에 첫 번째 앱을 만들 수 있습니다.
+</div>
+
+---
+
+## 4️⃣ JetBrains IDE (IntelliJ, PyCharm, WebStorm 등)
 
 IntelliJ IDEA, PyCharm, WebStorm 등을 사용한다면:
 
@@ -192,12 +246,12 @@ IntelliJ IDEA, PyCharm, WebStorm 등을 사용한다면:
 
 ## 📋 IDE별 단축키
 
-| 작업 | VS Code | Cursor | JetBrains |
-|------|---------|--------|-----------|
-| Claude 열기 | Cmd+Shift+A | Cmd+K | Cmd+K |
-| 대화 시작 | Cmd+I | Cmd+K | Cmd+K |
-| 도움말 | Cmd+/ | Cmd+/ | Cmd+/ |
-| 설정 | Cmd+, | Cmd+, | Cmd+, |
+| 작업 | VS Code | Cursor | Antigravity | JetBrains |
+|------|---------|--------|-------------|-----------|
+| AI 열기 | Cmd+Shift+A | Cmd+K | 우측 패널 클릭 | Cmd+K |
+| 대화 시작 | Cmd+I | Cmd+K | 입력창에 바로 입력 | Cmd+K |
+| 도움말 | Cmd+/ | Cmd+/ | ? 버튼 | Cmd+/ |
+| 설정 | Cmd+, | Cmd+, | 우상단 프로필 | Cmd+, |
 
 ---
 
@@ -245,6 +299,13 @@ IntelliJ IDEA, PyCharm, WebStorm 등을 사용한다면:
 ✅ 별도 설치 불필요
 ✅ 통합이 더 깔끔함
 ✅ Claude 사용자 최적화
+
+### Antigravity를 추천하는 경우
+
+✅ 코딩을 처음 시작하는 분
+✅ 설치가 귀찮은 분
+✅ 구글 계정만 있으면 바로 시작하고 싶은 분
+✅ 간단한 앱을 AI와 함께 빠르게 만들고 싶은 분
 
 ### JetBrains를 추천하는 경우
 
