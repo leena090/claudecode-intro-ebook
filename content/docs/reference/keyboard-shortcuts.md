@@ -4,10 +4,10 @@ description: "Claude Code를 빠르게 조작하는 모든 키보드 단축키"
 category: "reference"
 order: 3
 tags: ["레퍼런스", "단축키", "키보드", "팁"]
-lastUpdated: "2026-03-22"
+lastUpdated: "2026-04-06"
 ---
 
-> 📅 최종 업데이트: 2026년 3월 22일
+> 📅 최종 업데이트: 2026년 4월 6일
 
 ## 키보드 단축키란?
 
@@ -40,6 +40,8 @@ lastUpdated: "2026-03-22"
 | `Tab` | 자동완성 (정방향) | 슬래시 명령어 자동완성 | `/st` 입력 후 Tab → `/status` |
 | `Shift+Tab` | 자동완성 (역순) | 자동완성 목록을 거꾸로 이동 | 이전 옵션 선택할 때 |
 | `Escape` | 입력 취소 | 현재 입력 줄 지우기 | 잘못 입력했을 때 |
+| `Esc+Esc` (두 번) | Rewind | 마지막 변경 취소 (`/rewind`와 동일) | AI가 잘못 수정했을 때 |
+| `스페이스바 (누르는 동안)` | 음성 녹음 | 음성 모드 활성화 시 push-to-talk 녹음 | `/voice` 활성화 후 사용 |
 
 ### ⏸️ 작업 제어
 
@@ -232,7 +234,9 @@ Enter
 ### 특수키
 - `Tab` — 자동완성
 - `Escape` — 취소
+- `Esc+Esc` — Rewind (이전 상태로 되돌리기)
 - `Enter` — 전송
+- `스페이스바 (유지)` — 음성 녹음 (voice 모드 시)
 
 ---
 
@@ -263,6 +267,29 @@ Ctrl+R      - 히스토리 검색
 Shift+Enter - 여러 줄 입력
 Ctrl+A/E    - 줄 처음/끝으로 즉시 이동
 ```
+
+---
+
+## 단축키 커스터마이징
+
+자주 쓰는 기능에 나만의 단축키를 지정할 수 있습니다. `~/.claude/keybindings.json` 파일을 만들어 설정합니다:
+
+```json
+{
+  "keybindings": [
+    {
+      "key": "ctrl+shift+r",
+      "command": "/rewind"
+    },
+    {
+      "key": "ctrl+shift+s",
+      "command": "/status"
+    }
+  ]
+}
+```
+
+파일이 없으면 새로 만들면 됩니다. 저장 후 Claude Code를 재시작하면 적용됩니다.
 
 ---
 

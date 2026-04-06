@@ -4,7 +4,7 @@ description: "클로드코드의 슬래시(/) 명령어로 더 빠르게 제어�
 tags: ["기본사용법", "명령어", "팁"]
 category: "basics"
 order: 3
-lastUpdated: "2026-03-22"
+lastUpdated: "2026-04-06"
 ---
 
 ## 슬래시(/) 명령어란?
@@ -107,9 +107,9 @@ Claude가 CLAUDE.md 파일 생성
 ```
 
 **역할:** Claude Code가 사용할 AI 모델 선택
-- Claude 3.5 Sonnet (기본, 빠름)
-- Claude 3 Opus (더 강력함, 복잡한 작업)
-- 더 저렴한 모델 선택 가능
+- Claude Sonnet 4.6 (기본, 빠름)
+- Claude Opus 4.6 (더 강력함, 복잡한 작업)
+- Claude Haiku 4.5 (더 빠르고 저렴)
 
 **언제 사용?**
 - 복잡한 작업이 필요할 때
@@ -120,9 +120,9 @@ Claude가 CLAUDE.md 파일 생성
 ```
 > /model
 Claude가 선택 가능한 모델들 보여줌:
-1. Claude 3.5 Sonnet (현재)
-2. Claude 3 Opus
-3. Claude 3 Haiku (더 저렴)
+1. Claude Sonnet 4.6 (현재)
+2. Claude Opus 4.6
+3. Claude Haiku 4.5 (더 빠름)
 
 > 2 선택
 이제 Opus 모델 사용!
@@ -192,7 +192,27 @@ Claude가 선택 가능한 모델들 보여줌:
 
 ---
 
-### 🔟 `Ctrl+C` — 작업 중지
+### 🔟 `/powerup` — UI 및 기능 학습 가이드
+
+```bash
+/powerup
+```
+
+**역할:** Claude가 직접 UI와 주요 기능을 대화형으로 안내해줍니다
+- 처음 사용하거나 새로운 기능이 궁금할 때 유용
+- 화면 구조, 명령어, 워크플로우를 단계별로 설명
+- 터미널 버전과 Desktop 앱 모두에서 사용 가능
+
+**사용 예시:**
+```
+> /powerup
+Claude가 현재 사용 중인 환경을 감지하고
+어떤 기능부터 배우고 싶은지 물어봅니다
+```
+
+---
+
+### `Ctrl+C` — 작업 중지
 
 터미널에서 `Ctrl` 키와 `C` 키를 **동시에** 누르기
 
@@ -263,6 +283,7 @@ claude
 | 더 강한 모델 필요 | `/model` |
 | 뭐가 바뀌었는지 보기 | `/diff` |
 | 마지막 수정 취소 | `/rewind` |
+| UI/기능 설명 받기 | `/powerup` |
 | AI 작업이 잘못됨 | `Ctrl+C` |
 
 ---

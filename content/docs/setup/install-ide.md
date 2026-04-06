@@ -4,7 +4,7 @@ description: "코드 에디터에 설치해서 개발하면서 Claude Code 사�
 category: "setup"
 order: 6
 tags: ["설치", "VS Code", "IDE", "확장", "플러그인", "Antigravity"]
-lastUpdated: "2026-03-23"
+lastUpdated: "2026-04-06"
 ---
 
 ## IDE에서 Claude Code 사용의 장점
@@ -25,7 +25,7 @@ lastUpdated: "2026-03-23"
 | **VS Code** | ⭐ 매우 쉬움 | ⭐⭐⭐ | 가장 인기, 초보자 추천 |
 | **Cursor** | ⭐ 기본 내장 | ⭐⭐⭐ | Claude Code 기본 내장 |
 | **Antigravity** | ⭐ 매우 쉬움 | ⭐⭐⭐ | 구글 기반 AI 코딩 도구, 설치 불필요 |
-| **JetBrains** | ⭐⭐ 쉬움 | ⭐⭐ | 전문가용 (IntelliJ 등) |
+| **JetBrains** | ⭐⭐ 쉬움 | ⭐⭐⭐ | 전문가용 (IntelliJ, WebStorm, PyCharm) — 2026 Q1부터 정식 안정 지원 |
 | **Sublime Text** | ⭐⭐ 쉬움 | ⭐ | 간단한 에디터 |
 
 ---
@@ -190,6 +190,8 @@ VS Code가 아직 없다면:
 
 ## 4️⃣ JetBrains IDE (IntelliJ, PyCharm, WebStorm 등)
 
+> **2026년 1분기부터 JetBrains 플러그인이 정식 안정 버전으로 전환되었습니다.** IntelliJ IDEA, WebStorm, PyCharm 등 주요 JetBrains 제품에서 모두 사용할 수 있습니다.
+
 IntelliJ IDEA, PyCharm, WebStorm 등을 사용한다면:
 
 ### Step 1: 플러그인 설치
@@ -310,9 +312,10 @@ IntelliJ IDEA, PyCharm, WebStorm 등을 사용한다면:
 ### JetBrains를 추천하는 경우
 
 ✅ 전문적인 개발 환경 원할 때
-✅ Python, Java 등 특정 언어 전문
+✅ Python(PyCharm), Java(IntelliJ), JavaScript(WebStorm) 전문 개발자
 ✅ 고급 기능 필요할 때
 ✅ 회사에서 기본으로 제공할 때
+✅ 2026년 1분기부터 정식 안정 지원으로 업무 환경에서도 안심하고 사용 가능
 
 ---
 

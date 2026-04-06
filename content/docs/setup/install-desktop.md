@@ -1,11 +1,13 @@
 ---
-title: "Desktop 앱 & 웹 버전 사용하기"
+title: "Claude Desktop 앱 & 웹 버전 사용하기"
 description: "터미널 없이 GUI 환경에서 Claude Code를 쉽게 사용하는 방법"
 category: "setup"
 order: 5
 tags: ["설치", "Desktop", "앱", "웹 브라우저"]
-lastUpdated: "2026-03-22"
+lastUpdated: "2026-04-06"
 ---
+
+> 📅 최종 업데이트: 2026년 4월 6일
 
 ## Claude Code는 3가지 방식으로 사용할 수 있습니다
 
@@ -23,7 +25,25 @@ lastUpdated: "2026-03-22"
 
 ---
 
-## 🖥️ Desktop 앱 설치하기
+## 🖥️ Claude Desktop 앱 설치하기
+
+### Desktop 앱의 3가지 탭 구조
+
+Claude Desktop 앱을 열면 상단에 세 가지 탭이 있습니다:
+
+| 탭 | 역할 |
+|----|------|
+| **Chat** | 일반 대화 — 질문, 요청, 아이디어 논의 |
+| **Cowork** | 공동 작업 — AI와 함께 파일·프로젝트 작업 |
+| **Code** | 코딩 전용 — 코드 작성, 디버깅, 개발 작업 |
+
+처음에는 Chat 탭으로 시작하고, 파일 작업이 필요할 때 Cowork나 Code 탭으로 이동하면 됩니다.
+
+---
+
+> 💡 **Windows 사용자 알림:** 2026년 4월부터 Windows 버전이 공식 지원됩니다! Mac과 동일한 기능을 사용할 수 있습니다.
+
+---
 
 ### macOS에서 설치
 
@@ -33,9 +53,10 @@ lastUpdated: "2026-03-22"
    - Mac의 Dock에서 App Store 아이콘 클릭
    - 또는 Spotlight (Cmd+Space)에서 "App Store" 입력
 
-2. **Claude Code 검색**
-   - 상단 검색창에 "Claude Code" 입력
-   - 또는 "Claude" 입력
+2. **"Claude" 검색**
+   - 상단 검색창에 "Claude" 입력
+   - Anthropic이 개발한 **Claude** 앱을 선택합니다
+   - (스토어에서는 "Claude"로 표시됩니다)
 
 3. **설치 클릭**
    - "설치" 또는 "가져오기" 버튼 클릭
@@ -44,7 +65,7 @@ lastUpdated: "2026-03-22"
 
 4. **실행**
    - 설치 완료 후 "열기" 버튼 클릭
-   - 또는 Launchpad에서 "Claude Code" 찾아서 클릭
+   - 또는 Launchpad에서 "Claude" 찾아서 클릭
 
 #### 방법 2: 직접 다운로드
 
@@ -68,14 +89,17 @@ lastUpdated: "2026-03-22"
 
 ### Windows에서 설치
 
+> 2026년 4월부터 Windows 공식 지원이 시작되었습니다. 이제 Mac과 동일한 모든 기능을 Windows에서도 사용할 수 있습니다.
+
 #### 방법 1: Microsoft Store (권장)
 
 1. **Microsoft Store 열기**
    - Windows 시작 메뉴에서 "Microsoft Store" 검색
    - 또는 Windows 키 → "store" 입력
 
-2. **Claude Code 검색**
-   - Store 상단 검색창에 "Claude Code" 입력
+2. **"Claude" 검색**
+   - Store 상단 검색창에 "Claude" 입력
+   - Anthropic의 **Claude** 앱 선택
 
 3. **설치 클릭**
    - "설치" 또는 "가져오기" 버튼 클릭
@@ -119,9 +143,11 @@ lastUpdated: "2026-03-22"
    https://claude.ai/code
    ```
 
+   > 웹 버전 Claude Code의 공식 주소는 `claude.ai/code`입니다. 이 주소로 접속하면 코딩에 최적화된 인터페이스가 열립니다.
+
 3. **로그인**
    - Claude 계정으로 로그인
-   - 없으면 가입 후 로그인
+   - 없으면 claude.ai에서 가입 후 로그인
 
 4. **바로 사용**
    - 로그인하면 바로 Claude Code 사용 가능

@@ -4,10 +4,10 @@ description: "Claude Code의 모든 슬래시 명령어 완벽 레퍼런스"
 category: "reference"
 order: 1
 tags: ["레퍼런스", "명령어", "전체목록"]
-lastUpdated: "2026-03-22"
+lastUpdated: "2026-04-06"
 ---
 
-> 📅 최종 업데이트: 2026년 3월 22일
+> 📅 최종 업데이트: 2026년 4월 6일
 
 ## 📋 전체 슬래시 커맨드 목록
 
@@ -51,13 +51,23 @@ Claude Code에서 사용 가능한 모든 슬래시(/) 명령어를 정렬하여
 | 30 | `/theme` | 설정 | 화면 테마 선택 | ⭐⭐⭐⭐ |
 | 31 | `/usage` | 정보 확인 | 사용량 통계 보기 | ⭐⭐⭐ |
 | 32 | `/voice` | 특수 기능 | 음성 모드 시작 | ⭐⭐⭐ |
-| 33 | `/copy` | 파일 & 코드 | 코드 복사 | ⭐⭐⭐⭐⭐ |
+| 33 | `/copy` | 파일 & 코드 | 코드 복사 (인덱스 번호로 특정 블록만 복사 가능: `/copy 2`) | ⭐⭐⭐⭐⭐ |
+| 34 | `/powerup` | 특수 기능 | UI 및 기능 대화형 안내 | ⭐⭐⭐ |
+| 35 | `/loop` | 특수 기능 | 명령을 반복 실행 | ⭐⭐⭐ |
+| 36 | `/batch` | 특수 기능 | 여러 파일/항목에 일괄 작업 | ⭐⭐⭐ |
+| 37 | `/simplify` | 파일 & 코드 | 코드 단순화 및 리팩토링 | ⭐⭐⭐ |
+| 38 | `/schedule` | 특수 기능 | 예약 실행 (cron 방식) 등록 | ⭐⭐⭐ |
+| 39 | `/teleport` | 세션 관리 | 현재 세션을 다른 기기로 이전 | ⭐⭐⭐ |
+| 40 | `/insights` | 정보 확인 | 사용 패턴 및 인사이트 요약 | ⭐⭐ |
+| 41 | `/agents` | 특수 기능 | 서브에이전트 타입 목록 보기 | ⭐⭐ |
+| 42 | `/desktop` | 특수 기능 | Desktop 앱 설정 열기 | ⭐⭐ |
+| 43 | `/release-notes` | 정보 확인 | 최신 업데이트 내역 보기 | ⭐⭐ |
 
 ---
 
 ## 📁 카테고리별로 정렬된 명령어
 
-### 🔄 세션 관리 (6개)
+### 🔄 세션 관리 (7개)
 
 대화와 세션을 제어하는 명령어들입니다.
 
@@ -68,6 +78,7 @@ Claude Code에서 사용 가능한 모든 슬래시(/) 명령어를 정렬하여
 | `/rename` | 세션 이름 변경 | [세션 관리 명령어](../commands/session-commands.md) |
 | `/branch` | 대화 분기하기 | [세션 관리 명령어](../commands/session-commands.md) |
 | `/rewind` | 이전 상태로 돌아가기 | [세션 관리 명령어](../commands/session-commands.md) |
+| `/teleport` | 현재 세션을 다른 기기로 이전 | [세션 관리 명령어](../commands/session-commands.md) |
 | `/exit` | 세션 종료 | [세션 관리 명령어](../commands/session-commands.md) |
 
 ### ⚙️ 설정 관리 (6개)
@@ -83,19 +94,21 @@ Claude Code를 커스터마이징하는 명령어들입니다.
 | `/color` | 색상 커스터마이징 | [설정 관련 명령어](../commands/config-commands.md) |
 | `/language` | 사용 언어 설정 | [설정 관련 명령어](../commands/config-commands.md) |
 
-### ℹ️ 정보 확인 (7개)
+### ℹ️ 정보 확인 (9개)
 
 상태, 비용, 통계를 확인하는 명령어들입니다.
 
 | 명령어 | 설명 | 자세한 문서 |
 |--------|------|-----------|
 | `/status` | 현재 상태 확인 | [정보 확인 명령어](../commands/info-commands.md) |
-| `/cost` | 비용 내역 상세 보기 | [정보 확인 명령어](../commands/info-commands.md) |
+| `/cost` | 비용 내역 상세 보기 (모델별 토큰 사용량 분리 표시) | [정보 확인 명령어](../commands/info-commands.md) |
 | `/usage` | 사용량 통계 보기 | [정보 확인 명령어](../commands/info-commands.md) |
 | `/stats` | 종합 통계 보기 | [정보 확인 명령어](../commands/info-commands.md) |
 | `/context` | 컨텍스트 정보 보기 | [정보 확인 명령어](../commands/info-commands.md) |
 | `/doctor` | 시스템 진단 | [정보 확인 명령어](../commands/info-commands.md) |
 | `/help` | 도움말 보기 | [정보 확인 명령어](../commands/info-commands.md) |
+| `/insights` | 사용 패턴 및 인사이트 요약 | [정보 확인 명령어](../commands/info-commands.md) |
+| `/release-notes` | 최신 업데이트 내역 | [정보 확인 명령어](../commands/info-commands.md) |
 
 ### 📁 파일 & 코드 (5개)
 
@@ -109,7 +122,7 @@ Claude Code를 커스터마이징하는 명령어들입니다.
 | `/compact` | 대화 압축 | [파일 & 코드 명령어](../commands/file-commands.md) |
 | `/memory` | 기억 관리 | [파일 & 코드 명령어](../commands/file-commands.md) |
 
-### 🎯 특수 기능 (9개)
+### 🎯 특수 기능 (15개)
 
 고급 기능과 전문가용 명령어들입니다.
 
@@ -117,13 +130,19 @@ Claude Code를 커스터마이징하는 명령어들입니다.
 |--------|------|-----------|
 | `/init` | 프로젝트 초기화 | [특수 명령어](../commands/special-commands.md) |
 | `/plan` | 프로젝트 계획 수립 | [특수 명령어](../commands/special-commands.md) |
-| `/fast` | 빠른 모드 활성화 | [특수 명령어](../commands/special-commands.md) |
-| `/voice` | 음성 모드 시작 | [특수 명령어](../commands/special-commands.md) |
+| `/fast` | 빠른 출력 모드 (모델 유지) | [특수 명령어](../commands/special-commands.md) |
+| `/voice` | 음성 모드 시작 (스페이스바 push-to-talk) | [특수 명령어](../commands/special-commands.md) |
 | `/effort` | 작업량 조절 | [특수 명령어](../commands/special-commands.md) |
 | `/sandbox` | 격리 환경에서 실행 | [특수 명령어](../commands/special-commands.md) |
 | `/pr` | PR 자동 생성 | [특수 명령어](../commands/special-commands.md) |
 | `/review` | 코드 리뷰 받기 | [특수 명령어](../commands/special-commands.md) |
 | `/commit` | Git 커밋 메시지 생성 | [특수 명령어](../commands/special-commands.md) |
+| `/powerup` | UI 및 기능 대화형 안내 | [특수 명령어](../commands/special-commands.md) |
+| `/loop` | 명령을 반복 실행 | [특수 명령어](../commands/special-commands.md) |
+| `/batch` | 여러 항목에 일괄 작업 | [특수 명령어](../commands/special-commands.md) |
+| `/simplify` | 코드 단순화 및 리팩토링 | [특수 명령어](../commands/special-commands.md) |
+| `/schedule` | 예약 실행 등록 | [특수 명령어](../commands/special-commands.md) |
+| `/agents` | 서브에이전트 타입 목록 | [특수 명령어](../commands/special-commands.md) |
 
 ---
 

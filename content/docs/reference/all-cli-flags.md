@@ -4,10 +4,10 @@ description: "Claude Code 터미널에서 사용할 수 있는 모든 커맨드�
 category: "reference"
 order: 2
 tags: ["레퍼런스", "CLI", "플래그", "터미널"]
-lastUpdated: "2026-03-22"
+lastUpdated: "2026-04-06"
 ---
 
-> 📅 최종 업데이트: 2026년 3월 22일
+> 📅 최종 업데이트: 2026년 4월 6일
 
 ## CLI 플래그란?
 
@@ -88,6 +88,17 @@ AI 모델과 작동 방식을 설정합니다.
 | `--allowed-tools` | 허용할 도구 지정 | `claude --allowed-tools read,write` |
 | `--disallowed-tools` | 금지할 도구 지정 | `claude --disallowed-tools execute` |
 | `--enable-extensions` | 확장 기능 활성화 | `claude --enable-extensions` |
+| `--disable-slash-commands` | 슬래시 명령어 비활성화 | `claude --disable-slash-commands` |
+
+### 🌐 원격 & 세션 이전
+
+원격 접속과 세션 이전을 제어합니다.
+
+| 플래그 | 용도 | 예시 |
+|--------|------|------|
+| `--remote` | 웹 세션으로 시작 (브라우저 접속 URL 생성) | `claude --remote` |
+| `--teleport` | 현재 세션을 이전 가능한 링크로 생성 | `claude --teleport` |
+| `--worktree` | Git worktree 모드로 실행 (에이전트 팀과 병행 사용) | `claude --worktree` |
 
 ### 📝 저장 & 캐시
 

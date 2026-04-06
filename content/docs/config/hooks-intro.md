@@ -4,14 +4,37 @@ description: "특정 상황에서 자동으로 실행되는 작업 설정하기"
 category: "config"
 order: 4
 tags: ["자동화", "hooks", "이벤트"]
-lastUpdated: "2026-03-22"
+lastUpdated: "2026-04-06"
 ---
 
-> 📅 최종 업데이트: 2026년 3월 22일
+> 📅 최종 업데이트: 2026년 4월 6일
 
 ## Hooks란?
 
 **Hooks**는 특정 상황이 발생했을 때 자동으로 무언가를 실행하도록 하는 설정입니다. 마치 자동 수도꼭지처럼, 손을 가져다 대면 자동으로 물이 나오듯이, 정해진 이벤트가 발생하면 자동으로 동작합니다.
+
+---
+
+## Hook 이벤트 목록 (현재 14가지)
+
+Claude Code는 현재 **14가지 Hook 이벤트**를 지원합니다. 2026년 초에 대폭 확장되었습니다.
+
+| 이벤트 | 발생 시점 |
+|--------|---------|
+| `PreToolUse` | 도구 사용 직전 |
+| `PostToolUse` | 도구 사용 직후 |
+| `UserPromptSubmit` | 사용자 메시지 전송 후 |
+| `InstructionsLoaded` | CLAUDE.md 등 지시파일이 로드될 때 |
+| `PostCompact` | 대화 압축(/compact) 완료 후 |
+| `FileChanged` | 파일이 외부에서 변경될 때 |
+| `TaskCreated` | 새 작업이 생성될 때 |
+| `CwdChanged` | 작업 디렉토리가 변경될 때 |
+| `PermissionDenied` | 권한 요청이 거부될 때 |
+| `SessionStart` | 세션 시작 시 |
+| `SessionEnd` | 세션 종료 시 |
+| `ModelChanged` | AI 모델 변경 시 |
+| `ErrorOccurred` | 에러 발생 시 |
+| `AgentSpawned` | 서브에이전트가 생성될 때 |
 
 ---
 
@@ -124,6 +147,36 @@ lastUpdated: "2026-03-22"
   "handler": "agent",
   "subagent": "reviewer",
   "prompt": "코드 리뷰를 해줄 수 있나?"
+}
+```
+
+---
+
+### 4. http — 원격 URL로 POST 전송 (신규)
+
+```json
+{
+  "handler": "http",
+  "url": "https://my-server.com/webhook",
+  "method": "POST"
+}
+```
+
+**특징:**
+- Hook 발생 시 JSON 데이터를 지정한 URL로 자동 전송
+- 슬랙 알림, 외부 서버 연동, 로그 수집에 활용
+- 응답 코드로 Hook 성공/실패 판단
+
+**예시:**
+```json
+{
+  "hooks": {
+    "PostToolUse": {
+      "handler": "http",
+      "url": "https://hooks.slack.com/services/xxx/yyy/zzz",
+      "method": "POST"
+    }
+  }
 }
 ```
 

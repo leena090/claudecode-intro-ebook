@@ -4,10 +4,10 @@ description: "외부 도구와 서비스를 AI에 연결하는 Model Context Pro
 category: "config"
 order: 5
 tags: ["MCP", "연동", "외부서비스"]
-lastUpdated: "2026-03-22"
+lastUpdated: "2026-04-06"
 ---
 
-> 📅 최종 업데이트: 2026년 3월 22일
+> 📅 최종 업데이트: 2026년 4월 6일
 
 ## MCP (Model Context Protocol)란?
 
@@ -170,6 +170,45 @@ AI: (GitHub과 연결) → "PR #123, #124, #125 입니다"
 - 원격 서버 연결 가능
 - HTTP 기반
 - 클라우드 환경에 적합
+
+---
+
+### 3. HTTP (원격 MCP 서버) — 신규
+
+```json
+{
+  "my-remote-mcp": {
+    "url": "https://mcp.myservice.com/v1",
+    "type": "http"
+  }
+}
+```
+
+**특징:**
+- 인터넷 어디서든 접근 가능한 원격 MCP 서버에 연결
+- 로컬에 서버 프로세스를 설치할 필요 없음
+- 팀 전체가 같은 MCP 서버를 공유할 때 유용
+
+**OAuth 2.0 인증 지원:**
+
+원격 MCP 서버가 OAuth 2.0 인증을 요구하는 경우, 다음처럼 설정합니다:
+
+```json
+{
+  "my-secure-mcp": {
+    "url": "https://mcp.myservice.com/v1",
+    "type": "http",
+    "auth": {
+      "type": "oauth2",
+      "clientId": "${MCP_CLIENT_ID}",
+      "clientSecret": "${MCP_CLIENT_SECRET}",
+      "tokenUrl": "https://auth.myservice.com/token"
+    }
+  }
+}
+```
+
+클라이언트 ID와 시크릿은 `.env` 파일에 저장하고 환경변수로 참조하세요.
 
 ---
 
@@ -376,13 +415,30 @@ MCP는 **API 커넥터**와 같습니다.
 
 ---
 
+## MCP 서버 켜고 끄기
+
+대화 중에 특정 MCP 서버만 활성화하거나 비활성화할 수 있습니다:
+
+```bash
+# MCP 서버 활성화
+/mcp enable github
+
+# MCP 서버 비활성화
+/mcp disable slack
+
+# 현재 연결된 MCP 서버 목록 확인
+/mcp
+```
+
+---
+
 ## MCP 설정 확인하기
 
 ### 설정이 올바른지 테스트
 
 ```bash
 # MCP 서버 연결 상태 확인
-claude /status-mcp
+/mcp
 ```
 
 ### 문제 해결
