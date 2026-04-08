@@ -94,15 +94,36 @@ AI 모델과 작동 방식을 설정합니다.
 
 | 플래그 | 용도 | 예시 |
 |--------|------|------|
-| `--remote` | 웹 세션으로 시작 (브라우저 접속 URL 생성) | `claude --remote` |
-| `--teleport` | 현재 세션을 이전 가능한 링크로 생성 | `claude --teleport` |
-| `--worktree <이름>` | **Git worktree 격리 모드** — 여러 에이전트를 서로 방해 없이 병렬 실행 (v2.1.49~) | `claude --worktree feature-auth` |
-| `--resume` | 최근 세션 재개 (v2.1.77 이후 45% 빨라짐) | `claude --resume` |
+| `--remote` | 웹 세션으로 시작 (브라우저 접속 URL 생성) | `claude --remote "Fix the login bug"` |
+| `--teleport` | 웹 세션을 내 로컬 터미널로 가져오기 | `claude --teleport` |
+| `--worktree <이름>`, `-w` | **Git worktree 격리 모드** — 여러 에이전트를 서로 방해 없이 병렬 실행 (v2.1.49~) | `claude --worktree feature-auth` |
+| `--resume`, `-r` | 최근 세션 재개 (v2.1.77 이후 45% 빨라짐) | `claude --resume "auth-refactor"` |
+| `--continue`, `-c` | **현재 폴더의 가장 최근 대화 이어서 시작** | `claude --continue` |
+| `--fork-session` | 세션 재개할 때 원본 건드리지 않고 복제본으로 이어가기 | `claude --resume abc123 --fork-session` |
 | `--remote-control-session-name-prefix <접두어>` | 원격 조종 세션 이름 접두어 지정 | `claude --remote-control-session-name-prefix dev` |
 
 <div class="note-circle">
 ○ <strong>`--worktree` 비유</strong>: 공사 현장에서 인부마다 자기 구역을 따로 파놓는 것과 같아요. 서로의 삽질에 방해받지 않습니다.
+<br />○ <strong>`--continue` vs `--resume` 차이</strong>: `-c`는 "지금 이 폴더의 마지막 대화", `-r`는 "이름·ID로 원하는 세션 골라서 재개". 일상용은 `-c`, 여러 세션 관리할 땐 `-r`.
 <br />○ <strong>환경변수로도 가능</strong>: <code>CLAUDE_REMOTE_CONTROL_SESSION_NAME_PREFIX</code>
+</div>
+
+### ⚡ 성능 & 모드 설정 (v2.1.92~ 신규)
+
+작업 강도와 권한 모드를 세션 시작 시 지정합니다.
+
+| 플래그 | 용도 | 예시 |
+|--------|------|------|
+| `--effort <레벨>` | **Effort 레벨 설정** — `low` / `medium` / `high` / `max`(Opus 4.6 only) | `claude --effort high` |
+| `--permission-mode <모드>` | **권한 모드로 시작** — `default` / `acceptEdits` / `plan` / `auto` / `bypassPermissions` | `claude --permission-mode plan` |
+| `--model <모델>` | 세션 모델 지정 | `claude --model opusplan` |
+| `--bare` | **최소 모드** — 훅·스킬·플러그인·MCP·CLAUDE.md 자동 로드 생략, 빠르게 시작 | `claude --bare -p "query"` |
+| `--dangerously-skip-permissions` | ⚠️ 권한 검사 전부 생략 — 자동화 스크립트용, 일반 사용 비추 | `claude --dangerously-skip-permissions` |
+
+<div class="note-star">
+★ <strong>`--permission-mode plan` 주목</strong>: 플래그로 바로 Plan 모드에서 시작해서 깊이 설계 먼저. <code>--model opusplan</code>과 조합하면 "Opus로 설계 → Sonnet으로 실행" 흐름이 세션 시작부터 자동.
+<br />★ <strong>`--bare` 활용</strong>: CI/CD 스크립트나 cron에서 Claude Code를 빠르게 실행할 때. CLAUDE.md도 안 읽으니 주의.
+<br />★ <strong>`--dangerously-skip-permissions` ⚠️</strong>: 이름 그대로 위험해요. 무인 자동화(CI 환경)에서만 쓰고, 로컬에서는 쓰지 마세요.
 </div>
 
 ### 📝 저장 & 캐시

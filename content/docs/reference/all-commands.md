@@ -1,10 +1,10 @@
 ---
 title: "전체 슬래시 커맨드 목록"
-description: "Claude Code의 모든 슬래시 명령어 완벽 레퍼런스 (2026-04-08 최신화)"
+description: "Claude Code의 모든 슬래시 명령어 완벽 레퍼런스 (2026-04-09 최신화)"
 category: "reference"
 order: 1
 tags: ["레퍼런스", "명령어", "전체목록"]
-lastUpdated: "2026-04-08"
+lastUpdated: "2026-04-09"
 ---
 
 ## 📋 전체 슬래시 커맨드 목록
@@ -12,8 +12,8 @@ lastUpdated: "2026-04-08"
 Claude Code에서 사용 가능한 모든 슬래시(/) 명령어를 정렬하여 표시합니다. 원하는 기능을 빠르게 찾으세요.
 
 <div class="note-circle">
-○ <strong>2026-04-08 기준 최신</strong> — v2.1.92까지 반영. <code>/tag</code>, <code>/vim</code>은 2026-04-04에 제거되었습니다.
-<br />○ <strong>신규 추가</strong>: <code>/btw</code>, <code>/fork</code>, <code>/ultraplan</code>, <code>/buddy</code>
+○ <strong>2026-04-09 기준 최신</strong> — v2.1.94까지 반영. <code>/tag</code>, <code>/vim</code>은 2026-04-04에 제거되었습니다.
+<br />○ <strong>신규 추가</strong>: <code>/btw</code>, <code>/fork</code>, <code>/ultraplan</code>, <code>/buddy</code>, <code>/model opusplan</code>(하이브리드 모드)
 </div>
 
 ---
@@ -49,7 +49,7 @@ Claude Code에서 사용 가능한 모든 슬래시(/) 명령어를 정렬하여
 | 25 | `/language` | 설정 | 사용 언어 설정 | ⭐⭐⭐ |
 | 26 | `/loop` | 특수 기능 | 세션 내 반복 실행 (최소 1분, 3일 후 자동 만료) | ⭐⭐⭐ |
 | 27 | `/memory` | 파일 & 코드 | 기억 관리 (25KB·200줄 자동 정리) | ⭐⭐⭐ |
-| 28 | `/model` | 설정 | AI 모델 선택 | ⭐⭐⭐⭐ |
+| 28 | `/model` | 설정 | AI 모델 선택 (`haiku`/`sonnet`/`opus`/**`opusplan`** 하이브리드) | ⭐⭐⭐⭐ |
 | 29 | `/permissions` | 설정 | 권한 설정 — **Recent 탭 추가** (v2.1.89~) | ⭐⭐⭐ |
 | 30 | `/plan` | 특수 기능 | 프로젝트 계획 수립 | ⭐⭐⭐⭐ |
 | 31 | `/powerup` | 특수 기능 | **인터랙티브 기능 학습 레슨** (v2.1.90~) | ⭐⭐⭐ |

@@ -1,10 +1,10 @@
 ---
 title: "설정 관련 명령어"
-description: "Claude Code를 나에게 맞게 커스터마이징하는 방법"
+description: "Claude Code를 나에게 맞게 커스터마이징하는 방법 (/model opusplan 하이브리드 모드 포함)"
 category: "commands"
 order: 3
-tags: ["설정", "커스터마이징", "명령어"]
-lastUpdated: "2026-04-08"
+tags: ["설정", "커스터마이징", "명령어", "opusplan"]
+lastUpdated: "2026-04-09"
 ---
 
 
@@ -68,26 +68,70 @@ Claude Code를 **내 입맛대로 조정하는 것**입니다. 마치 휴대폰�
 <mark>더 강력한 모델 = 더 정확한 답 (하지만 느릴 수 있음)</mark>
 
 **사용 가능한 모델:**
-- `claude-haiku` — 빠르지만 단순한 작업용
-- `claude-sonnet` — 균형잡힌 선택 (추천)
-- `claude-opus` — 가장 강력 (복잡한 작업용)
+- `claude-haiku-4-5` — 빠르지만 단순한 작업용
+- `claude-sonnet-4-6` — 균형잡힌 선택 (추천)
+- `claude-opus-4-6` — 가장 강력 (복잡한 작업용, 1M 컨텍스트)
+- **`opusplan`** — ⭐ 자동 전환 하이브리드 (Plan 모드는 Opus, 실행은 Sonnet)
 
 **사용 예시:**
 ```bash
-/model claude-opus
-(더 복잡하고 정확한 작업이 필요할 때)
-
-/model claude-haiku
-(빠른 응답이 필요할 때)
+/model opus          (복잡하고 정확한 작업이 필요할 때)
+/model haiku         (빠른 응답이 필요할 때)
+/model opusplan      (플랜만 Opus, 실행은 Sonnet — 비용 절약)
 ```
 
 **언제 어떤 모델을 쓸까?**
 
 | 상황 | 모델 |
 |------|------|
-| 간단한 질문, 빠른 응답 필요 | haiku |
-| 일반적인 코딩, 기본 설명 | sonnet (기본) |
-| 복잡한 논리, 정확한 답 필요 | opus |
+| 간단한 질문, 빠른 응답 필요 | `haiku` |
+| 일반적인 코딩, 기본 설명 | `sonnet` (기본) |
+| 복잡한 논리, 정확한 답 필요 | `opus` |
+| **플래닝은 고급·실행은 경제적** | **`opusplan`** ⭐ |
+
+---
+
+### ⭐ `/model opusplan` — 토큰 절약 최강 조합
+
+<div class="note-star">
+★ Claude Code 창시자 Boris Cherny가 직접 추천한 하이브리드 모드예요.
+<br />★ "생각할 땐 Opus, 코딩할 땐 Sonnet" — <strong>자동 전환</strong>
+<br />★ Opus 토큰은 Plan 모드에서만 소비 → 주간 쿼터·API 비용 <strong>대폭 절감</strong>
+</div>
+
+#### 어떻게 작동하나요?
+
+```bash
+/model opusplan
+```
+
+이 한 줄만 입력하면:
+
+| 내가 하는 일 | Claude가 쓰는 모델 |
+|---|---|
+| **플랜 모드** (Shift+Tab → Plan) — 복잡한 설계·아키텍처 고민 | 🧠 **Opus 4.6** (가장 똑똑) |
+| **일반 대화·실행 모드** — 코드 작성·수정·파일 편집 | ⚡ **Sonnet 4.6** (빠르고 저렴) |
+
+내가 **수동으로 `/model` 바꿀 필요 없이** Claude가 알아서 전환해줘요.
+
+#### 왜 이게 혁명인가요?
+
+> 🍱 **비유로 설명하면**: 회사에서 **"기획 회의에는 임원급이 참석하고, 실제 작업은 실무진이 진행"** 하는 것과 같아요. 모든 일에 임원급(Opus)을 쓰면 인건비가 너무 비싸고, 모든 일에 실무진(Sonnet)만 쓰면 중요한 판단을 못 해요. **`opusplan`은 자동으로 이걸 분배**해줘요.
+
+**실제 절감 효과**:
+- Opus 4.6 입력: $15/M 토큰
+- Sonnet 4.6 입력: $3/M 토큰
+- → 실행이 90% 차지하는 일반 작업에서 **비용 약 80% 절감** 가능
+- 주간 쿼터도 오래 감
+
+#### 언제 쓰면 좋나요?
+
+- ✅ **대형 리팩토링·아키텍처 설계** (플랜은 Opus로 깊이 생각)
+- ✅ **하루 종일 작업하는 날** (쿼터 오래 끌기)
+- ✅ **Pro·Max 플랜 사용자** (쿼터 걱정 있는 분)
+- ❌ 간단한 수정 한두 개 (그냥 `haiku`나 `sonnet`이 더 나음)
+
+**기본 모드로 세팅하려면**: `settings.json`에 `"model": "opusplan"` 등록 (또는 Claude한테 *"기본 모델을 opusplan으로 바꿔줘"* 말로 시키기).
 
 ---
 
