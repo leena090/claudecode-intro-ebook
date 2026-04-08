@@ -4,10 +4,9 @@ description: "대화 없이 바로 결과를 출력하는 print 모드의 활용
 category: "advanced"
 order: 1
 tags: ["고급", "print", "자동화"]
-lastUpdated: "2026-03-22"
+lastUpdated: "2026-04-08"
 ---
 
-> 📅 최종 업데이트: 2026년 3월 22일
 
 ## Print 모드란?
 

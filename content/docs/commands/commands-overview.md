@@ -1,13 +1,11 @@
 ---
 title: "슬래시 커맨드란?"
-description: "Claude Code를 더 빠르게 제어하는 특수 명령어 완벽 가이드"
+description: "Claude Code를 더 빠르게 제어하는 특수 명령어 완벽 가이드 (2026-04-08 v2.1.92 기준)"
 category: "commands"
 order: 1
 tags: ["명령어", "슬래시커맨드", "기초"]
-lastUpdated: "2026-04-06"
+lastUpdated: "2026-04-08"
 ---
-
-> 📅 최종 업데이트: 2026년 4월 6일
 
 ## 슬래시 커맨드가 뭐예요?
 
@@ -100,15 +98,35 @@ Claude Code에서 `/` 기호로 시작하는 명령어입니다. 일반 대화 �
 - `/commit` — 커밋 메시지
 
 ### 🆕 **2026년 새로 추가된 명령어**
-- `/powerup` — 내장 튜토리얼 (18개 인터랙티브 레슨)
+
+#### 2026년 3~4월 신규 (v2.1.7x ~ v2.1.92)
+- `/btw` — **사이드 질문** (기록 안 남김) — v2.1.72
+- `/fork` — 컨텍스트 복제해 다른 방향 실험
 - `/rewind` — 파일/대화 되감기 (Esc+Esc도 가능)
-- `/loop` — 반복 실행 (예: `/loop 5m 배포 상태 확인`)
+- `/powerup` — **인터랙티브 기능 학습 레슨** — v2.1.90
+- `/ultraplan` — **클라우드 플랜 다듬기** (research preview) — v2.1.91+
+- `/buddy` — 터미널 다마고치 펫 — v2.1.89+ (Pro)
+- `/loop` — 반복 실행 (`/loop 5m 배포 상태`, 3일 만료)
+- `/batch` — worktree 격리 병렬 일괄 작업
+- `/simplify` — 코드 단순화 (3 에이전트 병렬 리뷰)
+
+#### 2026년 2월 이전
 - `/teleport` — 웹 ↔ 터미널 세션 이동
 - `/insights` — 코드 분석 후 방향 제안
 - `/agents` — 서브에이전트 목록/관리
 - `/desktop` — CLI 세션을 Desktop 앱으로 이동
 - `/schedule` — 원격 예약 작업 설정
-- `/batch` — 대규모 병렬 변경 작업
+
+<div class="note-star">
+☆ <strong>2026-04-04 v2.1.92에서 제거된 명령어</strong>: <code>/tag</code>, <code>/vim</code>
+</div>
+
+#### 주목할 기존 명령어 개선
+- `/cost` — **모델별 + 캐시 히트율** 표시 (v2.1.92~)
+- `/release-notes` — **인터랙티브 버전 선택기** (v2.1.92~)
+- `/effort` — `low`/`medium`/`high` **3단계로 단순화** (v2.1.92~)
+- `/resume` — **45% 빨라짐** (v2.1.77~)
+- `/permissions` — **Recent 탭** 추가 (v2.1.89~)
 
 ---
 

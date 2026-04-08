@@ -32,6 +32,9 @@ export interface DocMeta {
   category: string
   order: number
   slug: string
+  // 최종 업데이트 날짜 (프론트매터 lastUpdated 필드) — "YYYY-MM-DD" 문자열
+  // 없으면 undefined → 페이지 헤더 뱃지 렌더링 생략
+  lastUpdated?: string
 }
 
 // content/docs 디렉토리 경로 (빌드 타임 기준)
@@ -44,18 +47,23 @@ export function getDocsByCategory(category: string): DocMeta[] {
   if (!fs.existsSync(categoryDir)) return []
 
   const files = fs.readdirSync(categoryDir).filter(f => f.endsWith('.md'))
-  const docs = files.map(file => {
+  const docs: DocMeta[] = files.map(file => {
     const slug = file.replace('.md', '')
     const content = fs.readFileSync(path.join(categoryDir, file), 'utf-8')
     const { data } = matter(content)
-    return {
+    // lastUpdated는 optional이며 exactOptionalPropertyTypes 제약을 맞추기 위해
+    // 값이 있을 때만 필드를 spread로 포함 (undefined 할당 회피)
+    const lastUpdatedRaw = data['lastUpdated'] as string | undefined
+    const meta: DocMeta = {
       title: (data['title'] as string | undefined) || slug,
       description: (data['description'] as string | undefined) || '',
       tags: (data['tags'] as string[] | undefined) || [],
       category: (data['category'] as string | undefined) || category,
       order: (data['order'] as number | undefined) || 99,
       slug,
+      ...(lastUpdatedRaw ? { lastUpdated: lastUpdatedRaw } : {}),
     }
+    return meta
   })
   // order 필드 기준 오름차순 정렬
   return docs.sort((a, b) => a.order - b.order)
@@ -81,15 +89,30 @@ export function getDoc(category: string, slug: string): { meta: DocMeta; content
 
   const raw = fs.readFileSync(filePath, 'utf-8')
   const { data, content } = matter(raw)
-  return {
-    meta: {
-      title: (data['title'] as string | undefined) || slug,
-      description: (data['description'] as string | undefined) || '',
-      tags: (data['tags'] as string[] | undefined) || [],
-      category: (data['category'] as string | undefined) || category,
-      order: (data['order'] as number | undefined) || 99,
-      slug,
-    },
-    content,
+  // lastUpdated optional 필드 — exactOptionalPropertyTypes 제약 대응 (spread)
+  const lastUpdatedRaw = data['lastUpdated'] as string | undefined
+  const meta: DocMeta = {
+    title: (data['title'] as string | undefined) || slug,
+    description: (data['description'] as string | undefined) || '',
+    tags: (data['tags'] as string[] | undefined) || [],
+    category: (data['category'] as string | undefined) || category,
+    order: (data['order'] as number | undefined) || 99,
+    slug,
+    ...(lastUpdatedRaw ? { lastUpdated: lastUpdatedRaw } : {}),
   }
+  return { meta, content }
+}
+
+// ── 날짜 문자열을 한국어 포맷으로 변환 ──
+// "2026-04-08" → "2026년 4월 8일"
+// 프론트매터 lastUpdated 값을 페이지 뱃지에 표시할 때 사용
+export function formatKoreanDate(isoDate: string | undefined): string | null {
+  if (!isoDate) return null
+  const match = isoDate.match(/^(\d{4})-(\d{2})-(\d{2})$/)
+  if (!match) return isoDate // 형식이 다르면 원본 반환 (fallback)
+  const [, year, month, day] = match
+  // 앞의 0 제거 (04 → 4)
+  const m = parseInt(month!, 10)
+  const d = parseInt(day!, 10)
+  return `${year}년 ${m}월 ${d}일`
 }

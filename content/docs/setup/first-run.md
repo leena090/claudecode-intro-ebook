@@ -4,6 +4,7 @@ description: "클로드코드를 처음 실행하고 로그인하는 방법"
 tags: ["설치", "로그인", "인증"]
 category: "setup"
 order: 4
+lastUpdated: "2026-04-08"
 ---
 
 ## 첫 실행 3단계

@@ -1,17 +1,21 @@
 ---
 title: "원격 제어 & 크로스 디바이스"
-description: "다양한 기기에서 클로드 코드를 사용하고 원격으로 제어하기"
+description: "다양한 기기에서 클로드 코드를 사용하고 원격으로 제어하기 (v2.1.83~ AI 세션 이름 자동 생성)"
 category: "advanced"
 order: 4
 tags: ["원격", "다중기기", "동기화"]
-lastUpdated: "2026-04-06"
+lastUpdated: "2026-04-08"
 ---
-
-> 📅 최종 업데이트: 2026년 4월 6일
 
 ## 원격 제어 & 크로스 디바이스란?
 
 **원격 제어**는 한 기기에서 다른 기기의 AI를 제어하는 것입니다. **크로스 디바이스**는 여러 기기(데스크톱, 노트북, 태블릿)에서 같은 프로젝트를 동기화하며 작업하는 것입니다. 마치 클라우드 드라이브처럼, 어디서나 같은 파일에 접근할 수 있습니다.
+
+<div class="note-star">
+★ <strong>v2.1.83(2026-03-25) 업데이트</strong>: 원격 제어 세션 이름이 이제 <strong>AI가 자동 생성</strong>해요. 내가 보낸 첫 메시지 내용을 기반으로 의미 있는 이름이 몇 초 안에 만들어집니다. 기존에는 호스트명이나 일련번호였어요.
+<br /><br />
+★ <strong>접두어 지정도 가능</strong>: <code>--remote-control-session-name-prefix</code> 플래그 또는 <code>CLAUDE_REMOTE_CONTROL_SESSION_NAME_PREFIX</code> 환경변수로 "dev-", "prod-" 같은 접두어를 붙일 수 있어요.
+</div>
 
 ---
 

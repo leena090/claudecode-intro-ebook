@@ -4,6 +4,7 @@ description: "빨간 오류 메시지? 그냥 복사해서 붙여넣으세요"
 tags: ["실전", "오류해결", "디버깅"]
 category: "practice"
 order: 3
+lastUpdated: "2026-04-08"
 ---
 
 ## 빨간 오류 메시지? 그냥 복사-붙여넣기하세요

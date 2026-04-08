@@ -1,17 +1,20 @@
 ---
 title: "전체 슬래시 커맨드 목록"
-description: "Claude Code의 모든 슬래시 명령어 완벽 레퍼런스"
+description: "Claude Code의 모든 슬래시 명령어 완벽 레퍼런스 (2026-04-08 최신화)"
 category: "reference"
 order: 1
 tags: ["레퍼런스", "명령어", "전체목록"]
-lastUpdated: "2026-04-06"
+lastUpdated: "2026-04-08"
 ---
-
-> 📅 최종 업데이트: 2026년 4월 6일
 
 ## 📋 전체 슬래시 커맨드 목록
 
 Claude Code에서 사용 가능한 모든 슬래시(/) 명령어를 정렬하여 표시합니다. 원하는 기능을 빠르게 찾으세요.
+
+<div class="note-circle">
+○ <strong>2026-04-08 기준 최신</strong> — v2.1.92까지 반영. <code>/tag</code>, <code>/vim</code>은 2026-04-04에 제거되었습니다.
+<br />○ <strong>신규 추가</strong>: <code>/btw</code>, <code>/fork</code>, <code>/ultraplan</code>, <code>/buddy</code>
+</div>
 
 ---
 
@@ -19,65 +22,76 @@ Claude Code에서 사용 가능한 모든 슬래시(/) 명령어를 정렬하여
 
 | # | 명령어 | 카테고리 | 설명 | 사용 빈도 |
 |---|--------|---------|------|----------|
-| 1 | `/branch` | 세션 관리 | 대화 분기하기 | ⭐⭐⭐ |
-| 2 | `/clear` | 세션 관리 | 대화 초기화 | ⭐⭐⭐⭐⭐ |
-| 3 | `/color` | 설정 | 색상 커스터마이징 | ⭐⭐ |
-| 4 | `/commit` | 특수 기능 | Git 커밋 메시지 생성 | ⭐⭐⭐ |
-| 5 | `/compact` | 파일 & 코드 | 대화 압축 | ⭐⭐⭐⭐⭐ |
-| 6 | `/config` | 설정 | 설정 보기 & 변경 | ⭐⭐⭐⭐ |
-| 7 | `/context` | 정보 확인 | 컨텍스트 정보 보기 | ⭐⭐⭐ |
-| 8 | `/cost` | 정보 확인 | 비용 내역 상세 보기 | ⭐⭐⭐⭐ |
-| 9 | `/diff` | 파일 & 코드 | 파일 변경사항 비교 | ⭐⭐⭐⭐⭐ |
-| 10 | `/doctor` | 정보 확인 | 시스템 진단 | ⭐⭐⭐ |
-| 11 | `/effort` | 특수 기능 | 작업량 조절 | ⭐⭐⭐ |
-| 12 | `/exit` | 세션 관리 | 세션 종료 | ⭐⭐⭐⭐⭐ |
-| 13 | `/export` | 파일 & 코드 | 파일 내보내기 | ⭐⭐⭐⭐ |
-| 14 | `/fast` | 특수 기능 | 빠른 모드 활성화 | ⭐⭐⭐ |
-| 15 | `/help` | 정보 확인 | 도움말 보기 | ⭐⭐⭐⭐⭐ |
-| 16 | `/init` | 특수 기능 | 프로젝트 초기화 | ⭐⭐⭐⭐ |
-| 17 | `/language` | 설정 | 사용 언어 설정 | ⭐⭐⭐ |
-| 18 | `/memory` | 파일 & 코드 | 기억 관리 | ⭐⭐⭐ |
-| 19 | `/model` | 설정 | AI 모델 선택 | ⭐⭐⭐⭐ |
-| 20 | `/permissions` | 설정 | 권한 설정 | ⭐⭐⭐ |
-| 21 | `/plan` | 특수 기능 | 프로젝트 계획 수립 | ⭐⭐⭐⭐ |
-| 22 | `/pr` | 특수 기능 | PR 자동 생성 | ⭐⭐⭐ |
-| 23 | `/rename` | 세션 관리 | 세션 이름 변경 | ⭐⭐⭐ |
-| 24 | `/resume` | 세션 관리 | 이전 대화 재개 | ⭐⭐⭐ |
-| 25 | `/review` | 특수 기능 | 코드 리뷰 받기 | ⭐⭐⭐⭐ |
-| 26 | `/rewind` | 세션 관리 | 이전 상태로 돌아가기 | ⭐⭐⭐⭐ |
-| 27 | `/sandbox` | 특수 기능 | 격리 환경에서 실행 | ⭐⭐⭐ |
-| 28 | `/stats` | 정보 확인 | 종합 통계 보기 | ⭐⭐⭐ |
-| 29 | `/status` | 정보 확인 | 현재 상태 확인 | ⭐⭐⭐⭐⭐ |
-| 30 | `/theme` | 설정 | 화면 테마 선택 | ⭐⭐⭐⭐ |
-| 31 | `/usage` | 정보 확인 | 사용량 통계 보기 | ⭐⭐⭐ |
-| 32 | `/voice` | 특수 기능 | 음성 모드 시작 | ⭐⭐⭐ |
-| 33 | `/copy` | 파일 & 코드 | 코드 복사 (인덱스 번호로 특정 블록만 복사 가능: `/copy 2`) | ⭐⭐⭐⭐⭐ |
-| 34 | `/powerup` | 특수 기능 | UI 및 기능 대화형 안내 | ⭐⭐⭐ |
-| 35 | `/loop` | 특수 기능 | 명령을 반복 실행 | ⭐⭐⭐ |
-| 36 | `/batch` | 특수 기능 | 여러 파일/항목에 일괄 작업 | ⭐⭐⭐ |
-| 37 | `/simplify` | 파일 & 코드 | 코드 단순화 및 리팩토링 | ⭐⭐⭐ |
-| 38 | `/schedule` | 특수 기능 | 예약 실행 (cron 방식) 등록 | ⭐⭐⭐ |
-| 39 | `/teleport` | 세션 관리 | 현재 세션을 다른 기기로 이전 | ⭐⭐⭐ |
-| 40 | `/insights` | 정보 확인 | 사용 패턴 및 인사이트 요약 | ⭐⭐ |
-| 41 | `/agents` | 특수 기능 | 서브에이전트 타입 목록 보기 | ⭐⭐ |
-| 42 | `/desktop` | 특수 기능 | Desktop 앱 설정 열기 | ⭐⭐ |
-| 43 | `/release-notes` | 정보 확인 | 최신 업데이트 내역 보기 | ⭐⭐ |
+| 1 | `/agents` | 특수 기능 | 서브에이전트 타입 목록 보기 | ⭐⭐ |
+| 2 | `/batch` | 특수 기능 | 여러 파일/항목에 일괄 작업 (worktree 자동 격리) | ⭐⭐⭐ |
+| 3 | `/branch` | 세션 관리 | 대화 분기하기 | ⭐⭐⭐ |
+| 4 | `/btw` | 세션 관리 | **사이드 질문** — 기록에 남기지 않고 잠깐 물어보기 (v2.1.72~) | ⭐⭐⭐⭐ |
+| 5 | `/buddy` | 재미/이스터에그 | **터미널 다마고치** — 나만의 18종 펫 (v2.1.89+, Pro) | ⭐ |
+| 6 | `/clear` | 세션 관리 | 대화 초기화 | ⭐⭐⭐⭐⭐ |
+| 7 | `/color` | 설정 | 색상 커스터마이징 | ⭐⭐ |
+| 8 | `/commit` | 특수 기능 | Git 커밋 메시지 생성 | ⭐⭐⭐ |
+| 9 | `/compact` | 파일 & 코드 | 대화 압축 | ⭐⭐⭐⭐⭐ |
+| 10 | `/config` | 설정 | 설정 보기 & 변경 | ⭐⭐⭐⭐ |
+| 11 | `/context` | 정보 확인 | 컨텍스트 정보 보기 | ⭐⭐⭐ |
+| 12 | `/copy` | 파일 & 코드 | 코드 복사 (`/copy 2` 식으로 특정 블록만) | ⭐⭐⭐⭐⭐ |
+| 13 | `/cost` | 정보 확인 | 비용 상세 — **모델별·캐시 히트율 분리 표시** (v2.1.92~) | ⭐⭐⭐⭐ |
+| 14 | `/desktop` | 특수 기능 | Desktop 앱 설정 열기 | ⭐⭐ |
+| 15 | `/diff` | 파일 & 코드 | 파일 변경사항 비교 | ⭐⭐⭐⭐⭐ |
+| 16 | `/doctor` | 정보 확인 | 시스템 진단 | ⭐⭐⭐ |
+| 17 | `/effort` | 특수 기능 | 작업량 조절 (`low`/`medium`/`high`, v2.1.92~ 단순화) | ⭐⭐⭐ |
+| 18 | `/exit` | 세션 관리 | 세션 종료 | ⭐⭐⭐⭐⭐ |
+| 19 | `/export` | 파일 & 코드 | 파일 내보내기 | ⭐⭐⭐⭐ |
+| 20 | `/fast` | 특수 기능 | 빠른 출력 모드 | ⭐⭐⭐ |
+| 21 | `/fork` | 세션 관리 | **컨텍스트 복제** — 현재 상태를 복사해 다른 방향으로 실험 | ⭐⭐⭐ |
+| 22 | `/help` | 정보 확인 | 도움말 보기 | ⭐⭐⭐⭐⭐ |
+| 23 | `/init` | 특수 기능 | 프로젝트 초기화 | ⭐⭐⭐⭐ |
+| 24 | `/insights` | 정보 확인 | 사용 패턴 및 인사이트 요약 | ⭐⭐ |
+| 25 | `/language` | 설정 | 사용 언어 설정 | ⭐⭐⭐ |
+| 26 | `/loop` | 특수 기능 | 세션 내 반복 실행 (최소 1분, 3일 후 자동 만료) | ⭐⭐⭐ |
+| 27 | `/memory` | 파일 & 코드 | 기억 관리 (25KB·200줄 자동 정리) | ⭐⭐⭐ |
+| 28 | `/model` | 설정 | AI 모델 선택 | ⭐⭐⭐⭐ |
+| 29 | `/permissions` | 설정 | 권한 설정 — **Recent 탭 추가** (v2.1.89~) | ⭐⭐⭐ |
+| 30 | `/plan` | 특수 기능 | 프로젝트 계획 수립 | ⭐⭐⭐⭐ |
+| 31 | `/powerup` | 특수 기능 | **인터랙티브 기능 학습 레슨** (v2.1.90~) | ⭐⭐⭐ |
+| 32 | `/pr` | 특수 기능 | PR 자동 생성 | ⭐⭐⭐ |
+| 33 | `/release-notes` | 정보 확인 | 최신 업데이트 내역 — **인터랙티브 버전 선택기** (v2.1.92~) | ⭐⭐ |
+| 34 | `/rename` | 세션 관리 | 세션 이름 변경 | ⭐⭐⭐ |
+| 35 | `/resume` | 세션 관리 | 이전 대화 재개 (v2.1.77~ 45% 빨라짐) | ⭐⭐⭐ |
+| 36 | `/review` | 특수 기능 | 코드 리뷰 받기 | ⭐⭐⭐⭐ |
+| 37 | `/rewind` | 세션 관리 | 이전 상태로 되돌리기 (코드만/대화만/전체) | ⭐⭐⭐⭐ |
+| 38 | `/sandbox` | 특수 기능 | 격리 환경에서 실행 | ⭐⭐⭐ |
+| 39 | `/schedule` | 특수 기능 | 예약 실행 등록 | ⭐⭐⭐ |
+| 40 | `/simplify` | 파일 & 코드 | 코드 단순화 및 리팩토링 | ⭐⭐⭐ |
+| 41 | `/stats` | 정보 확인 | 종합 통계 보기 | ⭐⭐⭐ |
+| 42 | `/status` | 정보 확인 | 현재 상태 확인 | ⭐⭐⭐⭐⭐ |
+| 43 | `/teleport` | 세션 관리 | 현재 세션을 다른 기기로 이전 | ⭐⭐⭐ |
+| 44 | `/theme` | 설정 | 화면 테마 선택 | ⭐⭐⭐⭐ |
+| 45 | `/ultraplan` | 특수 기능 | **클라우드 플랜 다듬기** (research preview, v2.1.91+) | ⭐⭐⭐ |
+| 46 | `/usage` | 정보 확인 | 사용량 통계 보기 | ⭐⭐⭐ |
+| 47 | `/voice` | 특수 기능 | 음성 모드 시작 (스페이스바 push-to-talk, 20개 언어) | ⭐⭐⭐ |
+
+<div class="note-star">
+☆ <strong>2026-04-04 v2.1.92에서 제거된 명령어</strong>: <code>/tag</code>, <code>/vim</code>
+<br />→ 기존 워크플로우에 있었다면 대체 방법을 찾으세요.
+</div>
 
 ---
 
 ## 📁 카테고리별로 정렬된 명령어
 
-### 🔄 세션 관리 (7개)
+### 🔄 세션 관리 (9개)
 
-대화와 세션을 제어하는 명령어들입니다.
+대화와 세션을 제어하는 명령어들입니다. `/btw`·`/fork`·`/rewind`는 **컨텍스트 위생 3종 세트**로 자주 함께 씁니다.
 
 | 명령어 | 설명 | 자세한 문서 |
 |--------|------|-----------|
 | `/clear` | 대화 모두 지우기 | [세션 관리 명령어](../commands/session-commands.md) |
-| `/resume` | 이전 대화 재개 | [세션 관리 명령어](../commands/session-commands.md) |
+| `/resume` | 이전 대화 재개 (45% 빨라짐) | [세션 관리 명령어](../commands/session-commands.md) |
 | `/rename` | 세션 이름 변경 | [세션 관리 명령어](../commands/session-commands.md) |
 | `/branch` | 대화 분기하기 | [세션 관리 명령어](../commands/session-commands.md) |
-| `/rewind` | 이전 상태로 돌아가기 | [세션 관리 명령어](../commands/session-commands.md) |
+| `/btw` | 기록에 남기지 않는 사이드 질문 | [컨텍스트 위생](../tips/btw-side-questions.md) |
+| `/fork` | 현재 컨텍스트 복제해 다른 실험 | [컨텍스트 위생](../tips/btw-side-questions.md) |
+| `/rewind` | 이전 상태로 되돌리기 (코드/대화/전체 선택) | [컨텍스트 위생](../tips/btw-side-questions.md) |
 | `/teleport` | 현재 세션을 다른 기기로 이전 | [세션 관리 명령어](../commands/session-commands.md) |
 | `/exit` | 세션 종료 | [세션 관리 명령어](../commands/session-commands.md) |
 
@@ -101,14 +115,14 @@ Claude Code를 커스터마이징하는 명령어들입니다.
 | 명령어 | 설명 | 자세한 문서 |
 |--------|------|-----------|
 | `/status` | 현재 상태 확인 | [정보 확인 명령어](../commands/info-commands.md) |
-| `/cost` | 비용 내역 상세 보기 (모델별 토큰 사용량 분리 표시) | [정보 확인 명령어](../commands/info-commands.md) |
+| `/cost` | **모델별 + 캐시 히트율** 상세 비용 (v2.1.92~) | [정보 확인 명령어](../commands/info-commands.md) |
 | `/usage` | 사용량 통계 보기 | [정보 확인 명령어](../commands/info-commands.md) |
 | `/stats` | 종합 통계 보기 | [정보 확인 명령어](../commands/info-commands.md) |
 | `/context` | 컨텍스트 정보 보기 | [정보 확인 명령어](../commands/info-commands.md) |
 | `/doctor` | 시스템 진단 | [정보 확인 명령어](../commands/info-commands.md) |
 | `/help` | 도움말 보기 | [정보 확인 명령어](../commands/info-commands.md) |
 | `/insights` | 사용 패턴 및 인사이트 요약 | [정보 확인 명령어](../commands/info-commands.md) |
-| `/release-notes` | 최신 업데이트 내역 | [정보 확인 명령어](../commands/info-commands.md) |
+| `/release-notes` | **인터랙티브 버전 선택기** (v2.1.92~) | [정보 확인 명령어](../commands/info-commands.md) |
 
 ### 📁 파일 & 코드 (5개)
 
@@ -122,7 +136,7 @@ Claude Code를 커스터마이징하는 명령어들입니다.
 | `/compact` | 대화 압축 | [파일 & 코드 명령어](../commands/file-commands.md) |
 | `/memory` | 기억 관리 | [파일 & 코드 명령어](../commands/file-commands.md) |
 
-### 🎯 특수 기능 (15개)
+### 🎯 특수 기능 (16개)
 
 고급 기능과 전문가용 명령어들입니다.
 
@@ -130,16 +144,17 @@ Claude Code를 커스터마이징하는 명령어들입니다.
 |--------|------|-----------|
 | `/init` | 프로젝트 초기화 | [특수 명령어](../commands/special-commands.md) |
 | `/plan` | 프로젝트 계획 수립 | [특수 명령어](../commands/special-commands.md) |
+| `/ultraplan` | **클라우드 플랜 다듬기** (research preview) | [/ultraplan 가이드](../advanced/ultraplan.md) |
 | `/fast` | 빠른 출력 모드 (모델 유지) | [특수 명령어](../commands/special-commands.md) |
-| `/voice` | 음성 모드 시작 (스페이스바 push-to-talk) | [특수 명령어](../commands/special-commands.md) |
-| `/effort` | 작업량 조절 | [특수 명령어](../commands/special-commands.md) |
+| `/voice` | 음성 모드 — 스페이스바 push-to-talk, 20개 언어 | [특수 명령어](../commands/special-commands.md) |
+| `/effort` | 작업량 `low`/`medium`/`high` (v2.1.92~ 단순화) | [특수 명령어](../commands/special-commands.md) |
 | `/sandbox` | 격리 환경에서 실행 | [특수 명령어](../commands/special-commands.md) |
 | `/pr` | PR 자동 생성 | [특수 명령어](../commands/special-commands.md) |
 | `/review` | 코드 리뷰 받기 | [특수 명령어](../commands/special-commands.md) |
 | `/commit` | Git 커밋 메시지 생성 | [특수 명령어](../commands/special-commands.md) |
-| `/powerup` | UI 및 기능 대화형 안내 | [특수 명령어](../commands/special-commands.md) |
-| `/loop` | 명령을 반복 실행 | [특수 명령어](../commands/special-commands.md) |
-| `/batch` | 여러 항목에 일괄 작업 | [특수 명령어](../commands/special-commands.md) |
+| `/powerup` | **인터랙티브 기능 학습 레슨** (v2.1.90~) | [특수 명령어](../commands/special-commands.md) |
+| `/loop` | 세션 내 반복 실행 (최소 1분·3일 만료) | [특수 명령어](../commands/special-commands.md) |
+| `/batch` | worktree 격리 병렬 일괄 작업 | [특수 명령어](../commands/special-commands.md) |
 | `/simplify` | 코드 단순화 및 리팩토링 | [특수 명령어](../commands/special-commands.md) |
 | `/schedule` | 예약 실행 등록 | [특수 명령어](../commands/special-commands.md) |
 | `/agents` | 서브에이전트 타입 목록 | [특수 명령어](../commands/special-commands.md) |
@@ -204,7 +219,13 @@ Claude Code를 커스터마이징하는 명령어들입니다.
 
 **"실수했을 때?"**
 ```bash
-/rewind     (되돌리기)
+/rewind     (되돌리기 — Esc×2로도 가능)
+/fork       (다른 길로 시도해보기)
+```
+
+**"작업 중인데 잠깐 궁금한 게 있을 때?"**
+```bash
+/btw 여쭤볼 것  (기록에 남기지 않고 질문)
 ```
 
 **"새 프로젝트를 시작할 때?"**

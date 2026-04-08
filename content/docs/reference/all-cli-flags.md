@@ -1,13 +1,11 @@
 ---
 title: "전체 CLI 플래그 목록"
-description: "Claude Code 터미널에서 사용할 수 있는 모든 커맨드라인 옵션"
+description: "Claude Code 터미널에서 사용할 수 있는 모든 커맨드라인 옵션 (v2.1.92 기준)"
 category: "reference"
 order: 2
 tags: ["레퍼런스", "CLI", "플래그", "터미널"]
-lastUpdated: "2026-04-06"
+lastUpdated: "2026-04-08"
 ---
-
-> 📅 최종 업데이트: 2026년 4월 6일
 
 ## CLI 플래그란?
 
@@ -98,7 +96,14 @@ AI 모델과 작동 방식을 설정합니다.
 |--------|------|------|
 | `--remote` | 웹 세션으로 시작 (브라우저 접속 URL 생성) | `claude --remote` |
 | `--teleport` | 현재 세션을 이전 가능한 링크로 생성 | `claude --teleport` |
-| `--worktree` | Git worktree 모드로 실행 (에이전트 팀과 병행 사용) | `claude --worktree` |
+| `--worktree <이름>` | **Git worktree 격리 모드** — 여러 에이전트를 서로 방해 없이 병렬 실행 (v2.1.49~) | `claude --worktree feature-auth` |
+| `--resume` | 최근 세션 재개 (v2.1.77 이후 45% 빨라짐) | `claude --resume` |
+| `--remote-control-session-name-prefix <접두어>` | 원격 조종 세션 이름 접두어 지정 | `claude --remote-control-session-name-prefix dev` |
+
+<div class="note-circle">
+○ <strong>`--worktree` 비유</strong>: 공사 현장에서 인부마다 자기 구역을 따로 파놓는 것과 같아요. 서로의 삽질에 방해받지 않습니다.
+<br />○ <strong>환경변수로도 가능</strong>: <code>CLAUDE_REMOTE_CONTROL_SESSION_NAME_PREFIX</code>
+</div>
 
 ### 📝 저장 & 캐시
 

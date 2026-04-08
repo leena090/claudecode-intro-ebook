@@ -4,10 +4,9 @@ description: "Claude Code를 나에게 맞게 커스터마이징하는 방법"
 category: "commands"
 order: 3
 tags: ["설정", "커스터마이징", "명령어"]
-lastUpdated: "2026-03-22"
+lastUpdated: "2026-04-08"
 ---
 
-> 📅 최종 업데이트: 2026년 3월 22일
 
 ## 설정이란?
 

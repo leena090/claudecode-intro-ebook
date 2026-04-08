@@ -1,13 +1,19 @@
 ---
 title: "데스크톱 제어 — AI가 내 화면을 직접 조작"
-description: "클로드가 내 컴퓨터 화면을 보고 마우스와 키보드를 직접 사용하는 Computer Use 기능을 알아봅니다."
-tags: ["코워크", "데스크톱 제어", "Computer Use", "화면 조작", "자동화"]
+description: "클로드가 내 컴퓨터 화면을 보고 마우스와 키보드를 직접 사용하는 Computer Use 기능 (2026-03-23 Pro/Max 출시)"
+tags: ["코워크", "데스크톱 제어", "Computer Use", "화면 조작", "자동화", "Pro Max 전용"]
 category: "cowork"
 order: 3
-lastUpdated: "2026-04-06"
+lastUpdated: "2026-04-08"
 ---
 
-> 📅 최종 업데이트: 2026년 4월 6일
+<div class="note-star">
+★ <strong>2026-03-23 정식 출시</strong> (Research Preview) — Computer Use가 Claude Code와 Cowork Desktop 앱에 정식 통합됐어요. <strong>Pro/Max 플랜 전용</strong>이며, 별도 설정 없이 바로 사용 가능합니다 (No setup required).
+<br /><br />
+★ <strong>언제 자동 발동되나요?</strong> Claude가 "이 작업엔 MCP나 커넥터가 없네" 라고 판단하면 <strong>화면을 직접 보고 클릭/타이핑</strong>으로 전환해요. Slack, Jira, 회계 프로그램처럼 MCP가 없는 앱도 이제 조작 가능합니다.
+<br /><br />
+★ <strong>⚠️ 아직 실험 단계</strong>: 커뮤니티 <code>[R]</code> 초기 반응은 "놀랍지만 아직 불안정하다". 중요한 작업은 결과를 꼭 검토하세요.
+</div>
 
 ## AI가 내 화면을 직접 본다고요?
 

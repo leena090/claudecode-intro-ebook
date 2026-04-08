@@ -4,10 +4,9 @@ description: "클로드의 기능을 확장하는 커스텀 플러그인과 스�
 category: "advanced"
 order: 6
 tags: ["플러그인", "스킬", "확장"]
-lastUpdated: "2026-03-22"
+lastUpdated: "2026-04-08"
 ---
 
-> 📅 최종 업데이트: 2026년 3월 22일
 
 ## 플러그인 & 스킬이란?
 
@@ -351,6 +350,39 @@ module.exports = {
 - 설명 없음
 - 하나의 역할만 (너무 세분화)
 ```
+
+---
+
+## 🏪 플러그인 마켓플레이스 — 남이 만든 플러그인 쓰기
+
+2026년 4월 기준 **공식 문서에 Plugin Marketplace + 배포 가이드**가 상세히 추가됐어요. 직접 안 만들고 **남이 만든 150개+ 플러그인을 다운로드**해서 쓸 수 있습니다.
+
+### Claude Marketplaces — 150개+ 커뮤니티 플러그인 <code>[R]</code>
+
+- 📦 **무료 플러그인**: Code Review, Test Writer, Commit Helper, Napkin 등
+- 💰 **유료 플러그인**: 5~15 EUR 대
+- 🔍 **GitHub 검색**: `"claude skill" path:/.claude/` → 공개 스킬 탐색 (10,913개 저장소 인덱싱 기준)
+
+### 공식 배포 가이드
+
+공식 문서에 **플러그인을 직접 만들어 마켓플레이스에 등록하는 법**도 정리됐어요:
+- Manifest 작성법
+- LSP(Language Server Protocol) 서버 통합
+- MCP 서버 연동 방식
+- 버전 관리 전략
+
+→ [공식 배포 가이드](https://code.claude.com/docs/en/create-plugins)
+
+### 💡 커뮤니티 핵심 피드백 <code>[R]</code>
+
+> *"Custom skills > generic ones — the greatest ROI comes from team-tailored implementations rather than generalist tools."*
+> (커스텀 스킬이 범용 스킬보다 ROI가 높다 — 팀에 맞춘 맞춤형이 최고)
+
+**해석**: 마켓플레이스에서 "인기 스킬"을 가져다 쓰는 것보다, **우리 팀·내 작업에 맞춘 스킬**을 직접 만드는 게 훨씬 효과적이에요. 마켓플레이스는 **참고용**으로만 쓰고, 본격 활용은 커스텀 제작을 권장합니다.
+
+<div class="note-circle">
+○ 출처: claudemarketplaces.com (2026-03 기준 150개+ 등록) + Simon Willison "Skills are awesome" (2025-10)
+</div>
 
 ---
 

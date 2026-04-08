@@ -1,17 +1,73 @@
 ---
 title: "Hooks로 자동화하기"
-description: "특정 상황에서 자동으로 실행되는 작업 설정하기"
+description: "특정 상황에서 자동으로 실행되는 작업 설정하기 — CLAUDE.md와의 결정적 차이"
 category: "config"
 order: 4
 tags: ["자동화", "hooks", "이벤트"]
-lastUpdated: "2026-04-06"
+lastUpdated: "2026-04-08"
 ---
-
-> 📅 최종 업데이트: 2026년 4월 6일
 
 ## Hooks란?
 
 **Hooks**는 특정 상황이 발생했을 때 자동으로 무언가를 실행하도록 하는 설정입니다. 마치 자동 수도꼭지처럼, 손을 가져다 대면 자동으로 물이 나오듯이, 정해진 이벤트가 발생하면 자동으로 동작합니다.
+
+---
+
+## 🔑 Hooks vs CLAUDE.md — 결정적 차이
+
+가장 중요한 포인트부터 말씀드릴게요. 많은 분들이 헷갈리는 부분입니다.
+
+| 비교 | CLAUDE.md | Hooks |
+|---|---|---|
+| **성격** | 권고 (advisory) | **강제 (deterministic)** |
+| **Claude가 무시할 수 있나?** | ✅ 가능 (AI 판단) | ❌ 불가능 (무조건 실행) |
+| **언제 쓰나?** | 취향, 스타일, 원칙 | **보안, 안전, 절대 규칙** |
+| **예시** | "한국어로 답해줘" | "rm -rf 실행 전 차단" |
+
+> 🍱 **비유로 설명하면**:
+> - **CLAUDE.md = 가정 교육** — "밥 먹기 전에 손 씻으렴" (말해줘도 가끔 빼먹음)
+> - **Hooks = 자동 수도꼭지** — 아무리 급해도 물이 나와야 뭘 하든 함 (빼먹을 수 없음)
+
+**실전 원칙**:
+- **돌이킬 수 없는 작업**(파일 삭제, DB 수정, 외부 발송)은 **반드시 Hooks**로 관리
+- **취향이나 원칙**은 CLAUDE.md로 충분
+
+---
+
+## 💎 커뮤니티 검증 필수 Hook 3종 [R]
+
+몇 달 써본 개발자들이 "이건 무조건 있어야 한다"고 공통 추천하는 Hook 3가지입니다.
+
+### 1. `block-dangerous-commands.js` — rm -rf 차단
+
+```javascript
+// PreToolUse 훅: Bash 실행 전 위험 명령 차단
+if (tool === 'Bash' && /rm\s+-rf/.test(command)) {
+  return { block: true, reason: 'rm -rf 차단 — 수동 확인 필요' };
+}
+```
+
+### 2. `protect-secrets.js` — .env 파일 읽기 차단
+
+```javascript
+// PreToolUse 훅: Read 시 민감 파일 차단
+if (tool === 'Read' && /\.(env|pem|key)$/.test(path)) {
+  return { block: true, reason: '민감 파일 접근 차단' };
+}
+```
+
+### 3. `auto-stage.js` — 파일 수정 후 자동 git add
+
+```javascript
+// PostToolUse 훅: Edit/Write 성공 후 자동 스테이징
+if (['Edit', 'Write'].includes(tool)) {
+  exec(`git add "${path}"`);
+}
+```
+
+<div class="note-circle">
+○ 출처: <code>[R]</code> Mustafa Morbel "Taming Claude Code: A Guide to CLAUDE.md and Hooks" (2026-03-16)
+</div>
 
 ---
 

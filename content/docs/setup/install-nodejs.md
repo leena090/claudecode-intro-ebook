@@ -4,7 +4,7 @@ description: "npm 설치 방식을 사용할 때 필요한 Node.js 설치 방법
 tags: ["설치", "Node.js", "준비"]
 category: "setup"
 order: 2
-lastUpdated: "2026-03-22"
+lastUpdated: "2026-04-08"
 ---
 
 ## ⭐ 중요: Node.js 설치 필요 여부

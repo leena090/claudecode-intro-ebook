@@ -1,13 +1,12 @@
 ---
 title: "나에게 필요한 도구일까?"
-description: "Claude 도구들 중 나에게 맞는 걸 찾아봅시다"
-tags: ["입문", "활용", "선택"]
+description: "Claude 도구들 중 나에게 맞는 걸 찾아봅시다 + Cursor/Copilot과의 차이"
+tags: ["입문", "활용", "선택", "Cursor비교"]
 category: "intro"
 order: 2
-lastUpdated: "2026-04-06"
+lastUpdated: "2026-04-08"
 ---
 
-> 📅 최종 업데이트: 2026년 4월 6일
 
 ## 나한테 맞는 Claude 도구는?
 
@@ -104,6 +103,51 @@ Claude에는 여러 도구가 있어요. 전부 다 쓸 필요는 없습니다. 
 - 📱 간단한 웹 앱 (예약 폼, 계산기, 퀴즈)
 - 📝 문서 자동 생성 시스템
 - 🎨 포트폴리오 사이트
+
+---
+
+## 🤔 다른 AI 코딩 도구와 뭐가 달라요? (Cursor, Copilot)
+
+요즘 AI 코딩 도구가 여러 개 있어요. Claude Code 말고도 **Cursor**, **GitHub Copilot**, **Windsurf** 등이 유명하죠. 뭐가 다른지 궁금하실 거예요.
+
+### 30일 실전 비교 결과 <code>[R]</code>
+
+커뮤니티에서 세 도구를 **30일 동안 같은 작업에 써본** 개발자들의 정리입니다.
+
+| 도구 | 강점 | 약점 | 정확도 (SWE-bench) |
+|---|---|---|---|
+| **Claude Code** | 🏆 **정확도 압도적**, 대규모 리팩토링, 보안 감사, 협업 | 5~10분 살짝 느림 | **80.8%** |
+| **Cursor** | ⚡ 속도, 코드베이스 탐색 빠름 | 복잡한 작업에서 정확도 보통 | ~65% (추정) |
+| **GitHub Copilot** | 📝 자동완성, 보일러플레이트 | 대규모 작업 약함 | - |
+
+### 커뮤니티 합의 한 줄 <code>[R]</code>
+
+> *"Copilot is a better typist, Cursor is a better explorer, Claude Code is a better collaborator."*
+>
+> → Copilot은 타이피스트, Cursor는 탐색가, **Claude Code는 협업자**
+
+### 🍱 비유로 설명하면
+
+- **Copilot** = 받아쓰기 잘하는 비서 (내가 말한 대로 빠르게 타이핑)
+- **Cursor** = 동네 지리 잘 아는 택시기사 (코드베이스 안을 빠르게 누비기)
+- **Claude Code** = 같이 일하는 동료 개발자 (생각하고 판단하고 제안)
+
+### 👍 추천 조합
+
+**하나만 쓰지 마세요!** 커뮤니티 공통 조언은 **용도별 조합**입니다:
+
+| 상황 | 추천 도구 |
+|---|---|
+| 일상 코딩, 자동완성 | **Cursor** 또는 **Copilot** |
+| 대규모 리팩토링, 보안 감사 | **Claude Code** |
+| 복잡한 설계, 플래닝 | **Claude Code** (+ `/ultraplan`) |
+| 긴 로그 파일·대용량 분석 | **Claude Code** (1M 컨텍스트) |
+| 단순 함수 만들기 | 아무거나 |
+
+<div class="note-circle">
+○ 출처: <code>[R]</code> "Cursor vs Windsurf vs Claude Code in 2026: The Honest Comparison" (Remis Haroon, 30일 비교 후기)
+<br />○ <strong>이 가이드는 Claude Code 중심</strong>이에요. 다른 도구는 필요하면 추가로 배우세요. 한 번에 다 할 필요 없습니다.
+</div>
 
 ---
 

@@ -1,13 +1,11 @@
 ---
 title: "음성 입력 & Fast 모드"
-description: "손을 사용하지 않고 음성으로 지시하거나 빠르게 응답 받기"
+description: "손을 사용하지 않고 음성으로 지시하거나 빠르게 응답 받기 (v2.1.69~ 20개 언어 지원)"
 category: "advanced"
 order: 5
-tags: ["음성", "속도", "편의성"]
-lastUpdated: "2026-04-06"
+tags: ["음성", "속도", "편의성", "20개언어"]
+lastUpdated: "2026-04-08"
 ---
-
-> 📅 최종 업데이트: 2026년 4월 6일
 
 ## 음성 입력 & Fast 모드란?
 
@@ -168,7 +166,7 @@ AI:
 
 ## 음성 입력 설정
 
-### 언어 설정
+### 언어 설정 — 20개 언어 지원 (v2.1.69~ 2배 확장)
 
 ```bash
 /voice --language korean
@@ -184,6 +182,35 @@ AI:
   }
 }
 ```
+
+<div class="note-star">
+★ <strong>2026-03-05 v2.1.69 업데이트</strong>: 지원 언어가 <strong>10개 → 20개</strong>로 늘어났어요. 한국어 인식 정확도도 이전보다 많이 좋아졌습니다.
+</div>
+
+**지원 언어 20개:**
+
+| 구분 | 언어 | 언어 코드 |
+|---|---|---|
+| 🇰🇷 한국어 | Korean | `ko-KR` |
+| 🇯🇵 일본어 | Japanese | `ja-JP` |
+| 🇨🇳 중국어(간체) | Chinese (Simplified) | `zh-CN` |
+| 🇹🇼 중국어(번체) | Chinese (Traditional) | `zh-TW` |
+| 🇺🇸 영어 | English | `en-US` |
+| 🇪🇸 스페인어 | Spanish | `es-ES` |
+| 🇫🇷 프랑스어 | French | `fr-FR` |
+| 🇩🇪 독일어 | German | `de-DE` |
+| 🇮🇹 이탈리아어 | Italian | `it-IT` |
+| 🇵🇹 포르투갈어 | Portuguese | `pt-PT` |
+| 🇷🇺 러시아어 | Russian | `ru-RU` |
+| 🇳🇱 네덜란드어 | Dutch | `nl-NL` |
+| 🇸🇪 스웨덴어 | Swedish | `sv-SE` |
+| 🇵🇱 폴란드어 | Polish | `pl-PL` |
+| 🇹🇷 터키어 | Turkish | `tr-TR` |
+| 🇮🇳 힌디어 | Hindi | `hi-IN` |
+| 🇸🇦 아랍어 | Arabic | `ar-SA` |
+| 🇻🇳 베트남어 | Vietnamese | `vi-VN` |
+| 🇹🇭 태국어 | Thai | `th-TH` |
+| 🇮🇩 인도네시아어 | Indonesian | `id-ID` |
 
 ---
 

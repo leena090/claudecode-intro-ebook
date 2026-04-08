@@ -1,13 +1,17 @@
 ---
 title: "Dispatch — 폰으로 일 시키고 퇴근하기"
-description: "스마트폰에서 코워크에 일을 지시하면 사무실 컴퓨터가 혼자 처리하는 Dispatch 기능을 알아봅니다."
-tags: ["코워크", "Dispatch", "원격 작업", "스마트폰", "자동화"]
+description: "스마트폰에서 코워크에 일을 지시하면 사무실 컴퓨터가 혼자 처리하는 Dispatch 기능 (2026-03-17 Computer Use 통합)"
+tags: ["코워크", "Dispatch", "원격 작업", "스마트폰", "자동화", "Computer Use"]
 category: "cowork"
 order: 4
-lastUpdated: "2026-04-06"
+lastUpdated: "2026-04-08"
 ---
 
-> 📅 최종 업데이트: 2026년 4월 6일
+<div class="note-star">
+★ <strong>2026-03-17 업데이트</strong>: Dispatch가 <strong>Computer Use와 통합</strong>됐어요. 이제 스마트폰에서 지시하면, 사무실 컴퓨터의 Claude가 <strong>직접 화면을 클릭·타이핑하면서 앱을 조작</strong>할 수 있습니다. (Pro/Max 전용)
+<br /><br />
+→ 출처: <a href="https://claude.com/blog/dispatch-and-computer-use">Anthropic 공식 블로그 "Dispatch and Computer Use"</a>
+</div>
 
 ## Dispatch가 뭔가요?
 

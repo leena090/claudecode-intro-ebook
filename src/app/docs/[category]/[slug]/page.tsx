@@ -3,7 +3,7 @@ import Sidebar from '@/components/Sidebar'
 import MarkdownBody from '@/components/MarkdownBody'
 import TagBadge from '@/components/TagBadge'
 import FooterNav from '@/components/FooterNav'
-import { CATEGORIES, getDoc, getDocsByCategory } from '@/lib/docs'
+import { CATEGORIES, getDoc, getDocsByCategory, formatKoreanDate } from '@/lib/docs'
 import { markdownToHtml } from '@/lib/markdown'
 import { notFound } from 'next/navigation'
 
@@ -34,6 +34,9 @@ export default async function DocPage({
   // 마크다운 → HTML 변환 (서버 사이드)
   const html = await markdownToHtml(doc.content)
 
+  // 최종 업데이트 날짜를 한국어 포맷으로 변환 (없으면 null → 뱃지 미표시)
+  const lastUpdatedKorean = formatKoreanDate(doc.meta.lastUpdated)
+
   return (
     <div className="min-h-screen" style={{ background: 'var(--bg-primary)' }}>
       {/* 헤더 — 홈 > 카테고리 > 문서 브레드크럼 */}
@@ -49,7 +52,7 @@ export default async function DocPage({
 
         {/* 메인 콘텐츠 영역 */}
         <main className="min-w-0 flex-1 max-w-3xl">
-          {/* 문서 헤더 — 제목 + 설명 + 태그 */}
+          {/* 문서 헤더 — 제목 + 설명 + 최종 업데이트 뱃지 + 태그 */}
           <div className="mb-8">
             <h1
               className="text-2xl sm:text-[1.75rem] font-bold mb-2.5"
@@ -60,6 +63,17 @@ export default async function DocPage({
             <p className="text-base" style={{ color: 'var(--text-secondary)' }}>
               {doc.meta.description}
             </p>
+
+            {/* 최종 업데이트 뱃지 — lastUpdated 프론트매터가 있을 때만 표시 */}
+            {/* 각 페이지마다 공식/커뮤니티 소스 기준 최신화 시점을 독자에게 명확히 안내 */}
+            {lastUpdatedKorean && (
+              <div className="last-updated-badge mt-3">
+                <span className="last-updated-icon">📅</span>
+                <span className="last-updated-label">최종 업데이트</span>
+                <span className="last-updated-date">{lastUpdatedKorean}</span>
+              </div>
+            )}
+
             {doc.meta.tags.length > 0 && (
               <div className="flex flex-wrap gap-1.5 mt-4">
                 {doc.meta.tags.map(tag => <TagBadge key={tag} label={tag} />)}

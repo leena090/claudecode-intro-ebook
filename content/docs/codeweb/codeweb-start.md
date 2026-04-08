@@ -1,13 +1,12 @@
 ---
 title: "Claude Code 웹 시작하기"
 description: "claude.ai/code 접속부터 GitHub 연결, 첫 코딩 지시, 결과 확인까지 단계별로 따라해봅니다."
-tags: ["Claude Code 웹", "시작하기", "GitHub 연결", "PR", "diff 보기"]
+tags: ["Claude Code 웹", "시작하기", "GitHub 연결", "PR", "diff 보기", "기본 허용 도메인"]
 category: "codeweb"
 order: 2
-lastUpdated: "2026-04-06"
+lastUpdated: "2026-04-08"
 ---
 
-> 📅 최종 업데이트: 2026년 4월 6일
 
 # Claude Code 웹 시작하기
 
@@ -141,6 +140,29 @@ PR이 생성되면 GitHub에 자동으로 저장됩니다. 나중에 github.com�
 ```
 
 딱 이 순서입니다. 한 번만 해보면 두 번째부터는 훨씬 빠르게 진행됩니다.
+
+---
+
+## 🌐 기본 허용 도메인 목록 (공식 문서 추가)
+
+Claude Code 웹은 **샌드박스 환경**에서 돌아가기 때문에, 기본적으로 외부 인터넷 접근이 제한돼요. 하지만 개발에 꼭 필요한 도메인 **50개 이상**은 **기본 허용**되어 있습니다.
+
+> 🍱 **비유로 설명하면**: 아이 방에 인터넷 차단기를 걸되, 교육용 사이트 몇 개는 화이트리스트로 풀어준 것과 같아요.
+
+**기본 허용 카테고리 (공식 문서 기준):**
+
+| 카테고리 | 예시 도메인 |
+|---|---|
+| 📦 패키지 레지스트리 | npm, PyPI, RubyGems, crates.io, pkg.go.dev |
+| 🐳 컨테이너 | Docker Hub, ghcr.io, gcr.io |
+| 🐙 Git 호스팅 | github.com, gitlab.com, bitbucket.org |
+| ☁️ 클라우드 | AWS, GCP, Azure CLI·API 엔드포인트 |
+| 📚 문서 | developer.mozilla.org, docs.python.org, go.dev |
+| 🎨 CDN | cdn.jsdelivr.net, unpkg.com, fonts.googleapis.com |
+
+→ 전체 목록: [공식 문서](https://code.claude.com/docs/en/claude-code-on-the-web#default-allowed-domains)
+
+**즉**, npm install, pip install, Docker pull, 공식 문서 검색, CDN 리소스 가져오기 같은 **일반적인 개발 작업은 추가 설정 없이 바로 가능**해요.
 
 ---
 

@@ -1,13 +1,11 @@
 ---
 title: "권한 시스템 이해하기"
-description: "클로드 코드가 할 수 있는 일과 할 수 없는 일을 제어하는 권한 체계"
+description: "클로드 코드가 할 수 있는 일과 할 수 없는 일을 제어하는 권한 체계 (v2.1.89 Recent 탭 추가)"
 category: "config"
 order: 3
 tags: ["권한", "보안", "접근제어"]
-lastUpdated: "2026-03-22"
+lastUpdated: "2026-04-08"
 ---
-
-> 📅 최종 업데이트: 2026년 3월 22일
 
 ## 권한 시스템이란?
 
@@ -255,6 +253,80 @@ AI가 즉시 실행 — 확인 없음
 해결책: Ask 빈도를 줄이기
 "mode": "allow"로 변경하되, denylist로 위험한 것만 차단
 ```
+
+---
+
+## 🆕 Recent 탭 — 거부된 명령 모아보기 (v2.1.89~)
+
+```bash
+/permissions
+```
+
+**역할:** `/permissions` 명령어에 **Recent 탭**이 추가됐어요. 최근에 거부되었던 명령들을 한눈에 보고, 필요하면 **바로 다시 시도**할 수 있습니다.
+
+> 🍱 **비유로 설명하면**: 카톡에서 "차단된 메시지 목록"을 보는 것과 비슷해요. 차단한 걸 다시 꺼내볼 수 있죠.
+
+**활용:**
+- 내가 실수로 거부한 명령을 다시 허용하고 싶을 때
+- 어떤 명령이 자주 막혔는지 통계 파악
+- 필요한 명령어를 allowlist에 추가할 후보 찾기
+
+<div class="note-circle">
+○ v2.1.89(2026-04-01)에 추가됐어요.
+</div>
+
+---
+
+## 🔑 중단 없는 워크플로우 — 와일드카드 패턴 [R]
+
+권한을 너무 촘촘히 물어보면 매번 "실행할까요?" 팝업이 떠서 집중이 깨져요. 커뮤니티 검증된 **3단계 계층 + 와일드카드 패턴**을 써봅시다.
+
+### 3단계 우선순위
+```
+User (~/.claude/settings.json)     ← 전역
+    ↓ 덮어씀
+Project (./.claude/settings.json)  ← 프로젝트
+    ↓ 덮어씀
+Local (./.claude/settings.local.json) ← 개인용, gitignore
+```
+
+더 구체적인(아래쪽) 설정이 우선이에요.
+
+### 와일드카드 패턴 예시
+
+```json
+{
+  "permissions": {
+    "mode": "ask",
+    "allowlist": [
+      "Read", "Write", "Edit",
+      "Bash(git:*)",
+      "Bash(npm:*)",
+      "Bash(node:*)",
+      "Bash(python:*)",
+      "mcp__plugin_playwright_playwright__*"
+    ],
+    "denylist": [
+      "Bash(rm -rf:*)",
+      "Bash(sudo:*)"
+    ]
+  }
+}
+```
+
+### 원칙: "돌이킬 수 있는 건 허용, 돌이킬 수 없는 건 확인"
+
+| 종류 | 권한 설정 |
+|---|---|
+| **읽기·되돌릴 수 있는 작업** (read, git commit, test) | ✅ 자동 허용 |
+| **돌이킬 수 없는 작업** (rm, db migration, push to main) | ❓ 매번 확인 |
+| **외부에 영향** (Slack 메시지, 이메일 발송) | ❓ 매번 확인 |
+
+> 🍱 **비유로 설명하면**: 집 청소는 아이에게 맡겨도 되지만, 현관문 열쇠는 매번 허락받게 하는 거예요. 되돌릴 수 없는 실수를 막는 게 핵심.
+
+<div class="note-circle">
+○ 출처: <code>[R]</code> Rajiv Pant "Stop Asking Me: Configuring Claude Code Permissions" (2026-03-31)
+</div>
 
 ---
 

@@ -4,6 +4,7 @@ description: "코드를 몰라도 AI가 쉽게 설명해주는 클로드코드"
 tags: ["실전", "코드이해", "설명"]
 category: "practice"
 order: 2
+lastUpdated: "2026-04-08"
 ---
 
 ## 코드를 몰라도 AI가 쉽게 설명해줍니다

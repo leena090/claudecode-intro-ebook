@@ -1,13 +1,11 @@
 ---
 title: "정보 확인 명령어"
-description: "Claude Code 사용 현황, 비용, 통계를 한눈에 파악하기"
+description: "Claude Code 사용 현황, 비용, 통계를 한눈에 파악하기 (v2.1.92 /cost 상세분석 반영)"
 category: "commands"
 order: 4
 tags: ["정보", "통계", "비용", "명령어"]
-lastUpdated: "2026-03-22"
+lastUpdated: "2026-04-08"
 ---
-
-> 📅 최종 업데이트: 2026년 3월 22일
 
 ## 정보 확인이 왜 중요한가?
 
@@ -60,7 +58,7 @@ Response Time: 1.2s
 
 ---
 
-### 2️⃣ `/cost` — 비용 내역 상세 보기
+### 2️⃣ `/cost` — 비용 내역 상세 보기 (⭐ v2.1.92 대폭 개선)
 
 ```bash
 /cost
@@ -70,29 +68,38 @@ Response Time: 1.2s
 
 <mark>요금 결제를 하는 사용자라면 정기적으로 확인해야 합니다</mark>
 
-**표시되는 정보:**
-- 오늘 사용 비용
-- 이번 주 총 비용
-- 이번 달 총 비용
-- 모델별 비용 분석
+<div class="note-star">
+★ <strong>2026-04-04 v2.1.92 업데이트</strong>: 구독 사용자에게 <strong>모델별 + 캐시 히트율</strong>이 분리되어 상세 표시됩니다. 이제 "어느 모델에 얼마가 들었는지", "캐시 덕분에 얼마나 절약됐는지"가 한눈에 보여요.
+</div>
+
+**표시되는 정보 (v2.1.92+):**
+- 오늘 / 이번 주 / 이번 달 사용 비용
+- **모델별 세부 내역** — Opus 4.6 / Sonnet 4.6 / Haiku 4.5 각각
+- **캐시 히트율** — 프롬프트 캐시로 절약한 비율
 - 추정 남은 크레딧
 
 **사용 예시:**
 ```bash
 /cost
 
-→ 결과:
-Today: $0.45
-This Week: $3.20
+→ 결과 (v2.1.92 포맷):
+Today: $0.45  (cache saved: 32%)
+This Week: $3.20  (cache saved: 28%)
 This Month: $12.50
-Claude-Opus: $5.00
-Claude-Sonnet: $7.50
+
+Models:
+  claude-opus-4-6:    $5.00  (cache hit: 45%)
+  claude-sonnet-4-6:  $7.50  (cache hit: 22%)
+  claude-haiku-4-5:   $0.00
 ```
 
+> 🍱 **캐시 히트율이 뭔가요?** 같은 질문·같은 파일을 여러 번 봤을 때, Claude가 기억하고 있던 걸 재활용한 비율이에요. 높을수록 돈이 절약돼요. 식당에서 같은 메뉴를 여러 번 시킬 때 주방에서 미리 재료를 준비해두는 것과 비슷해요.
+
 **절약 팁:**
-- 빠른 작업은 `claude-haiku` 사용
+- 빠른 작업은 Haiku 4.5 사용 (`/model claude-haiku-4-5`)
 - `/compact`로 대화 압축해 토큰 줄이기
 - 불필요한 맥락은 `/clear`로 제거
+- **캐시 히트율이 낮다면** → 대화를 자주 초기화하지 말고 한 세션을 길게 쓰기
 
 ---
 

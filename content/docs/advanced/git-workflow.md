@@ -4,10 +4,9 @@ description: "클로드와 Git을 함께 사용하여 버전 관리와 협업하
 category: "advanced"
 order: 3
 tags: ["Git", "버전관리", "협업"]
-lastUpdated: "2026-03-22"
+lastUpdated: "2026-04-08"
 ---
 
-> 📅 최종 업데이트: 2026년 3월 22일
 
 ## Git 연동 워크플로우란?
 

@@ -4,7 +4,7 @@ description: "명령어 한 줄로 완료하는 클로드코드 설치 방법"
 tags: ["설치", "Claude Code", "npm"]
 category: "setup"
 order: 3
-lastUpdated: "2026-03-22"
+lastUpdated: "2026-04-08"
 ---
 
 ## ⭐ 권장 설치 방법: Native Install (최신)
@@ -29,15 +29,25 @@ claude --version
 
 관리자 권한으로 PowerShell을 열고 입력:
 
-```bash
+```powershell
 winget install Anthropic.ClaudeCode
 ```
 
 또는:
 
-```bash
+```powershell
 choco install claude-code
 ```
+
+<div class="note-star">
+★ <strong>Windows 사용자 희소식 — PowerShell 도구 Preview (v2.1.84~)</strong>
+<br /><br />
+기존 Claude Code는 내부적으로 Bash(터미널 명령어)를 기본으로 썼어요. Windows에서는 WSL(Windows Subsystem for Linux)이나 Git Bash가 필요했죠.
+<br /><br />
+<strong>2026-03-26 v2.1.84부터</strong> Windows 사용자용 <strong>PowerShell 도구</strong>가 추가됐어요 (opt-in preview). 이제 Claude가 직접 PowerShell 명령어를 쓸 수 있어서 Windows 작업이 훨씬 자연스러워졌습니다.
+<br /><br />
+→ <strong>활성화 방법</strong>: <code>settings.json</code>에 <code>"experimental": {"powershell": true}</code> 추가 후 재시작 (preview라 기본 꺼져 있음).
+</div>
 
 ---
 
@@ -139,3 +149,27 @@ npm install -g @anthropic-ai/claude-code@latest
 npm uninstall -g @anthropic-ai/claude-code
 npm install -g @anthropic-ai/claude-code
 ```
+
+---
+
+## 🏢 회사에서 AWS Bedrock으로 쓰는 경우 (v2.1.92~)
+
+회사 보안 정책상 Claude Code를 **AWS Bedrock**으로 써야 하는 분들께 희소식이에요. **2026-04-04 v2.1.92**부터 로그인 화면에 **인터랙티브 설정 마법사**가 생겼습니다.
+
+### 로그인 화면에서 자동으로 안내
+
+```bash
+claude
+```
+
+처음 실행하면 로그인 화면에서 "Bedrock 설정" 옵션을 선택할 수 있어요. 마법사가:
+1. AWS 인증 정보 확인
+2. 리전 선택 (서울 `ap-northeast-2` 등)
+3. 모델 선택 (Opus 4.6, Sonnet 4.6 등)
+4. 연결 테스트까지 자동
+
+> 🍱 **비유로 설명하면**: 이전에는 "어디 터미널에 환경변수 뭐 넣고, config 파일 수정하고..." 한참 헤맸다면, 이제는 **ATM 같은 단계별 화면**을 따라가기만 하면 돼요.
+
+<div class="note-circle">
+○ 일반 사용자분들은 이 기능을 쓸 일이 없어요. 회사에서 AWS 통해 Claude를 쓰라고 지시받은 분들만 참고하세요.
+</div>

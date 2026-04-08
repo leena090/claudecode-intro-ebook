@@ -1,13 +1,11 @@
 ---
 title: "Claude 생태계 한눈에 보기"
-description: "웹앱, 코워크, 클로드 코드, 클로드 코드 웹 — 뭘 언제 쓰는지 완전 정리"
+description: "웹앱, 코워크, 클로드 코드, 클로드 코드 웹 — 뭘 언제 쓰는지 완전 정리 (Opus 4.6 1M 컨텍스트 반영)"
 tags: ["입문", "비교", "생태계"]
 category: "intro"
 order: 3
-lastUpdated: "2026-04-06"
+lastUpdated: "2026-04-08"
 ---
-
-> 📅 최종 업데이트: 2026년 4월 6일
 
 ## Claude, 너무 많은데 뭘 써야 하죠?
 
@@ -147,6 +145,51 @@ Claude에는 크게 **4가지 사용 공간**이 있습니다. 같은 AI지만 *
 - 📌 **[코워크](/docs/cowork/cowork-intro)** — Dispatch, 예약 작업, 엑셀/PPT 자동화
 - 📌 **[Claude Code](/docs/basics/understanding-ui)** — 터미널 기반 코딩 도구
 - 📌 **[Claude Code 웹](/docs/codeweb/codeweb-intro)** — 브라우저 코딩, 원격 세션
+
+---
+
+## 🚀 2026년 핵심 변화 — 꼭 알아두세요
+
+### 1. Opus/Sonnet 4.6 = 1M 토큰 컨텍스트 (2026-03-13 일반 출시)
+
+한 대화창에 **책 7권 분량**을 넣을 수 있게 됐어요. 기존 200K의 **5배**.
+
+| 모델 | 컨텍스트 | 플랜 |
+|---|---|---|
+| Opus 4.6 | **1M 토큰** | Max/Team/Enterprise |
+| Sonnet 4.6 | **1M 토큰** | Max/Team/Enterprise |
+| Haiku 4.5 | 200K 토큰 | 모든 플랜 |
+
+> 🔥 경쟁 대비 강점 <code>[R]</code>: OpenAI GPT-5.4는 272K 초과 시 **2배 요금**을 받지만, Anthropic은 **동일 요금** 유지. Hacker News 1위(1,100+ 포인트).
+
+→ 상세: [1M 컨텍스트 완벽 가이드](/docs/advanced/one-million-context)
+
+### 2. 경쟁 도구 대비 — "하나만 쓰지 말고 조합하세요" <code>[R]</code>
+
+30일 실전 비교(Remis Haroon)와 커뮤니티 합의:
+
+| 도구 | 강점 | 약점 | 정확도 (SWE-bench) |
+|---|---|---|---|
+| **Claude Code** | 🏆 정확도 압도적, 대규모 리팩토링, 보안 | 5~10분 느림 | **80.8%** |
+| **Cursor** | ⚡ 속도, 코드베이스 탐색 | 정확도 보통 | ~65% (추정) |
+| **Copilot** | 📝 보일러플레이트 자동완성 | 대규모 작업 약함 | - |
+
+**커뮤니티 합의** <code>[R]</code>:
+> *"Copilot is a better typist, Cursor is a better explorer, Claude Code is a better collaborator."*
+> (Copilot은 타이피스트, Cursor는 탐색가, Claude Code는 협업자)
+
+**추천 조합**:
+- 일상 코딩·자동완성 → **Cursor/Copilot**
+- 대규모 리팩토링·보안 감사·복잡한 설계 → **Claude Code**
+
+### 3. 창시자의 조언 — "정답은 없어요" <code>[x]</code>
+
+Claude Code 창시자 Boris Cherny:
+
+> *"There is no one correct way to use Claude Code — it's intentionally built in a way that you can use it, customize it, and hack it however you like."*
+> (정해진 정답은 없어요. 자신만의 방식으로 쓰시면 됩니다.)
+
+→ 완벽하게 쓰려고 애쓰지 마세요. 부담 없이 이것저것 써보는 게 제일 빨라요.
 
 ---
 

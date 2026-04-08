@@ -1,13 +1,11 @@
 ---
 title: "스킬 시스템 — 나만의 명령어 만들기"
-description: "SKILL.md로 커스텀 슬래시 커맨드를 만드는 방법"
+description: "SKILL.md로 커스텀 슬래시 커맨드를 만드는 방법 (Simon Willison: '올해 MCP를 초라하게 만들 기능')"
 tags: ["설정", "스킬", "커스텀", "슬래시커맨드"]
 category: "config"
 order: 6
-lastUpdated: "2026-04-06"
+lastUpdated: "2026-04-08"
 ---
-
-> 📅 최종 업데이트: 2026년 4월 6일
 
 ## 스킬이 뭔가요?
 
@@ -16,6 +14,16 @@ lastUpdated: "2026-04-06"
 예를 들어, 매번 "블로그 글을 SEO에 맞게 써줘, 제목은 이렇게, 구조는 저렇게..."라고 말하는 게 귀찮다면?
 
 `/blog` 라는 스킬을 만들어두면, 다음부터는 `/blog 오늘의 주제` 한 줄로 끝!
+
+<div class="note-star">
+★ <strong>왜 지금 중요한가요?</strong> 유명 개발자 <strong>Simon Willison</strong>은 Skills에 대해 이렇게 예측했어요:
+<br /><br />
+<em>"A Cambrian explosion in Skills will make this year's MCP rush look pedestrian by comparison."</em>
+<br />
+(스킬의 캄브리아기 폭발이 올해의 MCP 러시를 초라하게 만들 것이다)
+<br /><br />
+→ MCP보다 훨씬 가볍고, 필요할 때만 로드돼서 컨텍스트가 낭비되지 않아요. <code>[x]</code>
+</div>
 
 ---
 
@@ -153,15 +161,29 @@ description: "상품 소개 글 자동 생성"
 
 ## 빌트인 스킬 (이미 만들어져 있는 것)
 
-Claude Code에는 기본으로 들어있는 스킬도 있어요:
+Claude Code에는 기본으로 들어있는 스킬도 있어요. 설치할 필요 없이 바로 쓸 수 있습니다:
 
-| 스킬 | 용도 |
-|------|------|
-| `/simplify` | 코드 품질 검사 (3개 에이전트가 병렬로 리뷰) |
-| `/batch` | 여러 파일 대규모 변경 |
-| `/loop` | 반복 작업 실행 |
-| `/claude-api` | Claude API 문서 참조 |
-| `/debug` | 디버그 로깅 활성화 |
+| 스킬 | 용도 | 추가 버전 |
+|------|------|---|
+| `/simplify` | 코드 품질 검사 (3개 에이전트가 병렬로 리뷰) | v2.1.63 |
+| `/batch` | 여러 파일 worktree 격리 병렬 작업 | v2.1.63 |
+| `/loop` | 반복 작업 실행 (최소 1분, 3일 만료) | v2.1.63 |
+| **`/claude-api`** | **Claude API + Anthropic SDK 빌드 가이드** | **v2.1.69 번들 포함** |
+| `/debug` | 디버그 로깅 활성화 | - |
+
+### ⭐ `/claude-api` 스킬 주목 (v2.1.69~ 기본 번들)
+
+`/claude-api`는 **Anthropic Claude API나 SDK를 직접 써서 앱을 만들 때** 도움받는 스킬이에요. 2026-03-05 v2.1.69부터 **별도 설치 없이 기본 제공**됩니다.
+
+**자동 발동 조건:**
+- 코드에서 `anthropic`, `@anthropic-ai/sdk`, `claude_agent_sdk` 등을 import 할 때
+- "Claude API로 뭐 만들어줘" 같은 요청이 들어올 때
+
+**안 발동되는 경우:**
+- OpenAI SDK, 다른 AI 서비스 코드
+- 일반 코딩 (API 연동 없음)
+
+> 🍱 **비유로 설명하면**: 요리할 때 "이 브랜드 제품은 이렇게 써요" 하고 전용 사용설명서가 자동으로 펼쳐지는 거예요. 내가 Anthropic 제품을 쓸 때만요.
 
 ---
 

@@ -322,6 +322,39 @@ body {
   color: var(--accent-text);
 }
 
+/* ── 최종 업데이트 뱃지 ── */
+/* 모든 문서 페이지 헤더에 "언제 갱신되었는지" 명확히 표시하는 소형 뱃지 */
+/* 프론트매터 lastUpdated 필드 기반 자동 렌더링 (src/lib/docs.ts + page.tsx) */
+.last-updated-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 11px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--text-muted);
+  letter-spacing: -0.005em;
+  transition: background 0.15s, border-color 0.15s;
+}
+.last-updated-badge:hover {
+  background: var(--accent-soft);
+  border-color: var(--accent-text);
+}
+.last-updated-icon {
+  font-size: 13px;
+  line-height: 1;
+}
+.last-updated-label {
+  color: var(--text-muted);
+}
+.last-updated-date {
+  color: var(--accent-text);
+  font-weight: 600;
+}
+
 /* ── 필기 노트 스타일 주석 박스 ── */
 .note-circle {
   background: var(--accent-soft);

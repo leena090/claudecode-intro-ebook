@@ -1,13 +1,11 @@
 ---
 title: "클로드코드 마스터 로드맵"
-description: "입문 이후 클로드코드와 함께 성장해 가는 로드맵"
-tags: ["로드맵", "학습경로", "다음단계"]
+description: "입문 이후 클로드코드와 함께 성장해 가는 로드맵 + 다음에 올 기능 예고"
+tags: ["로드맵", "학습경로", "다음단계", "미래기능"]
 category: "next"
 order: 1
-lastUpdated: "2026-04-06"
+lastUpdated: "2026-04-08"
 ---
-
-> 📅 최종 업데이트: 2026년 4월 6일
 
 ## 입문 이후 이렇게 성장해 가세요
 
@@ -381,6 +379,52 @@ MCP(Model Context Protocol)는 Claude Code를 외부 서비스와 연결해주�
 | GitHub 배우기 | github.com/skills |
 | Vercel 시작하기 | vercel.com/docs |
 | 질문하기 | Claude Code에 직접 물어보기 |
+
+---
+
+## 🔮 다음에 올 기능들 — 2026년 로드맵 엿보기
+
+아직 공식 출시 전인 흥미로운 기능들입니다. **실제 출시 여부와 시점은 변경될 수 있어요.**
+
+### ✅ 이미 출시됨 (2026년 1~4월)
+- **Opus 4.6 1M 토큰 컨텍스트** (2026-03-13 GA)
+- **`/btw` 사이드 질문** (v2.1.72)
+- **`/powerup` 인터랙티브 레슨** (v2.1.90)
+- **`/ultraplan` 클라우드 플랜** (v2.1.91, research preview)
+- **Git worktree 내장** (v2.1.49)
+- **PowerShell 도구 for Windows** (v2.1.84 opt-in preview)
+- **Voice 20개 언어** (v2.1.69)
+
+### 🧪 Research Preview 단계
+- **Ultraplan** — 클라우드 플랜 다듬기 (현재 preview)
+- **Computer Use in Cowork** — 화면 직접 클릭·타이핑 (Pro/Max 대상)
+- **Agent Teams** — 여러 AI 팀원 직접 소통 (환경변수 활성화 필요)
+
+### 🔍 커뮤니티가 발견한 미출시 기능들 [R] [추정]
+
+> ⚠️ **주의**: 아래는 커뮤니티가 공개 정보를 분석해 발견한 내용이에요. **Anthropic 공식 발표는 아닙니다.** 출시 여부·시점은 확정되지 않았습니다.
+
+- **KAIROS** — 유휴 시간에 백그라운드 데몬이 여러 관찰을 통합해 **검증된 인사이트**로 변환 (`autoDream` 프로세스)
+- **Undercover Mode** — 상세 미공개
+- **더 많은 Skills 마켓플레이스 기능**
+
+→ 당장 쓸 수는 없지만, 로드맵 방향을 엿볼 수 있는 힌트예요.
+
+---
+
+## 💎 창시자의 마무리 철학 [x]
+
+Claude Code 창시자 Boris Cherny의 실제 작업 방식:
+
+- **CLAUDE.md는 약 2,500토큰 / 100줄** 유지 (짧게)
+- **동시에 10~15개 세션** 실행
+- **"Shoot and forget"** — 반복 과정은 에이전트에게, 나는 결과물(PR)만 평가
+
+핵심 철학:
+> *"There is no one correct way to use Claude Code — it's intentionally built in a way that you can use it, customize it, and hack it however you like."*
+> (정해진 정답은 없어요. 자신만의 방식으로 쓰시면 됩니다.)
+
+완벽하게 쓰려고 애쓰지 마세요. **나만의 워크플로우**를 만들어가는 게 진짜 마스터의 길이에요.
 
 ---
 

@@ -4,6 +4,7 @@ description: "아이디어를 말하면 파일로 만들어주는 클로드코�
 tags: ["실전", "파일작성", "활용"]
 category: "practice"
 order: 1
+lastUpdated: "2026-04-08"
 ---
 
 ## 아이디어를 말하면 파일로 만들어줍니다

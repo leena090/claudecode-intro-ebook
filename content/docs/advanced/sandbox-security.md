@@ -4,10 +4,9 @@ description: "클로드 코드를 안전하게 사용하고 민감정보를 보�
 category: "advanced"
 order: 7
 tags: ["보안", "샌드박스", "프라이버시"]
-lastUpdated: "2026-03-22"
+lastUpdated: "2026-04-08"
 ---
 
-> 📅 최종 업데이트: 2026년 3월 22일
 
 ## 샌드박스 & 보안이란?
 

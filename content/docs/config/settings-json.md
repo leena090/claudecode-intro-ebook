@@ -1,13 +1,11 @@
 ---
 title: "settings.json 설정하기"
-description: "클로드 코드의 동작 방식을 세부적으로 조정하는 설정 파일"
+description: "클로드 코드의 동작 방식을 세부적으로 조정하는 설정 파일 (v2.1.92 기준 — effort 단순화, disableSkillShellExecution 반영)"
 category: "config"
 order: 2
 tags: ["설정", "settings.json", "커스터마이제이션"]
-lastUpdated: "2026-03-22"
+lastUpdated: "2026-04-08"
 ---
-
-> 📅 최종 업데이트: 2026년 3월 22일
 
 ## settings.json이란?
 
@@ -51,9 +49,35 @@ lastUpdated: "2026-03-22"
 ```
 
 선택지:
-- `claude-opus-4-6` — 가장 강력한 모델 (추천)
-- `claude-sonnet-4-6` — 균형잡힌 속도와 성능
+- `claude-opus-4-6` — 가장 강력한 모델 (**1M 토큰 컨텍스트**, Max/Team/Enterprise)
+- `claude-sonnet-4-6` — 균형잡힌 속도와 성능 (**1M 토큰 컨텍스트**)
 - `claude-haiku-4-5` — 빠르고 가벼움
+
+<div class="note-circle">
+○ <strong>Opus/Sonnet 4.6은 1M 토큰 컨텍스트</strong>를 지원해요. 기존 200K의 5배! 자세한 건 <a href="/docs/advanced/one-million-context">1M 컨텍스트 가이드</a>에서.
+</div>
+
+---
+
+### 1-1. Effort Level — `low` / `medium` / `high`
+
+```json
+{
+  "effort": "high"
+}
+```
+
+<div class="note-star">
+★ <strong>2026-04-04 v2.1.92에서 단순화됐어요</strong> — 기존 ultrafast/fast/balanced/thorough/ultrathink 5단계 → <strong>low / medium / high</strong> 3단계.
+<br />★ Opus 4.6 + Max/Team은 기본값이 <code>high</code>예요.
+<br />★ 현재 effort level이 로고/스피너에 자동 표시됩니다.
+</div>
+
+| 레벨 | 추천 용도 |
+|---|---|
+| `low` | 간단한 수정, 짧은 답변 — 빠르고 저렴 |
+| `medium` | 일반적인 작업 (기본) |
+| `high` | 복잡한 문제, 중요한 코드 — 느리지만 정확 |
 
 ---
 
@@ -111,6 +135,47 @@ lastUpdated: "2026-03-22"
 - `PreToolUse` — 도구 실행 전
 - `PostToolUse` — 도구 실행 후
 - `UserPromptSubmit` — 사용자 입력 전
+
+---
+
+### 5. 보안 설정 — 스킬 셸 실행 차단 (v2.1.91~)
+
+```json
+{
+  "disableSkillShellExecution": true
+}
+```
+
+**역할:** 스킬·커맨드·플러그인이 **내 컴퓨터에서 직접 셸(터미널)을 실행하지 못하도록 차단**
+
+> 🍱 **비유로 설명하면**: 손님이 우리집 부엌을 쓰지 못하게 부엌 문을 잠그는 것과 같아요. 손님이 요리 레시피는 보여줄 수 있지만, 직접 불을 켜고 칼을 쓸 수는 없게 되죠.
+
+**언제 써요?**
+- 출처를 완전히 신뢰하지 못하는 **외부 스킬**을 설치해야 할 때
+- 회사 컴퓨터 등 **보안이 중요한 환경**에서 작업할 때
+- **민감한 파일**(재무·개인정보)이 있는 폴더에서 실험할 때
+
+<div class="note-circle">
+○ v2.1.91(2026-04-02)에 추가된 보안 옵션이에요. 켜두면 살짝 불편해지지만 훨씬 안전해집니다.
+</div>
+
+---
+
+### 6. Agent Teams 활성화 (실험 기능)
+
+```json
+{
+  "env": {
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
+  }
+}
+```
+
+**역할:** 여러 에이전트가 **서로 직접 소통하며 팀으로 일하도록** 활성화 (기본은 꺼져 있음)
+
+<div class="note-star">
+★ <strong>실험 기능입니다</strong> — Anthropic이 정식 출시 전까지 계속 변할 수 있어요. 자세한 건 <a href="/docs/advanced/agent-teams">에이전트 팀 가이드</a>.
+</div>
 
 ---
 

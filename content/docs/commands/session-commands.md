@@ -1,19 +1,23 @@
 ---
 title: "세션 관리 명령어"
-description: "Claude Code와의 대화를 제어하는 모든 방법"
+description: "Claude Code와의 대화를 제어하는 모든 방법 + 컨텍스트 위생 3종 세트 (/btw, /fork, /rewind)"
 category: "commands"
 order: 2
-tags: ["세션", "대화관리", "명령어"]
-lastUpdated: "2026-03-22"
+tags: ["세션", "대화관리", "명령어", "컨텍스트위생"]
+lastUpdated: "2026-04-08"
 ---
-
-> 📅 최종 업데이트: 2026년 3월 22일
 
 ## 세션이란?
 
 Claude Code와 나누는 **한 번의 연속된 대화**를 의미합니다. 처음 Claude Code를 시작해서 종료할 때까지가 하나의 세션입니다.
 
 세션 관리 명령어는 이 대화를 더 잘 제어하고 정리하는 도구입니다.
+
+<div class="note-circle">
+○ <strong>2026-04-08 최신화</strong>: <code>/btw</code>·<code>/fork</code>·<code>/rewind</code>는 <strong>컨텍스트 위생 3종 세트</strong>로 함께 쓰는 걸 권장합니다. <a href="/docs/tips/btw-side-questions">자세한 가이드</a>에서 조합 사용법을 확인하세요.
+<br />○ <strong>Transcript 검색</strong>: 전사(transcript) 모드에서 <code>/</code>키를 누르면 단어 검색이 되고, <code>n</code>/<code>N</code>로 결과 사이를 오갈 수 있어요. (v2.1.83~)
+<br />○ <code>/resume</code> 세션 재개가 <strong>45% 빨라졌어요</strong> (v2.1.77~) + 메모리 사용도 100~150MB 줄었습니다.
+</div>
 
 ---
 
