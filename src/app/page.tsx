@@ -28,7 +28,7 @@ export default function HomePage() {
           <div className="flex items-center gap-2">
             <PixelLogo size="sm" />
             <span className="font-semibold text-[15px]" style={{ color: 'var(--text-primary)' }}>
-              Claude Code 입문
+              Claude Code 입문자 교육용
             </span>
           </div>
           <ThemeToggle />

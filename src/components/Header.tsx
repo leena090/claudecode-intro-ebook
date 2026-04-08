@@ -27,7 +27,7 @@ export default function Header({ breadcrumbs = [] }: { breadcrumbs?: BreadcrumbI
             <PixelLogo size="sm" />
           </Link>
           <Link href="/" className="font-semibold text-[15px] shrink-0" style={{ color: 'var(--text-primary)' }}>
-            Claude Code 입문
+            Claude Code 입문자 교육용
           </Link>
           {breadcrumbs.map((crumb, i) => (
             <span key={i} className="flex items-center gap-2 min-w-0">
