@@ -2,6 +2,55 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 
+// ── 학습 레벨 탭 구조 ──
+// 14개 카테고리를 5개 학습 레벨 탭으로 그룹화 (클로드 왕초보 → 심화 학습자 → 업무 자동화 → 참고)
+// 홈페이지에서 탭 전환 시 해당 레벨의 카테고리만 표시 → 압도감 제거
+export interface LearningTab {
+  id: string
+  icon: string
+  title: string
+  subtitle: string
+  categories: string[] // CATEGORIES의 slug 배열
+}
+
+export const LEARNING_TABS: LearningTab[] = [
+  {
+    id: 'beginner',
+    icon: '🌱',
+    title: '클로드 왕초보',
+    subtitle: '처음 접한 분 — 5분 안에 시작',
+    categories: ['intro', 'setup', 'basics', 'practice'],
+  },
+  {
+    id: 'intermediate',
+    icon: '📈',
+    title: '클로드 중급 세션',
+    subtitle: '기본은 아는 분 — Claude Code 자유자재로',
+    categories: ['commands', 'config', 'webapp'],
+  },
+  {
+    id: 'advanced',
+    icon: '🔥',
+    title: '클로드 심화 학습자',
+    subtitle: '고수가 되려는 분 — 에이전트·워크트리·MCP',
+    categories: ['codeweb', 'advanced'],
+  },
+  {
+    id: 'automation',
+    icon: '💼',
+    title: '업무 자동화',
+    subtitle: '업무에 바로 쓰려는 분 — 웹앱·코워크·실전 사례',
+    categories: ['cowork'],
+  },
+  {
+    id: 'reference',
+    icon: '📖',
+    title: '참고 자료',
+    subtitle: '필요할 때 찾아보는 자료',
+    categories: ['tips', 'next', 'reference'],
+  },
+]
+
 // ── 카테고리 메타데이터 정의 ──
 // 각 카테고리의 제목, 설명, 아이콘, 순서를 관리
 export const CATEGORIES: Record<string, { title: string; description: string; icon: string; order: number }> = {
@@ -20,8 +69,9 @@ export const CATEGORIES: Record<string, { title: string; description: string; ic
   advanced: { title: '고급 기능', description: '에이전트 팀, 워크트리, 원격 제어를 배웁니다', icon: '🔥', order: 10 },
   // ── 마무리 영역 ──
   tips: { title: '팁 & FAQ', description: '토큰 절약법, 유용한 팁과 자주 묻는 질문', icon: '💡', order: 11 },
-  next: { title: '다음 단계', description: '더 깊이 학습하는 로드맵', icon: '🗺️', order: 12 },
-  reference: { title: '레퍼런스', description: '전체 명령어, CLI 플래그, 단축키 목록', icon: '📖', order: 13 },
+  stories: { title: '실제 사용 사례 10편', description: '직장인·가족·유튜버·창업자가 클로드를 실제로 어떻게 쓰는지', icon: '🎬', order: 12 },
+  next: { title: '다음 단계', description: '더 깊이 학습하는 로드맵', icon: '🗺️', order: 13 },
+  reference: { title: '레퍼런스', description: '전체 명령어, CLI 플래그, 단축키 목록', icon: '📖', order: 14 },
 }
 
 // 문서 메타데이터 인터페이스

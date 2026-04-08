@@ -54,15 +54,20 @@ Auto-fix는 PR을 지켜보다가 두 가지 상황에서 자동으로 행동합
 
 ## Auto-fix 켜는 방법
 
-Auto-fix는 Claude Code 웹 설정에서 켤 수 있습니다.
+Auto-fix는 PR에서 바로 활성화할 수 있어요. 공식 문서 기준 정확한 절차입니다.
 
-### 1. 설정 화면 열기
+### 1. PR 생성
 
-claude.ai/code에 접속한 후, 작업 중인 저장소를 선택합니다. 화면 오른쪽 상단 또는 설정 메뉴에서 **"Auto-fix"** 또는 **"자동 수정"** 옵션을 찾습니다.
+Claude Code 웹에서 평소처럼 작업하고 **Create PR** 버튼으로 PR을 만드세요.
 
-### 2. Auto-fix 활성화
+### 2. CI status bar에서 Auto-fix 활성화
 
-토글 버튼을 켜서 활성화합니다. 이제 이 저장소의 모든 PR에서 Auto-fix가 작동합니다.
+PR 화면에서 **CI status bar**(빌드·테스트 상태가 표시되는 영역)를 엽니다. 거기서 **"Auto-fix"** 옵션을 선택하면 활성화돼요.
+
+> 🍱 **비유로 설명하면**: PR 아래에 있는 "빌드 결과 표시줄" 같은 곳이에요. 여기서 Auto-fix 스위치를 켜면 CI가 실패할 때마다 Claude가 자동으로 고치러 출동합니다.
+
+<div class="note-circle">○ 공식 문서: <a href="https://code.claude.com/docs/en/claude-code-on-the-web">code.claude.com/docs/en/claude-code-on-the-web</a> (Auto-fix 섹션)
+</div>
 
 ### 3. 저장소별 설정
 
