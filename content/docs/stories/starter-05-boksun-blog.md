@@ -218,7 +218,7 @@ Claude가 답했다.
 | **쇼미 (Artifacts)** | "글 미리보기로 보여줘" 자연어로 오른쪽에 블로그 미리보기 창 자동 열림 |
 | **Cowork Dispatch** | 논둑에서 폰으로 글감 전송 → 집 Windows 데스크톱이 알아서 초안 작성 대기 |
 | **예약 작업 (/schedule)** | 매주 월요일 오전 9시에 "이번 주 글감 3개 제안" 자동 준비 |
-| **커스텀 스킬** | 손녀가 `~/.claude/skills/grandma-polish/SKILL.md` 직접 작성 — 할머니 말투 유지 규칙 저장 |
+| **커스텀 스킬** | 할머니가 사투리로 *"스킬 하나 만들어줘, 내 말투 그대로 두라고…"* 말로 시키자 Claude가 `~/.claude/skills/grandma-polish/SKILL.md` 자동 생성 |
 
 ---
 
