@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import PasswordGate from '@/components/PasswordGate'
 import './globals.css'
 
 // ── 사이트 메타데이터 ──
@@ -35,7 +36,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           `
         }} />
       </head>
-      <body>{children}</body>
+      <body>
+        <PasswordGate>{children}</PasswordGate>
+      </body>
     </html>
   )
 }
