@@ -6,7 +6,7 @@ import type { NextRequest } from 'next/server'
 // 비밀번호는 클라이언트 JS에 절대 노출되지 않음
 const AUTH_COOKIE = 'nmm-auth-token'
 // 토큰 = 비밀번호 해시 (단방향) — 쿠키에 비밀번호 원문 저장 안 함
-const VALID_TOKEN = '8f14e45fceea167a5a36dedd4bea2543' // yuna2026의 MD5
+const VALID_TOKEN = '9bd52b3a24cc5fa64f28586339f6a675' // yuna2026의 MD5
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl
