@@ -64,9 +64,12 @@ export default function Header({ breadcrumbs = [] }: { breadcrumbs?: BreadcrumbI
             노모어매뉴얼
           </a>
           <ThemeToggle />
-          {/* 로그아웃 버튼 */}
+          {/* 로그아웃 버튼 — 서버 API로 httpOnly 쿠키 삭제 */}
           <button
-            onClick={() => { localStorage.removeItem('nmm-ebook-auth'); window.location.reload() }}
+            onClick={async () => {
+              await fetch('/api/auth', { method: 'DELETE' })
+              window.location.href = '/login'
+            }}
             className="text-xs px-2 py-1 rounded transition-opacity hover:opacity-70"
             style={{ color: 'var(--text-muted)' }}
             title="로그아웃"
