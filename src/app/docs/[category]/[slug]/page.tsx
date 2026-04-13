@@ -134,7 +134,12 @@ export default async function DocPage({
           {/* 하단 네비게이션 — 카테고리 목록으로 돌아가기 */}
           <FooterNav
             backHref={`/docs/${category}`}
-            backLabel={`${catMeta.title} 목록으로`}
+            backLabel={category === 'stories' ? '다른 사장님들은 어떻게 쓰고 있을까?' : `${catMeta.title} 목록으로`}
+            {...(category === 'stories' ? {
+              ctaText: '나도 이렇게 해볼까?',
+              ctaHref: '/docs/cowork/cowork-intro',
+              ctaLinkText: '시작 가이드 보기',
+            } : {})}
           />
         </main>
       </div>

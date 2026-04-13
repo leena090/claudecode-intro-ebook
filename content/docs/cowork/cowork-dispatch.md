@@ -1,7 +1,7 @@
 ---
-title: "Dispatch — 폰으로 일 시키고 퇴근하기"
-description: "스마트폰에서 코워크에 일을 지시하면 사무실 컴퓨터가 혼자 처리하는 Dispatch 기능 (2026-03-17 Computer Use 통합)"
-tags: ["코워크", "Dispatch", "원격 작업", "스마트폰", "자동화", "Computer Use"]
+title: "폰으로 일 시키고 퇴근하기 — Dispatch"
+description: "스마트폰에서 코워크에 일을 지시하면 사무실 컴퓨터가 혼자 처리하는 Dispatch 기능"
+tags: ["원격작업", "업무자동화", "코워크"]
 category: "cowork"
 order: 4
 lastUpdated: "2026-04-13"
@@ -138,6 +138,29 @@ Dispatch는 컴퓨터가 켜져 있어야 작동해요. 집에 오기 전에 절
 
 ---
 
+## 앱까지 직접 조작하는 Dispatch (2026년 4월~)
+
+2026년 4월부터 Dispatch가 한 단계 더 진화했어요. 예전에는 파일을 열고 정리하는 수준이었는데, 이제는 **앱을 열고 화면을 클릭하고 데이터를 입력하는 것까지** 가능해요.
+
+예를 들어볼게요.
+
+```
+이메일에서 경비 보고서 찾아서,
+회계 프로그램에 금액 입력하고,
+승인 요청 보내줘.
+```
+
+이렇게 지시하면 클로드가 직접:
+1. 이메일 앱을 열고 경비 보고서를 찾아요
+2. 회계 프로그램을 열고 금액을 입력해요
+3. 승인 요청 버튼을 클릭해요
+
+예전에는 파일 작업만 되었는데, 이제 **화면을 보고 클릭하는 것(Computer Use)**까지 결합된 거예요. 마치 내 옆에 앉아 있는 보조 직원이 여러 프로그램을 오가며 일하는 것처럼요.
+
+<div class="note-circle">○ 이 기능은 2026년 4월 코워크 정식 출시(GA)와 함께 추가됐어요. Pro/Max 요금제에서 사용 가능하고, macOS와 Windows 모두 지원해요. <code>[공식]</code></div>
+
+---
+
 ## 이런 상황에 딱 맞아요
 
 | 상황 | Dispatch 활용법 |
@@ -154,5 +177,6 @@ Dispatch는 컴퓨터가 켜져 있어야 작동해요. 집에 오기 전에 절
 
 Dispatch로 한 발 더 나아가 볼게요.
 
-- [예약 작업 설정하기](/docs/cowork/cowork-scheduled) — 매일 자동으로 반복되는 일 만들기
-- [외부 서비스 연결하기](/docs/cowork/cowork-connectors) — 이메일, 구글 드라이브와 함께 쓰기
+- [밤마다 알아서 돌아가는 반복 작업](/docs/cowork/cowork-scheduled) — 매일 자동으로 반복되는 일 만들기
+- [업무별로 AI 방 따로 만들기](/docs/cowork/cowork-projects) — Dispatch + 프로젝트 전환으로 멀티태스킹
+- [내 Gmail, 드라이브를 AI에게 연결](/docs/cowork/cowork-connectors) — 이메일, 구글 드라이브와 함께 쓰기

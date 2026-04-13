@@ -1,9 +1,9 @@
 ---
-title: "MCP 서버 연결하기"
-description: "외부 도구와 서비스를 AI에 연결하는 Model Context Protocol 설정 (v2.1.91 500KB 오버라이드 반영)"
+title: "외부 도구를 AI에 연결하기 — MCP 서버"
+description: "Model Context Protocol로 GitHub, Notion, Slack 등 외부 서비스를 AI에 연결하는 방법 (Desktop Extensions 원클릭 설치 포함)"
 category: "config"
 order: 5
-tags: ["MCP", "연동", "외부서비스"]
+tags: ["외부연결", "MCP", "설정"]
 lastUpdated: "2026-04-13"
 ---
 
@@ -52,7 +52,70 @@ AI: (GitHub과 연결) → "PR #123, #124, #125 입니다"
 
 ---
 
-## 기본 MCP 설정 예시
+## MCP 생태계 현황 (2026년 4월)
+
+MCP는 이제 거대한 생태계가 됐어요. `[공식]`
+
+| 항목 | 수치 |
+|------|------|
+| 공개 MCP 서버 수 | **10,000개 이상** |
+| SDK 월 다운로드 | 9,700만 회 |
+| 표준 관리 | Linux Foundation Agentic AI Foundation (오픈 표준) |
+
+---
+
+## 설치 방법 3가지 — 쉬운 것부터
+
+### 방법 1: 더블클릭으로 설치 (Desktop Extensions) — 가장 쉬움
+
+Claude Desktop 앱에서는 `.mcpb` 파일을 **더블클릭만 하면** MCP 서버가 설치돼요. Node.js 같은 것도 따로 설치할 필요 없어요 — 모든 의존성이 파일 안에 포함돼 있거든요.
+
+```
+1. MCP 서버 제공 페이지에서 .mcpb 파일 다운로드
+2. 다운로드된 파일 더블클릭
+3. "Install" 버튼 클릭
+4. 끝!
+```
+
+설치된 확장은 **Settings > Extensions**에서 관리할 수 있어요.
+
+> 비유하면: 앱스토어에서 앱 받듯이 MCP 서버를 설치하는 거예요.
+
+<div class="note-circle">○ Desktop Extensions는 Claude Desktop 전용이에요. Claude Code(터미널)에서는 아래 방법 2나 3을 쓰세요.</div>
+
+### 방법 2: Claude Code CLI로 추가
+
+터미널에서 한 줄 명령어로 추가해요.
+
+```bash
+# Notion MCP 추가 (원격 서버)
+claude mcp add --transport http notion https://mcp.notion.com/mcp
+
+# 현재 연결된 MCP 목록 확인
+claude mcp list
+```
+
+### 방법 3: JSON 직접 편집 (고급)
+
+설정 파일을 직접 열어서 MCP 서버를 추가하는 방법이에요. 세부 설정이 필요할 때 써요.
+
+---
+
+## MCP 서버 찾는 방법 5가지
+
+"어떤 MCP 서버가 있는지 어떻게 알아요?" — 이런 곳에서 찾을 수 있어요.
+
+| 경로 | 설명 |
+|------|------|
+| **MCP Registry** (registry.modelcontextprotocol.io) | 공식 레지스트리 |
+| **Smithery** (smithery.ai) | 최대 규모 마켓플레이스, CLI 도구 제공 |
+| **awesome-mcp-servers** (GitHub) | 커뮤니티 선별 목록 |
+| **Docker MCP Catalog** (mcp.docker.com) | Docker Desktop에서 시각적 탐색 |
+| **Settings > Extensions** | Claude Desktop 앱 내 내장 디렉터리 |
+
+---
+
+## 기본 MCP 설정 예시 (JSON 방식)
 
 ```json
 {
@@ -614,6 +677,22 @@ MCP 서버를 연결하면 Claude는 **매 대화마다** 그 서버가 어떤 �
 
 ---
 
+## 코워크 커넥터 = MCP
+
+코워크 탭에서 Gmail, Google Drive 같은 **커넥터**를 연결하는 것도 내부적으로는 MCP 서버를 연결하는 거예요. 같은 원리, 같은 비용 구조입니다.
+
+| 용어 | 어디서 쓰는 표현 | 실체 |
+|------|---------------|------|
+| **커넥터** | 코워크 탭 (일반 사용자용) | MCP 서버 |
+| **MCP 서버** | Claude Code (개발자용) | MCP 서버 |
+
+그래서 커넥터를 많이 연결하면 위의 토큰 비용 경고가 그대로 적용돼요. 자세한 내용은 [커넥터 가이드](/docs/cowork/cowork-connectors)를 참고하세요.
+
+---
+
 ## 다음 단계
 
-MCP로 외부 서비스까지 연결했다면, 이제 **고급 기능**을 배워봅시다!
+MCP로 외부 서비스까지 연결했다면, 이제 **나만의 명령어를 만들어** 봅시다!
+
+- [나만의 명령어 만들기](/docs/config/skills-guide) — 스킬 시스템으로 반복 작업 자동화
+- [내 Gmail, 드라이브를 AI에게 연결](/docs/cowork/cowork-connectors) — 코워크에서 커넥터 연결하기

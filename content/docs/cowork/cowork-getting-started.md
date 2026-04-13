@@ -3,7 +3,7 @@ title: "코워크 시작하기"
 description: "Mac과 Windows에서 클로드 데스크톱 앱을 설치하고 코워크 탭을 처음 사용하는 방법을 안내합니다."
 tags: ["코워크", "설치", "시작하기", "Mac", "Windows"]
 category: "cowork"
-order: 2
+order: 3
 lastUpdated: "2026-04-13"
 ---
 
@@ -62,7 +62,9 @@ lastUpdated: "2026-04-13"
 
 가운데 **Cowork**를 클릭하세요.
 
-처음 클릭하면 코워크 소개 화면이 나올 수 있어요. 잠깐 읽어보시고 계속 진행하시면 됩니다.
+처음 클릭하면 코워크 설정 마법사가 시작돼요. 내 직업을 선택하면 맞춤 플러그인과 커넥터를 추천받을 수 있어요.
+
+<div class="note-circle">○ 설정 마법사의 자세한 사용법은 <a href="/docs/cowork/cowork-setup">나한테 맞는 AI 비서 세팅하기</a>에서 단계별로 안내해 드려요.</div>
 
 ---
 
@@ -148,5 +150,6 @@ Pro 또는 Max 요금제인지 확인해 보세요. 무료 플랜에서는 코�
 
 설치와 첫 작업을 마쳤다면, 이제 더 강력한 기능을 배워봐요.
 
-- [데스크톱 제어 알아보기](/docs/cowork/cowork-desktop-control) — AI가 내 화면을 직접 조작하는 방법
-- [Dispatch로 폰에서 일 시키기](/docs/cowork/cowork-dispatch) — 외출 중에도 사무실 컴퓨터에 일 맡기기
+- [나한테 맞는 AI 비서 세팅하기](/docs/cowork/cowork-setup) — 직업 선택 → 플러그인 → 커넥터 10분 완성
+- [AI가 내 화면을 직접 조작](/docs/cowork/cowork-desktop-control) — 데스크톱 제어 알아보기
+- [폰으로 일 시키고 퇴근하기](/docs/cowork/cowork-dispatch) — 외출 중에도 사무실 컴퓨터에 일 맡기기
