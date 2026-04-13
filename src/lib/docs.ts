@@ -85,6 +85,11 @@ export interface DocMeta {
   // 최종 업데이트 날짜 (프론트매터 lastUpdated 필드) — "YYYY-MM-DD" 문자열
   // 없으면 undefined → 페이지 헤더 뱃지 렌더링 생략
   lastUpdated?: string
+  // 유튜브 영상 ID (프론트매터 youtubeId 필드) — "dQw4w9WgXcQ" 같은 11자리
+  // 있으면 페이지 하단에 "영상으로 보기" 섹션 자동 렌더링
+  youtubeId?: string
+  // 유튜브 영상 제목 (선택) — 없으면 기본 텍스트 사용
+  youtubeTitle?: string
 }
 
 // content/docs 디렉토리 경로 (빌드 타임 기준)
@@ -104,6 +109,8 @@ export function getDocsByCategory(category: string): DocMeta[] {
     // lastUpdated는 optional이며 exactOptionalPropertyTypes 제약을 맞추기 위해
     // 값이 있을 때만 필드를 spread로 포함 (undefined 할당 회피)
     const lastUpdatedRaw = data['lastUpdated'] as string | undefined
+    const youtubeIdRaw = data['youtubeId'] as string | undefined
+    const youtubeTitleRaw = data['youtubeTitle'] as string | undefined
     const meta: DocMeta = {
       title: (data['title'] as string | undefined) || slug,
       description: (data['description'] as string | undefined) || '',
@@ -112,6 +119,8 @@ export function getDocsByCategory(category: string): DocMeta[] {
       order: (data['order'] as number | undefined) || 99,
       slug,
       ...(lastUpdatedRaw ? { lastUpdated: lastUpdatedRaw } : {}),
+      ...(youtubeIdRaw ? { youtubeId: youtubeIdRaw } : {}),
+      ...(youtubeTitleRaw ? { youtubeTitle: youtubeTitleRaw } : {}),
     }
     return meta
   })
@@ -139,8 +148,10 @@ export function getDoc(category: string, slug: string): { meta: DocMeta; content
 
   const raw = fs.readFileSync(filePath, 'utf-8')
   const { data, content } = matter(raw)
-  // lastUpdated optional 필드 — exactOptionalPropertyTypes 제약 대응 (spread)
+  // optional 필드 — exactOptionalPropertyTypes 제약 대응 (spread)
   const lastUpdatedRaw = data['lastUpdated'] as string | undefined
+  const youtubeIdRaw = data['youtubeId'] as string | undefined
+  const youtubeTitleRaw = data['youtubeTitle'] as string | undefined
   const meta: DocMeta = {
     title: (data['title'] as string | undefined) || slug,
     description: (data['description'] as string | undefined) || '',
@@ -149,6 +160,8 @@ export function getDoc(category: string, slug: string): { meta: DocMeta; content
     order: (data['order'] as number | undefined) || 99,
     slug,
     ...(lastUpdatedRaw ? { lastUpdated: lastUpdatedRaw } : {}),
+    ...(youtubeIdRaw ? { youtubeId: youtubeIdRaw } : {}),
+    ...(youtubeTitleRaw ? { youtubeTitle: youtubeTitleRaw } : {}),
   }
   return { meta, content }
 }

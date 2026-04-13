@@ -527,3 +527,94 @@ lastUpdated: "2026-04-08"
 - https://code.claude.com/docs/en/ultraplan
 - https://github.com/anthropics/claude-code/releases
 - https://claude.com/blog/dispatch-and-computer-use
+
+---
+
+## Part G — 2026-04-09~13 업데이트 (Post v2.1.94)
+
+> 조사일: 2026-04-13
+> 목적: v2.1.94 이후 ~ v2.1.101까지 변경사항 + 에코시스템 발표 반영
+
+### G.1 에코시스템 주요 발표
+
+#### G.1.1 [공식] Claude Cowork GA (2026-04-09)
+- **출처**: https://support.claude.com/en/articles/12138966-release-notes
+- **내용**: macOS + Windows에서 정식 출시(General Availability). 더 이상 Research Preview가 아님
+- **엔터프라이즈 6대 기능**: RBAC(Okta/Azure AD 연동), 그룹별 지출 한도, 확장 사용 분석(Analytics API), OpenTelemetry 감사 로그, Zoom MCP 커넥터, 도구별 커넥터 제어
+- **초보자 관련도**: **HIGH** — cowork 6개 파일 "리서치 프리뷰" 제거 필수
+- **반영**: cowork-intro, getting-started, desktop-control, dispatch, connectors, scheduled
+
+#### G.1.2 [공식] Advisor Tool 공개 베타 (2026-04-09)
+- **출처**: https://platform.claude.com/docs/en/release-notes/overview
+- **내용**: Sonnet(실행) + Opus(전략 조언) 쌍. Executor가 막히면 Advisor에게 질의. Advisor 단독 품질 + Executor 비용
+- **Beta 헤더**: `advisor-tool-2026-03-01`
+- **초보자 관련도**: MEDIUM — 간략 언급 정도
+- **반영**: special-commands에 간략 언급
+
+#### G.1.3 [공식] Managed Agents 공개 베타 (2026-04-08)
+- **출처**: https://platform.claude.com/docs/en/release-notes/overview
+- **내용**: 클라우드 호스팅 에이전트 하네스. $0.08/session-hour
+- **초보자 관련도**: LOW — 개발자 API 전용
+- **반영**: 스킵
+
+#### G.1.4 [공식] `ant` CLI (2026-04-08)
+- **출처**: https://platform.claude.com/docs/en/release-notes/overview
+- **내용**: Claude API 전용 CLI 클라이언트, YAML 리소스 관리
+- **초보자 관련도**: LOW — 개발자 전용
+- **반영**: 스킵
+
+#### G.1.5 [공식] Claude Mythos Preview (2026-04-07)
+- **출처**: https://platform.claude.com/docs/en/release-notes/overview
+- **내용**: 방어적 사이버보안 전용 연구 프리뷰, 초대 전용
+- **초보자 관련도**: LOW
+- **반영**: 스킵
+
+### G.2 Claude Code 버전 업데이트
+
+#### G.2.1 [공식] v2.1.101 (2026-04-10)
+- `/team-onboarding`: 현재 사용 패턴 기반 팀원 온보딩 가이드 자동 생성
+- OS CA 인증서 스토어 기본 신뢰 (기업 TLS 프록시 설정 불필요)
+- MCP 대형 결과: 50K chars 초과 시 파일로 자동 저장
+- `claude -p --resume <name>`: 세션 이름으로 이동 가능
+- **초보자 반영**: `/team-onboarding` → all-commands + special-commands
+
+#### G.2.2 [공식] v2.1.98 (2026-04-초)
+- Google Vertex AI 대화형 설정 위저드
+- Monitor 도구: 백그라운드 스크립트 이벤트 스트리밍
+- Linux PID 네임스페이스 격리 (`CLAUDE_CODE_SUBPROCESS_ENV_SCRUB`)
+- Perforce 모드 (`CLAUDE_CODE_PERFORCE_MODE`)
+- `--exclude-dynamic-system-prompt-sections` 플래그
+- **초보자 반영**: 전부 LOW → 스킵
+
+#### G.2.3 [공식] v2.1.97 (2026-04-09)
+- **Focus View (Ctrl+O)**: NO_FLICKER 모드에서 프롬프트·최종 응답만 표시
+- **/agents 탭 분리**: Running 탭(실시간) + Library 탭(에이전트 타입)
+- refreshInterval 상태바 설정
+- MCP HTTP/SSE 버퍼 누수 수정
+- **초보자 반영**: Focus View → keyboard-shortcuts + understanding-ui / /agents → all-commands + agent-teams
+
+#### G.2.4 [공식] v2.1.94 (2026-04-07)
+- **기본 Effort 레벨 medium → high 상향** (API-key, Bedrock/Vertex/Foundry, Team, Enterprise)
+- Amazon Bedrock powered by Mantle 지원
+- Slack MCP 커스텀 헤더
+- **초보자 반영**: effort 기본값 → all-commands, special-commands, understanding-ui, settings-json, faq
+
+### G.3 반영 우선순위 정리
+
+| 우선순위 | 항목 | 파일 수 |
+|---------|------|--------|
+| **HIGH** | Cowork GA "리서치 프리뷰" 제거 | 6 |
+| **HIGH** | effort 기본값 high 갱신 | 5~6 |
+| **HIGH** | Focus View (Ctrl+O) 추가 | 2~3 |
+| MEDIUM | /team-onboarding 추가 | 3 |
+| MEDIUM | /agents Running+Library 탭 | 2 |
+| MEDIUM | Advisor Tool 간략 언급 | 1 |
+| LOW | MCP 50K 자동 파일 | 1 |
+| LOW | Cowork 엔터프라이즈 6기능 | 1 |
+
+### G.4 추가 출처
+
+- https://support.claude.com/en/articles/12138966-release-notes (Cowork GA)
+- https://platform.claude.com/docs/en/release-notes/overview (Managed Agents, Advisor, ant CLI, Mythos)
+- https://releasebot.io/updates/anthropic/claude-code (v2.1.94~101 추적)
+- https://claudefa.st/blog/guide/changelog (커뮤니티 분석)

@@ -4,7 +4,7 @@ description: "웹앱, 코워크, 클로드 코드, 클로드 코드 웹 — 뭘 
 tags: ["입문", "비교", "생태계"]
 category: "intro"
 order: 3
-lastUpdated: "2026-04-08"
+lastUpdated: "2026-04-13"
 ---
 
 ## Claude, 너무 많은데 뭘 써야 하죠?

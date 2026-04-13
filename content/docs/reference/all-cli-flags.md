@@ -1,10 +1,10 @@
 ---
 title: "전체 CLI 플래그 목록"
-description: "Claude Code 터미널에서 사용할 수 있는 모든 커맨드라인 옵션 (v2.1.92 기준)"
+description: "Claude Code 터미널에서 사용할 수 있는 모든 커맨드라인 옵션 (v2.1.101 기준)"
 category: "reference"
 order: 2
 tags: ["레퍼런스", "CLI", "플래그", "터미널"]
-lastUpdated: "2026-04-08"
+lastUpdated: "2026-04-13"
 ---
 
 ## CLI 플래그란?

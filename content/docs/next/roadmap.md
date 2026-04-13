@@ -4,7 +4,7 @@ description: "입문 이후 클로드코드와 함께 성장해 가는 로드맵
 tags: ["로드맵", "학습경로", "다음단계", "미래기능"]
 category: "next"
 order: 1
-lastUpdated: "2026-04-08"
+lastUpdated: "2026-04-13"
 ---
 
 ## 입문 이후 이렇게 성장해 가세요
@@ -388,6 +388,11 @@ MCP(Model Context Protocol)는 Claude Code를 외부 서비스와 연결해주�
 
 ### ✅ 이미 출시됨 (2026년 1~4월)
 - **Opus 4.6 1M 토큰 컨텍스트** (2026-03-13 GA)
+- **Claude Cowork 정식 출시(GA)** (2026-04-09, macOS + Windows) `[공식]`
+- **Advisor Tool 공개 베타** (2026-04-09, Sonnet 실행 + Opus 조언) `[공식]`
+- **`/team-onboarding`** (v2.1.101, 팀원 온보딩 가이드 자동 생성) `[공식]`
+- **Focus View** (v2.1.97, Ctrl+O로 입력에 집중) `[공식]`
+- **기본 effort `high`** (v2.1.94, 모든 사용자 기본값 상향) `[공식]`
 - **`/btw` 사이드 질문** (v2.1.72)
 - **`/powerup` 인터랙티브 레슨** (v2.1.90)
 - **`/ultraplan` 클라우드 플랜** (v2.1.91, research preview)
@@ -395,9 +400,8 @@ MCP(Model Context Protocol)는 Claude Code를 외부 서비스와 연결해주�
 - **PowerShell 도구 for Windows** (v2.1.84 opt-in preview)
 - **Voice 20개 언어** (v2.1.69)
 
-### 🧪 Research Preview 단계
+### 🧪 Research Preview / 실험 단계
 - **Ultraplan** — 클라우드 플랜 다듬기 (현재 preview)
-- **Computer Use in Cowork** — 화면 직접 클릭·타이핑 (Pro/Max 대상)
 - **Agent Teams** — 여러 AI 팀원 직접 소통 (환경변수 활성화 필요)
 
 ### 🔍 커뮤니티가 발견한 미출시 기능들 [R] [추정]

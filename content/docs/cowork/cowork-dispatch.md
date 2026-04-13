@@ -4,11 +4,11 @@ description: "스마트폰에서 코워크에 일을 지시하면 사무실 컴�
 tags: ["코워크", "Dispatch", "원격 작업", "스마트폰", "자동화", "Computer Use"]
 category: "cowork"
 order: 4
-lastUpdated: "2026-04-08"
+lastUpdated: "2026-04-13"
 ---
 
 <div class="note-star">
-★ <strong>2026-03-17 업데이트</strong>: Dispatch가 <strong>Computer Use와 통합</strong>됐어요. 이제 스마트폰에서 지시하면, 사무실 컴퓨터의 Claude가 <strong>직접 화면을 클릭·타이핑하면서 앱을 조작</strong>할 수 있습니다. (Pro/Max 전용)
+★ <strong>2026년 4월, 코워크 정식 출시(GA)</strong>: Dispatch가 <strong>Computer Use와 통합</strong>됐어요. 이제 스마트폰에서 지시하면, 사무실 컴퓨터의 Claude가 <strong>직접 화면을 클릭·타이핑하면서 앱을 조작</strong>할 수 있습니다. macOS/Windows 모두 지원, Pro/Max 전용. <code>[공식]</code>
 <br /><br />
 → 출처: <a href="https://claude.com/blog/dispatch-and-computer-use">Anthropic 공식 블로그 "Dispatch and Computer Use"</a>
 </div>

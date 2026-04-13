@@ -4,7 +4,7 @@ description: "Claude 웹앱, 코워크, Claude Code, 웹 코딩까지 한 곳에
 tags: ["FAQ", "총정리", "비교", "요금", "기능", "2026업데이트"]
 category: "tips"
 order: 2
-lastUpdated: "2026-04-08"
+lastUpdated: "2026-04-13"
 ---
 
 각 가이드를 열어보지 않아도 여기서 핵심만 빠르게 확인하세요.
@@ -402,7 +402,7 @@ Desktop 앱이 가장 쉬워요. 채팅 + 코워크 + Code가 한 앱에 다 들
 
 ### Q: Opus 4.6에서 effort 설정이 왜 이상해졌어요?
 
-**A**. 2026-04-04 v2.1.92에서 **단순화됐어요**. 기존 ultrafast/fast/balanced/thorough/ultrathink → **low / medium / high** 3단계로. Opus + Max/Team은 기본값이 `high`입니다.
+**A**. 2026-04-04 v2.1.92에서 **단순화됐어요**. 기존 ultrafast/fast/balanced/thorough/ultrathink → **low / medium / high** 3단계로. 그리고 v2.1.94(2026-04-07)부터 **모든 사용자의 기본값이 `high`**로 올라갔어요. 예전에는 `medium`이었지만 이제는 처음부터 꼼꼼하게 작업합니다. `[공식]`
 
 ### Q: /tag, /vim이 없어요!
 

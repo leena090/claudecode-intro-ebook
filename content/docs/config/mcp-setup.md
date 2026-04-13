@@ -4,7 +4,7 @@ description: "외부 도구와 서비스를 AI에 연결하는 Model Context Pro
 category: "config"
 order: 5
 tags: ["MCP", "연동", "외부서비스"]
-lastUpdated: "2026-04-08"
+lastUpdated: "2026-04-13"
 ---
 
 ## MCP (Model Context Protocol)란?
@@ -495,6 +495,7 @@ MCP 도구를 만들 때 파라미터를 `list[str]` 같은 **배열 타입**으
 
 <div class="note-circle">
 ○ v2.1.91(2026-04-02)에 추가됐어요. 무조건 늘리진 마세요 — 토큰 비용이 커집니다. 꼭 필요할 때만.
+<br />○ <strong>v2.1.101 업데이트</strong>: 결과가 50,000글자를 넘으면 클로드가 자동으로 파일에 저장해요. 화면이 결과로 넘치는 일이 줄어들었어요. <code>[공식]</code>
 </div>
 
 ---

@@ -4,7 +4,7 @@ description: "여러 AI가 서로 소통하며 협력하는 팀 협업 시스템
 category: "advanced"
 order: 2
 tags: ["팀", "에이전트", "협업", "실험기능"]
-lastUpdated: "2026-04-08"
+lastUpdated: "2026-04-13"
 ---
 
 <div class="note-star">
@@ -67,7 +67,9 @@ lastUpdated: "2026-04-08"
 | `planner` | 프로젝트 일정 및 계획 수립 |
 | `critic` | 결과물 비판적 검토 |
 
-전체 타입 목록은 `/agents` 명령어로 확인할 수 있습니다.
+전체 타입 목록은 `/agents` 명령어로 확인할 수 있습니다. v2.1.97부터 `/agents`가 **Running 탭**(현재 실행 중인 에이전트)과 **Library 탭**(사용 가능한 타입 목록)으로 나뉘어서 관리가 더 편해졌어요. `[공식]`
+
+<div class="note-circle">○ <strong>Advisor Tool (공개 베타)</strong>: v2.1.94부터 Sonnet이 실행하고 Opus가 전략을 조언하는 "어드바이저 패턴"도 있어요. 비유하면 신입사원(빠른 Sonnet)이 일하고 팀장(똑똑한 Opus)이 방향을 잡아주는 거예요. 비용은 줄이면서 품질은 높게 유지하고 싶을 때 좋아요. <code>[공식]</code></div>
 
 ---
 

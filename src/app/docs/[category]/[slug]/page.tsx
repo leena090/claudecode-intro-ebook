@@ -84,6 +84,53 @@ export default async function DocPage({
           {/* 마크다운 본문 */}
           <MarkdownBody html={html} />
 
+          {/* 유튜브 영상 연결 — youtubeId 프론트매터가 있을 때만 자동 표시 */}
+          {doc.meta.youtubeId && (
+            <div
+              className="mt-10 mb-8 p-5 rounded-xl border"
+              style={{
+                background: 'var(--bg-secondary)',
+                borderColor: 'var(--border)',
+              }}
+            >
+              <div className="flex items-center gap-2 mb-3">
+                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="#FF0000">
+                  <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                </svg>
+                <span
+                  className="text-sm font-semibold"
+                  style={{ color: 'var(--text-primary)' }}
+                >
+                  {doc.meta.youtubeTitle || '이 내용을 영상으로 보기'}
+                </span>
+              </div>
+              {/* 반응형 유튜브 임베드 (16:9 비율) */}
+              <div
+                className="relative w-full rounded-lg overflow-hidden"
+                style={{ paddingBottom: '56.25%' }}
+              >
+                <iframe
+                  className="absolute top-0 left-0 w-full h-full"
+                  src={`https://www.youtube.com/embed/${doc.meta.youtubeId}`}
+                  title={doc.meta.youtubeTitle || '관련 영상'}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+              <div className="mt-2 text-right">
+                <a
+                  href={`https://youtube.com/watch?v=${doc.meta.youtubeId}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs transition-colors"
+                  style={{ color: 'var(--accent-text)' }}
+                >
+                  유튜브에서 보기 →
+                </a>
+              </div>
+            </div>
+          )}
+
           {/* 하단 네비게이션 — 카테고리 목록으로 돌아가기 */}
           <FooterNav
             backHref={`/docs/${category}`}

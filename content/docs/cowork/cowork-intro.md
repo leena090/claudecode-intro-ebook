@@ -4,7 +4,9 @@ description: "클로드 데스크톱 앱의 코워크 탭이 무엇인지, 일�
 tags: ["코워크", "소개", "AI 비서", "업무 자동화"]
 category: "cowork"
 order: 1
-lastUpdated: "2026-04-06"
+lastUpdated: "2026-04-13"
+youtubeId: "XWZ2IvgsFrk"
+youtubeTitle: "클로드 코워크 윈도우 출시! 직장인, 1인 창업에 필수"
 ---
 
 
@@ -106,7 +108,7 @@ lastUpdated: "2026-04-06"
 
 웹 브라우저가 아니라, 컴퓨터에 설치하는 앱이 필요해요. Mac과 Windows 둘 다 지원합니다.
 
-<div class="note-circle">○ 코워크는 현재 "리서치 프리뷰(Research Preview)" 상태입니다. 아직 완성 단계가 아니라 테스트 중이라는 뜻이에요. 기능이 더 추가되거나 바뀔 수 있어요.</div>
+<div class="note-star">★ <strong>2026년 4월, 코워크 정식 출시!</strong> — 코워크가 macOS와 Windows 모두에서 정식 버전(GA)이 됐어요. 더 이상 테스트 단계가 아닙니다. 안심하고 쓰셔도 돼요. 기업 사용자를 위해 보안 관리(RBAC), 사용 분석, Zoom 연동 등 새로운 기능도 추가되었어요. <code>[공식]</code></div>
 
 ---
 

@@ -4,7 +4,7 @@ description: "클로드 코드의 동작 방식을 세부적으로 조정하는 
 category: "config"
 order: 2
 tags: ["설정", "settings.json", "커스터마이제이션"]
-lastUpdated: "2026-04-08"
+lastUpdated: "2026-04-13"
 ---
 
 ## settings.json이란?
@@ -69,14 +69,14 @@ lastUpdated: "2026-04-08"
 
 <div class="note-star">
 ★ <strong>2026-04-04 v2.1.92에서 단순화됐어요</strong> — 기존 ultrafast/fast/balanced/thorough/ultrathink 5단계 → <strong>low / medium / high</strong> 3단계.
-<br />★ Opus 4.6 + Max/Team은 기본값이 <code>high</code>예요.
+<br />★ <strong>v2.1.94(2026-04-07)부터 모든 사용자의 기본값이 <code>high</code></strong>예요. 예전에는 <code>medium</code>이었지만 이제 처음부터 꼼꼼하게 작업합니다. <code>[공식]</code>
 <br />★ 현재 effort level이 로고/스피너에 자동 표시됩니다.
 </div>
 
 | 레벨 | 추천 용도 |
 |---|---|
 | `low` | 간단한 수정, 짧은 답변 — 빠르고 저렴 |
-| `medium` | 일반적인 작업 (기본) |
+| `medium` | 일반적인 작업 |
 | `high` | 복잡한 문제, 중요한 코드 — 느리지만 정확 |
 
 ---

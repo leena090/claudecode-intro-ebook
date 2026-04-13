@@ -1,10 +1,10 @@
 ---
 title: "전체 슬래시 커맨드 목록"
-description: "Claude Code의 모든 슬래시 명령어 완벽 레퍼런스 (2026-04-09 최신화)"
+description: "Claude Code의 모든 슬래시 명령어 완벽 레퍼런스 (2026-04-13 최신화)"
 category: "reference"
 order: 1
 tags: ["레퍼런스", "명령어", "전체목록"]
-lastUpdated: "2026-04-09"
+lastUpdated: "2026-04-13"
 ---
 
 ## 📋 전체 슬래시 커맨드 목록
@@ -12,8 +12,8 @@ lastUpdated: "2026-04-09"
 Claude Code에서 사용 가능한 모든 슬래시(/) 명령어를 정렬하여 표시합니다. 원하는 기능을 빠르게 찾으세요.
 
 <div class="note-circle">
-○ <strong>2026-04-09 기준 최신</strong> — v2.1.94까지 반영. <code>/tag</code>, <code>/vim</code>은 2026-04-04에 제거되었습니다.
-<br />○ <strong>신규 추가</strong>: <code>/btw</code>, <code>/fork</code>, <code>/ultraplan</code>, <code>/buddy</code>, <code>/model opusplan</code>(하이브리드 모드)
+○ <strong>2026-04-13 기준 최신</strong> — v2.1.101까지 반영. <code>/tag</code>, <code>/vim</code>은 2026-04-04에 제거되었습니다.
+<br />○ <strong>신규 추가</strong>: <code>/btw</code>, <code>/fork</code>, <code>/ultraplan</code>, <code>/buddy</code>, <code>/model opusplan</code>(하이브리드 모드), <code>/team-onboarding</code>
 </div>
 
 ---
@@ -22,7 +22,7 @@ Claude Code에서 사용 가능한 모든 슬래시(/) 명령어를 정렬하여
 
 | # | 명령어 | 카테고리 | 설명 | 사용 빈도 |
 |---|--------|---------|------|----------|
-| 1 | `/agents` | 특수 기능 | 서브에이전트 타입 목록 보기 | ⭐⭐ |
+| 1 | `/agents` | 특수 기능 | 서브에이전트 관리 — **Running + Library 탭 분리** (v2.1.97~) | ⭐⭐ |
 | 2 | `/batch` | 특수 기능 | 여러 파일/항목에 일괄 작업 (worktree 자동 격리) | ⭐⭐⭐ |
 | 3 | `/branch` | 세션 관리 | 대화 분기하기 | ⭐⭐⭐ |
 | 4 | `/btw` | 세션 관리 | **사이드 질문** — 기록에 남기지 않고 잠깐 물어보기 (v2.1.72~) | ⭐⭐⭐⭐ |
@@ -38,7 +38,7 @@ Claude Code에서 사용 가능한 모든 슬래시(/) 명령어를 정렬하여
 | 14 | `/desktop` | 특수 기능 | Desktop 앱 설정 열기 | ⭐⭐ |
 | 15 | `/diff` | 파일 & 코드 | 파일 변경사항 비교 | ⭐⭐⭐⭐⭐ |
 | 16 | `/doctor` | 정보 확인 | 시스템 진단 | ⭐⭐⭐ |
-| 17 | `/effort` | 특수 기능 | 작업량 조절 (`low`/`medium`/`high`, v2.1.92~ 단순화) | ⭐⭐⭐ |
+| 17 | `/effort` | 특수 기능 | 작업량 조절 (`low`/`medium`/`high`, **기본값 `high`** v2.1.94~) | ⭐⭐⭐ |
 | 18 | `/exit` | 세션 관리 | 세션 종료 | ⭐⭐⭐⭐⭐ |
 | 19 | `/export` | 파일 & 코드 | 파일 내보내기 | ⭐⭐⭐⭐ |
 | 20 | `/fast` | 특수 기능 | 빠른 출력 모드 | ⭐⭐⭐ |
@@ -64,11 +64,12 @@ Claude Code에서 사용 가능한 모든 슬래시(/) 명령어를 정렬하여
 | 40 | `/simplify` | 파일 & 코드 | 코드 단순화 및 리팩토링 | ⭐⭐⭐ |
 | 41 | `/stats` | 정보 확인 | 종합 통계 보기 | ⭐⭐⭐ |
 | 42 | `/status` | 정보 확인 | 현재 상태 확인 | ⭐⭐⭐⭐⭐ |
-| 43 | `/teleport` | 세션 관리 | 현재 세션을 다른 기기로 이전 | ⭐⭐⭐ |
-| 44 | `/theme` | 설정 | 화면 테마 선택 | ⭐⭐⭐⭐ |
-| 45 | `/ultraplan` | 특수 기능 | **클라우드 플랜 다듬기** (research preview, v2.1.91+) | ⭐⭐⭐ |
-| 46 | `/usage` | 정보 확인 | 사용량 통계 보기 | ⭐⭐⭐ |
-| 47 | `/voice` | 특수 기능 | 음성 모드 시작 (스페이스바 push-to-talk, 20개 언어) | ⭐⭐⭐ |
+| 43 | `/team-onboarding` | 특수 기능 | **팀원 온보딩 가이드 자동 생성** (v2.1.101~) | ⭐⭐ |
+| 44 | `/teleport` | 세션 관리 | 현재 세션을 다른 기기로 이전 | ⭐⭐⭐ |
+| 45 | `/theme` | 설정 | 화면 테마 선택 | ⭐⭐⭐⭐ |
+| 46 | `/ultraplan` | 특수 기능 | **클라우드 플랜 다듬기** (research preview, v2.1.91+) | ⭐⭐⭐ |
+| 47 | `/usage` | 정보 확인 | 사용량 통계 보기 | ⭐⭐⭐ |
+| 48 | `/voice` | 특수 기능 | 음성 모드 시작 (스페이스바 push-to-talk, 20개 언어) | ⭐⭐⭐ |
 
 <div class="note-star">
 ☆ <strong>2026-04-04 v2.1.92에서 제거된 명령어</strong>: <code>/tag</code>, <code>/vim</code>

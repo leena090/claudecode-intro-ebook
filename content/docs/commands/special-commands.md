@@ -1,10 +1,10 @@
 ---
 title: "특수 명령어"
-description: "Claude Code의 고급 기능을 활용하는 전문가 명령어 (2026-04-08 v2.1.92 기준)"
+description: "Claude Code의 고급 기능을 활용하는 전문가 명령어 (2026-04-13 v2.1.101 기준)"
 category: "commands"
 order: 6
 tags: ["특수기능", "고급", "명령어"]
-lastUpdated: "2026-04-08"
+lastUpdated: "2026-04-13"
 ---
 
 ## 특수 명령어란?
@@ -15,7 +15,7 @@ lastUpdated: "2026-04-08"
 
 ## 특수 명령어 (기존 9개 + 신규 9개)
 
-> 📢 **2026-04-08 기준 추가**: `/btw`, `/fork`, `/ultraplan`까지 포함 — 최근 몇 달 사이 가장 많이 바뀐 영역입니다.
+> 📢 **2026-04-13 기준 추가**: `/btw`, `/fork`, `/ultraplan`, `/team-onboarding`까지 포함 — 최근 몇 달 사이 가장 많이 바뀐 영역입니다.
 
 ---
 
@@ -353,7 +353,7 @@ claude --remote "이 작업 웹에서 계속 해줘"
 
 <div class="note-star">
 ★ <strong>2026-04-04 v2.1.92에서 크게 단순화됐어요</strong> — 기존 ultrafast/fast/balanced/thorough/ultrathink 5단계가 <strong>low / medium / high</strong> 3단계로 깔끔해졌습니다.
-<br />★ <strong>Opus 4.6 + Max/Team 플랜</strong>은 기본값이 <code>high</code>예요.
+<br />★ <strong>v2.1.94(2026-04-07)부터 기본값이 <code>high</code></strong>로 올라갔어요. 예전에는 <code>medium</code>이었지만, 이제 모든 사용자의 기본이 <code>high</code>입니다. <code>[공식]</code>
 <br />★ 로고와 스피너에 현재 effort level이 <strong>자동 표시</strong>됩니다.
 </div>
 
@@ -508,6 +508,30 @@ Closes #123
 - 제목: 한 줄 요약
 - 본문: 상세 변경사항
 - 이슈 연결
+
+---
+
+### 🔟 `/team-onboarding` — 팀원 온보딩 가이드 자동 생성
+
+```bash
+/team-onboarding
+```
+
+**역할:** 새 팀원이 합류했을 때, 내가 Claude Code를 어떻게 쓰고 있는지를 분석해서 **팀원용 가이드를 자동으로 만들어줘요**.
+
+신입사원 첫날, 선배가 "우리 팀은 이런 식으로 일해" 하고 알려주는 가이드를 클로드가 대신 만들어주는 거예요.
+
+<div class="note-star">
+★ v2.1.101(2026-04-10)에 새로 추가됐어요. 현재 세션의 사용 패턴을 분석해서 가이드를 구성합니다. <code>[공식]</code>
+</div>
+
+**생성되는 가이드 내용:**
+- 프로젝트에서 자주 쓰는 명령어
+- 추천 설정과 CLAUDE.md 활용법
+- 팀의 작업 흐름(워크플로우)
+- 유용한 팁과 주의사항
+
+<div class="note-circle">○ <strong>Advisor Tool (공개 베타)</strong>: v2.1.94 이후 Sonnet이 실행하고 Opus가 조언하는 "어드바이저 모드"도 있어요. 빠른 모델이 일하고, 똑똑한 모델이 감독하는 방식이에요. 팀 작업에서 비용을 줄이면서도 높은 품질을 유지하고 싶을 때 유용합니다. <code>[공식]</code></div>
 
 ---
 

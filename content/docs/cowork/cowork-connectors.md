@@ -4,7 +4,7 @@ description: "코워크의 MCP 커넥터로 구글 드라이브, Gmail, 마이�
 tags: ["코워크", "커넥터", "구글 드라이브", "Gmail", "Microsoft 365", "연동"]
 category: "cowork"
 order: 7
-lastUpdated: "2026-04-06"
+lastUpdated: "2026-04-13"
 ---
 
 
@@ -37,8 +37,9 @@ lastUpdated: "2026-04-06"
 | **OneDrive** | MS 클라우드 파일 접근 |
 | **SharePoint** | 회사 문서 시스템 접근 |
 | **DocuSign** | 전자 서명 문서 처리 |
+| **Zoom** | 회의 요약, 액션 아이템, 녹취록 접근 *(2026-04 신규)* |
 
-<div class="note-circle">○ 연결 가능한 서비스는 계속 늘어나고 있어요. 클로드 업데이트에 따라 새로운 서비스가 추가될 수 있습니다.</div>
+<div class="note-star">★ <strong>2026년 4월 업데이트</strong>: Zoom MCP 커넥터가 새로 추가됐어요. 또한 관리자가 팀원별로 특정 커넥터만 허용하거나 차단할 수 있는 <strong>도구별 접근 제어</strong> 기능도 생겼어요. 회사에서 보안이 중요한 경우 관리자에게 문의해보세요. <code>[공식]</code></div>
 
 ---
 

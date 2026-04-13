@@ -4,7 +4,7 @@ description: "코워크의 예약 작업 기능으로 매일, 매주, 매달 반
 tags: ["코워크", "예약 작업", "자동화", "반복 작업", "스케줄"]
 category: "cowork"
 order: 5
-lastUpdated: "2026-04-06"
+lastUpdated: "2026-04-13"
 ---
 
 
