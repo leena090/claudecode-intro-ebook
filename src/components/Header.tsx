@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import PixelLogo from './PixelLogo'
 import ThemeToggle from './ThemeToggle'
+import SearchButton from './SearchButton'
 
 // ── 브레드크럼 아이템 타입 ──
 interface BreadcrumbItem {
@@ -48,8 +49,10 @@ export default function Header({ breadcrumbs = [] }: { breadcrumbs?: BreadcrumbI
             </span>
           ))}
         </nav>
-        {/* 우측 — 브랜드 링크 + 테마 전환 */}
+        {/* 우측 — 검색 버튼 + 브랜드 링크 + 테마 전환 */}
         <div className="flex items-center gap-3 shrink-0">
+          {/* 문서 전체 검색 버튼 — SearchModal 포함 */}
+          <SearchButton />
           {/* 노모어매뉴얼 브랜드 링크 — 항상 노출 */}
           <a
             href="https://youtube.com/@nomore_manual"

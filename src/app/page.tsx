@@ -2,6 +2,7 @@ import Link from 'next/link'
 import PixelLogo from '@/components/PixelLogo'
 import ThemeToggle from '@/components/ThemeToggle'
 import CategoryTabs from '@/components/CategoryTabs'
+import SearchButton from '@/components/SearchButton'
 import { getAllCategories, LEARNING_TABS } from '@/lib/docs'
 
 // ── 홈페이지 ──
@@ -32,7 +33,11 @@ export default function HomePage() {
               Claude Code 입문자 교육용
             </span>
           </div>
-          <ThemeToggle />
+          {/* 홈 헤더 — 검색 버튼 + 테마 전환 */}
+          <div className="flex items-center gap-3">
+            <SearchButton />
+            <ThemeToggle />
+          </div>
         </div>
       </header>
 

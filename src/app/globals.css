@@ -388,3 +388,289 @@ body {
 [data-theme="dark"] .markdown-body mark {
   background: rgba(255, 235, 59, 0.2);
 }
+
+/* ═══════════════════════════════════════════════
+   ── 검색 UI 스타일 ──
+   SearchButton (헤더 버튼) + SearchModal (전체 화면 다이얼로그)
+   40~60대 사용자 최적화: 큰 글씨, 명확한 레이블, 충분한 여백
+   ═══════════════════════════════════════════════ */
+
+/* ── 헤더 검색 트리거 버튼 ── */
+.search-trigger-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg-secondary);
+  color: var(--text-muted);
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+.search-trigger-btn:hover {
+  border-color: var(--accent-text);
+  color: var(--accent-text);
+  background: var(--accent-soft);
+}
+/* 검색 버튼 내 텍스트 레이블 — 모바일에서 숨김 */
+.search-trigger-label {
+  font-weight: 500;
+}
+/* 단축키 힌트 뱃지 — 작은 화면에서 숨김 */
+.search-trigger-kbd {
+  display: none; /* 기본 숨김 */
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-family: 'JetBrains Mono', monospace;
+  background: var(--bg-primary);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+@media (min-width: 640px) {
+  /* sm 이상에서 단축키 힌트 표시 */
+  .search-trigger-kbd { display: inline; }
+}
+
+/* ── 검색 오버레이 (반투명 배경) ── */
+.search-overlay {
+  position: fixed;
+  inset: 0;                             /* 화면 전체 덮기 */
+  z-index: 200;                         /* 헤더(z-50)보다 위 */
+  background: rgba(0, 0, 0, 0.55);     /* 반투명 어두운 배경 */
+  backdrop-filter: blur(4px);           /* 배경 블러 */
+  display: flex;
+  align-items: flex-start;             /* 상단 정렬 (모바일 키보드 대응) */
+  justify-content: center;
+  padding: 80px 16px 40px;             /* 상단에 여백 — 헤더 아래 자연스럽게 */
+  animation: overlayFadeIn 0.15s ease;
+}
+
+@keyframes overlayFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ── 검색 패널 (흰색 카드) ── */
+.search-panel {
+  width: 100%;
+  max-width: 640px;                     /* 최대 너비 제한 */
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  background: var(--bg-primary);
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.2), 0 4px 16px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  animation: panelSlideIn 0.18s ease;
+}
+
+@keyframes panelSlideIn {
+  from { opacity: 0; transform: translateY(-12px) scale(0.98); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* ── 검색 입력 영역 ── */
+.search-input-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border);
+}
+.search-icon {
+  flex-shrink: 0;
+  color: var(--text-muted);
+}
+/* 검색 입력창 — 크고 읽기 쉽게 */
+.search-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 17px;              /* 40~60대 고려: 충분히 큰 글씨 */
+  font-family: 'Pretendard', -apple-system, sans-serif;
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+.search-input::placeholder {
+  color: var(--text-muted);
+  font-size: 15px;
+}
+
+/* ── 닫기 버튼 — 크고 명확하게 ── */
+.search-close-btn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg-secondary);
+  color: var(--text-muted);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.search-close-btn:hover {
+  border-color: var(--accent-text);
+  color: var(--accent-text);
+  background: var(--accent-soft);
+}
+.search-close-label {
+  font-family: 'Pretendard', -apple-system, sans-serif;
+}
+
+/* ── 결과 영역 ── */
+.search-results-area {
+  max-height: 420px;            /* 스크롤 영역 제한 */
+  overflow-y: auto;
+  /* 스크롤바 스타일 */
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}
+.search-results-area::-webkit-scrollbar { width: 4px; }
+.search-results-area::-webkit-scrollbar-track { background: transparent; }
+.search-results-area::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+
+/* ── 빈 상태 안내 ── */
+.search-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 36px 24px;
+  text-align: center;
+}
+.search-empty-icon {
+  font-size: 36px;
+  margin-bottom: 12px;
+  line-height: 1;
+}
+.search-empty-text {
+  font-size: 16px;              /* 큰 글씨 — 40~60대 가독성 */
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 8px;
+}
+.search-empty-hint {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin: 0 0 8px;
+  line-height: 1.6;
+}
+.search-shortcut-hint {
+  font-size: 13px;
+  color: var(--text-muted);
+  padding: 4px 10px;
+  border-radius: 6px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* ── 결과 목록 ── */
+.search-result-list {
+  list-style: none;
+  margin: 0;
+  padding: 8px;
+}
+
+/* ── 결과 아이템 ── */
+.search-result-item {
+  display: block;
+  padding: 12px 14px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background 0.12s;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+.search-result-item:hover,
+.search-result-item--active {
+  background: var(--accent-soft);
+  border-color: var(--accent-text);
+}
+
+/* 카테고리 메타 (아이콘 + 카테고리명) */
+.search-result-meta {
+  margin-bottom: 4px;
+}
+.search-result-category {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--accent-text);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+/* 결과 제목 — 가장 크게 */
+.search-result-title {
+  font-size: 16px;              /* 40~60대 고려: 충분히 큰 제목 */
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+  line-height: 1.4;
+}
+
+/* 설명 텍스트 */
+.search-result-desc {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  /* 2줄 이상 넘치면 말줄임 */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* 태그 뱃지 목록 */
+.search-result-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 6px;
+}
+.search-result-tag {
+  font-size: 11px;
+  padding: 2px 7px;
+  border-radius: 4px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+}
+
+/* ── 하단 단축키 안내 바 ── */
+.search-footer {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 10px 16px;
+  border-top: 1px solid var(--border);
+  background: var(--bg-secondary);
+}
+.search-footer-tip {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+.search-footer-tip kbd {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1px 6px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-family: 'JetBrains Mono', monospace;
+  background: var(--bg-primary);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  line-height: 1.6;
+  min-width: 22px;
+}
