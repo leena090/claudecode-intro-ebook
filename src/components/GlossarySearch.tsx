@@ -694,6 +694,27 @@ const GLOSSARY: Term[] = [
     desc: '새 프로젝트를 시작할 때 기본 설정을 자동으로 만들어주는 명령어예요. CLAUDE.md 파일도 자동 생성됩니다.',
     analogy: '새 노트를 사서 첫 페이지에 이름, 날짜, 과목을 적는 것',
   },
+  // ── 2026-04-15 추가 ──
+  {
+    ko: '루틴',
+    en: 'Routines',
+    desc: '2026년 4월 출시. 한 번 설정하면 컴퓨터를 꺼도 Anthropic 서버에서 자동 실행되는 자동화 기능. 시간 예약, API 호출, GitHub 이벤트 3가지 트리거를 지원해요.',
+    analogy: '세탁기 예약처럼 — 외출해도 알아서 돌아가요',
+    link: '/docs/advanced/routines',
+    linkLabel: '루틴 가이드',
+  },
+  {
+    ko: 'Managed Agents',
+    en: 'Managed Agents',
+    desc: 'Anthropic이 호스팅하는 에이전트 인프라. 개발자가 서버 관리 없이 Claude 에이전트를 배포·실행할 수 있어요. API로 사용하며 세션당 $0.08 + 토큰 비용.',
+    analogy: '회사가 직접 서버 안 사고 클라우드 직원을 빌리는 것',
+  },
+  {
+    ko: 'Claude Agent SDK',
+    en: 'Claude Agent SDK',
+    desc: '기존 "Claude Code SDK"에서 이름이 바뀐 개발자 도구. Claude Code를 프로그래밍 방식으로 제어할 수 있는 JavaScript/Python 라이브러리예요.',
+    analogy: '리모컨 — Claude Code를 프로그램에서 조종하는 장치',
+  },
 ]
 
 // ── 초성 그룹 매핑 ──

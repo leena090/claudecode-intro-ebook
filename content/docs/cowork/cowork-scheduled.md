@@ -4,9 +4,15 @@ description: "코워크의 예약 작업 기능으로 매일, 매주, 매달 반
 tags: ["코워크", "예약 작업", "자동화", "반복 작업", "스케줄"]
 category: "cowork"
 order: 5
-lastUpdated: "2026-04-13"
+lastUpdated: "2026-04-15"
 ---
 
+<div class="note-star">
+★ <strong>2026년 4월 14일, 더 강력한 "루틴(Routines)" 기능이 나왔어요!</strong>
+<br />이 페이지의 예약 작업은 <strong>컴퓨터가 켜져 있어야</strong> 실행돼요.
+<br />하지만 루틴은 <strong>컴퓨터를 꺼도 Anthropic 서버에서 자동 실행</strong>됩니다.
+<br />→ <a href="/docs/advanced/routines">루틴(Routines) 가이드 보러 가기</a>
+</div>
 
 ## 반복 업무를 클로드에게 맡기면 어떨까요?
 
@@ -39,7 +45,8 @@ lastUpdated: "2026-04-13"
 | 실행 시간 | 오전 8시 30분 |
 | 무슨 일을 할지 | 구체적으로 적기 |
 
-<div class="note-circle">○ 예약 작업도 Dispatch처럼 컴퓨터가 켜져 있어야 실행돼요. 사무실 컴퓨터라면 절전 모드를 해제해두는 게 좋아요.</div>
+<div class="note-circle">○ 예약 작업은 컴퓨터가 켜져 있어야 실행돼요. 사무실 컴퓨터라면 절전 모드를 해제해두는 게 좋아요.
+<br />○ 컴퓨터를 꺼도 실행되길 원한다면? → <a href="/docs/advanced/routines">루틴(Routines)</a>을 사용하세요!</div>
 
 ---
 

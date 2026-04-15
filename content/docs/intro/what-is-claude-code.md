@@ -4,7 +4,7 @@ description: "AI 코딩 도구 Claude Code가 뭔지, 어디서 쓸 수 있는�
 tags: ["입문", "개념", "Claude Code"]
 category: "intro"
 order: 1
-lastUpdated: "2026-04-06"
+lastUpdated: "2026-04-15"
 ---
 
 
@@ -25,7 +25,7 @@ Claude Code는 여러 곳에서 쓸 수 있습니다:
 | **터미널** (CLI) | 컴퓨터 명령창에서 직접 실행 | 가장 강력, 이 가이드의 메인 |
 | **VS Code 확장** | VS Code 에디터 안에서 사용 | 코드 편집과 동시에 |
 | **JetBrains 플러그인** | IntelliJ, WebStorm 등에서 사용 | Java/웹 개발자용 |
-| **Desktop 앱** | Claude Desktop 앱의 "Code" 탭 | 앱 하나로 채팅+코워크+코드 |
+| **Desktop 앱** | Claude Desktop 앱의 "Code" 탭 | 앱 하나로 채팅+코워크+코드 (4월 대규모 리디자인!) |
 | **웹 버전** | claude.ai/code 접속 | 설치 없이 브라우저에서 바로 |
 
 ---

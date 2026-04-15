@@ -54,7 +54,7 @@ export default function HomePage() {
           대한민국 유일의 Claude Code 입문 교실
         </p>
         <div className="text-sm" style={{ color: 'var(--text-muted)' }}>
-          {totalDocs}편의 가이드 · 15편의 실전 이야기 · 2026-04-13 최신
+          {totalDocs}편의 가이드 · 15편의 실전 이야기 · 2026-04-15 최신
         </div>
       </section>
 
