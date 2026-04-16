@@ -344,7 +344,7 @@ Desktop 앱이 가장 쉬워요. 채팅 + 코워크 + Code가 한 앱에 다 들
 ### Q: 더 궁금한 게 있어요
 
 1. Claude에게 직접 물어보기 — 가장 빠름
-2. 공식 문서: docs.anthropic.com/claude-code
+2. 공식 문서: code.claude.com/docs (구 주소 docs.anthropic.com에서 이전됨)
 3. 이 가이드의 각 카테고리별 상세 문서 확인
 
 ---

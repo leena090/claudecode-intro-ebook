@@ -4,7 +4,7 @@ description: "코드 에디터에 설치해서 개발하면서 Claude Code 사�
 category: "setup"
 order: 6
 tags: ["설치", "VS Code", "IDE", "확장", "플러그인", "Antigravity"]
-lastUpdated: "2026-04-06"
+lastUpdated: "2026-04-16"
 ---
 
 ## IDE에서 Claude Code 사용의 장점
@@ -23,8 +23,8 @@ lastUpdated: "2026-04-06"
 | IDE | 설치 난이도 | 추천도 | 특징 |
 |-----|----------|-------|------|
 | **VS Code** | ⭐ 매우 쉬움 | ⭐⭐⭐ | 가장 인기, 초보자 추천 |
-| **Cursor** | ⭐ 기본 내장 | ⭐⭐⭐ | Claude Code 기본 내장 |
-| **Antigravity** | ⭐ 매우 쉬움 | ⭐⭐⭐ | 구글 기반 AI 코딩 도구, 설치 불필요 |
+| **Cursor** | ⭐⭐ 쉬움 | ⭐⭐⭐ | VS Code 기반, 마켓플레이스에서 설치 |
+| **Antigravity** | ⭐ 매우 쉬움 | ⭐⭐⭐ | 구글 기반 AI 코딩 도구, 설치 불필요 (참고: Claude Code와 별도) |
 | **JetBrains** | ⭐⭐ 쉬움 | ⭐⭐⭐ | 전문가용 (IntelliJ, WebStorm, PyCharm) — 2026 Q1부터 정식 안정 지원 |
 | **Sublime Text** | ⭐⭐ 쉬움 | ⭐ | 간단한 에디터 |
 
@@ -54,13 +54,15 @@ VS Code가 아직 없다면:
 
 ### Step 2: Claude Code 확장 설치
 
+**방법 1: Extensions 뷰에서 검색 (추천)**
+
 1. **VS Code 열고 확장탭 열기**
    - 왼쪽 사이드바에서 네모 4개 모양 아이콘 클릭
    - 또는 `Ctrl+Shift+X` (Windows) / `Cmd+Shift+X` (Mac)
 
 2. **"Claude Code" 검색**
    - 상단 검색창에 "Claude Code" 입력
-   - Anthropic 공식 확장 찾기
+   - **Anthropic** 이 만든 공식 확장 선택
 
 3. **설치 버튼 클릭**
    - 파란색 "Install" 버튼 클릭
@@ -69,6 +71,14 @@ VS Code가 아직 없다면:
 4. **로그인**
    - 설치 완료 후 Claude 계정으로 로그인
    - API Key 입력 (필요시)
+
+**방법 2: CLI 명령어로 설치**
+
+터미널에서 한 줄로 설치 가능합니다:
+
+```bash
+code --install-extension anthropic.claude-code
+```
 
 ### Step 3: 사용하기
 
@@ -86,9 +96,9 @@ VS Code가 아직 없다면:
 
 ---
 
-## 2️⃣ Cursor에 사용하기 (최고 추천!)
+## 2️⃣ Cursor에 사용하기
 
-**Cursor는 Claude Code가 기본으로 내장된 코드 에디터입니다!** 별도 설치가 필요 없습니다.
+**Cursor는 VS Code를 기반으로 만든 코드 에디터입니다.** Claude Code를 사용하려면 VS Code처럼 마켓플레이스에서 확장을 설치하면 됩니다.
 
 ### Step 1: Cursor 설치
 
@@ -104,21 +114,22 @@ VS Code가 아직 없다면:
 4. **Cursor 열기**
    - 설치 완료 후 실행
 
-### Step 2: Claude 계정 연동 (자동)
+### Step 2: Claude Code 확장 설치
 
-1. **처음 실행**
-   - Cursor를 처음 열면 계정 연동 안내
+**방법 1: 마켓플레이스에서 설치**
 
-2. **Claude 계정 로그인**
-   - 화면 안내대로 로그인
-   - 또는 명령어 팔레트 (`Cmd+Shift+P`) → "Claude" 입력
+1. Cursor Extensions 탭 열기 (`Ctrl+Shift+X` / `Cmd+Shift+X`)
+2. "Claude Code" 검색 → Anthropic 공식 확장 설치
 
-3. **완료!**
-   - 별도 설치 불필요
+**방법 2: 직접 링크로 설치**
+
+Cursor 주소창에 아래를 입력:
+
+```
+cursor:extension/anthropic.claude-code
+```
 
 ### Step 3: 사용하기
-
-**Cursor는 모든 기능이 이미 포함되어 있습니다:**
 
 ```
 코드 선택 → Cmd+K (또는 Ctrl+K)
@@ -127,20 +138,14 @@ VS Code가 아직 없다면:
 → Tab으로 수락 또는 거부
 ```
 
-**Cursor 추천 이유:**
-- ✅ Claude Code가 기본 내장
-- ✅ 별도 설치 불필요
-- ✅ 더 깔끔한 UI
-- ✅ 개발자들이 많이 사용
-
 ---
 
-## 3️⃣ Antigravity (구글 AI 코딩 도구)
+## 3️⃣ Antigravity (참고: Claude Code와 별도)
 
-**Antigravity는 Google이 만든 AI 기반 코딩 도구입니다.** 별도 설치 없이 브라우저에서 바로 사용할 수 있습니다.
+**Antigravity는 Google이 만든 AI 기반 코딩 도구입니다. Claude Code와는 별개의 Google AI 코딩 도구입니다.** 별도 설치 없이 브라우저에서 바로 사용할 수 있습니다.
 
 <div class="note-circle">
-○ Antigravity = "구글판 AI 코딩 도구" — 설치 없이 브라우저에서 코딩
+○ Antigravity = "구글판 AI 코딩 도구" — 설치 없이 브라우저에서 코딩. Claude Code와는 다른 도구입니다.
 </div>
 
 ### Step 1: 접속
@@ -216,6 +221,9 @@ IntelliJ IDEA, PyCharm, WebStorm 등을 사용한다면:
 6. **Install 클릭**
    - 설치 시작
    - IDE 재시작 필요
+
+또는 JetBrains 플러그인 마켓플레이스에서 직접 확인:
+- https://plugins.jetbrains.com/plugin/27310-claude-code-beta-
 
 ### Step 2: 설정
 
@@ -295,11 +303,10 @@ IntelliJ IDEA, PyCharm, WebStorm 등을 사용한다면:
 ✅ 초보자도 사용하기 쉬움
 ✅ 온라인 튜토리얼 많음
 
-### Cursor를 추천하는 경우 (최고 추천!)
+### Cursor를 추천하는 경우
 
-✅ Claude Code 기본 내장
-✅ 별도 설치 불필요
-✅ 통합이 더 깔끔함
+✅ VS Code와 비슷한 환경에서 Claude Code 사용
+✅ 마켓플레이스 설치로 빠르게 시작
 ✅ Claude 사용자 최적화
 
 ### Antigravity를 추천하는 경우
@@ -394,5 +401,3 @@ IntelliJ IDEA, PyCharm, WebStorm 등을 사용한다면:
 2. 기본 명령어 배우기 (`/help`, `/status` 등)
 3. 간단한 파일부터 AI에게 수정 요청해보기
 4. 점차 복잡한 작업 시도
-
-**당신이 선택한 IDE가 최고의 선택입니다!** 🚀

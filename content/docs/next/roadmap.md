@@ -4,7 +4,7 @@ description: "입문 이후 클로드코드와 함께 성장해 가는 로드맵
 tags: ["로드맵", "학습경로", "다음단계", "미래기능"]
 category: "next"
 order: 1
-lastUpdated: "2026-04-13"
+lastUpdated: "2026-04-16"
 ---
 
 ## 입문 이후 이렇게 성장해 가세요
@@ -376,9 +376,16 @@ MCP(Model Context Protocol)는 Claude Code를 외부 서비스와 연결해주�
 | 항목 | 링크/방법 |
 |------|---------|
 | Claude Code 공식 | claude.ai |
+| Claude Code 공식 문서 (신규) | code.claude.com/docs |
 | GitHub 배우기 | github.com/skills |
 | Vercel 시작하기 | vercel.com/docs |
 | 질문하기 | Claude Code에 직접 물어보기 |
+
+<div class="note-star">
+★ <strong>공식 문서 주소가 바뀌었어요!</strong><br />
+기존 <code>docs.anthropic.com</code>에 있던 Claude Code 문서가 <strong><code>code.claude.com/docs</code></strong>로 이전되었습니다. (2026년 4월 기준)<br />
+북마크를 새 주소로 갱신해 두세요. 예전 주소로 접속하면 새 주소로 자동으로 이동되기도 하지만, 미리 바꿔두는 게 편합니다.
+</div>
 
 ---
 
@@ -386,19 +393,26 @@ MCP(Model Context Protocol)는 Claude Code를 외부 서비스와 연결해주�
 
 아직 공식 출시 전인 흥미로운 기능들입니다. **실제 출시 여부와 시점은 변경될 수 있어요.**
 
-### ✅ 이미 출시됨 (2026년 1~4월)
+### ✅ 이미 출시됨 (2026년 1~4월, v2.1.110 기준)
 - **Opus 4.6 1M 토큰 컨텍스트** (2026-03-13 GA)
 - **Claude Cowork 정식 출시(GA)** (2026-04-09, macOS + Windows) `[공식]`
 - **Advisor Tool 공개 베타** (2026-04-09, Sonnet 실행 + Opus 조언) `[공식]`
+- **`/tui`** (v2.1.110, 깜빡임 없는 부드러운 화면 모드) `[공식]`
+- **`/focus`** (v2.1.110, 마지막 답변만 화면 가득 표시) `[공식]`
+- **`/recap`** (v2.1.108, 지금까지 작업 내용 한줄 요약) `[공식]`
 - **`/team-onboarding`** (v2.1.101, 팀원 온보딩 가이드 자동 생성) `[공식]`
+- **`/chrome` + `--chrome` 플래그** (v2.1.97 beta, 크롬 브라우저 연동) `[공식]`
 - **Focus View** (v2.1.97, Ctrl+O로 입력에 집중) `[공식]`
 - **기본 effort `high`** (v2.1.94, 모든 사용자 기본값 상향) `[공식]`
+- **`/release-notes` 인터랙티브 버전 선택기** (v2.1.92~) `[공식]`
 - **`/btw` 사이드 질문** (v2.1.72)
 - **`/powerup` 인터랙티브 레슨** (v2.1.90)
 - **`/ultraplan` 클라우드 플랜** (v2.1.91, research preview)
+- **`/plugin` 플러그인 관리** (v2.1.84~)
 - **Git worktree 내장** (v2.1.49)
 - **PowerShell 도구 for Windows** (v2.1.84 opt-in preview)
 - **Voice 20개 언어** (v2.1.69)
+- **공식 문서 사이트 이전**: `docs.anthropic.com` → `code.claude.com/docs` `[공식]`
 
 ### 🧪 Research Preview / 실험 단계
 - **Ultraplan** — 클라우드 플랜 다듬기 (현재 preview)

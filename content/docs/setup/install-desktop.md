@@ -4,7 +4,7 @@ description: "터미널 없이 GUI 환경에서 Claude Code를 쉽게 사용하�
 category: "setup"
 order: 5
 tags: ["설치", "Desktop", "앱", "웹 브라우저"]
-lastUpdated: "2026-04-06"
+lastUpdated: "2026-04-16"
 ---
 
 
@@ -40,91 +40,69 @@ Claude Desktop 앱을 열면 상단에 세 가지 탭이 있습니다:
 
 ---
 
-> 💡 **Windows 사용자 알림:** 2026년 4월부터 Windows 버전이 공식 지원됩니다! Mac과 동일한 기능을 사용할 수 있습니다.
+### Desktop 앱에서 Claude Code 사용하는 방법
+
+앱을 설치한 뒤 Claude Code를 사용하려면:
+
+1. **앱 실행** → Claude 실행 (아이콘 더블클릭)
+2. **로그인** → Claude 계정으로 로그인
+3. **Code 탭 클릭** → 상단 탭에서 "Code" 선택
+4. **Claude Code 시작!**
+
+<div class="note-circle">
+○ Code 탭은 <strong>유료 구독(Pro / Max / Team / Enterprise)</strong> 플랜에서 사용할 수 있습니다. 무료 플랜은 Chat 탭만 이용 가능합니다.
+</div>
 
 ---
 
 ### macOS에서 설치
 
-#### 방법 1: App Store (권장)
-
-1. **App Store 열기**
-   - Mac의 Dock에서 App Store 아이콘 클릭
-   - 또는 Spotlight (Cmd+Space)에서 "App Store" 입력
-
-2. **"Claude" 검색**
-   - 상단 검색창에 "Claude" 입력
-   - Anthropic이 개발한 **Claude** 앱을 선택합니다
-   - (스토어에서는 "Claude"로 표시됩니다)
-
-3. **설치 클릭**
-   - "설치" 또는 "가져오기" 버튼 클릭
-   - Apple ID 로그인 (필요시)
-   - 자동 다운로드 및 설치
-
-4. **실행**
-   - 설치 완료 후 "열기" 버튼 클릭
-   - 또는 Launchpad에서 "Claude" 찾아서 클릭
-
-#### 방법 2: 직접 다운로드
+#### 직접 다운로드 (권장)
 
 1. **공식 웹사이트 방문**
    - https://claude.ai/download 접속
 
 2. **macOS 버전 다운로드**
    - "Download for macOS" 클릭
-   - 자동으로 DMG 파일 다운로드
+   - DMG 파일 자동 다운로드
+   - Intel Mac과 Apple Silicon(M1~M4) 모두 지원 (Universal 빌드)
 
 3. **설치하기**
    - 다운로드된 DMG 파일 더블클릭
-   - "Claude Code.app" 아이콘을 Applications 폴더로 드래그
-   - 또는 설치 안내 따라하기
+   - **"Claude"** 아이콘을 Applications 폴더로 드래그
+   - 설치 완료
 
 4. **실행**
-   - Applications 폴더에서 "Claude Code" 더블클릭
+   - Applications 폴더에서 "Claude" 더블클릭
    - Dock에 고정하면 다음에 쉽게 클릭 가능
 
 ---
 
 ### Windows에서 설치
 
-> 2026년 4월부터 Windows 공식 지원이 시작되었습니다. 이제 Mac과 동일한 모든 기능을 Windows에서도 사용할 수 있습니다.
-
-#### 방법 1: Microsoft Store (권장)
-
-1. **Microsoft Store 열기**
-   - Windows 시작 메뉴에서 "Microsoft Store" 검색
-   - 또는 Windows 키 → "store" 입력
-
-2. **"Claude" 검색**
-   - Store 상단 검색창에 "Claude" 입력
-   - Anthropic의 **Claude** 앱 선택
-
-3. **설치 클릭**
-   - "설치" 또는 "가져오기" 버튼 클릭
-   - 자동으로 다운로드 및 설치됨
-
-4. **실행**
-   - 설치 완료 후 "실행" 클릭
-   - 또는 시작 메뉴에서 "Claude Code" 검색해서 실행
-
-#### 방법 2: 직접 다운로드
+#### 직접 다운로드 (권장)
 
 1. **공식 웹사이트 방문**
    - https://claude.ai/download 접속
 
 2. **Windows 버전 다운로드**
    - "Download for Windows" 클릭
-   - EXE 파일 자동 다운로드
+   - 본인의 PC 아키텍처에 맞는 설치파일 선택:
+     - **x64** — 일반 Intel/AMD 프로세서 노트북·데스크톱
+     - **ARM64** — Snapdragon 기반 Windows 노트북 (Surface Pro X 등)
 
 3. **설치하기**
-   - 다운로드된 설치 파일 더블클릭
+   - 다운로드된 Setup EXE 파일 더블클릭
    - "설치" 또는 "다음" 버튼 클릭
    - 설치 완료 대기
 
 4. **실행**
    - 설치 완료 후 "실행" 또는 "완료" 클릭
-   - 또는 시작 메뉴에서 "Claude Code" 검색
+   - 또는 시작 메뉴에서 "Claude" 검색
+
+<div class="note-circle">
+○ 내 PC가 x64인지 ARM64인지 모르면? Windows 설정 → 시스템 → 정보 → "시스템 종류"에서 확인하세요. 대부분의 일반 PC는 x64입니다.
+</div>
 
 ---
 
@@ -203,7 +181,7 @@ Claude Desktop 앱을 열면 상단에 세 가지 탭이 있습니다:
 ### Desktop 앱 = 스마트폰 앱
 
 - **스마트폰 앱**: App Store에서 설치 → 아이콘 클릭으로 실행
-- **Desktop 앱**: App Store/Microsoft Store에서 설치 → 아이콘 클릭으로 실행
+- **Desktop 앱**: 공식 웹사이트에서 다운로드 → 아이콘 클릭으로 실행
 - 마찬가지로 편하고 빠릅니다!
 
 ### 웹 버전 = 웹브라우저 열기

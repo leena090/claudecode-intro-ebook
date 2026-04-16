@@ -1,10 +1,10 @@
 ---
 title: "전체 CLI 플래그 목록"
-description: "Claude Code 터미널에서 사용할 수 있는 모든 커맨드라인 옵션 (v2.1.101 기준)"
+description: "Claude Code 터미널에서 사용할 수 있는 모든 커맨드라인 옵션 (v2.1.110 기준)"
 category: "reference"
 order: 2
 tags: ["레퍼런스", "CLI", "플래그", "터미널"]
-lastUpdated: "2026-04-13"
+lastUpdated: "2026-04-16"
 ---
 
 ## CLI 플래그란?
@@ -106,6 +106,27 @@ AI 모델과 작동 방식을 설정합니다.
 ○ <strong>`--worktree` 비유</strong>: 공사 현장에서 인부마다 자기 구역을 따로 파놓는 것과 같아요. 서로의 삽질에 방해받지 않습니다.
 <br />○ <strong>`--continue` vs `--resume` 차이</strong>: `-c`는 "지금 이 폴더의 마지막 대화", `-r`는 "이름·ID로 원하는 세션 골라서 재개". 일상용은 `-c`, 여러 세션 관리할 땐 `-r`.
 <br />○ <strong>환경변수로도 가능</strong>: <code>CLAUDE_REMOTE_CONTROL_SESSION_NAME_PREFIX</code>
+</div>
+
+### 🔗 연동 & 세션 확장 (v2.1.97~ 신규)
+
+브라우저, 채널, 팀 협업 관련 플래그입니다.
+
+| 플래그 | 용도 | 예시 |
+|--------|------|------|
+| `--chrome` | 크롬 브라우저 연동 활성화 — 코드 짜고 바로 브라우저에서 테스트 (beta) | `claude --chrome` |
+| `--no-chrome` | 크롬 연동 비활성화 | `claude --no-chrome` |
+| `--channels` | 채널(Telegram 등 외부 채널) 플러그인 활성화 | `claude --channels plugin:telegram@1.0.0` |
+| `--teammate-mode` | 에이전트 팀 표시 방식 설정 | `claude --teammate-mode tmux` |
+| `--tmux` | worktree 격리 모드에서 tmux 세션으로 실행 | `claude -w feature --tmux` |
+| `--name` / `-n` | 세션 이름 지정 — 나중에 `--resume 이름`으로 바로 이어서 시작 | `claude -n "로그인버그수정"` |
+| `--from-pr` | 특정 GitHub PR과 연결된 세션 재개 | `claude --from-pr 123` |
+| `--fallback-model` | 주 모델 과부하 시 자동으로 대체 모델 사용 | `claude -p --fallback-model sonnet "분석해줘"` |
+
+<div class="note-circle">
+○ <strong>`--chrome` 비유</strong>: 주방(코드 편집)과 식당홀(브라우저)을 한 건물에 넣은 것과 같아요. 코드 고치고 바로 화면에서 결과 확인, 왔다갔다 필요 없어요.
+<br />○ <strong>`--name` / `-n` 활용</strong>: "로그인버그수정"처럼 의미 있는 이름을 붙이면, 다음에 <code>claude --resume 로그인버그수정</code>으로 바로 이어서 작업할 수 있어요. 책갈피 꽂는 것과 같습니다.
+<br />○ <strong>`--fallback-model` 활용</strong>: Opus가 바쁠 때 자동으로 Sonnet으로 대신 처리해 작업이 끊기지 않아요.
 </div>
 
 ### ⚡ 성능 & 모드 설정 (v2.1.92~ 신규)

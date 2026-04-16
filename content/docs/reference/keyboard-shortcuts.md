@@ -4,7 +4,7 @@ description: "Claude Code를 빠르게 조작하는 모든 키보드 단축키"
 category: "reference"
 order: 3
 tags: ["레퍼런스", "단축키", "키보드", "팁"]
-lastUpdated: "2026-04-13"
+lastUpdated: "2026-04-16"
 ---
 
 
@@ -88,6 +88,27 @@ lastUpdated: "2026-04-13"
 | `/st` + `Tab` | 자동완성 | `/status` 자동 완성 | 빠르게 상태 확인 |
 | `/cl` + `Tab` | 자동완성 | `/clear` 자동 완성 | 빠르게 초기화 |
 | `/he` + `Tab` | 자동완성 | `/help` 자동 완성 | 도움말 빠르게 보기 |
+
+### 🆕 고급 모드 & 작업 제어 (v2.1.97~ 신규)
+
+AI 동작 방식과 작업 흐름을 빠르게 전환하는 단축키입니다.
+
+| 단축키 | 작동 | 비유 |
+|--------|------|------|
+| `Ctrl+T` | 작업 목록(Task List) 보기/숨기기 | 투두리스트 열기 — 지금 무슨 일이 진행 중인지 한눈에 |
+| `Ctrl+B` | 현재 작업을 백그라운드로 보내기 | 알바생한테 맡기고 나는 다른 일 — 끝나면 알려줌 |
+| `Alt+P` (Mac: `Option+P`) | AI 모델 전환 | 더 똑똑한/빠른 AI로 바꾸기 — 지금 대화 중에도 가능 |
+| `Alt+T` (Mac: `Option+T`) | 확장 사고(Extended Thinking) 켜기/끄기 | AI가 더 깊이 생각하게 하기 — 어려운 문제엔 ON |
+| `Alt+O` (Mac: `Option+O`) | 빠른 모드(Fast Mode) 토글 | 속도 우선 모드 — 간단한 질문엔 빠르게 |
+| `Ctrl+R` | 이전 입력 역검색 | 전에 뭐라고 입력했더라? — Ctrl+F처럼 대화 내 검색 |
+| `/` (트랜스크립트 뷰에서) | 대화 내용 검색 | 긴 대화에서 특정 단어 찾기 — 문서의 Ctrl+F |
+| `Space` (길게 누르기) | 음성 입력 시작 | 말로 지시하기 — 워키토키처럼 누르는 동안 녹음 |
+
+<div class="note-circle">
+○ <strong>Mac에서 Alt 단축키 주의</strong>: Option 키가 기본적으로 특수문자 입력에 할당되어 있어요. 터미널 설정에서 Option을 <strong>Meta 키로 변경</strong>해야 Alt+P, Alt+T, Alt+O가 작동합니다.
+<br />&nbsp;&nbsp;&nbsp;&nbsp;• <strong>iTerm2</strong>: Preferences → Profiles → Keys → Left Option Key → "Esc+"
+<br />&nbsp;&nbsp;&nbsp;&nbsp;• <strong>터미널 앱</strong>: 환경설정 → 프로파일 → 키보드 → "Option을 메타 키로 사용" 체크
+</div>
 
 ### 💾 복사 & 붙여넣기
 
@@ -231,7 +252,14 @@ Enter
 - `Ctrl+U` — 앞 삭제
 - `Ctrl+K` — 뒤 삭제
 - `Ctrl+W` — 단어 삭제
-- `Ctrl+R` — 검색
+- `Ctrl+R` — 히스토리 역검색
+- `Ctrl+T` — 작업 목록 보기/숨기기 (v2.1.97~)
+- `Ctrl+B` — 현재 작업 백그라운드로 보내기 (v2.1.97~)
+
+### Alt / Option 관련 (Mac에서는 Option 키를 Meta로 설정 필요)
+- `Alt+P` (Mac: `Option+P`) — AI 모델 전환
+- `Alt+T` (Mac: `Option+T`) — 확장 사고 켜기/끄기
+- `Alt+O` (Mac: `Option+O`) — 빠른 모드 토글
 
 ### Shift 관련
 - `Shift+Enter` — 줄바꿈
@@ -247,6 +275,7 @@ Enter
 - `Esc+Esc` — Rewind (이전 상태로 되돌리기)
 - `Enter` — 전송
 - `스페이스바 (유지)` — 음성 녹음 (voice 모드 시)
+- `/` (트랜스크립트 뷰에서) — 대화 내용 검색
 
 ---
 
