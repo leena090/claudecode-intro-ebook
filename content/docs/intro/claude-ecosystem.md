@@ -1,6 +1,6 @@
 ---
 title: "Claude 생태계 한눈에 보기"
-description: "웹앱, 코워크, 클로드 코드, 클로드 코드 웹 — 뭘 언제 쓰는지 완전 정리 (Opus 4.6 1M 컨텍스트 반영)"
+description: "웹앱, 코워크, 클로드 코드, 클로드 코드 웹 — 뭘 언제 쓰는지 완전 정리 (Opus 4.7 1M 컨텍스트 반영)"
 tags: ["입문", "비교", "생태계"]
 category: "intro"
 order: 3
@@ -156,7 +156,7 @@ Claude에는 크게 **4가지 사용 공간**이 있습니다. 같은 AI지만 *
 
 | 모델 | 컨텍스트 | 플랜 |
 |---|---|---|
-| Opus 4.6 | **1M 토큰** | Max/Team/Enterprise |
+| Opus 4.7 | **1M 토큰** | Max/Team/Enterprise |
 | Sonnet 4.6 | **1M 토큰** | Max/Team/Enterprise |
 | Haiku 4.5 | 200K 토큰 | 모든 플랜 |
 

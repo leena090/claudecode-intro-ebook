@@ -324,7 +324,7 @@ AI가 즉시 실행 — 확인 없음
 |---|---|
 | **플랜** | **Team, Enterprise, API만** (Pro·Max 불가 ❌) |
 | **관리자 승인** | Team·Enterprise는 관리자가 [Claude Code admin settings](https://claude.ai/admin-settings/claude-code)에서 활성화 |
-| **모델** | **Sonnet 4.6** 또는 **Opus 4.6** 만 (Haiku·구버전 불가) |
+| **모델** | **Sonnet 4.6** 또는 **Opus 4.7** 만 (Haiku·구버전 불가) |
 | **프로바이더** | **Anthropic API만** (Bedrock, Vertex, Foundry 불가) |
 
 <div class="note-circle">
@@ -397,7 +397,7 @@ classifier가 액션을 차단하면:
 | 사용 권장 환경 | 격리된 컨테이너·VM만 | 일상 작업 가능 |
 | 위험 액션 차단 | ❌ 불가 | ✅ **자동 차단** |
 | 프롬프트 주입 보호 | ❌ 취약 | ✅ 별도 scanner |
-| 플랜 요구사항 | 없음 | **Team/Enterprise/API + Sonnet/Opus 4.6** |
+| 플랜 요구사항 | 없음 | **Team/Enterprise/API + Sonnet 4.6/Opus 4.7** |
 
 **공식 문서 경고**: *"bypassPermissions offers no protection against prompt injection. For background safety checks without prompts, use auto mode instead."*
 

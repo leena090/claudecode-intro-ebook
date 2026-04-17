@@ -108,7 +108,7 @@ Claude가 CLAUDE.md 파일 생성
 
 **역할:** Claude Code가 사용할 AI 모델 선택
 - Claude Sonnet 4.6 (기본, 빠름)
-- Claude Opus 4.6 (더 강력함, 복잡한 작업)
+- Claude Opus 4.7 (더 강력함, 복잡한 작업)
 - Claude Haiku 4.5 (더 빠르고 저렴)
 
 **언제 사용?**
@@ -121,7 +121,7 @@ Claude가 CLAUDE.md 파일 생성
 > /model
 Claude가 선택 가능한 모델들 보여줌:
 1. Claude Sonnet 4.6 (현재)
-2. Claude Opus 4.6
+2. Claude Opus 4.7
 3. Claude Haiku 4.5 (더 빠름)
 
 > 2 선택

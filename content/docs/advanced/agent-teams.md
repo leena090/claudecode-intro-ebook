@@ -402,7 +402,7 @@ Reddit에서 Agent Teams를 실전 사용한 개발자들의 핵심 팁 7가지�
 `teammate_idle` / `task_complete` 이벤트를 hook으로 받아서 Slack이나 Notion에 자동 업데이트 가능.
 
 ### 💰 비용 최적화 팁
-- **리더 에이전트** = Opus 4.6 (판단력 중요)
+- **리더 에이전트** = Opus 4.7 (판단력 중요)
 - **팀원들** = Sonnet 4.6 (실행 작업이 대부분)
 - → Opus만 쓰면 비용이 훅 나가요.
 

@@ -135,9 +135,9 @@ AI 모델과 작동 방식을 설정합니다.
 
 | 플래그 | 용도 | 예시 |
 |--------|------|------|
-| `--effort <레벨>` | **Effort 레벨 설정** — `low` / `medium` / `high` / `max`(Opus 4.6 only) | `claude --effort high` |
+| `--effort <레벨>` | **Effort 레벨 설정** — `low` / `medium` / `high` / `xhigh`(Opus 4.7) / `max`(Opus 4.7 only) | `claude --effort high` |
 | `--permission-mode <모드>` | **권한 모드로 시작** — `default` / `acceptEdits` / `plan` / `auto` / `dontAsk` / `bypassPermissions` | `claude --permission-mode plan` |
-| `--enable-auto-mode` | ⭐ **auto 모드 활성화** — Shift+Tab 사이클에 `auto` 추가. Team/Enterprise/API + Sonnet/Opus 4.6 필요 (v2.1.83~) | `claude --enable-auto-mode` |
+| `--enable-auto-mode` | ⭐ **auto 모드 활성화** — Shift+Tab 사이클에 `auto` 추가. Team/Enterprise/API + Sonnet 4.6/Opus 4.7 필요 (v2.1.83~) | `claude --enable-auto-mode` |
 | `--model <모델>` | 세션 모델 지정 | `claude --model opusplan` |
 | `--bare` | **최소 모드** — 훅·스킬·플러그인·MCP·CLAUDE.md 자동 로드 생략, 빠르게 시작 | `claude --bare -p "query"` |
 | `--dangerously-skip-permissions` | ⚠️ 권한 검사 전부 생략 — 자동화 스크립트용, 일반 사용 비추 | `claude --dangerously-skip-permissions` |
