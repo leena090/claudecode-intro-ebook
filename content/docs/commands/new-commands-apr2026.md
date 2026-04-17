@@ -359,13 +359,82 @@ Claude Code는 계속 진화합니다. 최근 몇 주 사이에 편리한 명령
 
 ---
 
+### `/ultrareview` — 클라우드 멀티 에이전트 코드 리뷰
+
+```bash
+/ultrareview
+/ultrareview 1234
+```
+
+> 🍱 **비유로 설명하면**: 일반 `/review`가 **동네 의원 건강검진**이라면, `/ultrareview`는 **종합병원 정밀검진**이에요. 여러 전문의(에이전트)가 동시에 코드를 살펴보고, 발견한 문제를 서로 교차 검증까지 합니다.
+
+**일반 리뷰 vs 울트라 리뷰:**
+
+| | `/review` | `/ultrareview` |
+|---|---|---|
+| 실행 위치 | 내 컴퓨터 | 클라우드 |
+| 깊이 | 1회 훑기 | 여러 에이전트가 병렬 검증 |
+| 소요 시간 | 수초~수분 | 5~10분 |
+| 비용 | 일반 사용량 | 무료 3회, 이후 $5~$20/회 |
+| 추천 시점 | 작업 중 빠른 피드백 | **머지 전 최종 점검** |
+
+**사용 예시:**
+```
+/ultrareview 입력
+→ 확인 대화: 리뷰 범위 + 남은 무료 횟수 + 예상 비용
+→ 확인 → 클라우드에서 리뷰 시작 (내 터미널은 계속 사용 가능)
+→ 5~10분 후 결과 알림 → 파일 위치 + 문제 설명
+```
+
+**PR 번호로 리뷰:**
+```
+/ultrareview 1234
+→ GitHub PR #1234를 직접 클라우드에서 리뷰
+```
+
+<div class="note-star">
+★ <strong>가격 안내</strong><br />
+Pro/Max: <strong>3회 무료</strong> (1회성, 갱신 안 됨). 이후 회당 $5~$20 (변경 규모에 따라).<br />
+Team/Enterprise: 무료 없음, 모두 추가 사용량(extra usage)으로 청구.<br /><br />
+추가 사용량 설정 확인: <code>/extra-usage</code>
+</div>
+
+<div class="note-circle">
+○ v2.1.111(2026-04-16)에 추가됐어요. research preview 상태입니다.
+</div>
+
+---
+
+### `/schedule` — 루틴 예약 작업 설정
+
+```bash
+/schedule
+/schedule 매일 아침 9시에 PR 리뷰해줘
+```
+
+> 🍱 **비유로 설명하면**: 세탁기 예약 기능이에요. "내일 아침 7시에 돌아가게" 설정해두면 알아서 돌아가는 것처럼, Claude에게 반복 작업을 예약할 수 있어요.
+
+**사용 예시:**
+```
+/schedule 입력
+→ 대화형으로 루틴 설정 안내
+→ 언제, 얼마나 자주, 무엇을 할지 자연어로 입력
+→ Anthropic 서버에서 실행 (컴퓨터 꺼도 됨!)
+```
+
+<div class="note-circle">
+○ `/routines`도 같은 명령어예요 (별칭). 웹이나 Desktop 앱에서도 설정 가능합니다.
+</div>
+
+---
+
 ## 난이도별 분류표
 
 | 난이도 | 명령어 |
 |--------|--------|
 | 왕초보 | `/powerup`, `/recap`, `/focus`, `/rename`, `/release-notes` |
-| 중급 | `/effort`, `/color`, `/context`, `/tui`, `/chrome` |
-| 고급 | `/loop`, `/team-onboarding`, `/plugin` |
+| 중급 | `/effort`, `/color`, `/context`, `/tui`, `/chrome`, `/schedule` |
+| 고급 | `/loop`, `/team-onboarding`, `/plugin`, `/ultrareview` |
 
 처음엔 왕초보 5개만 써보세요. 익숙해지면 하나씩 추가하면 됩니다.
 
