@@ -49,6 +49,15 @@ export const LEARNING_TABS: LearningTab[] = [
     subtitle: '필요할 때 찾아보는 자료',
     categories: ['tips', 'next', 'reference'],
   },
+  // ── 특별부록 — 2026-04-17 공개된 Claude Design 리서치 프리뷰 전용 탭 ──
+  // 대표님 지시: "말그대로 특별이야!" → 다른 레벨과 구분되는 별도 탭으로 강조
+  {
+    id: 'design',
+    icon: '✨',
+    title: '특별부록: 클로드 디자인',
+    subtitle: '말로 시안을 그리는 AI 디자인 도구 (2026-04-17 공개)',
+    categories: ['design'],
+  },
 ]
 
 // ── 카테고리 메타데이터 정의 ──
@@ -72,6 +81,9 @@ export const CATEGORIES: Record<string, { title: string; description: string; ic
   stories: { title: '실제 사용 사례 10편', description: '직장인·가족·유튜버·창업자가 클로드를 실제로 어떻게 쓰는지', icon: '🎬', order: 12 },
   next: { title: '다음 단계', description: '더 깊이 학습하는 로드맵', icon: '🗺️', order: 13 },
   reference: { title: '레퍼런스', description: '전체 명령어, CLI 플래그, 단축키 목록', icon: '📖', order: 14 },
+  // ── 특별부록 — Claude Design 리서치 프리뷰 (2026-04-17 공개) ──
+  // 기존 14개 카테고리 뒤에 특별부록으로 배치. 전용 Learning Tab 'design'으로 노출
+  design: { title: '✨ 특별부록: 클로드 디자인', description: '말로 시안을 그리는 AI 디자인 도구 완전 가이드', icon: '🎨', order: 15 },
 }
 
 // 문서 메타데이터 인터페이스
