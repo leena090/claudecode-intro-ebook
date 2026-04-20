@@ -1,0 +1,40 @@
+name: PR 텔레그램 알림
+
+on:
+  pull_request:
+    types: [opened, reopened]
+
+jobs:
+  notify:
+    if: startsWith(github.event.pull_request.head.ref, 'auto/docs-watch-')
+    runs-on: ubuntu-latest
+    steps:
+      - name: 텔레그램으로 PR 알림 전송
+        env:
+          BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          PR_TITLE: ${{ github.event.pull_request.title }}
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          PR_BRANCH: ${{ github.event.pull_request.head.ref }}
+          PR_BODY: ${{ github.event.pull_request.body }}
+        run: |
+          # PR body에서 변경 건수만 추출 (예: "감지된 변경 3건" → "3")
+          COUNT=$(echo "$PR_BODY" | grep -oE '변경 [0-9]+건' | head -1 | grep -oE '[0-9]+' || echo "?")
+
+          MESSAGE=$(cat <<EOF
+          🔔 <b>Claude 공식 업데이트 감지</b>
+
+          변경점 <b>${COUNT}건</b> 반영 대기
+
+          📝 PR: <a href="${PR_URL}">${PR_TITLE}</a>
+          🌿 브랜치: <code>${PR_BRANCH}</code>
+
+          diff 확인 후 머지하세요, 대표님!
+          EOF
+          )
+
+          curl -sS -X POST "https://api.telegram.org/bot${BOT_TOKEN}/sendMessage" \
+            --data-urlencode "chat_id=${CHAT_ID}" \
+            --data-urlencode "parse_mode=HTML" \
+            --data-urlencode "disable_web_page_preview=false" \
+            --data-urlencode "text=${MESSAGE}"
