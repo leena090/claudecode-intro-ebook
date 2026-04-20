@@ -13,7 +13,8 @@ Claude Code에서 사용 가능한 모든 슬래시(/) 명령어를 정렬하여
 
 <div class="note-circle">
 ○ <strong>2026-04-13 기준 최신</strong> — v2.1.101까지 반영. <code>/tag</code>, <code>/vim</code>은 2026-04-04에 제거되었습니다.
-<br />○ <strong>신규 추가</strong>: <code>/btw</code>, <code>/fork</code>, <code>/ultraplan</code>, <code>/buddy</code>, <code>/model opusplan</code>(하이브리드 모드), <code>/team-onboarding</code>
+<br />○ <strong>신규 추가</strong>: <code>/btw</code>, <code>/fork</code>, <code>/ultraplan</code>, <code>/model opusplan</code>(하이브리드 모드), <code>/team-onboarding</code>
+<br />○ <strong>사라진 장난</strong>: <code>/buddy</code> — 2026년 4월 1일 <strong>만우절 하루 한정</strong> 이스터에그였고, 지금은 제거돼 <code>Unknown command</code>로 표시돼요
 </div>
 
 ---
@@ -26,7 +27,7 @@ Claude Code에서 사용 가능한 모든 슬래시(/) 명령어를 정렬하여
 | 2 | `/batch` | 특수 기능 | 여러 파일/항목에 일괄 작업 (worktree 자동 격리) | ⭐⭐⭐ |
 | 3 | `/branch` | 세션 관리 | 대화 분기하기 | ⭐⭐⭐ |
 | 4 | `/btw` | 세션 관리 | **사이드 질문** — 기록에 남기지 않고 잠깐 물어보기 (v2.1.72~) | ⭐⭐⭐⭐ |
-| 5 | `/buddy` | 재미/이스터에그 | **터미널 다마고치** — 나만의 18종 펫 (v2.1.89+, Pro) | ⭐ |
+| 5 | ~~`/buddy`~~ | 재미/이스터에그 | **터미널 다마고치** — 2026년 4월 1일 **만우절 한정**이었고 지금은 제거됨 | — |
 | 6 | `/clear` | 세션 관리 | 대화 초기화 | ⭐⭐⭐⭐⭐ |
 | 7 | `/color` | 설정 | 색상 커스터마이징 | ⭐⭐ |
 | 8 | `/commit` | 특수 기능 | Git 커밋 메시지 생성 | ⭐⭐⭐ |

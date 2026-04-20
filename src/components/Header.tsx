@@ -1,83 +1,68 @@
 'use client'
 
 import Link from 'next/link'
-import PixelLogo from './PixelLogo'
-import ThemeToggle from './ThemeToggle'
-import SearchButton from './SearchButton'
 
-// ── 브레드크럼 아이템 타입 ──
+// ── 간이 헤더 (홈·용어사전·로그인 등 사이드바가 없는 페이지용) ──
+// 사이드바가 있는 docs 페이지에서는 .reader-top 구조가 헤더 역할을 대신함.
 interface BreadcrumbItem {
   label: string
-  href?: string // href 없으면 현재 페이지(클릭 불가)
+  href?: string
 }
 
-// ── 헤더 컴포넌트 ──
-// sticky top 고정, 브레드크럼 네비게이션 + 테마 토글 포함
 export default function Header({ breadcrumbs = [] }: { breadcrumbs?: BreadcrumbItem[] }) {
   return (
     <header
-      className="sticky top-0 z-50 h-14 border-b"
+      className="sticky top-0 z-50"
       style={{
-        background: 'var(--bg-primary)',
-        borderColor: 'var(--border)',
-        backdropFilter: 'blur(8px)', // 스크롤 시 배경 블러 효과
+        background: 'rgba(250,247,242,0.92)',
+        backdropFilter: 'blur(12px)',
+        WebkitBackdropFilter: 'blur(12px)',
+        borderBottom: '1px solid var(--line-soft)',
+        height: 64,
       }}
     >
-      <div className="max-w-7xl mx-auto px-5 sm:px-8 h-14 flex items-center justify-between gap-4">
-        {/* 브레드크럼 네비게이션 — 홈 > 카테고리 > 문서 구조 */}
-        <nav className="flex items-center gap-2 text-sm min-w-0 overflow-hidden">
-          <Link href="/" className="flex items-center gap-2 shrink-0">
-            <PixelLogo size="sm" />
+      <div className="max-w-7xl mx-auto flex items-center justify-between" style={{ padding: '0 32px', height: 64 }}>
+        <nav className="flex items-center gap-3 min-w-0">
+          <Link href="/" className="brand-row" style={{ margin: 0 }}>
+            <div className="brand-stamp">CC</div>
+            <div className="brand-text">NOMORE MANUAL</div>
           </Link>
-          <Link href="/" className="font-semibold text-[15px] shrink-0" style={{ color: 'var(--text-primary)' }}>
-            Claude Code 입문자 교육용
-          </Link>
-          {breadcrumbs.map((crumb, i) => (
-            <span key={i} className="flex items-center gap-2 min-w-0">
-              {/* 구분자 */}
-              <span style={{ color: 'var(--border)', fontSize: '16px' }}>/</span>
-              {crumb.href ? (
-                <Link href={crumb.href} className="breadcrumb-link shrink-0">
-                  {crumb.label}
-                </Link>
-              ) : (
-                /* 현재 페이지 — 클릭 불가, 텍스트 잘림 처리 */
-                <span className="font-medium truncate" style={{ color: 'var(--text-primary)', fontSize: '14px' }}>
-                  {crumb.label}
+          {breadcrumbs.length > 0 && (
+            <span className="breadcrumb" style={{ marginLeft: 8 }}>
+              {breadcrumbs.map((c, i) => (
+                <span key={i}>
+                  <span className="bc-sep">/</span>
+                  {c.href ? <Link href={c.href}>{c.label}</Link> : <span className="bc-current">{c.label}</span>}
                 </span>
-              )}
+              ))}
             </span>
-          ))}
+          )}
         </nav>
-        {/* 우측 — 검색 버튼 + 브랜드 링크 + 테마 전환 */}
-        <div className="flex items-center gap-3 shrink-0">
-          {/* 문서 전체 검색 버튼 — SearchModal 포함 */}
-          <SearchButton />
-          {/* 노모어매뉴얼 브랜드 링크 — 항상 노출 */}
+        <div className="flex items-center gap-3">
           <a
             href="https://youtube.com/@nomore_manual"
             target="_blank"
             rel="noopener noreferrer"
-            className="nmm-brand-link flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold"
+            className="nmm-brand-link inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold"
           >
-            {/* 유튜브 아이콘 */}
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.7 15.5V8.5l6.3 3.5-6.3 3.5z"/>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.7 15.5V8.5l6.3 3.5-6.3 3.5z" />
             </svg>
             노모어매뉴얼
           </a>
-          <ThemeToggle />
-          {/* 로그아웃 버튼 — 서버 API로 httpOnly 쿠키 삭제 */}
           <button
             onClick={async () => {
               await fetch('/api/auth', { method: 'DELETE' })
               window.location.href = '/login'
             }}
-            className="text-xs px-2 py-1 rounded transition-opacity hover:opacity-70"
-            style={{ color: 'var(--text-muted)' }}
+            style={{
+              background: 'transparent', border: 0, cursor: 'pointer',
+              padding: '6px 8px', color: 'var(--muted)',
+            }}
             title="로그아웃"
+            aria-label="로그아웃"
           >
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
               <polyline points="16 17 21 12 16 7" />
               <line x1="21" y1="12" x2="9" y2="12" />
