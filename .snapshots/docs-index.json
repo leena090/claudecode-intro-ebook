@@ -3,7 +3,7 @@
     "created": "2026-04-20",
     "updated": "2026-04-20",
     "source_url": "https://code.claude.com/docs/llms.txt",
-    "note": "2026-04-20 2차 실행: 신규 URL 37개 추가 감지. Agent SDK 상세 문서, best-practices, common-workflows, costs, platforms, claude-directory 등. 콘텐츠 5개 생성.",
+    "note": "2026-04-20 3차 실행: 신규 URL 없음. 총 114개 URL 동일. 변경 없음.",
     "fetch_status": "200_ok"
   },
   "https://code.claude.com/docs/en/overview": "SNAPSHOT_2026-04-20",
