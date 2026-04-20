@@ -1,16 +1,20 @@
 import type { Config } from 'tailwindcss'
 
-// Tailwind CSS 설정 — 폰트, 컬러, 사이즈 확장
 const config: Config = {
   content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Pretendard', '-apple-system', 'sans-serif'],
-        mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
+        display: ['Gowun Dodum', 'Noto Sans KR', 'system-ui', 'sans-serif'],
+        sans: ['Nanum Gothic', 'Noto Sans KR', 'system-ui', 'sans-serif'],
+        mono: ['JetBrains Mono', 'ui-monospace', 'monospace'],
       },
       colors: {
-        accent: '#DA7756',
+        brand: '#D97706',
+        'brand-deep': '#92400E',
+        'brand-soft': '#FEF3C7',
+        'brand-mid': '#FDBA74',
+        ink: '#1E1B16',
       },
       maxWidth: {
         '3xl': '768px',
