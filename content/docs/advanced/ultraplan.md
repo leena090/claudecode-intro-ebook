@@ -4,11 +4,12 @@ description: "로컬 CLI에서 플랜을 클라우드의 강력한 Opus 4.7에 �
 tags: ["고급", "ultraplan", "플래닝", "클라우드", "research preview"]
 category: "advanced"
 order: 10
-lastUpdated: "2026-04-08"
+lastUpdated: "2026-04-20"
 ---
 
 <div class="note-star">
-★ <strong>Research Preview</strong> — Claude Code v2.1.91 이상이 필수예요. 아직 실험 단계라 동작이 가끔 불안정할 수 있습니다.
+★ <strong>Research Preview</strong> — Claude Code v2.1.101 이상이 필수예요. 아직 실험 단계라 동작이 가끔 불안정할 수 있습니다.
+<br />★ <strong>v2.1.101 업데이트</strong>: 처음 실행 시 기본 클라우드 환경이 <strong>자동 생성</strong>됩니다 — 웹에서 미리 설정할 필요가 없어요!
 <br />★ <strong>공식 문서</strong>: <a href="https://code.claude.com/docs/en/ultraplan">code.claude.com/docs/en/ultraplan</a>
 </div>
 
