@@ -1,8 +1,9 @@
 {
   "_meta": {
     "created": "2026-04-20",
+    "updated": "2026-04-20",
     "source_url": "https://www.anthropic.com/news",
-    "note": "최초 실행 베이스라인. 직접 fetch 403 차단으로 WebSearch 기반 블로그 목록 초기화.",
+    "note": "2026-04-20 실행: fetch 403 차단 (2회 연속). 이전 목록 유지.",
     "fetch_status": "403_blocked"
   },
   "seen": [
