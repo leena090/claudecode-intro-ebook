@@ -1,26 +1,46 @@
 # SNAPSHOT - 2026-04-20
 # 소스: https://claude.com/claude-code (마케팅 공식 페이지)
-# 상태: fetch 403 차단 (2회 연속) — 이전 내용 유지
-# 다음 실행에서 재시도
+# 상태: ga-marketing.txt 정상 수신 (2026-04-20 GitHub Actions 실행분)
 
-## 제품 설명
-Claude Code — Agentic coding tool
-- 터미널에서 동작하는 AI 코딩 어시스턴트
-- 코드베이스 전체를 이해하고 자연어 명령으로 작업 수행
-- 반복 태스크 자동화, 복잡한 코드 설명, git 워크플로 처리
-- VS Code / JetBrains IDE 확장 지원
-- Claude Code on the Web (Web UI)
+## 최신 기능 하이라이트 (2026-04-20 기준)
+- Routines: 한 번 설정하면 스케줄, API 호출, 이벤트 반응으로 자동 실행 (Apr 14, 2026)
+- Auto mode: --dangerously-skip-permissions의 더 안전한 대안 (Mar 24, 2026)
+- 데스크톱 앱 리디자인: 여러 Claude Code 작업을 동시에 실행하기 위한 새 UI
+- 모바일 Dispatch (리서치 프리뷰): 폰에서 지시 → 내 로컬 PC에서 실행 → PR 생성
 
-## 지원 모델 (2026-04-20 기준)
-- claude-opus-4-7 (최신 Opus, 고급 코딩 특화)
-- claude-sonnet-4-6 (균형형 기본 모델)
-- claude-haiku-4-5-20251001 (경량 빠른 모델)
+## 지원 플랫폼
+- 데스크톱 (Desktop App)
+- 터미널 (Terminal/CLI)
+- VS Code / JetBrains IDE
+- 웹 & iOS (리서치 프리뷰)
+- Slack
+
+## 요금제 (공식 발표 기준)
+- Pro: $17/월 (연간 선납, $200/년) 또는 $20/월 (월납)
+  - Sonnet 4.6 + Opus 4.7 포함
+- Max 5x: $100/월
+- Max 20x: $200/월
+- Team: $20/인원/월 (5~150명, 연간)
+  - Sonnet 4.6 + Opus 4.7 포함
+- Enterprise: 별도 문의
+- Claude API: 토큰 기반 과금 (개발자용)
+
+## 지원 모델
+- claude-opus-4-7 (최신 Opus)
+- claude-sonnet-4-6 (기본 균형형)
+- claude-haiku-4-5-20251001 (경량)
+
+## Fast Mode
+- Opus 4.6 고속 실행 버전
+- 2.5배 빠름, 토큰당 비용 높음
+- 요금: $30/$150 per million tokens (입출력)
+- Pro/Max 리서치 프리뷰
 
 ## 주요 기능 (공식 문서 기반 확인)
 - /focus 명령어
-- Ctrl+O (verbose/normal 전환 / flicker-free mode 마지막 응답 요약)
+- Ctrl+O (verbose/normal 전환 / flicker-free mode)
 - Ctrl+G (에디터에 마지막 응답 컨텍스트 삽입)
-- Routines (반복 자동화, 스케줄 실행)
+- Routines (반복 자동화, 스케줄 실행, API 트리거, GitHub 이벤트)
 - Code Review (AI 에이전트 기반 PR 리뷰)
 - /ultrareview (클라우드 멀티 에이전트 코드 리뷰)
 - /ultraplan (클라우드 플래닝)
@@ -28,17 +48,32 @@ Claude Code — Agentic coding tool
 - Monitor tool (백그라운드 이벤트 감시)
 - /loop self-pacing (간격 생략 시 Claude가 타이밍 결정)
 - Remote Control (모바일·브라우저에서 세션 이어가기)
-- Desktop App (멀티세션 사이드바, 드래그 앤 드롭)
+- Desktop App (멀티세션 사이드바, 드래그 앤 드롭, 미리보기)
 - /tui 풀스크린 렌더링
-- 모바일 푸시 알림
+- 모바일 Dispatch 푸시 알림 (리서치 프리뷰)
 - Plugin Marketplace
 - /team-onboarding (팀원 온보딩 가이드 자동 생성)
 - Voice dictation (/voice, push-to-talk, 20개 언어)
+- Computer Use (CLI에서 macOS 앱 조작)
+- Auto mode (백그라운드 안전 classifier 포함)
 
-## 요금제 (공식 발표 기준 — 정확한 금액은 확인 필요)
-- Pro 플랜 포함
-- API 사용량 기반 과금
-- /effort 기본값이 high로 변경 (v2.1.94~)
+## 성과 지표 (마케팅 페이지 공개)
+- 7.6x 더 잦은 배포 (Claude Code 팀 평균)
+- 14% 주간 배포 성장률
+- 80% 빠른 인시던트 조사 시간
+- 2x 빠른 기능/수정 실행 속도
+- 89% AI 채택률 (전 직원 기준)
 
-## fetch_error_log
-- 2026-04-20: 403 Forbidden (2회)
+## 신규 제품 (Anthropic Labs)
+- Claude Design: 시각적 디자인 협업 도구 (Apr 17, 2026)
+  - 디자인, 프로토타입, 슬라이드, 원페이저 제작
+
+## 블로그 링크 (마케팅 페이지 기재)
+- "Redesigned Desktop app" - 블로그
+- "Routines: Configure a routine once..." (Apr 14, 2026) - 블로그
+- "Auto mode: A safer long-running alternative..." (Mar 24, 2026) - 블로그
+- "Improving frontend design through Skills" - 블로그
+
+## fetch_log
+- 2026-04-20 이전: 403 Forbidden (2회)
+- 2026-04-20: ga-marketing.txt 통해 정상 수신
