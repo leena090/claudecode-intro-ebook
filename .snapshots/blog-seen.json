@@ -1,0 +1,70 @@
+{
+  "_meta": {
+    "created": "2026-04-20",
+    "source_url": "https://www.anthropic.com/news",
+    "note": "최초 실행 베이스라인. 직접 fetch 403 차단으로 WebSearch 기반 블로그 목록 초기화.",
+    "fetch_status": "403_blocked"
+  },
+  "seen": [
+    {
+      "url": "https://www.anthropic.com/news/claude-opus-4-7",
+      "title": "Introducing Claude Opus 4.7",
+      "date": "2026-04",
+      "confirmed": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/google-broadcom-partnership-compute",
+      "title": "Anthropic expands partnership with Google and Broadcom",
+      "date": "2026-04-06",
+      "confirmed": true
+    },
+    {
+      "url": "https://red.anthropic.com/2026/mythos-preview/",
+      "title": "Claude Mythos Preview",
+      "date": "2026-04-07",
+      "confirmed": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/vas-narasimhan-board",
+      "title": "Long-Term Benefit Trust appoints Vas Narasimhan to Board",
+      "date": "2026-04-14",
+      "confirmed": false,
+      "note": "URL 추정 — 제목만 확인됨"
+    },
+    {
+      "url": "https://www.anthropic.com/news/anthropic-institute",
+      "title": "Introducing The Anthropic Institute",
+      "date": "2026-03-11",
+      "confirmed": false,
+      "note": "URL 추정 — 제목만 확인됨"
+    },
+    {
+      "url": "https://www.anthropic.com/news/mozilla-firefox-security",
+      "title": "Partnering with Mozilla to improve Firefox security",
+      "date": "2026-03-06",
+      "confirmed": false,
+      "note": "URL 추정 — 제목만 확인됨"
+    },
+    {
+      "url": "https://www.anthropic.com/news/australia-mou",
+      "title": "Australian government and Anthropic sign MOU",
+      "date": "2026-03-31",
+      "confirmed": false,
+      "note": "URL 추정 — 제목만 확인됨"
+    },
+    {
+      "url": "https://www.anthropic.com/news/sydney-apac-office",
+      "title": "Sydney will become Anthropic's fourth APAC office",
+      "date": "2026-03-10",
+      "confirmed": false,
+      "note": "URL 추정 — 제목만 확인됨"
+    },
+    {
+      "url": "https://www.anthropic.com/news/anthropic-partner-network",
+      "title": "Anthropic invests $100M into Claude Partner Network",
+      "date": "2026-03-12",
+      "confirmed": false,
+      "note": "URL 추정 — 제목만 확인됨"
+    }
+  ]
+}

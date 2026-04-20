@@ -1,0 +1,32 @@
+# BASELINE - 2026-04-20
+# 소스: https://claude.com/claude-code (마케팅 공식 페이지)
+# 상태: 직접 fetch 403 차단 — WebSearch/공개 정보 기반 초기화
+# 다음 실행부터 이 파일과 실제 페이지 콘텐츠를 비교
+
+## 제품 설명
+Claude Code — Agentic coding tool
+- 터미널에서 동작하는 AI 코딩 어시스턴트
+- 코드베이스 전체를 이해하고 자연어 명령으로 작업 수행
+- 반복 태스크 자동화, 복잡한 코드 설명, git 워크플로 처리
+- VS Code / JetBrains IDE 확장 지원
+- Claude Code on the Web (Web UI)
+
+## 지원 모델 (2026-04-20 기준)
+- claude-opus-4-7 (최신 Opus, 고급 코딩 특화)
+- claude-sonnet-4-6 (균형형 기본 모델)
+- claude-haiku-4-5-20251001 (경량 빠른 모델)
+
+## 주요 기능 (검색 기반 확인)
+- /focus 명령어
+- Ctrl+O (verbose/normal 전환)
+- Ctrl+G (에디터에 마지막 응답 컨텍스트 삽입)
+- Routines (반복 자동화, 스케줄 실행)
+- Code Review (AI 에이전트 기반 PR 리뷰)
+- Desktop App 리디자인 (멀티세션 사이드바, 드래그 앤 드롭)
+- /tui 풀스크린 렌더링
+- 모바일 푸시 알림
+- Plugin Marketplace
+
+## 요금제 (공식 발표 기준 — 정확한 금액은 확인 필요)
+- Pro 플랜 포함
+- API 사용량 기반 과금

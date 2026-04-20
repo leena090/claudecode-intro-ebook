@@ -1,0 +1,18 @@
+{
+  "_meta": {
+    "created": "2026-04-20",
+    "source_url": "https://code.claude.com/docs/en/llms.txt",
+    "note": "최초 실행 베이스라인. 직접 fetch 403 차단으로 WebSearch 기반 URL 목록 초기화. 다음 실행부터 실제 콘텐츠 해시와 비교.",
+    "fetch_status": "403_blocked"
+  },
+  "https://docs.anthropic.com/en/docs/claude-code/overview": "BASELINE_2026-04-20",
+  "https://docs.anthropic.com/en/docs/claude-code/llm-gateway": "BASELINE_2026-04-20",
+  "https://docs.anthropic.com/en/docs/claude-code/sdk/sdk-overview": "BASELINE_2026-04-20",
+  "https://docs.anthropic.com/en/docs/claude-code/sdk/sdk-typescript": "BASELINE_2026-04-20",
+  "https://docs.anthropic.com/en/docs/about-claude/models/overview": "BASELINE_2026-04-20",
+  "https://docs.anthropic.com/en/docs/about-claude/models/whats-new-claude-4-5": "BASELINE_2026-04-20",
+  "https://docs.anthropic.com/en/release-notes/claude-code": "BASELINE_2026-04-20",
+  "https://docs.anthropic.com/en/release-notes/overview": "BASELINE_2026-04-20",
+  "https://docs.anthropic.com/en/docs/build-with-claude/files": "BASELINE_2026-04-20",
+  "https://docs.anthropic.com/en/release-notes/system-prompts": "BASELINE_2026-04-20"
+}
