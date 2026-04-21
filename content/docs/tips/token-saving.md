@@ -1,275 +1,397 @@
 ---
-title: "토큰 절약법 — 비용 아끼는 실전 가이드"
-description: "1M 컨텍스트 시대의 토큰 절약법 + 2026년 4월 요금 소진 사태 대응법"
-tags: ["팁", "토큰", "비용", "절약", "1M컨텍스트", "피크타임"]
+title: "Claude Code 토큰 절약 — 6가지 무기 + 추천 전략"
+description: "/btw, 플랜 모드, /ultraplan, /rewind, /compact, /session-handoff — Claude Code 토큰 절약의 6가지 핵심 무기와 조합 전략"
+tags: ["토큰", "비용", "절약", "컨텍스트관리", "ultraplan", "rewind", "compact", "btw", "플랜모드", "session-handoff"]
 category: "tips"
 order: 4
-lastUpdated: "2026-04-08"
+lastUpdated: "2026-04-21"
 ---
 
-## 토큰이 뭔가요?
 
-Claude와 대화할 때마다 **토큰**이라는 단위가 소비됩니다. 글자 수라고 생각하면 쉬워요. 한국어 한 글자가 보통 2~3토큰 정도 됩니다.
+## 이 챕터는 Claude Code (터미널) 전용이에요
 
-토큰을 많이 쓸수록 → 사용량 한도에 빨리 도달 → 속도 제한에 걸림
-
-그래서 **같은 일을 더 적은 토큰으로** 하는 게 중요합니다.
-
-<div class="note-star">
-★ <strong>2026-04-01 요금 소진 사태</strong> <code>[R]</code> — Anthropic이 공식 인정: "<em>people are hitting usage limits in Claude Code way faster than expected.</em>" Max 5x($100/월)에서 1시간만에 한도 도달, Pro에서 12개 프롬프트로 소진되는 사례가 나왔어요. 원인: 캐시 무효화 버그 2개로 비용 10~20배 증가 + 피크타임 쿼터 축소. <strong>이 글에 나오는 절약법이 그 어느 때보다 중요해졌어요.</strong>
+<div class="callout insight">
+<div class="callout-head"><span class="stamp">🎯</span>대상 독자</div>
+<p>이 챕터는 <strong>Claude Code CLI 구독자</strong>(터미널에서 <code>claude</code> 실행해 쓰는 분)를 위한 거예요. claude.ai 웹앱·데스크탑 앱 사용자라면 <a href="/docs/tips/token-saving-web-cowork">웹·코워크·아티팩트 토큰 절약</a> 챕터로 가세요.</p>
 </div>
 
 ---
 
-## 현재 내 사용량 확인하기
+## 먼저 현황부터 — `/cost`
+
+Claude Code 안에서 언제든 현재 세션의 사용량을 확인할 수 있어요.
 
 ```
 /cost
 ```
 
-이 명령어를 입력하면 현재 세션에서 얼마나 썼는지 볼 수 있어요. 모델별로, 캐시 적중률까지 나옵니다.
+출력 예시 (v2.1.92+):
+```
+Models:
+  claude-opus-4-7:    $5.00   (cache hit: 78%)   ← 캐시 히트율이 핵심
+  claude-sonnet-4-6:  $7.50   (cache hit: 45%)
+Context: 47% used · Session: 28m
+```
+
+**캐시 히트율 70%↑** = 건강 / **40% 미만** = 캐시 계속 깨지는 중 → 대응 필요
 
 ---
 
-## 💡 절약법 10가지
+## 📋 6가지 핵심 무기 (상황별 선택)
 
-### 1. /compact로 대화 정리하기
+Claude Code에는 **토큰/컨텍스트를 아끼기 위한 6가지 내장 무기**가 있어요. 각각 쓰임새가 다르니 상황에 맞게 꺼내 쓰세요.
 
-대화가 길어지면 토큰이 계속 쌓입니다. 중간중간 정리해주세요:
+| # | 무기 | 어떤 상황에? | 효과 |
+|---|---|---|---|
+| 1 | **`/btw`** | 작업 중 잠깐 딴 질문 할 때 | 메인 기록 안 남김 → 최대 50% 절감 |
+| 2 | **플랜 모드** | 복잡한 작업 시작 전 | 헛걸음 방지로 "잘못된 코드" 토큰 0 |
+| 3 | **`/ultraplan`** | 아주 큰 계획 수립 | 로컬 터미널 컨텍스트 소비 **0** |
+| 4 | **`/rewind`** | 잘못된 방향 갔을 때 | 실패 경로 통째로 증발 |
+| 5 | **`/compact`** | 긴 대화 정리 | 앞부분 요약해서 공간 확보 |
+| 6 | **`/session-handoff`** | 세션 종료·이관 | 다음 세션에서 0부터 재개 안 해도 됨 |
 
+---
+
+### 1️⃣ `/btw` — 사이드 질문 (기록 안 남김)
+
+Claude가 한창 코드 짜고 있는데 갑자기 **"잠깐, 이거 뭐였지?"** 궁금해진 적 있죠. 평소처럼 물으면 그 질문·답변이 **메인 대화 기록에 그대로 남아서** 이후 모든 턴에서 재처리됩니다. 컨텍스트 오염.
+
+`/btw`는 이걸 **오버레이로 답변**만 받고 기록에 안 남겨요.
+
+```bash
+❌ 나쁜 예 (메인 오염)
+> (Claude가 인증 기능 만드는 중)
+> 잠깐, JWT가 정확히 뭐였지?
+→ 이 질의응답이 계속 컨텍스트로 누적됨
+
+✅ 좋은 예 (오염 없음)
+> /btw JWT가 정확히 뭔가요?
+→ 답변만 보고 기록엔 안 남음
 ```
+
+<div class="note-circle">
+○ <strong>토큰 절감 효과</strong>: 공식 안내 기준 최대 <strong>50%</strong>. 사이드 질문을 많이 하는 분일수록 효과 큼.
+<br />○ 비슷한 친척: <code>/fork</code>(분기해서 다른 접근 시도) / <code>/rewind</code>(되돌리기)
+</div>
+
+→ 상세: [/btw + /fork + /rewind 3종 세트](/docs/tips/btw-side-questions)
+
+---
+
+### 2️⃣ 플랜 모드 — 코드 쓰기 전 설계
+
+**Shift+Tab 두 번** 또는 `claude --permission-mode plan`으로 시작하면 플랜 모드 진입. 이 모드에서는:
+
+- Claude가 **파일 수정·실행 권한 없음** — 오직 "읽고 설계"만
+- 내가 승인하기 전까지 코드 한 줄도 안 바뀜
+- 복잡한 작업일수록 **시작 전에 Claude와 계획 맞추기** → 잘못된 방향 출발 차단
+
+#### 토큰 절약 관점
+
+**"잘못 짠 코드 디버깅" = 가장 비싼 토큰 낭비**예요. 플랜 모드는 이걸 원천 차단:
+
+- ❌ 바로 코드 → 틀림 → 수정 → 또 틀림 → 디버깅 (컨텍스트 10배 팽창)
+- ✅ 플랜 모드로 먼저 합의 → 한 번에 올바른 방향 → 작은 수정만
+
+#### 사용 예
+
+```bash
+# 새 기능 설계용 세션
+claude --permission-mode plan
+
+> 결제 모듈을 Stripe에서 Toss로 이전하는 계획을 짜줘.
+> 영향받는 파일, 테스트 순서, 롤백 전략까지.
+```
+
+Claude가 플랜만 작성 → 내가 확인 → 승인 후 실행.
+
+→ 상세: [권한 모드 가이드](/docs/advanced/permission-modes)
+
+---
+
+### 3️⃣ `/ultraplan` — 클라우드로 계획 위임 ⭐ (신기능, v2.1.91+)
+
+**2026년 3월 공개된 공식 research preview 기능**이에요. 플랜 모드의 업그레이드판인데 **가장 강력한 토큰 절약** 무기입니다.
+
+#### 뭐가 다른가?
+
+일반 플랜 모드는 **내 로컬 터미널의 컨텍스트**를 쓰지만, `/ultraplan`은:
+
+- 계획을 **Anthropic 클라우드 세션**에서 짜게 위임
+- 내 로컬 터미널 컨텍스트 **0 소비** — 다른 작업과 병행 가능
+- 브라우저에서 **섹션별 인라인 코멘트·이모지 리액션**으로 정밀 검토
+- 승인 후 **터미널로 텔레포트**해서 실행 가능
+
+#### 사용법 3가지
+
+```bash
+# 1. 명시적 커맨드
+/ultraplan Stripe → Toss 결제 이전 계획 짜줘
+
+# 2. 키워드만 끼워 넣기
+> ultraplan 으로 인증 리팩토링 계획 세워줘
+
+# 3. 로컬 플랜 승인 창에서 "Refine with Ultraplan" 선택
+# (플랜 모드로 시작했다가 더 정교하게 다듬고 싶을 때)
+```
+
+#### 진행 상태 표시
+
+프롬프트 입력 아래에 상태 표시자가 뜹니다.
+
+| 표시 | 의미 |
+|---|---|
+| `◇ ultraplan` | 클라우드에서 코드 탐색·플랜 작성 중 |
+| `◇ ultraplan needs your input` | 질문 있음 — 브라우저에서 응답 필요 |
+| `◆ ultraplan ready` | 플랜 완성 — 브라우저에서 검토 |
+
+#### 완성 후 3가지 선택
+
+브라우저에서 플랜 승인 시:
+
+- **Execute on the web** — 클라우드 세션에서 바로 구현 + PR 생성
+- **Teleport back to terminal** — 내 터미널로 플랜 전송 → `Implement here` / `Start new session` / `Cancel(파일 저장)` 중 선택
+
+#### 필요 조건
+
+- Claude Code v2.1.91+
+- **Claude Code on the web** 계정 (Pro/Max/Team/Enterprise)
+- **GitHub 레포** 연결 필수
+- Anthropic 클라우드만 (Bedrock/Vertex/Foundry 불가)
+
+<div class="callout insight">
+<div class="callout-head"><span class="stamp">💰</span>왜 이게 최강 토큰 절약인가</div>
+<p>"큰 계획 수립"은 원래 가장 비싼 작업이에요 — 전체 코드베이스 훑고, 영향도 분석하고, 순서 정하고… Ultraplan은 이 무거운 작업을 <strong>내 5시간 한도 밖</strong>(클라우드 쿼터)에서 처리하고, 나에겐 완성된 결과만 가져다줍니다. 특히 <strong>구독자에게는 "공짜 플래너"</strong>인 셈.</p>
+</div>
+
+→ 공식 문서: [Plan in the cloud with ultraplan](https://code.claude.com/docs/en/ultraplan)
+
+---
+
+### 4️⃣ `/rewind` — 잘못된 길 통째로 지우기
+
+Claude가 엉뚱한 방향으로 갔을 때 — 그 시도가 실패했는데 **대화 기록엔 남아서** 이후 모든 턴에서 재처리됩니다. 토큰 먹는 귀신.
+
+`/rewind` (또는 **Esc 두 번**)로 체크포인트 시점으로 돌아가면서 4가지 옵션:
+
+| 옵션 | 효과 | 언제? |
+|---|---|---|
+| Restore code + conversation | 완전 되돌리기 | 전면 리셋 |
+| Restore conversation | 대화만 지우기 | 대화 오염만 제거 |
+| Restore code | 파일만 되돌리기 | 대화는 유지하고 싶을 때 |
+| **Summarize from here** ⭐ | 이후 대화만 요약 압축 | **가장 정밀한 토큰 회복** |
+
+#### Summarize from here vs /compact
+
+`/compact`는 **전체 대화**를 요약하지만, `/rewind` → Summarize from here는 **선택 지점 이후만** 요약해요. 초반 맥락(CLAUDE.md 해석·설계 결정 등)은 그대로 유지. **캐시 히트도 유지**되는 큰 장점.
+
+#### 주의
+
+- **bash 명령어로 변경된 파일은 추적 안 됨** (rm/mv/cp)
+- **외부 수정도 추적 안 됨**
+- Git 대체품 아님 — 세션 내 "빠른 취소"용
+
+→ 상세: [컨텍스트 위생 3종](/docs/tips/btw-side-questions) · [공식 checkpointing](https://code.claude.com/docs/en/checkpointing)
+
+---
+
+### 5️⃣ `/compact` — 긴 대화 요약 압축
+
+대화가 수백 턴 이어지면 컨텍스트가 꽉 차요. `/compact`는 **지금까지의 대화를 AI 요약으로 교체**해서 공간을 확보합니다.
+
+```bash
 /compact
 ```
 
-이 명령어는 지금까지의 대화를 **요약해서 압축**합니다. 맥락은 유지하면서 토큰은 대폭 줄어요.
+#### 작동 방식
 
-<mark>긴 작업 중간중간 `/compact`를 해주면 토큰이 훨씬 절약됩니다.</mark>
+- 이전 대화 전체 → 핵심만 담은 요약으로 대체
+- 원본은 transcript에 보존 (필요하면 참조 가능)
+- 맥락은 유지, 토큰은 **대폭 감소**
 
----
+#### 언제 쓰나
 
-### 2. 작은 모델 먼저 쓰기
+- 컨텍스트 80% 넘겼을 때
+- 같은 주제로 더 이어갈 건데 앞부분은 참조 빈도 낮음
+- `/cost`에서 캐시 히트율 떨어지기 시작할 때
 
-모든 일에 Opus(가장 똑똑한 모델)를 쓸 필요 없어요:
+#### /compact vs /rewind → Summarize vs 새 대화
 
-| 상황 | 추천 모델 | 이유 |
-|------|----------|------|
-| 간단한 질문 | **Haiku** | 빠르고 저렴 |
-| 일반 코딩 작업 | **Sonnet** (기본값) | 균형 잡힘 |
-| 복잡한 설계/디버깅 | **Opus** | 가장 똑똑 |
+| 방법 | 앞부분 | 뒷부분 | 캐시 |
+|---|---|---|---|
+| `/compact` | 요약 | 요약 | 거의 깨짐 |
+| `/rewind → Summarize from here` | **원본 유지** | 요약 | **앞부분 캐시 유지** |
+| `/clear` → 새 대화 | 버림 | 버림 | 완전 새로 시작 |
 
-모델 바꾸기:
-```
-/model
-
-# 또는 구체적으로
-/model sonnet
-/model opus
-/model haiku
-```
+**우선순위**: `/rewind → Summarize` > `/compact` > `/clear`
 
 ---
 
-### 3. CLAUDE.md 잘 쓰기
+### 6️⃣ `/session-handoff` — 세션 간 이어가기
 
-프로젝트마다 CLAUDE.md를 잘 작성해두면, 매번 같은 설명을 반복하지 않아도 돼요.
+작업이 길어지거나 내일 이어서 할 예정이면, 지금 세션의 **맥락을 구조화 문서로 저장**. 다음 세션에서 그 문서만 보면 바로 이어 작업 가능.
 
-**❌ 매번 이렇게 말하는 것:**
-> "이 프로젝트는 React로 만들었고, TypeScript를 쓰고, Tailwind CSS를 사용하고, 한국어로 주석을 달아야 하고..."
+```bash
+# 풀 스펙 (10 섹션)
+/session-handoff
 
-**✅ CLAUDE.md에 한 번만 적어두면:**
-```markdown
-## 프로젝트 규칙
-- React + TypeScript + Tailwind CSS
-- 주석은 한국어로
+# 간단 (5줄)
+/session-handoff quick
+
+# 복원 (다음 세션에서)
+/session-handoff resume
 ```
 
-이후에는 Claude가 알아서 이 규칙을 따릅니다.
+저장 위치: 프로젝트의 `.claude/handoffs/handoff-YYYYMMDD-HHMM.md`
+
+#### 10 섹션 포함
+
+🎯 목표 / ✅ 완료 / ⏳ 남은 것 / ❌ 시도 실패 / 💡 핵심 결정 / 🗺️ 현재 상태 / 📂 코드 맥락 / ▶️ 이어가기 지침 / ⚙️ 환경 설정 / ⚠️ 함정
+
+#### 토큰 절약 관점
+
+- 다음 세션이 **0부터 재탐색** 안 해도 됨 → 탐색 토큰 절감
+- 실패 경로 기록으로 **같은 실수 반복** 방지
+- 여러 날 걸리는 프로젝트에서 누적 효과 큼
+
+<div class="note-star">
+⭐ <strong>/memory-update</strong>와는 다른 용도예요. memory-update는 "장기 기억 정리"(며칠~몇 주), session-handoff는 "지금 세션 → 다음 세션"(당장 이어 쓰기). 둘 다 쓰면 짝 맞음.
+</div>
+
+→ 이 스킬은 커뮤니티에서 제작된 버전을 노모어매뉴얼 스타일로 이식했어요. 설치는 `~/.claude/commands/session-handoff.md`에 SKILL.md 하나면 끝.
 
 ---
 
-### 4. 구체적으로 말하기
+## 🏆 추천 전략 — 상황별 조합 워크플로우
 
-모호하게 말하면 Claude가 여러 번 되물어요. 한 번에 정확하게 말하는 게 토큰 절약의 핵심.
+6가지 무기를 **언제·어떻게 섞어 쓰는지**가 고수의 영역입니다. 제가 추천하는 5가지 조합입니다.
 
-**❌ 토큰 낭비:**
-> "홈페이지 만들어줘"
-> → "어떤 홈페이지요?" → "카페 소개 페이지요" → "디자인은요?" → ...
+### A. 새 기능 개발 (가장 기본)
 
-**✅ 토큰 절약:**
-> "카페 소개 홈페이지 만들어줘. 메뉴 목록, 위치 지도, 영업시간 포함. 색상은 갈색 톤으로."
+```
+1. /ultraplan 으로 설계 (로컬 토큰 0)
+2. 브라우저에서 검토·수정
+3. Teleport back to terminal → Start new session
+4. 실행하며 /btw로 의문점 해소
+5. 막힌 부분은 /rewind → 다시 시도
+6. 세션 끝나면 /session-handoff quick
+```
+
+**효과**: 전통적 방식 대비 **세션당 30~50% 토큰 절약**. 특히 설계 단계가 커서 컨텍스트 꽉 차는 일 사라짐.
 
 ---
 
-### 5. /fast 모드 활용하기
+### B. 긴 디버깅 세션
 
 ```
-/fast
+1. 플랜 모드로 시작 (Shift+Tab 두 번)
+2. 원인 추정·수정안 합의
+3. 승인 후 실행
+4. 실패하면 /rewind 1 로 한 턴만 되감고 다시 시도
+5. 2시간 넘어가면 /rewind → Summarize from here 로 앞부분 보존 + 뒷부분 압축
+6. 해결 못 하고 내일 이어할 거면 /session-handoff
 ```
 
-빠른 모드로 전환합니다. 현재 사용 중인 모델이 **더 빠른 출력 속도로 전환**되고, 응답이 간결해집니다.
+**효과**: "같은 실패 반복"을 구조적으로 차단. 디버깅이 컨텍스트 블랙홀이 되는 걸 방지.
 
-<div class="note-circle">
-○ /fast는 모델을 바꾸는 게 아닙니다. 같은 모델을 "빠른 출력" 모드로 전환하는 거예요.
+---
+
+### C. 리팩토링 / 마이그레이션 (큰 작업)
+
+```
+1. /ultraplan — 영향도 분석 + 순서 설계 (클라우드 쿼터 사용)
+2. 큰 그림을 GitHub Issue에 복사 (동료 공유)
+3. 터미널로 텔레포트 → Start new session
+4. 단계별로 쪼개서 실행 (각 단계 끝나면 /compact 대신 새 채팅)
+5. 각 단계 마무리 시 /session-handoff — 다음 단계로 전달
+```
+
+**효과**: 컨텍스트 쪼개기 + 클라우드 위임 조합. 일주일 프로젝트도 한도 안 터뜨리고 완주.
+
+---
+
+### D. 빠른 수정·자잘한 요청
+
+```
+1. 플랜 모드 스킵 (오버헤드 아까움)
+2. 자연어 한 줄 지시
+3. 잘못 가면 /rewind 한 방
+4. 끝나면 그 채팅 닫기 (새 작업은 새 채팅)
+```
+
+**효과**: 작은 작업을 큰 세션에 끌어들이지 말 것. 오염 방지.
+
+---
+
+### E. 탐색·학습 중심 세션
+
+```
+1. /btw 를 적극 활용 (학습 질문은 전부 /btw)
+2. 메인 대화는 실제 결정·실행만
+3. 세션 끝나면 /session-handoff — "오늘 배운 것" 섹션에 정리
+```
+
+**효과**: 학습과 실행을 분리해서 실행 세션이 학습으로 오염되지 않게.
+
+---
+
+## 📋 하루 루틴 체크리스트
+
+<div class="callout good">
+<div class="callout-head"><span class="stamp">☀️</span>아침 — 세션 시작</div>
+<ol>
+<li><code>/cost</code> 로 전날 잔량 확인</li>
+<li>큰 작업이면 <code>/ultraplan</code> 또는 플랜 모드부터</li>
+<li>전날 <code>/session-handoff</code> 있으면 <code>resume</code></li>
+</ol>
+</div>
+
+<div class="callout tip">
+<div class="callout-head"><span class="stamp">🌤️</span>작업 중</div>
+<ol>
+<li>딴 질문은 <code>/btw</code></li>
+<li>잘못 가면 <code>/rewind</code> — 미련 없이</li>
+<li>컨텍스트 게이지 🟡 나오면 <code>/rewind → Summarize from here</code></li>
+<li>주제 바뀌면 새 채팅</li>
+</ol>
+</div>
+
+<div class="callout insight">
+<div class="callout-head"><span class="stamp">🌙</span>저녁 — 마무리</div>
+<ol>
+<li><code>/session-handoff</code> 로 구조화된 인수인계</li>
+<li>장기 프로젝트면 <code>/memory-update</code> 로 장기 기억 정리</li>
+<li><code>/cost</code> 마지막 확인</li>
+</ol>
 </div>
 
 ---
 
-### 6. 파일을 통째로 보여주지 말기
+## 2026년 4월 한도 사태 — 짧은 배경
 
-큰 파일을 Claude에게 보여주면 토큰이 엄청나게 소비돼요.
+2026-04-01 Anthropic **공식 인정**: *"people are hitting usage limits in Claude Code way faster than expected."*
 
-**❌ 토큰 낭비:**
-> "이 파일 전체를 분석해줘" (1000줄짜리 파일)
+원인 3가지:
+1. 3/28 2x 프로모션 종료
+2. 피크타임 쿼터 축소
+3. 캐시 무효화 버그 2개 (비용 10~20배 증가)
 
-**✅ 토큰 절약:**
-> "이 파일의 50~80번째 줄에 있는 함수를 분석해줘"
-
-필요한 부분만 지정하면 토큰을 크게 아낄 수 있어요.
-
----
-
-### 7. 대화 새로 시작하기
-
-하나의 대화에서 너무 다양한 주제를 다루면 컨텍스트가 무거워져요.
-
-- 주제가 바뀌면 → `/clear`로 새 대화 시작
-- 또는 터미널을 닫고 다시 `claude` 실행
+이 사태 이후로 **캐시 히트율 관리**가 그 어느 때보다 중요해졌고, 이 챕터의 6가지 무기 + 조합 전략이 실질적인 대응책입니다.
 
 ---
 
-### 8. 이전 대화 이어가기
+## 📎 관련 가이드
 
-반대로, 같은 주제라면 새 대화를 시작하지 말고 이어가세요:
+- [웹·코워크·아티팩트 토큰 절약](/docs/tips/token-saving-web-cowork) — claude.ai 웹 구독자용
+- [/btw + /fork + /rewind 3종 세트](/docs/tips/btw-side-questions)
+- [컨텍스트 게이지 바 설치](/docs/config/statusline-setup) — 시각화로 타이밍 판단
+- [권한 모드 가이드](/docs/advanced/permission-modes) — 플랜 모드 상세
+- [1M 컨텍스트 완벽 가이드](/docs/advanced/one-million-context)
+- [FAQ](/docs/tips/faq) — 요금 소진 관련 Q&A
 
-```
-/resume
-```
+## 참고 자료 (공식)
 
-이전 대화를 이어가면 처음부터 다시 설명할 필요가 없어서 토큰 절약!
-
----
-
-### 9. 에이전트 팀 활용하기
-
-큰 작업을 하나의 대화에서 하면 컨텍스트가 폭발해요. 서브에이전트를 쓰면 작업이 분산되어 토큰이 절약됩니다.
-
-큰 작업 → 여러 에이전트가 나눠서 → 각자 독립적인 컨텍스트로 처리
-
----
-
-### 10. 캐시 활용하기 (v2.1.92부터 상세 분석 가능)
-
-Claude Code는 **자동으로 캐시**를 사용합니다. 같은 파일을 반복해서 읽을 때 캐시가 적중하면 토큰 비용이 **최대 90% 저렴**해져요.
-
-```bash
-/cost
-```
-
-**v2.1.92부터는 모델별 + 캐시 히트율이 분리되어 표시**됩니다:
-```
-Models:
-  claude-opus-4-6:    $5.00  (cache hit: 45%)  ← 45%가 캐시 덕분
-  claude-sonnet-4-6:  $7.50  (cache hit: 22%)
-```
-
-> 🍱 **캐시 히트율이 뭔가요?** 식당에서 같은 메뉴를 여러 번 시킬 때 주방이 재료를 미리 준비해두는 것과 같아요. 비율이 높을수록 빠르고 싸죠.
-
-**캐시 히트율을 높이는 법:**
-- ✅ 한 세션을 **길게** 사용하세요 (자주 `/clear` 하지 말기)
-- ✅ 같은 파일을 반복 참조
-- ❌ 대화 초반에 계속 새 파일만 추가하면 낮아짐
-
----
-
-### 11. `/btw`로 사이드 질문하기 [x]
-
-작업 중에 잠깐 궁금한 걸 물어볼 때 `/btw`를 쓰면 **메인 대화에 기록이 안 남아서** 토큰을 최대 **50% 절감**할 수 있어요.
-
-```bash
-# 나쁜 예 (메인 대화 오염)
-> (Claude가 인증 기능 만드는 중)
-> 잠깐, JWT가 정확히 뭐였지?
-→ 설명이 대화 기록에 남아서 다음 요청부터 계속 토큰 소비
-
-# 좋은 예 (오염 없음)
-> (Claude가 인증 기능 만드는 중)
-> /btw JWT가 정확히 뭔가요?
-→ 답변만 오버레이로 받고 기록에 안 남음
-```
-
-자세한 건 [/btw·/fork·/rewind 3종 세트 가이드](/docs/tips/btw-side-questions) 참고.
-
----
-
-### 12. MCP보다 CLI — Playwright 등은 4배 차이 [R]
-
-**같은 작업**인데 MCP로 하면 약 114,000 토큰, CLI 스크립트로 하면 약 27,000 토큰. **4배 차이**!
-
-| 방식 | 토큰 사용 | 언제? |
-|---|---|---|
-| **MCP** (Playwright, GitHub 등) | 많음 (4×) | 로그인 세션 유지 등 **상태 필요** |
-| **CLI 스크립트** | 적음 | 단발성 작업 |
-
-**실전 팁**: MCP 서버는 **꼭 필요한 2~3개만** 붙이고, 나머지는 CLI로. Tool Search 기능이 46.9% 절감해주지만, MCP를 줄이는 게 근본 해결책.
-
----
-
-## 🕐 피크타임 회피 전략 [R] [추정]
-
-2026-03-26부터 Anthropic이 **수요 기반 동적 한도 조정**을 시작했어요. 피크타임에 같은 작업을 해도 **더 빨리 한도에 도달**합니다.
-
-| 시간대 (미국 동부시간) | 한국 시간 환산 | 혼잡도 |
-|---|---|---|
-| **평일 오전 8시 ~ 오후 2시** | **평일 오후 9시 ~ 익일 오전 3시** | 🔴 피크 (피하기) |
-| 평일 그 외 시간 | 한국 기준 오전 3시 ~ 저녁 9시 | 🟢 여유 |
-| 주말 | 종일 | 🟢 여유 |
-
-> 🎯 **한국에서 낮에 작업하는 분께 희소식**: 한국 낮 시간은 미국 동부 기준 한밤중이라 상대적으로 여유 있는 시간대예요.
-
-<div class="note-circle">
-○ 출처: <code>[R]</code> RoboRhythms "Claude Code Rate Limit Draining March 2026"
-<br />○ <strong>주의</strong>: 커뮤니티 역공학 기반이라 Anthropic 공식 확인은 없어요 <code>[추정]</code>.
-</div>
-
----
-
-## ⚠️ 2026-04-01 요금 소진 사태 — 현재 상황
-
-**Anthropic 공식 인정** <code>[R]</code> 2026-04-01:
-> *"people are hitting usage limits in Claude Code way faster than expected. We're actively investigating. It's the top priority for the team."*
-
-### 원인 3가지
-1. **3/28 2x 프로모션 종료** — 같은 한도로 돌아옴
-2. **피크타임 쿼터 축소** — 사용자 7% 영향
-3. **캐시 무효화 버그 2개** — 비용 10~20배 증가
-
-### 현재 상황 (2026-04-08 기준)
-- ⏳ **공식 수정 패치 아직 미발표**
-- 💡 일부 사용자가 **v2.1.34 다운그레이드** 후 개선 효과 보고 <code>[R]</code> (자기 책임)
-- ✅ **피크타임 회피** + **캐시 히트율 관리**가 현실적 대응책
-
----
-
-## 요약: 토큰 절약 우선순위 (2026-04-08 갱신)
-
-| 순위 | 방법 | 효과 |
-|------|------|------|
-| 1 | 한 세션 길게 쓰기 (캐시 히트율 ↑) | ⭐⭐⭐⭐ |
-| 2 | `/btw`로 사이드 질문 처리 | ⭐⭐⭐ |
-| 3 | 구체적으로 말하기 | ⭐⭐⭐ |
-| 4 | `/compact` 자주 쓰기 | ⭐⭐⭐ |
-| 5 | CLAUDE.md 2,500토큰 이내로 유지 | ⭐⭐⭐ |
-| 6 | MCP 줄이고 CLI 활용 | ⭐⭐⭐ |
-| 7 | 작은 모델 먼저 쓰기 | ⭐⭐ |
-| 8 | 피크타임 피하기 | ⭐⭐ |
-| 9 | 파일 일부만 보여주기 | ⭐⭐ |
-
----
-
-## 다음 단계
-
-토큰 절약법을 알았으니, 이제 자주 묻는 질문(FAQ)도 확인해보세요!
-
-- **[/btw + /fork + /rewind 컨텍스트 위생](/docs/tips/btw-side-questions)** — 11번 팁 심화
-- **[1M 컨텍스트 완벽 가이드](/docs/advanced/one-million-context)** — 대용량 활용 시 비용 관리
-- **[FAQ](/docs/tips/faq)** — 요금 소진 관련 질문 포함
+- [Plan in the cloud with ultraplan — Claude Code Docs](https://code.claude.com/docs/en/ultraplan)
+- [Checkpointing & /rewind — Claude Code Docs](https://code.claude.com/docs/en/checkpointing)
+- [Permission modes (Plan mode) — Claude Code Docs](https://code.claude.com/docs/en/permission-modes)
+- [Usage limit best practices — Claude Help Center](https://support.claude.com/en/articles/9797557-usage-limit-best-practices)
