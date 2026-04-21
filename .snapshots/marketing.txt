@@ -1,7 +1,7 @@
-# SNAPSHOT - 2026-04-20 (3차 실행 검증완료)
+# SNAPSHOT - 2026-04-21 (4차 실행 검증완료)
 # 소스: https://claude.com/claude-code (마케팅 공식 페이지)
-# 상태: ga-marketing.txt 정상 수신 (2026-04-20 GitHub Actions 실행분)
-# 3차 실행 확인: 신규 변경 없음. nav 항목(Claude Cowork, Mythos preview, M365 integrations) 이미 ebook에 반영됨.
+# 상태: ga-marketing.txt 정상 수신 (2026-04-21 GitHub Actions 실행분)
+# 4차 실행 확인: 신규 변경 없음. 요금제·모델·기능·nav 항목 모두 이전 스냅샷과 동일.
 
 ## 최신 기능 하이라이트 (2026-04-20 기준)
 - Routines: 한 번 설정하면 스케줄, API 호출, 이벤트 반응으로 자동 실행 (Apr 14, 2026)
@@ -86,3 +86,4 @@
 - 2026-04-20 이전: 403 Forbidden (2회)
 - 2026-04-20: ga-marketing.txt 통해 정상 수신
 - 2026-04-20 3차: 신규 변경 없음 확인. nav 항목 명시적으로 기록 완료.
+- 2026-04-21 4차: 신규 변경 없음 확인. 전체 ga-marketing.txt 비교 완료.
