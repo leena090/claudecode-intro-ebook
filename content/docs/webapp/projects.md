@@ -3,7 +3,7 @@ title: "프로젝트 — 작업을 깔끔하게 정리하기"
 description: "Claude 프로젝트 기능으로 업무별 대화를 분리하고, 자주 쓰는 정보를 한 번만 알려주는 방법"
 tags: ["프로젝트", "정리", "파일", "팀", "context"]
 category: "webapp"
-order: 3
+order: 4
 lastUpdated: "2026-04-06"
 ---
 

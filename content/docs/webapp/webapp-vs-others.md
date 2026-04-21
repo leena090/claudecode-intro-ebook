@@ -3,7 +3,7 @@ title: "웹앱 채팅 vs 코워크 vs Claude Code — 뭐가 다를까?"
 description: "Claude를 만나는 세 가지 방법의 차이를 쉽게 비교하고, 내 상황에 맞는 것을 고르는 방법"
 tags: ["비교", "웹앱", "코워크", "Claude Code", "선택"]
 category: "webapp"
-order: 5
+order: 6
 lastUpdated: "2026-04-06"
 ---
 

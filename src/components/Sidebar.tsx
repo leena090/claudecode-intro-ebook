@@ -125,11 +125,11 @@ export default function Sidebar({ parts, activeHref }: SidebarProps) {
         {/* 상단 — 브랜드 + 제목 */}
         <div className="sidebar-head">
           <Link href="/" className="brand-row">
-            <div className="brand-stamp">CC</div>
-            <div className="brand-text">NOMORE MANUAL</div>
+            <div className="brand-stamp">CE</div>
+            <div className="brand-text">CLAUDE ENCYCLOPEDIA</div>
           </Link>
-          <h1 className="book-title">클로드코드 입문</h1>
-          <p className="book-sub">40~60대 눈높이 · 왕초보 교실</p>
+          <h1 className="book-title">최신 클로드 백과사전</h1>
+          <p className="book-sub">2026년 4월판 · 40~60대 눈높이</p>
         </div>
 
         {/* 검색 */}

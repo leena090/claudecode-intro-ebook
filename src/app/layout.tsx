@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: '클로드코드 입문 — 노모어매뉴얼',
-  description: '비개발자도 이해하는 Claude Code 완전 입문 가이드 · 40~60대 눈높이 ebook',
+  title: '최신 클로드 백과사전 — 노모어매뉴얼',
+  description: 'Claude의 모든 기능을 40~60대 눈높이로 풀어낸 최신 백과사전 · 웹/코드/코워크/디자인 전부',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
