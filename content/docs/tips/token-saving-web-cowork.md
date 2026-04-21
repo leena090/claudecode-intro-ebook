@@ -161,6 +161,11 @@ Claude는 이미 그 내용을 기억하고 있어서, 참조만 해도 충분�
 
 ## PART 4. 캐시 보존 — 구독자도 받는 숨은 혜택 ⭐
 
+<div class="callout insight">
+<div class="callout-head"><span class="stamp">🎯</span>이 챕터는 <strong>Pro · Max 구독자 전용</strong></div>
+<p>아래 내용은 <strong>claude.ai 웹·데스크탑 앱·Claude Code를 구독으로 쓰는 일반 사용자</strong>를 위한 실천 가이드예요. API를 직접 호출하는 개발자는 공식 문서(Prompt Caching)를 따로 참고하세요. 이 챕터에서 <strong>돈·토큰 가격 얘기는 없고</strong>, "5시간 한도가 덜 닳게 하는 법"만 다룹니다.</p>
+</div>
+
 ### 먼저 용어 정리 — "프롬프트 캐싱"이 뭔가요?
 
 Claude에는 **프롬프트 캐싱(Prompt Caching)**이라는 기능이 있어요. 말 자체가 어려우니 비유부터.
@@ -173,23 +178,28 @@ Claude에는 **프롬프트 캐싱(Prompt Caching)**이라는 기능이 있어�
 
 ### 용어 대조표 — 기술 용어 ↔ 쉬운 말
 
-| 기술 용어 | 쉬운 말 | 뜻 |
+| 기술 용어 | 쉬운 말 | 구독자가 알아야 할 것 |
 |---|---|---|
-| **Prompt Caching** | 재료 냉장고 | 같은 맥락을 매번 새로 읽지 않고 보관해 재사용 |
-| **Cache Write** (캐시 쓰기) | 냉장고에 넣기 | 처음 보는 내용을 저장하는 단계 (약간 **비쌈 +25%**) |
-| **Cache Read / Hit** (캐시 읽기·적중) | 냉장고에서 꺼내기 | 같은 걸 다시 쓸 때 **90% 할인** |
-| **Cache Miss** (캐시 불발) | 냉장고에 없음 | 새로 읽어야 함 (할인 없음) |
-| **TTL** (Time To Live) | 유통기한 | **기본 5분**. 이 시간 안에 또 쓰면 유지, 지나면 폐기 |
-| **Hit Rate** (적중률) | 냉장고 재활용 비율 | 전체 처리 중 몇 %가 캐시에서 꺼내졌는지 |
+| **Prompt Caching** | 재료 냉장고 | 같은 맥락을 반복 쓰면 Anthropic이 알아서 보관·재사용 |
+| **Cache Write** (캐시 쓰기) | 냉장고에 넣기 | 처음 보는 내용을 저장. 이 순간은 **한도 소모 큼** |
+| **Cache Read / Hit** (캐시 읽기·적중) | 냉장고에서 꺼내기 | 같은 걸 다시 쓸 때 **한도 소모 극적으로 적음** ⭐ |
+| **Cache Miss** (캐시 불발) | 냉장고에 없음 | 새로 읽어야 함. 한도 평소대로 소모 |
+| **TTL** (Time To Live) | 유통기한 | **기본 5분**. 이 안에 또 쓰면 유지, 지나면 폐기 |
+| **Hit Rate** (적중률) | 냉장고 재활용 비율 | 전체 처리 중 몇 %가 캐시에서 꺼내졌는지 — <strong>높을수록 좋음</strong> |
 
-### API vs 구독 — 같은 냉장고, 다른 조작
+<div class="note-circle">
+○ 구독자는 가격 할인 얼마나 받았는지를 <strong>직접 볼 수 없어요</strong>. 대신 "5시간 한도가 얼마나 오래 가는지"로 <strong>체감</strong>합니다. 히트율 높을수록 <strong>같은 작업이 한도를 덜 먹음</strong>.
+</div>
 
-| | **API (개발자)** | **구독 (Pro / Max)** |
+### API랑 구독, 무엇이 다른가? (간단 비교)
+
+같은 냉장고를 쓰지만 **조작 방식**이 달라요. 구독자는 아래 오른쪽 열만 신경 쓰면 됩니다.
+
+| | API 사용자 | **구독자 (이 챕터 주인공)** |
 |---|---|---|
-| 누가 냉장고 관리? | **내가 직접** 표시 (`cache_control`) | **Anthropic이 자동**으로 |
-| 내가 볼 수 있나? | 청구서에 캐시 쓰기·읽기 숫자 | **안 보임** (숨겨진 최적화) |
-| 혜택 형태 | **돈으로 90% 할인** | **5시간 한도가 오래 감** |
-| 제어 가능? | 정밀 제어 | 패턴 설계로 간접 유도 |
+| 누가 냉장고 관리? | 내가 직접 지정 | **Anthropic이 자동** — 나는 패턴만 잘 만들면 됨 |
+| 혜택 형태 | 돈으로 할인 | **5시간 한도가 오래 감** |
+| 어떻게 활용? | 코드로 제어 | **반복 패턴 설계로 간접 유도** |
 
 ### 🎯 가장 큰 오해
 
@@ -264,7 +274,35 @@ Claude Code에서 특히 중요. **CLAUDE.md 자주 바꾸지 말기** — 바�
 ⚠️ 재처리 유발: "아까 논의한 내용을 다 고려해서 새 버전 만들어줘"
 ```
 
-#### 8️⃣ Claude Code `/cost`로 적중률 실시간 확인
+#### 8️⃣ `/rewind`로 "잘못 간 길" 통째로 지우기 ⭐ (공식 팁)
+
+Claude Code **공식 체크포인트 문서**에 명시된 토큰 절약 기능이에요. `Esc` 두 번 또는 `/rewind` 입력 → 되돌릴 시점 선택 → **4가지 옵션** 중 선택:
+
+| 옵션 | 효과 | 토큰 절약 관점 |
+|---|---|---|
+| 코드 + 대화 모두 복원 | 완전 되돌리기 | 잘못된 경로의 **캐시를 깨끗이 버림** |
+| 대화만 복원 | 대화만 지우고 코드는 유지 | 불필요 컨텍스트 제거 |
+| 코드만 복원 | 파일만 되돌리고 대화는 유지 | 드물게 사용 |
+| **Summarize from here** ⭐ | 선택 지점 이후를 **AI 요약으로 압축** | <strong>컨텍스트 공간 확보 (/compact의 정밀 버전)</strong> |
+
+<div class="callout insight">
+<div class="callout-head"><span class="stamp">💡</span>Summarize from here — 가장 강력한 토큰 절약</div>
+<p>긴 디버깅 대화에서 <strong>중간부터 끝까지만 압축</strong>하고 초반 맥락은 온전히 유지하는 기능. 전체를 뭉개는 <code>/compact</code>와 달리 "필요한 부분은 그대로, 낭비된 부분만 압축"이에요. <mark>앞부분 캐시 히트는 유지하면서</mark> 컨텍스트 공간만 확보됩니다.</p>
+</div>
+
+##### 왜 토큰이 절약되나?
+
+- **잘못된 시도의 토큰 증발**: Claude가 틀린 방향으로 간 대화는 이후 모든 턴에서 컨텍스트로 재처리됨 → rewind로 삭제하면 그 부담이 사라짐
+- **탐색 장벽 제거**: "토큰 아까워서 못 시도하던" 접근을 과감히 해볼 수 있음. 실패하면 rewind 한 방으로 리셋
+- **공식 문서 표현 그대로**: *"Pursue ambitious, wide-scale tasks knowing you can always return to a prior code state"*
+
+##### 주의사항
+
+- **bash 명령어 변경은 추적 안 됨** (`rm`, `mv`, `cp` 등으로 바뀐 파일은 rewind 안 됨)
+- **외부 수정도 추적 안 됨** (Claude 밖에서 직접 파일 고친 건 복원 불가)
+- **Git 대체품 아님** — 세션 수준의 "빠른 취소"용. 영구 보존은 Git으로
+
+#### 9️⃣ Claude Code `/cost`로 적중률 실시간 확인
 
 구독자가 캐시 동작을 **숫자로 볼 수 있는 유일한 지점**. 작업 후 `/cost` 치면:
 
@@ -421,34 +459,38 @@ Claude 웹에서는 대화 길이가 한계에 도달하면 아래 중 하나를
 
 ### 대응 순서 (위에서부터 시도)
 
-1. **"지금까지 한 작업을 3문단으로 요약해줘"**
+1. **Claude Code라면 `/rewind` → "Summarize from here"** ⭐ (공식 권장)
+   초반 맥락은 온전히 유지한 채 **중간부터 현재까지만 AI 요약**으로 압축합니다. 같은 세션에서 계속 이어가되 공간만 확보. `/compact`보다 정밀해요.
+
+2. **Claude 웹이라면 "지금까지 한 작업을 3문단으로 요약해줘"**
    Claude가 핵심만 압축한 요약본을 줍니다.
 
-2. **요약을 복사**해서 **새 대화 첫 메시지**로 붙여넣기
+3. **요약을 복사**해서 **새 대화 첫 메시지**로 붙여넣기
    ```
    [이전 대화 요약 붙여넣기]
 
    위 맥락에서 이어서 작업해줘. 다음 단계는 ___.
    ```
 
-3. **아티팩트가 있으면 사이드바에서 찾아** 새 대화에서 "이 아티팩트 이어서 작업해줘" 라고 지시
+4. **아티팩트가 있으면 사이드바에서 찾아** 새 대화에서 "이 아티팩트 이어서 작업해줘" 라고 지시
 
-4. **프로젝트로 격상**: 이 주제를 계속 다룰 거라면, 아예 **새 프로젝트**를 만들고 요약·관련 파일을 프로젝트 지식에 넣으세요. 앞으로 토큰 절약.
+5. **프로젝트로 격상**: 이 주제를 계속 다룰 거라면, 아예 **새 프로젝트**를 만들고 요약·관련 파일을 프로젝트 지식에 넣으세요. 앞으로 토큰 절약.
 
 ---
 
 ## ✅ 오늘부터 바로 적용할 체크리스트
 
 <div class="callout good">
-<div class="callout-head"><span class="stamp">📋</span>매일 쓰는 8가지 습관</div>
+<div class="callout-head"><span class="stamp">📋</span>매일 쓰는 9가지 습관</div>
 <ol>
 <li><strong>주제 바뀌면 새 채팅</strong> — "Claude야 새 대화로 가자" 같은 건 무의미, 새 채팅 버튼만.</li>
 <li><strong>자주 쓰는 자료는 프로젝트에</strong> — 한 번 올려두면 평생 무료 재사용.</li>
 <li><strong>Personal Preferences·CLAUDE.md 고정</strong> — 캐시 히트율 극대화의 핵심.</li>
+<li><strong>잘못된 시도는 /rewind</strong> — Esc 두 번. 실패 캐시를 깨끗이 지우고 처음부터.</li>
 <li><strong>질문 묶어서 한 번에</strong> — "1) 2) 3)" 포맷.</li>
 <li><strong>도구는 필요할 때만</strong> — Search·Tools 기본은 OFF.</li>
 <li><strong>스타일 Concise</strong> — 응답 짧아져서 출력 토큰 절반.</li>
-<li><strong>컨텍스트 경고 뜨면 요약 후 새 대화</strong>.</li>
+<li><strong>컨텍스트 경고 뜨면 Summarize from here</strong> — /rewind의 요약 옵션으로 초반 맥락 유지 + 뒷부분만 압축.</li>
 <li><strong>아티팩트는 Publish해서 영구 보존</strong> — 잃을 위험 제로.</li>
 </ol>
 </div>
@@ -471,3 +513,4 @@ Claude 웹에서는 대화 길이가 한계에 도달하면 아래 중 하나를
 - [What are artifacts and how do I use them? — Claude Help Center](https://support.claude.com/en/articles/9487310-what-are-artifacts-and-how-do-i-use-them)
 - [Publishing and sharing artifacts — Claude Help Center](https://support.claude.com/en/articles/9547008-publishing-and-sharing-artifacts)
 - [Prompt caching — Claude API Docs (기술 스펙)](https://platform.claude.com/docs/en/build-with-claude/prompt-caching)
+- [Checkpointing & /rewind — Claude Code Docs](https://code.claude.com/docs/en/checkpointing)
