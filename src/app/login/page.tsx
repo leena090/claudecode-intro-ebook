@@ -76,7 +76,7 @@ function LoginForm() {
           className="mb-8 py-3 px-4 rounded-lg text-sm"
           style={{ background: 'var(--accent-soft)', color: 'var(--text-secondary)' }}
         >
-          Claude Code 입문 — 비개발자를 위한 완전 가이드
+          최신 클로드 백과사전 — 2026년 4월판
         </div>
 
         {/* 비밀번호 입력 */}

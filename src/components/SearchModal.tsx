@@ -11,6 +11,7 @@
 
 import { useState, useEffect, useCallback, useRef } from 'react'
 import Link from 'next/link'
+import { matchSearchQuery, expandTerm } from '@/lib/search-synonyms'
 
 // ── 검색 인덱스 아이템 타입 (api/search/route.ts와 동일 구조) ──
 interface SearchItem {
@@ -49,130 +50,38 @@ function highlight(text: string, query: string): React.ReactNode {
   )
 }
 
-// ── 한영 동의어 사전 ──
-// "깃허브"로 검색해도 "GitHub" 결과가 나오도록 양방향 매핑
-const SYNONYMS: Record<string, string[]> = {
-  'github': ['깃허브', '깃헙'],
-  '깃허브': ['github', '깃헙'],
-  '깃헙': ['github', '깃허브'],
-  'git': ['깃'],
-  '깃': ['git'],
-  'commit': ['커밋'],
-  '커밋': ['commit'],
-  'push': ['푸시', '푸쉬'],
-  '푸시': ['push', '푸쉬'],
-  '푸쉬': ['push', '푸시'],
-  'pull': ['풀'],
-  '풀': ['pull'],
-  'branch': ['브랜치'],
-  '브랜치': ['branch'],
-  'merge': ['머지'],
-  '머지': ['merge'],
-  'clone': ['클론'],
-  '클론': ['clone'],
-  'pr': ['풀리퀘스트', '풀 리퀘스트', '결재'],
-  '풀리퀘스트': ['pr', 'pull request'],
-  'mcp': ['엠씨피'],
-  '엠씨피': ['mcp'],
-  'hook': ['훅'],
-  '훅': ['hook', 'hooks'],
-  'skill': ['스킬'],
-  '스킬': ['skill', 'skills'],
-  'agent': ['에이전트'],
-  '에이전트': ['agent', 'agents'],
-  'deploy': ['배포', '디플로이'],
-  '배포': ['deploy', 'vercel'],
-  'vercel': ['버셀', '배포'],
-  '버셀': ['vercel'],
-  'terminal': ['터미널'],
-  '터미널': ['terminal'],
-  'setting': ['설정', 'settings'],
-  '설정': ['setting', 'settings', 'config'],
-  'install': ['설치'],
-  '설치': ['install'],
-  'search': ['검색'],
-  '검색': ['search'],
-  // ── ultrathink / 사고 모드 관련 — 2026-04-20 추가 ──
-  'ultrathink': ['울트라씽크', '울트라 씽크', '울트라싱크', '울트라 싱크', 'ultra think'],
-  '울트라씽크': ['ultrathink', '울트라싱크', '울트라 씽크'],
-  '울트라싱크': ['ultrathink', '울트라씽크', '울트라 싱크'],
-  '울트라 씽크': ['ultrathink', '울트라씽크'],
-  '울트라 싱크': ['ultrathink', '울트라싱크'],
-  'think': ['씽크', '싱크', '사고', '생각'],
-  '사고': ['thinking', 'think', '생각'],
-  '생각': ['thinking', 'think', '사고'],
-  'effort': ['에포트', '사고 깊이', '사고깊이'],
-  // ── 권한 모드 관련 — 2026-04-20 추가 ──
-  'auto': ['오토', '자동', '오토모드', '자동 모드'],
-  '오토': ['auto', '오토모드', '자동'],
-  '오토모드': ['auto', 'auto mode', '오토 모드'],
-  '자동 모드': ['auto mode', 'auto', '오토모드'],
-  'permission': ['권한', '퍼미션'],
-  '권한': ['permission', 'permissions'],
-  'permission mode': ['권한 모드', '권한모드', '모드'],
-  '권한 모드': ['permission mode', 'permission'],
-  '권한모드': ['permission mode', 'permission'],
-  'plan mode': ['플랜 모드', '플랜모드', '계획 모드'],
-  '플랜 모드': ['plan mode', 'plan'],
-  'acceptedits': ['accept edits', '자동 수정', '수정 자동 승인'],
-  'accept edits': ['acceptedits', '자동 수정 승인'],
-  'bypasspermissions': ['bypass permissions', 'dangerously skip', '모든 권한 스킵'],
-  'bypass': ['바이패스', '스킵', '건너뛰기'],
-  'dangerously': ['위험하게', 'dangerously skip'],
-  'shift tab': ['shift+tab', '시프트탭', '쉬프트탭', '모드 전환'],
-  'shift+tab': ['shift tab', '시프트탭', '쉬프트탭'],
-}
-
-// ── 검색어 확장 함수 ──
-// 입력된 검색어에 동의어를 추가해서 확장된 검색어 배열 반환
-function expandQuery(q: string): string[] {
-  const queries = [q]
-  // 동의어 사전에서 매칭되는 항목 추가
-  for (const [key, synonyms] of Object.entries(SYNONYMS)) {
-    if (q.includes(key)) {
-      for (const syn of synonyms) {
-        queries.push(q.replace(key, syn))
-      }
-    }
-  }
-  return [...new Set(queries)] // 중복 제거
-}
-
 // ── 검색 필터 로직 ──
-// 검색어를 제목·설명·태그·카테고리명·본문 발췌문에서 매칭
-// 한영 동의어 확장으로 "깃허브" → "GitHub" 등 교차 검색 지원
+// matchSearchQuery(공용) — 복수 단어 AND + 한/영 동의어 확장 자동 처리
+// 필드별 가중치로 점수 계산 후 상위 8개 반환
 function filterItems(items: SearchItem[], query: string): SearchItem[] {
-  const q = query.trim().toLowerCase()
+  const q = query.trim()
   if (!q) return []
-
-  // 검색어를 동의어로 확장 (예: "깃허브" → ["깃허브", "github", "깃헙"])
-  const queries = expandQuery(q)
 
   const scored = items
     .map(item => {
       let score = 0
-      const title = item.title.toLowerCase()
-      const desc = item.description.toLowerCase()
-      const tags = item.tags.join(' ').toLowerCase()
-      const catTitle = item.categoryTitle.toLowerCase()
-      const excerpt = item.excerpt.toLowerCase()
+      const title = item.title
+      const desc = item.description
+      const tags = item.tags.join(' ')
+      const catTitle = item.categoryTitle
+      const excerpt = item.excerpt
 
-      // 모든 확장 검색어에 대해 점수 계산
-      for (const searchQ of queries) {
-        if (title.includes(searchQ)) score += 100       // 제목 완전 포함 — 최고 우선순위
-        if (title.startsWith(searchQ)) score += 50       // 제목 시작 일치 보너스
-        if (desc.includes(searchQ)) score += 40          // 설명 포함
-        if (tags.includes(searchQ)) score += 30          // 태그 포함
-        if (catTitle.includes(searchQ)) score += 20      // 카테고리명 포함
-        if (excerpt.includes(searchQ)) score += 10       // 본문 발췌 포함
-      }
+      if (matchSearchQuery(title, q)) score += 100
+      // 제목 시작 일치 보너스: 첫 단어가 제목의 앞 variant와 일치
+      const firstWord = q.toLowerCase().split(/\s+/)[0] || ''
+      const variants = expandTerm(firstWord)
+      if (variants.some(v => title.toLowerCase().startsWith(v))) score += 50
+      if (matchSearchQuery(desc, q)) score += 40
+      if (matchSearchQuery(tags, q)) score += 30
+      if (matchSearchQuery(catTitle, q)) score += 20
+      if (matchSearchQuery(excerpt, q)) score += 10
 
       return { item, score }
     })
-    .filter(({ score }) => score > 0)            // 매칭된 항목만
-    .sort((a, b) => b.score - a.score)           // 점수 높은 순 정렬
+    .filter(({ score }) => score > 0)
+    .sort((a, b) => b.score - a.score)
 
-  return scored.map(({ item }) => item).slice(0, 8) // 최대 8개 결과
+  return scored.map(({ item }) => item).slice(0, 8)
 }
 
 export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
