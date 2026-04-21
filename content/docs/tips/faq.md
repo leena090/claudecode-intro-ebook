@@ -3,7 +3,7 @@ title: "자주 묻는 질문 (FAQ) — 전체 총정리"
 description: "Claude 웹앱, 코워크, Claude Code, 웹 코딩까지 한 곳에서 빠르게 확인 + 2026-04 요금 소진 사태 Q&A"
 tags: ["FAQ", "총정리", "비교", "요금", "기능", "2026업데이트"]
 category: "tips"
-order: 2
+order: 3
 lastUpdated: "2026-04-13"
 ---
 

@@ -3,7 +3,7 @@ title: "/buddy — 만우절 이스터에그 (지금은 사라짐)"
 description: "2026년 4월 1일 만우절 한정으로 있었던 터미널 다마고찌 펫 기능. 지금은 제거됐어요"
 tags: ["팁", "buddy", "이스터에그", "만우절"]
 category: "tips"
-order: 6
+order: 7
 lastUpdated: "2026-04-21"
 ---
 

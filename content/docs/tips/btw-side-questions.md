@@ -3,7 +3,7 @@ title: "/btw + /fork + /rewind — 컨텍스트 위생 3종 세트"
 description: "Claude가 일하는 도중에 끼어들고, 복제하고, 되돌리는 3가지 필수 명령어"
 tags: ["팁", "btw", "fork", "rewind", "컨텍스트위생", "토큰절약"]
 category: "tips"
-order: 4
+order: 5
 lastUpdated: "2026-04-08"
 ---
 

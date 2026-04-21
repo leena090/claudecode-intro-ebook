@@ -3,7 +3,7 @@ title: "알아두면 편한 CLI 플래그 모음"
 description: "--continue, --auto, --worktree 등 실전에서 자주 쓰는 플래그 총정리"
 tags: ["팁", "플래그", "CLI", "세션"]
 category: "tips"
-order: 5
+order: 6
 lastUpdated: "2026-04-06"
 ---
 
