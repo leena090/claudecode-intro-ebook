@@ -3,7 +3,7 @@ title: "Claude가 '생각 중'일 때 뜨는 귀여운 말들 — 전체 233개 
 description: "코딩할 때 프롬프트 창 옆에 잠깐 반짝이는 Pondering, Noodling, Shenaniganing… 그 수수께끼의 단어들 정체"
 tags: ["이스터에그", "재미", "스피너", "개발자장난"]
 category: "tips"
-order: 8
+order: 9
 lastUpdated: "2026-04-21"
 ---
 

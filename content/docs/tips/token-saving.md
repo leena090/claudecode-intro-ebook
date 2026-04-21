@@ -3,7 +3,7 @@ title: "토큰 절약법 — 비용 아끼는 실전 가이드"
 description: "1M 컨텍스트 시대의 토큰 절약법 + 2026년 4월 요금 소진 사태 대응법"
 tags: ["팁", "토큰", "비용", "절약", "1M컨텍스트", "피크타임"]
 category: "tips"
-order: 3
+order: 4
 lastUpdated: "2026-04-08"
 ---
 

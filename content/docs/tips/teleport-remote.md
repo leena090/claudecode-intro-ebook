@@ -3,7 +3,7 @@ title: "어디서나 이어하기 — 모바일·웹·터미널 자유자재"
 description: "작업을 웹에서 시작해서 터미널로, 터미널에서 데스크톱 앱으로 옮길 수 있습니다"
 tags: ["teleport", "remote-control", "모바일", "원격", "이어하기"]
 category: "tips"
-order: 7
+order: 8
 lastUpdated: "2026-04-16"
 ---
 
