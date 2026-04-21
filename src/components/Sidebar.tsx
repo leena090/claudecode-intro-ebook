@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { useEffect, useMemo, useState } from 'react'
+import { matchSearchQuery } from '@/lib/search-synonyms'
 
 // ── 사이드바 데이터 구조 (서버에서 precompute) ──
 export interface SidebarChapter {
@@ -99,19 +100,19 @@ export default function Sidebar({ parts, activeHref }: SidebarProps) {
     ? Math.min(100, Math.round((readCount / totalChapters) * 100))
     : 0
 
-  // 검색 필터 — 제목 + 번호 + 본문/태그/설명 전체
-  // 제목 매칭을 못 찾으면 searchIndex(본문 포함) 로 2차 검색
-  const q = query.trim().toLowerCase()
+  // 검색 필터 — 한/영 동의어 확장 + 복수 단어 AND 매칭
+  // 제목/번호/본문발췌(searchIndex)를 합쳐 한 번에 매칭
+  const q = query.trim()
   const filteredParts = useMemo(() => {
     if (!q) return parts
     return parts
       .map(p => ({
         ...p,
-        chapters: p.chapters.filter(c =>
-          c.title.toLowerCase().includes(q) ||
-          c.num.includes(q) ||
-          (searchIndex[c.href]?.includes(q) ?? false)
-        ),
+        chapters: p.chapters.filter(c => {
+          // 매칭 대상: 번호 + 제목 + API 인덱스(설명·태그·본문발췌·카테고리명)
+          const haystack = `${c.num} ${c.title} ${searchIndex[c.href] || ''}`
+          return matchSearchQuery(haystack, q)
+        }),
       }))
       .filter(p => p.chapters.length > 0)
   }, [parts, q, searchIndex])
