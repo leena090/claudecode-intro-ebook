@@ -154,7 +154,7 @@ export default function Sidebar({ parts, activeHref }: SidebarProps) {
             <div className="brand-text">CLAUDE ENCYCLOPEDIA</div>
           </Link>
           <h1 className="book-title">최신 클로드 백과사전</h1>
-          <p className="book-sub">2026년 4월판 · 40~60대 눈높이</p>
+          <p className="book-sub">by 노모어매뉴얼</p>
         </div>
 
         {/* 검색 */}
