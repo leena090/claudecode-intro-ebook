@@ -32,6 +32,10 @@ export default function Sidebar({ parts, activeHref }: SidebarProps) {
   const [fs, setFs] = useState<'small' | 'med' | 'large'>('med')
   const [mobileOpen, setMobileOpen] = useState(false)
 
+  // 검색 인덱스 — href → 합쳐진 검색 가능 텍스트 (본문 발췌·태그·설명)
+  // 최초 렌더 시 /api/search 한 번 로드해서 full-text 검색에 활용
+  const [searchIndex, setSearchIndex] = useState<Record<string, string>>({})
+
   // localStorage 부트 — 읽음 기록 + 폰트 크기
   useEffect(() => {
     try {
@@ -43,6 +47,24 @@ export default function Sidebar({ parts, activeHref }: SidebarProps) {
       const savedFs = (localStorage.getItem('fs') || 'med') as 'small' | 'med' | 'large'
       setFs(savedFs)
     } catch { /* ignore */ }
+  }, [])
+
+  // 검색 인덱스 로드 — 한 번만
+  useEffect(() => {
+    fetch('/api/search')
+      .then(r => r.json())
+      .then((items: Array<{ href: string; title: string; description: string; tags: string[]; excerpt: string; categoryTitle: string }>) => {
+        const map: Record<string, string> = {}
+        for (const it of items) {
+          // 모든 검색 대상 필드를 소문자 + 공백 구분 문자열 하나로 평탄화
+          map[it.href] = [
+            it.title, it.description, it.tags.join(' '),
+            it.excerpt, it.categoryTitle,
+          ].join(' ').toLowerCase()
+        }
+        setSearchIndex(map)
+      })
+      .catch(() => { /* 네트워크 오류 시 제목 검색만 동작 */ })
   }, [])
 
   // 현재 페이지 자동 체크 (활성 href가 바뀔 때 읽음 처리)
@@ -77,7 +99,8 @@ export default function Sidebar({ parts, activeHref }: SidebarProps) {
     ? Math.min(100, Math.round((readCount / totalChapters) * 100))
     : 0
 
-  // 검색 필터 — 제목 기준
+  // 검색 필터 — 제목 + 번호 + 본문/태그/설명 전체
+  // 제목 매칭을 못 찾으면 searchIndex(본문 포함) 로 2차 검색
   const q = query.trim().toLowerCase()
   const filteredParts = useMemo(() => {
     if (!q) return parts
@@ -86,11 +109,12 @@ export default function Sidebar({ parts, activeHref }: SidebarProps) {
         ...p,
         chapters: p.chapters.filter(c =>
           c.title.toLowerCase().includes(q) ||
-          c.num.includes(q)
+          c.num.includes(q) ||
+          (searchIndex[c.href]?.includes(q) ?? false)
         ),
       }))
       .filter(p => p.chapters.length > 0)
-  }, [parts, q])
+  }, [parts, q, searchIndex])
 
   // 체크박스 토글
   const toggleRead = (href: string) => {
@@ -125,11 +149,11 @@ export default function Sidebar({ parts, activeHref }: SidebarProps) {
         {/* 상단 — 브랜드 + 제목 */}
         <div className="sidebar-head">
           <Link href="/" className="brand-row">
-            <div className="brand-stamp">CC</div>
-            <div className="brand-text">NOMORE MANUAL</div>
+            <div className="brand-stamp">CE</div>
+            <div className="brand-text">CLAUDE ENCYCLOPEDIA</div>
           </Link>
-          <h1 className="book-title">클로드코드 입문</h1>
-          <p className="book-sub">40~60대 눈높이 · 왕초보 교실</p>
+          <h1 className="book-title">최신 클로드 백과사전</h1>
+          <p className="book-sub">2026년 4월판 · 40~60대 눈높이</p>
         </div>
 
         {/* 검색 */}
@@ -140,10 +164,10 @@ export default function Sidebar({ parts, activeHref }: SidebarProps) {
           </svg>
           <input
             type="text"
-            placeholder="챕터 제목 검색"
+            placeholder="전체 검색 (제목·본문·태그)"
             value={query}
             onChange={e => setQuery(e.target.value)}
-            aria-label="목차 검색"
+            aria-label="전체 문서 검색"
           />
         </div>
 

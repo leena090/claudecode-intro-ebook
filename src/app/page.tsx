@@ -20,7 +20,7 @@ export default function HomePage() {
         <section className="cover">
           <div className="cover-bg-letters" aria-hidden="true">CC</div>
 
-          <div className="cover-eyebrow">클로드코드 입문 · 2026 최신판</div>
+          <div className="cover-eyebrow">최신 클로드 백과사전 · 2026년 4월판</div>
 
           <h1 className="cover-mega">
             컴퓨터가 무서웠던 분도,<br />
@@ -28,8 +28,8 @@ export default function HomePage() {
           </h1>
 
           <p className="cover-sub">
-            설치부터 실전까지. 40~60대 눈높이에 맞춰, 손으로 하나하나 짚어주는
-            대한민국 유일의 Claude Code 입문 교실.
+            Claude의 모든 기능을 40~60대 눈높이로 정리한 백과사전.
+            웹앱·코드·코워크·디자인까지 — 찾고 싶은 건 반드시 있습니다.
           </p>
 
           <div className="cover-badges">

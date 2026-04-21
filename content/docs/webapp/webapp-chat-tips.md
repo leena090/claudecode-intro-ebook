@@ -3,7 +3,7 @@ title: "채팅 200% 활용법"
 description: "파일 첨부, 웹 검색, 모델 선택까지 — claude.ai 웹앱 채팅을 제대로 쓰는 방법"
 tags: ["채팅", "파일첨부", "웹검색", "프롬프트", "모델선택"]
 category: "webapp"
-order: 4
+order: 5
 lastUpdated: "2026-04-06"
 ---
 

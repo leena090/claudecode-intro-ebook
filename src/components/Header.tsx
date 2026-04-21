@@ -24,8 +24,8 @@ export default function Header({ breadcrumbs = [] }: { breadcrumbs?: BreadcrumbI
       <div className="max-w-7xl mx-auto flex items-center justify-between" style={{ padding: '0 32px', height: 64 }}>
         <nav className="flex items-center gap-3 min-w-0">
           <Link href="/" className="brand-row" style={{ margin: 0 }}>
-            <div className="brand-stamp">CC</div>
-            <div className="brand-text">NOMORE MANUAL</div>
+            <div className="brand-stamp">CE</div>
+            <div className="brand-text">최신 클로드 백과사전</div>
           </Link>
           {breadcrumbs.length > 0 && (
             <span className="breadcrumb" style={{ marginLeft: 8 }}>
