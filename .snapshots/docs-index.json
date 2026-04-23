@@ -1,9 +1,9 @@
 {
   "_meta": {
     "created": "2026-04-20",
-    "updated": "2026-04-21",
+    "updated": "2026-04-23",
     "source_url": "https://code.claude.com/docs/llms.txt",
-    "note": "2026-04-21 4차 실행: 신규 URL 없음. 총 114개 URL 동일. 변경 없음. (w16 아직 미등재)",
+    "note": "2026-04-23 5차 실행: 신규 URL 2개 — auto-mode-config, debug-your-config. 총 116개 URL.",
     "fetch_status": "200_ok"
   },
   "https://code.claude.com/docs/en/overview": "SNAPSHOT_2026-04-20",
@@ -119,5 +119,7 @@
   "https://code.claude.com/docs/en/server-managed-settings": "SNAPSHOT_2026-04-20",
   "https://code.claude.com/docs/en/setup": "SNAPSHOT_2026-04-20",
   "https://code.claude.com/docs/en/third-party-integrations": "SNAPSHOT_2026-04-20",
-  "https://code.claude.com/docs/en/web-quickstart": "SNAPSHOT_2026-04-20"
+  "https://code.claude.com/docs/en/web-quickstart": "SNAPSHOT_2026-04-20",
+  "https://code.claude.com/docs/en/auto-mode-config": "SNAPSHOT_2026-04-23",
+  "https://code.claude.com/docs/en/debug-your-config": "SNAPSHOT_2026-04-23"
 }
