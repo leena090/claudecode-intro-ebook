@@ -1,9 +1,9 @@
 {
   "_meta": {
     "created": "2026-04-20",
-    "updated": "2026-04-24",
+    "updated": "2026-04-25",
     "source_url": "https://code.claude.com/docs/llms.txt",
-    "note": "2026-04-24 6차 실행: 신규 URL 1개 — admin-setup. 총 117개 URL.",
+    "note": "2026-04-25 7차 실행: 신규 URL 없음. 총 117개 URL. whats-new 최신은 여전히 2026-w15 (4/6~10). 마케팅·블로그 변경 없음.",
     "fetch_status": "200_ok"
   },
   "https://code.claude.com/docs/en/overview": "SNAPSHOT_2026-04-20",
