@@ -1,9 +1,9 @@
 {
   "_meta": {
     "created": "2026-04-20",
-    "updated": "2026-04-24",
+    "updated": "2026-04-27",
     "source_url": "https://www.anthropic.com/news",
-    "note": "2026-04-24 6차 실행: 신규 블로그 3건 감지 — Amazon compute 협력(Apr 20), NEC 일본 AI 인력(Apr 24), 선거 안전 업데이트(Apr 24). 선거 및 NEC 건은 코딩 ebook 직접 관련 낮아 콘텐츠 생성 스킵. Amazon 건도 비즈니스 파트너십 뉴스로 스킵.",
+    "note": "2026-04-27 7차 실행: 신규 블로그 1건 감지 — 호주·뉴질랜드 GM 임명 + 시드니 오피스 오픈(Apr 27). 비즈니스 뉴스로 콘텐츠 생성 스킵.",
     "fetch_status": "ga-blog.txt 수신"
   },
   "seen": [
@@ -129,6 +129,14 @@
       "date": "2026-04-24",
       "confirmed": false,
       "note": "URL 추정 — 선거 안전 정책 업데이트. 정치/정책 주제, 코딩 ebook과 무관하여 콘텐츠 생성 스킵",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/theo-hourmouzis-australia-new-zealand-gm",
+      "title": "Anthropic names Theo Hourmouzis General Manager of Australia & New Zealand and officially opens Sydney office",
+      "date": "2026-04-27",
+      "confirmed": false,
+      "note": "URL 추정 — 호주·뉴질랜드 GM 임명 + 시드니 오피스 오픈. 비즈니스 뉴스, 한국어 코딩 ebook과 직접 연관 낮아 콘텐츠 생성 스킵",
       "content_written": false
     }
   ]

@@ -1,10 +1,10 @@
 ---
 title: "정보 확인 명령어"
-description: "Claude Code 사용 현황, 비용, 통계를 한눈에 파악하기 (v2.1.92 /cost 상세분석 반영)"
+description: "Claude Code 사용 현황, 비용, 통계를 한눈에 파악하기 (/usage 한도 유발 요인 분석 및 /cost·/stats 통합 반영)"
 category: "commands"
 order: 4
 tags: ["정보", "통계", "비용", "명령어"]
-lastUpdated: "2026-04-08"
+lastUpdated: "2026-04-27"
 ---
 
 ## 정보 확인이 왜 중요한가?
@@ -58,7 +58,7 @@ Response Time: 1.2s
 
 ---
 
-### 2️⃣ `/cost` — 비용 내역 상세 보기 (⭐ v2.1.92 대폭 개선)
+### 2️⃣ `/cost` — 비용 내역 상세 보기 (⭐ v2.1.92 + v2.1.119 통합)
 
 ```bash
 /cost
@@ -69,7 +69,8 @@ Response Time: 1.2s
 <mark>요금 결제를 하는 사용자라면 정기적으로 확인해야 합니다</mark>
 
 <div class="note-star">
-★ <strong>2026-04-04 v2.1.92 업데이트</strong>: 구독 사용자에게 <strong>모델별 + 캐시 히트율</strong>이 분리되어 상세 표시됩니다. 이제 "어느 모델에 얼마가 들었는지", "캐시 덕분에 얼마나 절약됐는지"가 한눈에 보여요.
+★ <strong>v2.1.92 업데이트</strong>: 구독 사용자에게 <strong>모델별 + 캐시 히트율</strong>이 분리되어 상세 표시됩니다.
+<br />★ <strong>v2.1.119 업데이트</strong>: <code>/cost</code>는 <code>/usage</code>에 통합됐어요. <code>/cost</code>를 입력하면 자동으로 <code>/usage</code>의 cost 탭으로 이동합니다.
 </div>
 
 **표시되는 정보 (v2.1.92+):**
@@ -103,69 +104,70 @@ Models:
 
 ---
 
-### 3️⃣ `/usage` — 사용량 통계 보기
+### 3️⃣ `/usage` — 사용량 + 한도 유발 요인 분석 (⭐ v2.1.116 대폭 개선)
 
 ```bash
 /usage
 ```
 
-**역할:** 토큰 사용량, 대화 횟수 등의 상세 통계
+**역할:** 토큰 사용량·비용·통계를 통합해서 보여주고, **무엇이 내 한도를 잡아먹고 있는지** 분석
 
-**표시되는 정보:**
-- 총 토큰 사용량
-- 입력 토큰 vs 출력 토큰 비율
-- 평균 응답 길이
-- 총 대화 횟수
-- 가장 많이 사용한 모델
+<div class="note-star">
+★ <strong>2026-04-22 v2.1.116 업데이트</strong>: 이제 <code>/usage</code>가 단순 통계를 넘어 <strong>한도 유발 요인을 항목별로 분석</strong>해줍니다. 병렬 세션·서브에이전트·캐시 미스·긴 컨텍스트 중 뭐가 사용량을 끌어올리는지 퍼센트와 함께 표시해요.
+<br />★ <strong>v2.1.119 업데이트</strong>: <code>/cost</code>와 <code>/stats</code>가 <code>/usage</code>에 통합됐어요. 옛날 이름으로 입력하면 해당 탭으로 바로 이동합니다.
+</div>
+
+> 🍱 **비유로 설명하면**: 예전엔 "이번 달 전기요금: 45,000원" 처럼 총액만 보여줬다면, 이제는 "에어컨 35%, 냉장고 20%, TV 15%, 세탁기 10%..." 처럼 **무엇이 얼마나 쓰는지**를 항목별로 알려줘요.
+
+**표시되는 정보 (v2.1.116+):**
+- **한도 유발 요인 분석** — 병렬 세션 / 서브에이전트 / 캐시 미스 / 긴 컨텍스트 (각 항목별 퍼센트)
+- 최적화 팁 (항목별 절약 방법 제안)
+- 비용·통계 탭 (기존 /cost, /stats 내용 포함)
+
+**키 단축키:**
+- `d` → 일간 뷰로 전환
+- `w` → 주간 뷰로 전환
 
 **사용 예시:**
 ```bash
 /usage
 
-→ 결과:
-Total Tokens: 15,240
-Input Tokens: 3,500
-Output Tokens: 11,740
-Average Response: 2.8s
-Total Conversations: 24
-Top Model: Claude-Sonnet
+→ 결과 (v2.1.116 포맷):
+Usage breakdown (last 24h)
+────────────────────────────
+Parallel sessions   38%  ↑ Tip: use /resume instead of opening new sessions
+Subagents           27%  ↑ Tip: set maxSubagents for long-running tasks
+Cache misses        22%  ↑ Tip: keep sessions open longer to improve cache reuse
+Long context        13%
+
+/cost 탭 → 비용 상세
+/stats 탭 → 사용 패턴 분석
 ```
 
-**활용 방법:**
-- 어떤 모델을 가장 많이 썼는지 알기
-- 평균 응답 시간 확인
-- 비용 최적화 계획 세우기
+**언제 사용할까?**
+- 사용량 한도에 자주 부딪힐 때 (원인 파악)
+- 비용이 갑자기 올랐을 때
+- 최적화 방법을 알고 싶을 때
 
 ---
 
-### 4️⃣ `/stats` — 종합 통계 보기
+### 4️⃣ `/stats` — 종합 통계 보기 (→ 이제 `/usage` 안에 통합)
 
 ```bash
 /stats
+(또는 /usage 입력 후 stats 탭 선택)
 ```
+
+<div class="note-circle">
+○ <strong>v2.1.119부터 <code>/stats</code>는 <code>/usage</code>의 탭으로 통합됐어요.</strong> 기존처럼 <code>/stats</code>를 입력해도 작동하지만, 실제로는 <code>/usage</code>를 열고 stats 탭으로 이동합니다.
+</div>
 
 **역할:** 사용 패턴과 추세를 종합적으로 분석
 
 **표시되는 정보:**
-- 이번 주/달/년 트렌드
 - 가장 활발한 사용 시간
 - 주로 사용하는 기능
 - 평균 세션 길이
-- 성공률
-
-**사용 예시:**
-```bash
-/stats
-
-→ 결과:
-Most Active: Weekday 2PM-4PM
-Avg Session Length: 15 minutes
-Feature Usage:
-  - Code Writing: 45%
-  - Explanation: 30%
-  - Debug: 25%
-Success Rate: 94%
-```
 
 ---
 
@@ -285,9 +287,9 @@ COMMANDS:
 | 명령어 | 용도 | 사용 시기 |
 |--------|------|----------|
 | `/status` | 빠른 상태 확인 | 매번 시작할 때 |
-| `/cost` | 비용 상세 보기 | 주 1회 (비용 체크) |
-| `/usage` | 통계 분석 | 월 1회 (패턴 분석) |
-| `/stats` | 추세 분석 | 월 1회 (최적화 검토) |
+| `/cost` | 비용 상세 보기 → `/usage` cost 탭 | 주 1회 (비용 체크) |
+| `/usage` | **한도 유발 요인 분석 + 통계** | 한도 문제 생길 때·주 1회 |
+| `/stats` | 추세 분석 → `/usage` stats 탭 | 월 1회 (최적화 검토) |
 | `/context` | 메모리 상태 | 대화가 길어질 때 |
 | `/doctor` | 문제 진단 | 뭔가 안 될 때 |
 | `/help` | 명령어 확인 | 명령어 까먹었을 때 |

@@ -4,12 +4,13 @@ description: "오토 모드 분류기에 믿을 수 있는 저장소·도메인�
 tags: ["자동생성", "auto mode", "오토모드", "config", "설정", "권한", "enterprise", "CLI", "분류기", "classifier"]
 category: "advanced"
 order: 21
-lastUpdated: "2026-04-23"
+lastUpdated: "2026-04-27"
 ---
 
 <div class="note-star">
 ★ <strong>이 문서는 auto 모드를 이미 쓰고 있는 분을 위한 "고급 조정 가이드"예요.</strong><br />
 ★ auto 모드 자체가 처음이라면 먼저 <a href="/docs/advanced/permission-modes">권한 모드 완전 정리</a>를 읽어보세요.<br />
+★ <strong>v2.1.113 신규</strong>: Max 구독자 + Opus 4.7 조합에서는 이제 <code>--enable-auto-mode</code> 플래그 없이도 auto 모드가 자동 활성화됩니다.<br />
 ★ <strong>공식 문서</strong>: <a href="https://code.claude.com/docs/en/auto-mode-config">code.claude.com/docs/en/auto-mode-config</a>
 </div>
 
@@ -144,6 +145,31 @@ Auto mode effective configuration:
 직원이 개별적으로 `trust-repo`를 호출하지 않아도 회사 표준 설정이 자동 적용돼요.
 
 > 📌 **서버 관리 설정 상세**: [server-managed-settings 공식 문서](https://code.claude.com/docs/en/server-managed-settings)
+
+---
+
+## `"$defaults"` 키워드 — 기본 규칙을 유지하면서 추가하기
+
+`overrideAllowRules`, `overrideBlockRules`, `environmentContext`에서 기본 내장 규칙 목록을 통째로 교체하지 않고 **거기에 추가만 할 수 있어요**.
+
+```json
+{
+  "autoMode": {
+    "allow": ["$defaults", "push to deployment/staging"],
+    "soft_deny": ["$defaults", "delete production database"],
+    "environment": ["$defaults", "CI environment, non-production"]
+  }
+}
+```
+
+`"$defaults"`를 배열 앞에 넣으면 Anthropic이 관리하는 **기본 허용/차단 목록 전체가 먼저 적용**되고, 그 뒤에 내 규칙이 추가돼요.
+
+> 🍱 **비유로 설명하면**: 회사 보안 규칙(기본 목록)이 있는데, 거기다 우리 팀 전용 규칙만 덧붙이는 거예요. 기본 규칙을 버리지 않고 확장하는 방식.
+
+<div class="note-star">
+★ `"$defaults"`를 생략하면 기본 내장 목록이 <strong>완전히 교체</strong>돼요 — 신중하게 쓰세요.<br />
+★ v2.1.114부터 지원돼요 (공식 발표 기준).
+</div>
 
 ---
 
