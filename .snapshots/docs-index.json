@@ -1,9 +1,9 @@
 {
   "_meta": {
     "created": "2026-04-20",
-    "updated": "2026-04-26",
+    "updated": "2026-04-28",
     "source_url": "https://code.claude.com/docs/llms.txt",
-    "note": "2026-04-26 8차 실행: 신규 URL 없음. 총 117개 URL. whats-new 최신은 여전히 2026-w15 (4/6~10). 마케팅·블로그 변경 없음.",
+    "note": "2026-04-28 9차 실행: 신규 URL 6개 감지 — champion-kit, communications-kit, glossary, troubleshoot-install, whats-new/2026-w16, whats-new/2026-w17. 총 123개 URL (이전 117개). 콘텐츠 작성: whats-new-2026-w16.md, whats-new-2026-w17.md, glossary.md (reference 카테고리). champion-kit·communications-kit·troubleshoot-install은 기업/팀 배포 or 기존 troubleshooting 중복으로 이번 회차 스킵.",
     "fetch_status": "200_ok"
   },
   "https://code.claude.com/docs/en/overview": "SNAPSHOT_2026-04-20",
@@ -122,5 +122,11 @@
   "https://code.claude.com/docs/en/web-quickstart": "SNAPSHOT_2026-04-20",
   "https://code.claude.com/docs/en/auto-mode-config": "SNAPSHOT_2026-04-23",
   "https://code.claude.com/docs/en/debug-your-config": "SNAPSHOT_2026-04-23",
-  "https://code.claude.com/docs/en/admin-setup": "SNAPSHOT_2026-04-24"
+  "https://code.claude.com/docs/en/admin-setup": "SNAPSHOT_2026-04-24",
+  "https://code.claude.com/docs/en/champion-kit": "SNAPSHOT_2026-04-28",
+  "https://code.claude.com/docs/en/communications-kit": "SNAPSHOT_2026-04-28",
+  "https://code.claude.com/docs/en/glossary": "SNAPSHOT_2026-04-28",
+  "https://code.claude.com/docs/en/troubleshoot-install": "SNAPSHOT_2026-04-28",
+  "https://code.claude.com/docs/en/whats-new/2026-w16": "SNAPSHOT_2026-04-28",
+  "https://code.claude.com/docs/en/whats-new/2026-w17": "SNAPSHOT_2026-04-28"
 }

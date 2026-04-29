@@ -1,9 +1,9 @@
 {
   "_meta": {
     "created": "2026-04-20",
-    "updated": "2026-04-24",
+    "updated": "2026-04-28",
     "source_url": "https://www.anthropic.com/news",
-    "note": "2026-04-24 6차 실행: 신규 블로그 3건 감지 — Amazon compute 협력(Apr 20), NEC 일본 AI 인력(Apr 24), 선거 안전 업데이트(Apr 24). 선거 및 NEC 건은 코딩 ebook 직접 관련 낮아 콘텐츠 생성 스킵. Amazon 건도 비즈니스 파트너십 뉴스로 스킵.",
+    "note": "2026-04-28 9차 실행: 신규 블로그 2건 감지 — Claude for Creative Work(Apr 28, 내용 미확인으로 다음 회차 재검토), AU/NZ GM 취임(Apr 27, 비즈니스 뉴스 스킵).",
     "fetch_status": "ga-blog.txt 수신"
   },
   "seen": [
@@ -129,6 +129,22 @@
       "date": "2026-04-24",
       "confirmed": false,
       "note": "URL 추정 — 선거 안전 정책 업데이트. 정치/정책 주제, 코딩 ebook과 무관하여 콘텐츠 생성 스킵",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/anthropic-theo-hourmouzis-australia-new-zealand",
+      "title": "Anthropic names Theo Hourmouzis General Manager of Australia & New Zealand and officially opens Sydney office",
+      "date": "2026-04-27",
+      "confirmed": false,
+      "note": "URL 추정 — AU/NZ GM 취임 및 시드니 오피스 공식 오픈. 비즈니스/인사 뉴스, 코딩 ebook과 직접 관련 낮아 콘텐츠 생성 스킵",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/claude-for-creative-work",
+      "title": "Claude for Creative Work",
+      "date": "2026-04-28",
+      "confirmed": false,
+      "note": "URL 추정 — 창작 작업용 Claude 관련 발표. 제목만 확인됨. 코딩 전용 ebook과의 직접 관련 불명확하여 이번 회차 콘텐츠 생성 스킵. 다음 회차에 내용 확인 후 재검토.",
       "content_written": false
     }
   ]
