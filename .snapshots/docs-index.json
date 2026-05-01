@@ -1,9 +1,9 @@
 {
   "_meta": {
     "created": "2026-04-20",
-    "updated": "2026-04-30",
+    "updated": "2026-05-01",
     "source_url": "https://code.claude.com/docs/llms.txt",
-    "note": "2026-04-30 10차 실행: 신규 URL 없음. 총 123개 URL 유지 (이전과 동일). 변경 없음으로 콘텐츠 생성 스킵.",
+    "note": "2026-05-01 11차 실행: 신규 URL 없음. 총 123개 URL 유지 (이전과 동일). whats-new 최신=2026-w17 (Week 18 미출시). 변경 없음으로 콘텐츠 생성 스킵.",
     "fetch_status": "200_ok"
   },
   "https://code.claude.com/docs/en/overview": "SNAPSHOT_2026-04-20",
