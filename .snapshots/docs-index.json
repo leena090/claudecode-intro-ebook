@@ -1,9 +1,9 @@
 {
   "_meta": {
     "created": "2026-04-20",
-    "updated": "2026-05-01",
+    "updated": "2026-05-02",
     "source_url": "https://code.claude.com/docs/llms.txt",
-    "note": "2026-05-01 11차 실행: 신규 URL 없음. 총 123개 URL 유지 (이전과 동일). whats-new 최신=2026-w17 (Week 18 미출시). 변경 없음으로 콘텐츠 생성 스킵.",
+    "note": "2026-05-02 12차 실행: 신규 URL 1개 감지 — deep-links (claude-cli:// URL 스킴). 총 124개 URL. whats-new 최신=2026-w17 (Week 18 미출시). content/docs/advanced/deep-links.md 생성.",
     "fetch_status": "200_ok"
   },
   "https://code.claude.com/docs/en/overview": "SNAPSHOT_2026-04-20",
@@ -128,5 +128,6 @@
   "https://code.claude.com/docs/en/glossary": "SNAPSHOT_2026-04-28",
   "https://code.claude.com/docs/en/troubleshoot-install": "SNAPSHOT_2026-04-28",
   "https://code.claude.com/docs/en/whats-new/2026-w16": "SNAPSHOT_2026-04-28",
-  "https://code.claude.com/docs/en/whats-new/2026-w17": "SNAPSHOT_2026-04-28"
+  "https://code.claude.com/docs/en/whats-new/2026-w17": "SNAPSHOT_2026-04-28",
+  "https://code.claude.com/docs/en/deep-links": "SNAPSHOT_2026-05-02"
 }
