@@ -1,9 +1,9 @@
 {
   "_meta": {
     "created": "2026-04-20",
-    "updated": "2026-04-30",
+    "updated": "2026-05-04",
     "source_url": "https://www.anthropic.com/news",
-    "note": "2026-04-30 10차 실행: 신규 블로그 없음. 'Claude for Creative Work'(Apr 28) 재검토 — 일반 창작 분야 발표로 Claude Code 코딩 ebook과 직접 관련 낮아 콘텐츠 생성 최종 스킵 확정.",
+    "note": "2026-05-04 12차 실행: 신규 블로그 1건 감지 — 'Building a new enterprise AI services company with Blackstone, Hellman & Friedman, and Goldman Sachs'(May 4). 금융 파트너십/비즈니스 뉴스, 코딩 ebook과 직접 관련 낮아 콘텐츠 생성 스킵.",
     "fetch_status": "ga-blog.txt 수신"
   },
   "seen": [
@@ -145,6 +145,14 @@
       "date": "2026-04-28",
       "confirmed": false,
       "note": "URL 추정 — 창작 작업용 Claude 관련 발표. 제목만 확인됨. 코딩 전용 ebook과의 직접 관련 불명확하여 이번 회차 콘텐츠 생성 스킵. 다음 회차에 내용 확인 후 재검토.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/enterprise-ai-services-blackstone",
+      "title": "Building a new enterprise AI services company with Blackstone, Hellman & Friedman, and Goldman Sachs",
+      "date": "2026-05-04",
+      "confirmed": false,
+      "note": "URL 추정 — 블랙스톤·HF·골드만 삭스와 엔터프라이즈 AI 서비스 회사 설립 발표. 금융/투자 비즈니스 뉴스, 코딩 ebook과 직접 관련 낮아 콘텐츠 생성 스킵.",
       "content_written": false
     }
   ]
