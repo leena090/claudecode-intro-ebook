@@ -1,9 +1,9 @@
 {
   "_meta": {
     "created": "2026-04-20",
-    "updated": "2026-04-30",
+    "updated": "2026-05-05",
     "source_url": "https://www.anthropic.com/news",
-    "note": "2026-04-30 10차 실행: 신규 블로그 없음. 'Claude for Creative Work'(Apr 28) 재검토 — 일반 창작 분야 발표로 Claude Code 코딩 ebook과 직접 관련 낮아 콘텐츠 생성 최종 스킵 확정.",
+    "note": "2026-05-05 12차 실행: 신규 블로그 2건. 'Agents for financial services'(May 5) → content/docs/next/agents-financial-services.md 신규 생성. 'Building a new enterprise AI services company...'(May 4) → 비즈니스/투자 뉴스 콘텐츠 생성 스킵.",
     "fetch_status": "ga-blog.txt 수신"
   },
   "seen": [
@@ -144,8 +144,24 @@
       "title": "Claude for Creative Work",
       "date": "2026-04-28",
       "confirmed": false,
-      "note": "URL 추정 — 창작 작업용 Claude 관련 발표. 제목만 확인됨. 코딩 전용 ebook과의 직접 관련 불명확하여 이번 회차 콘텐츠 생성 스킵. 다음 회차에 내용 확인 후 재검토.",
+      "note": "URL 추정 — 창작 작업용 Claude 관련 발표. 제목만 확인됨. 코딩 전용 ebook과의 직접 관련 불명확하여 콘텐츠 생성 최종 스킵.",
       "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/building-enterprise-ai-services-blackstone-hf-goldman",
+      "title": "Building a new enterprise AI services company with Blackstone, Hellman & Friedman, and Goldman Sachs",
+      "date": "2026-05-04",
+      "confirmed": false,
+      "note": "URL 추정 — 사모펀드·투자은행과 AI 서비스 기업 설립 발표. 비즈니스/투자 뉴스, 코딩 ebook 직접 관련 낮아 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/agents-for-financial-services",
+      "title": "Agents for financial services",
+      "date": "2026-05-05",
+      "confirmed": false,
+      "note": "URL 추정 — 금융 서비스 AI 에이전트 공식 발표. Blackstone·Goldman Sachs 파트너십 연계 발표. 콘텐츠 생성: content/docs/next/agents-financial-services.md",
+      "content_written": true
     }
   ]
 }
