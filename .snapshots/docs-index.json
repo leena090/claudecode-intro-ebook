@@ -1,9 +1,9 @@
 {
   "_meta": {
     "created": "2026-04-20",
-    "updated": "2026-05-06",
+    "updated": "2026-05-07",
     "source_url": "https://code.claude.com/docs/llms.txt",
-    "note": "2026-05-06 12차 실행: 신규 URL 1개 감지 — deep-links. 총 124개 URL. whats-new 최신=2026-w17 (Week 18 미출시). 콘텐츠 생성: content/docs/advanced/deep-links.md (new).",
+    "note": "2026-05-07 13차 실행: 신규 URL 없음. 총 124개 URL 유지. whats-new 최신=2026-w17 (Week 18 미출시). 변경 없음.",
     "fetch_status": "200_ok"
   },
   "https://code.claude.com/docs/en/overview": "SNAPSHOT_2026-04-20",
