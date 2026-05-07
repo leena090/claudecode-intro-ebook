@@ -1,9 +1,9 @@
 {
   "_meta": {
     "created": "2026-04-20",
-    "updated": "2026-04-30",
+    "updated": "2026-05-06",
     "source_url": "https://www.anthropic.com/news",
-    "note": "2026-04-30 10차 실행: 신규 블로그 없음. 'Claude for Creative Work'(Apr 28) 재검토 — 일반 창작 분야 발표로 Claude Code 코딩 ebook과 직접 관련 낮아 콘텐츠 생성 최종 스킵 확정.",
+    "note": "2026-05-06 12차 실행: 신규 블로그 3건 감지 (May 4, 5, 6). 사용 한도 증가 발표(May 6) → 콘텐츠 생성: content/docs/next/usage-limits-increase.md. Agents for financial services(May 5) → 업종 특화, 이번 회차 스킵. Blackstone 엔터프라이즈 딜(May 4) → 비즈니스 뉴스, 스킵.",
     "fetch_status": "ga-blog.txt 수신"
   },
   "seen": [
@@ -145,6 +145,30 @@
       "date": "2026-04-28",
       "confirmed": false,
       "note": "URL 추정 — 창작 작업용 Claude 관련 발표. 제목만 확인됨. 코딩 전용 ebook과의 직접 관련 불명확하여 이번 회차 콘텐츠 생성 스킵. 다음 회차에 내용 확인 후 재검토.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/higher-usage-limits-spacex-compute",
+      "title": "Higher usage limits for Claude and a compute deal with SpaceX",
+      "date": "2026-05-06",
+      "confirmed": false,
+      "note": "URL 추정 — 사용 한도 증가 + SpaceX 컴퓨팅 딜. Claude Code 사용자에게 직접 영향. 콘텐츠 생성: content/docs/next/usage-limits-increase.md",
+      "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/agents-for-financial-services",
+      "title": "Agents for financial services",
+      "date": "2026-05-05",
+      "confirmed": false,
+      "note": "URL 추정 — 금융 서비스 에이전트 특화 발표. 업종 특화 내용으로 일반 입문 ebook과 직접 관련 낮아 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/enterprise-ai-services-blackstone",
+      "title": "Building a new enterprise AI services company with Blackstone, Hellman & Friedman, and Goldman Sachs",
+      "date": "2026-05-04",
+      "confirmed": false,
+      "note": "URL 추정 — 엔터프라이즈 AI 서비스 회사 설립 투자 뉴스. 비즈니스/투자 뉴스, 코딩 ebook과 무관하여 콘텐츠 생성 스킵.",
       "content_written": false
     }
   ]
