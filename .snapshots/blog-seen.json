@@ -1,9 +1,9 @@
 {
   "_meta": {
     "created": "2026-04-20",
-    "updated": "2026-05-06",
+    "updated": "2026-05-08",
     "source_url": "https://www.anthropic.com/news",
-    "note": "2026-05-06 12차 실행: 신규 블로그 3건 감지 (May 4, 5, 6). 사용 한도 증가 발표(May 6) → 콘텐츠 생성: content/docs/next/usage-limits-increase.md. Agents for financial services(May 5) → 업종 특화, 이번 회차 스킵. Blackstone 엔터프라이즈 딜(May 4) → 비즈니스 뉴스, 스킵.",
+    "note": "2026-05-08 14차 실행: 신규 블로그 없음. ga-blog.txt 최신 글 = May 6 (Higher usage limits). 변경 없음.",
     "fetch_status": "ga-blog.txt 수신"
   },
   "seen": [
