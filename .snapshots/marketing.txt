@@ -75,12 +75,15 @@
 - "Auto mode: A safer long-running alternative..." (Mar 24, 2026) - 블로그
 - "Improving frontend design through Skills" - 블로그
 
-## 공식 nav 등재 제품·기능 (2026-04-20 확인)
-- Products: Claude, Claude Code, Claude Code for Enterprise, **Claude Cowork**, Pro/Max/Team/Enterprise plan
-- Features: Claude Code Security, Claude for Chrome, Claude for Slack, **Claude for Excel**, **Claude for PowerPoint**, **Claude for Word**, Skills
+## 공식 nav 등재 제품·기능 (2026-05-08 업데이트)
+- Products: Claude, Claude Code, Claude Code for Enterprise, **Claude Cowork**, Claude Security, Pro/Max/Team/Enterprise plan
+- Features: Claude for Chrome, Claude for Slack, **Claude for Microsoft 365** *(← 이전: Claude for Excel·Word·PowerPoint 3개 → 1개로 통합)*, Skills
 - Models: **Mythos preview**, Opus, Sonnet, Haiku
 - Resources: Plugins, Connectors, Plugin Marketplace 포함
 - Solutions: AI agents, Code modernization, Coding, Customer support, Education, Financial services, Government, Healthcare, Life sciences, Nonprofits, Security
+
+## 변경 이력
+- 2026-05-08: **[변경]** Features nav에서 "Claude for Excel", "Claude for PowerPoint", "Claude for Word" 3개 → "Claude for Microsoft 365" 1개로 통합 감지. 콘텐츠 생성: content/docs/cowork/claude-for-m365.md (new)
 
 ## fetch_log
 - 2026-04-20 이전: 403 Forbidden (2회)
@@ -92,3 +95,4 @@
 - 2026-04-30 10차: 신규 변경 없음 확인. ga-marketing.txt 전체 비교 완료.
 - 2026-05-06 12차: 신규 변경 없음 확인. 요금제·모델·기능·nav 항목 모두 이전 스냅샷과 동일. ga-marketing.txt 전체 비교 완료.
 - 2026-05-07 13차: 신규 변경 없음 확인. 요금제·모델·기능·nav 항목 모두 이전 스냅샷과 동일. ga-marketing.txt 전체 비교 완료.
+- 2026-05-08 14차: **[변경 감지]** Features nav "Claude for Excel·Word·PowerPoint" → "Claude for Microsoft 365" 통합. content/docs/cowork/claude-for-m365.md 신규 생성.
