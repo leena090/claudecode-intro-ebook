@@ -96,3 +96,4 @@
 - 2026-05-06 12차: 신규 변경 없음 확인. 요금제·모델·기능·nav 항목 모두 이전 스냅샷과 동일. ga-marketing.txt 전체 비교 완료.
 - 2026-05-07 13차: 신규 변경 없음 확인. 요금제·모델·기능·nav 항목 모두 이전 스냅샷과 동일. ga-marketing.txt 전체 비교 완료.
 - 2026-05-08 14차: **[변경 감지]** Features nav "Claude for Excel·Word·PowerPoint" → "Claude for Microsoft 365" 통합. content/docs/cowork/claude-for-m365.md 신규 생성.
+- 2026-05-09 15차: 신규 변경 없음. 요금제·모델·기능·nav 항목 모두 이전 스냅샷과 동일. ga-marketing.txt 전체 비교 완료.
