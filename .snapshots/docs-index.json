@@ -1,9 +1,9 @@
 {
   "_meta": {
     "created": "2026-04-20",
-    "updated": "2026-05-08",
+    "updated": "2026-05-11",
     "source_url": "https://code.claude.com/docs/llms.txt",
-    "note": "2026-05-08 14차 실행: 신규 URL 없음. 총 124개 URL 유지. whats-new 최신=2026-w17 (Week 18 미출시). 변경 없음.",
+    "note": "2026-05-11 15차 실행: 신규 URL 7개 감지 (agent-view, agents, claude-platform-on-aws, goal, whats-new/2026-w18, whats-new/2026-w19, worktrees). 총 131개 URL. 콘텐츠 생성: agent-view.md, agents-parallel.md, goal.md, whats-new-w18-w19.md, worktrees.md 업데이트. claude-platform-on-aws는 엔터프라이즈 내용으로 콘텐츠 생성 스킵.",
     "fetch_status": "200_ok"
   },
   "https://code.claude.com/docs/en/overview": "SNAPSHOT_2026-04-20",
@@ -129,5 +129,12 @@
   "https://code.claude.com/docs/en/troubleshoot-install": "SNAPSHOT_2026-04-28",
   "https://code.claude.com/docs/en/whats-new/2026-w16": "SNAPSHOT_2026-04-28",
   "https://code.claude.com/docs/en/whats-new/2026-w17": "SNAPSHOT_2026-04-28",
-  "https://code.claude.com/docs/en/deep-links": "SNAPSHOT_2026-05-06"
+  "https://code.claude.com/docs/en/deep-links": "SNAPSHOT_2026-05-06",
+  "https://code.claude.com/docs/en/agent-view": "SNAPSHOT_2026-05-11",
+  "https://code.claude.com/docs/en/agents": "SNAPSHOT_2026-05-11",
+  "https://code.claude.com/docs/en/claude-platform-on-aws": "SNAPSHOT_2026-05-11",
+  "https://code.claude.com/docs/en/goal": "SNAPSHOT_2026-05-11",
+  "https://code.claude.com/docs/en/whats-new/2026-w18": "SNAPSHOT_2026-05-11",
+  "https://code.claude.com/docs/en/whats-new/2026-w19": "SNAPSHOT_2026-05-11",
+  "https://code.claude.com/docs/en/worktrees": "SNAPSHOT_2026-05-11"
 }

@@ -4,7 +4,7 @@ description: "Git 워크트리로 독립적인 작업 공간을 만들어 병렬
 tags: ["고급", "워크트리", "병렬", "Git"]
 category: "advanced"
 order: 8
-lastUpdated: "2026-04-08"
+lastUpdated: "2026-05-11"
 ---
 
 ## 워크트리가 뭔가요?
@@ -61,6 +61,61 @@ claude --worktree
 ```
 
 각 워크트리는 **완전히 독립적**이에요. A안에서 뭘 바꿔도 B안에는 영향이 없습니다.
+
+---
+
+## 🆕 신기능: .worktreeinclude — 환경 파일 자동 복사 (2026-05)
+
+워크트리는 깨끗한 빈 공간이라서 `.env` 같은 환경 파일이 없어요. 매번 복사하기 귀찮다면 `.worktreeinclude` 파일을 만들면 됩니다.
+
+프로젝트 루트에 `.worktreeinclude` 파일을 만들고, 복사하고 싶은 파일 패턴을 적어주세요:
+
+```text
+# .worktreeinclude (프로젝트 루트에 저장)
+.env
+.env.local
+config/secrets.json
+```
+
+이제 새 워크트리가 만들어질 때 자동으로 저 파일들이 복사됩니다. `.gitignore`에 있는 파일들만 복사되니까 추적 중인 파일은 중복 복사 안 돼요.
+
+---
+
+## 🆕 신기능: PR에서 워크트리 시작하기 (2026-05)
+
+특정 PR(풀 리퀘스트)을 기반으로 워크트리를 바로 열 수 있어요:
+
+```bash
+# PR 번호로 시작
+claude --worktree "#1234"
+
+# GitHub PR URL로 시작
+claude --worktree "https://github.com/my-org/my-repo/pull/1234"
+```
+
+PR의 코드를 받아서 거기서 작업을 이어갈 때 유용합니다. 자동으로 `.claude/worktrees/pr-1234/` 폴더에 생겨요.
+
+---
+
+## 🆕 신기능: worktree.baseRef 설정 (2026-05)
+
+워크트리를 만들 때 어디서부터 시작할지 설정할 수 있어요:
+
+```json
+// settings.json (또는 ~/.claude/settings.json)
+{
+  "worktree": {
+    "baseRef": "head"
+  }
+}
+```
+
+| 값 | 설명 |
+|----|------|
+| `"fresh"` (기본값) | 원격 저장소 최신 버전에서 시작 (깨끗한 상태) |
+| `"head"` | 지금 내 로컬 HEAD(작업 중인 상태)에서 시작 |
+
+아직 push 안 한 커밋이 있는데 워크트리에도 그 내용이 있어야 할 때 `"head"`를 씁니다.
 
 ---
 
