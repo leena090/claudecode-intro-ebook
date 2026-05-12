@@ -4,7 +4,7 @@ description: "Git 워크트리로 독립적인 작업 공간을 만들어 병렬
 tags: ["고급", "워크트리", "병렬", "Git"]
 category: "advanced"
 order: 8
-lastUpdated: "2026-04-08"
+lastUpdated: "2026-05-12"
 ---
 
 ## 워크트리가 뭔가요?
@@ -90,10 +90,68 @@ claude --worktree
 
 ---
 
+## 시작 브랜치 설정하기 (2026-05 신규) `[공]`
+
+워크트리를 어느 브랜치에서 시작할지 설정할 수 있어요:
+
+```json
+// .claude/settings.json
+{
+  "worktree": {
+    "baseRef": "head"
+  }
+}
+```
+
+| 설정값 | 설명 |
+|--------|------|
+| `"fresh"` (기본값) | 원격 저장소 기본 브랜치에서 깨끗하게 시작 |
+| `"head"` | 현재 내 로컬 최신 커밋부터 시작 (push 안 된 변경사항 포함) |
+
+---
+
+## PR URL로 워크트리 시작하기
+
+특정 Pull Request 기반으로 워크트리를 만들 수 있어요:
+
+```bash
+# PR 번호로 시작
+claude --worktree "#1234"
+
+# 또는 PR URL 전체
+claude --worktree "https://github.com/내-조직/저장소/pull/1234"
+```
+
+PR 코드를 검토하거나 수정할 때 유용해요. `[공]`
+
+---
+
+## .env 파일 자동 복사하기
+
+워크트리는 새 복사본이라 `.env`나 비공개 설정 파일이 없어요. `.worktreeinclude` 파일을 만들면 자동으로 복사해줍니다:
+
+```text
+# .worktreeinclude (프로젝트 루트에 생성)
+.env
+.env.local
+config/secrets.json
+```
+
+`.gitignore`에 있는 파일만 복사 대상이 되므로 추적 중인 파일은 중복되지 않아요. `[공]`
+
+---
+
+## Agent View와 함께 쓰기
+
+[Agent View](./agent-view)에서 백그라운드 세션을 시작하면, Claude Code가 **자동으로 워크트리를 만들어서** 각 세션을 격리시켜요. 따로 설정할 필요가 없습니다.
+
+---
+
 ## 주의사항
 
 <div class="note-circle">
-○ 워크트리는 Git 저장소에서만 사용할 수 있습니다. Git이 뭔지 모르셔도 괜찮아요 — Claude Code가 알아서 처리해줍니다.
+○ 워크트리는 Git 저장소에서만 사용할 수 있습니다. Git이 뭔지 모르셔도 괜찮아요 — Claude Code가 알아서 처리해줍니다.<br /><br />
+○ <code>.claude/worktrees/</code>를 <code>.gitignore</code>에 추가해두면, 워크트리 내용이 메인 저장소에 추적 파일로 나타나지 않아요.
 </div>
 
 ---
