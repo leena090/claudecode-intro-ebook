@@ -1,9 +1,9 @@
 {
   "_meta": {
     "created": "2026-04-20",
-    "updated": "2026-05-12",
+    "updated": "2026-05-13",
     "source_url": "https://code.claude.com/docs/llms.txt",
-    "note": "2026-05-12 15차 실행: 신규 URL 7개 감지. agent-view, agents, claude-platform-on-aws, goal, whats-new/2026-w18, whats-new/2026-w19, worktrees. 총 131개 URL. 콘텐츠 생성: goal-command.md(new), agent-view.md(new), whats-new-w18.md(new), whats-new-w19.md(new), worktrees.md(update).",
+    "note": "2026-05-13 16차 실행: 신규 URL 없음. 총 131개 URL 동일. whats-new/2026-w20 미등재(아직 미발행). llms.txt 200 OK 정상 수신.",
     "fetch_status": "200_ok"
   },
   "https://code.claude.com/docs/en/overview": "SNAPSHOT_2026-04-20",
