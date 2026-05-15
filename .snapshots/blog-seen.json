@@ -1,9 +1,9 @@
 {
   "_meta": {
     "created": "2026-04-20",
-    "updated": "2026-05-13",
+    "updated": "2026-05-15",
     "source_url": "https://www.anthropic.com/news",
-    "note": "2026-05-13 16차 실행: 신규 블로그 1개 감지. claude-for-small-business (May 13). 콘텐츠 생성: content/docs/next/claude-for-small-business.md (new).",
+    "note": "2026-05-15 17차 실행: 신규 블로그 2개 감지. PwC (May 14, 엔터프라이즈 파트너십, 스킵), Gates Foundation (May 14, 자선재단 파트너십, 스킵). 콘텐츠 생성 없음.",
     "fetch_status": "ga-blog.txt 수신"
   },
   "seen": [
@@ -178,6 +178,22 @@
       "confirmed": false,
       "note": "URL 추정 — 소규모 사업장 전용 Claude 솔루션 발표. 마케팅 Solutions nav에 'Small business' 항목 동시 추가. ebook 핵심 타깃(40~60대 소사업주)과 직접 관련. 콘텐츠 생성: content/docs/next/claude-for-small-business.md (new).",
       "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/pwc-claude-enterprise",
+      "title": "PwC is deploying Claude to build technology, execute deals, and reinvent enterprise functions for clients",
+      "date": "2026-05-14",
+      "confirmed": false,
+      "note": "URL 추정 — PwC 엔터프라이즈 배포 파트너십. 대형 전문서비스 기업의 Claude 도입 사례. 입문 ebook 핵심 타깃(개인·소규모)과 거리 있어 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/gates-foundation-partnership",
+      "title": "Anthropic forms $200 million partnership with the Gates Foundation",
+      "date": "2026-05-14",
+      "confirmed": false,
+      "note": "URL 추정 — 게이츠재단 2억 달러 파트너십. 글로벌 보건·교육 분야 AI 활용. 코딩 입문 ebook과 직접 관련 없어 콘텐츠 생성 스킵.",
+      "content_written": false
     }
   ]
 }
