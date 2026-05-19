@@ -1,9 +1,9 @@
 {
   "_meta": {
     "created": "2026-04-20",
-    "updated": "2026-05-13",
+    "updated": "2026-05-19",
     "source_url": "https://code.claude.com/docs/llms.txt",
-    "note": "2026-05-13 16차 실행: 신규 URL 없음. 총 131개 URL 동일. whats-new/2026-w20 미등재(아직 미발행). llms.txt 200 OK 정상 수신.",
+    "note": "2026-05-19 17차 실행: 신규 URL 3개 감지. desktop-changelog(신규 데스크톱 전용 릴리즈 노트), prompt-caching(프롬프트 캐싱 원리 문서), whats-new/2026-w20(5/11-15 주간 업데이트 — 에이전트 뷰/goal/패스트 모드 Opus 4.7). 총 134개 URL. llms.txt 200 OK 정상 수신.",
     "fetch_status": "200_ok"
   },
   "https://code.claude.com/docs/en/overview": "SNAPSHOT_2026-04-20",
@@ -136,5 +136,8 @@
   "https://code.claude.com/docs/en/goal": "SNAPSHOT_2026-05-12",
   "https://code.claude.com/docs/en/whats-new/2026-w18": "SNAPSHOT_2026-05-12",
   "https://code.claude.com/docs/en/whats-new/2026-w19": "SNAPSHOT_2026-05-12",
-  "https://code.claude.com/docs/en/worktrees": "SNAPSHOT_2026-05-12"
+  "https://code.claude.com/docs/en/worktrees": "SNAPSHOT_2026-05-12",
+  "https://code.claude.com/docs/en/desktop-changelog": "SNAPSHOT_2026-05-19",
+  "https://code.claude.com/docs/en/prompt-caching": "SNAPSHOT_2026-05-19",
+  "https://code.claude.com/docs/en/whats-new/2026-w20": "SNAPSHOT_2026-05-19"
 }
