@@ -1,9 +1,9 @@
 {
   "_meta": {
     "created": "2026-04-20",
-    "updated": "2026-05-13",
+    "updated": "2026-05-25",
     "source_url": "https://www.anthropic.com/news",
-    "note": "2026-05-13 16차 실행: 신규 블로그 1개 감지. claude-for-small-business (May 13). 콘텐츠 생성: content/docs/next/claude-for-small-business.md (new).",
+    "note": "2026-05-25 17차 실행: 신규 블로그 7개 감지. 콘텐츠 생성: content/docs/next/stainless-acquisition.md (new) for Stainless 인수. 나머지 6개는 비즈니스/파트너십/정치 주제로 코딩 ebook과 직접 관련 낮아 스킵.",
     "fetch_status": "ga-blog.txt 수신"
   },
   "seen": [
@@ -178,6 +178,62 @@
       "confirmed": false,
       "note": "URL 추정 — 소규모 사업장 전용 Claude 솔루션 발표. 마케팅 Solutions nav에 'Small business' 항목 동시 추가. ebook 핵심 타깃(40~60대 소사업주)과 직접 관련. 콘텐츠 생성: content/docs/next/claude-for-small-business.md (new).",
       "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/anthropic-acquires-stainless",
+      "title": "Anthropic acquires Stainless",
+      "date": "2026-05-18",
+      "confirmed": false,
+      "note": "URL 추정 — SDK 자동 생성 회사 Stainless 인수. Claude Python/TypeScript SDK 품질 향상 기대. 개발자 관련성 있음. 콘텐츠 생성: content/docs/next/stainless-acquisition.md (new).",
+      "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/pwc-deploying-claude",
+      "title": "PwC is deploying Claude to build technology, execute deals, and reinvent enterprise functions for clients",
+      "date": "2026-05-14",
+      "confirmed": false,
+      "note": "URL 추정 — PwC 엔터프라이즈 배포. 비즈니스/컨설팅 뉴스, 코딩 ebook과 직접 관련 낮아 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/gates-foundation-partnership",
+      "title": "Anthropic forms $200 million partnership with the Gates Foundation",
+      "date": "2026-05-14",
+      "confirmed": false,
+      "note": "URL 추정 — 게이츠 재단 $200M 파트너십. 자선/연구 주제, 코딩 ebook과 무관하여 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/kpmg-claude-integration",
+      "title": "KPMG integrates Claude across its core business and workforce of more than 276,000 in strategic alliance",
+      "date": "2026-05-19",
+      "confirmed": false,
+      "note": "URL 추정 — KPMG 엔터프라이즈 통합. 비즈니스/컨설팅 뉴스, 코딩 ebook과 직접 관련 낮아 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/widening-conversation-frontier-ai",
+      "title": "Widening the conversation on frontier AI",
+      "date": "2026-05-19",
+      "confirmed": false,
+      "note": "URL 추정 — AI 정책/안전 논의. 코딩 ebook과 무관하여 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/project-glasswing-update",
+      "title": "Project Glasswing: An initial update",
+      "date": "2026-05-22",
+      "confirmed": false,
+      "note": "URL 추정 — 2026-04-07 발표된 Project Glasswing의 업데이트. 소프트웨어 보안 이니셔티브 진행 현황. 코딩 ebook과 직접 관련 낮아 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/chris-olah-pope-leo-encyclical",
+      "title": "Anthropic co-founder Chris Olah's remarks on Pope Leo XIV's encyclical \"Magnifica humanitas\"",
+      "date": "2026-05-25",
+      "confirmed": false,
+      "note": "URL 추정 — 종교/철학 주제. 코딩 ebook과 무관하여 콘텐츠 생성 스킵.",
+      "content_written": false
     }
   ]
 }

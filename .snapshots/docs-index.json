@@ -1,9 +1,9 @@
 {
   "_meta": {
     "created": "2026-04-20",
-    "updated": "2026-05-13",
+    "updated": "2026-05-25",
     "source_url": "https://code.claude.com/docs/llms.txt",
-    "note": "2026-05-13 16차 실행: 신규 URL 없음. 총 131개 URL 동일. whats-new/2026-w20 미등재(아직 미발행). llms.txt 200 OK 정상 수신.",
+    "note": "2026-05-25 17차 실행: 신규 URL 9개 감지. agent-sdk/session-storage, desktop-changelog, managed-mcp, plugin-hints, prompt-caching, prompt-library, sandbox-environments, sessions, whats-new/2026-w20. 총 140개 URL. 콘텐츠 생성: next/whats-new-w20.md (new), tips/prompt-library.md (new), advanced/prompt-caching.md (new), commands/session-commands.md (edit: --continue/--from-pr 추가). sandbox-environments 스킵(advanced/sandbox-security.md 중복), managed-mcp 스킵(기업관리자용), desktop-changelog 스킵(changelog류), plugin-hints 스킵(플러그인개발자용), agent-sdk/session-storage 스킵(SDK고급).",
     "fetch_status": "200_ok"
   },
   "https://code.claude.com/docs/en/overview": "SNAPSHOT_2026-04-20",
@@ -136,5 +136,14 @@
   "https://code.claude.com/docs/en/goal": "SNAPSHOT_2026-05-12",
   "https://code.claude.com/docs/en/whats-new/2026-w18": "SNAPSHOT_2026-05-12",
   "https://code.claude.com/docs/en/whats-new/2026-w19": "SNAPSHOT_2026-05-12",
-  "https://code.claude.com/docs/en/worktrees": "SNAPSHOT_2026-05-12"
+  "https://code.claude.com/docs/en/worktrees": "SNAPSHOT_2026-05-12",
+  "https://code.claude.com/docs/en/agent-sdk/session-storage": "SNAPSHOT_2026-05-25",
+  "https://code.claude.com/docs/en/desktop-changelog": "SNAPSHOT_2026-05-25",
+  "https://code.claude.com/docs/en/managed-mcp": "SNAPSHOT_2026-05-25",
+  "https://code.claude.com/docs/en/plugin-hints": "SNAPSHOT_2026-05-25",
+  "https://code.claude.com/docs/en/prompt-caching": "SNAPSHOT_2026-05-25",
+  "https://code.claude.com/docs/en/prompt-library": "SNAPSHOT_2026-05-25",
+  "https://code.claude.com/docs/en/sandbox-environments": "SNAPSHOT_2026-05-25",
+  "https://code.claude.com/docs/en/sessions": "SNAPSHOT_2026-05-25",
+  "https://code.claude.com/docs/en/whats-new/2026-w20": "SNAPSHOT_2026-05-25"
 }
