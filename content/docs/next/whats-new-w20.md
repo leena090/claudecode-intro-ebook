@@ -1,166 +1,139 @@
 ---
-title: "[공] 2026년 Week 20 업데이트 — Agent View, /goal, Fast 모드 Opus 4.7"
-description: "5월 11~15일 릴리즈: 여러 세션 한 화면 관리, 목표 설정 자율 실행, Fast 모드 최신 모델 적용"
-tags: ["자동생성", "whats-new", "agent-view", "goal", "fast-mode", "opus47", "week20"]
+title: "[공] 주간 업데이트: 2026년 5월 11일 ~ 15일 (Week 20)"
+description: "claude agents로 모든 세션 한눈에 관리, /goal로 목표 달성까지 자동 실행, Fast Mode가 Opus 4.7 기본값으로"
+tags: ["업데이트", "2026", "week20", "agent-view", "goal", "fast-mode", "자동생성"]
 category: "next"
-order: 7
-lastUpdated: "2026-05-22"
+order: 6
+lastUpdated: "2026-05-24"
 ---
 
 <div class="note-star">
-★ <strong>출처</strong> — <a href="https://code.claude.com/docs/en/whats-new/2026-w20">code.claude.com/docs/en/whats-new/2026-w20</a> (v2.1.139 → v2.1.142, 2026-05-11~15) <code>[공]</code>
+★ <strong>공식 발표 기준</strong> — v2.1.139 ~ v2.1.142 업데이트 내역. <code>[공]</code><br />
+👉 <a href="https://code.claude.com/docs/en/whats-new/2026-w20" target="_blank">공식 문서: code.claude.com/docs/en/whats-new/2026-w20</a>
 </div>
 
-## Week 20 핵심 3가지
-
-이번 주엔 Claude Code를 **혼자 일하는 부하직원 → 팀을 이끄는 PM**으로 업그레이드하는 기능들이 나왔어요.
+## 이번 주 핵심 변경 (3가지)
 
 ---
 
-## 1️⃣ Agent View — 여러 작업을 한 화면에서
-
-### 어떤 기능인가요?
+### 1️⃣ Agent View — 모든 세션을 한 화면에서 관리
 
 ```bash
 claude agents
 ```
 
-이 명령어 하나로 **지금 돌아가는 모든 Claude Code 세션을 한 화면**에서 볼 수 있어요.
+> 🍱 **비유**: 여러 직원이 각자 다른 방에서 일하고 있을 때, 사장님이 각 방을 따로 들러봐야 했다면 — 이제는 **CCTV 모니터처럼** 한 화면에서 누가 일하고, 누가 지시를 기다리고, 누가 끝났는지 한눈에 볼 수 있어요.
 
-🍱 **비유**: 사무실 CCTV 모니터 같은 거예요. 직원 A는 버그 수정 중, 직원 B는 PR 리뷰 중, 직원 C는 테스트 조사 중 — 전부 한 화면에서 상태를 확인하고, 필요할 때만 들어가서 지시하면 됩니다.
+**리서치 프리뷰** 기능이에요. 지금 실행 중인 모든 Claude Code 세션을 목록으로 보여줘요:
 
-### 어떻게 쓰나요?
-
-```bash
-# 대시보드 열기
-claude agents
-
-# 특정 디렉터리의 세션만 보기
-claude agents --cwd ./my-project
-```
-
-- 각 세션은 "실행 중 / 내 입력 기다림 / 완료" 상태로 표시
-- 세션 행을 선택하면 **그 대화로 바로 들어가기**
-- `←` 키를 누르면 다시 목록으로
-- 터미널을 닫아도 백그라운드 세션은 계속 실행
-
-### 새로 추가된 플래그들
+| 상태 | 의미 |
+|------|------|
+| 진행 중 | Claude가 혼자 작업 중 |
+| 입력 대기 | Claude가 내 결정을 기다리는 중 |
+| 완료 | 작업 끝 |
 
 ```bash
-claude agents \
-  --add-dir ./extra-context \
-  --model claude-opus-4-7 \
-  --permission-mode plan \
-  --effort high
+claude agents                 # 전체 세션 대시보드 열기
+claude agents --cwd ./myapp   # 특정 폴더의 세션만 보기
 ```
 
-| 플래그 | 설명 |
-|---|---|
-| `--add-dir <경로>` | 추가 디렉터리를 세션에 포함 |
-| `--model <모델명>` | 사용할 모델 지정 |
-| `--permission-mode <모드>` | 허가 모드 설정 |
-| `--effort <레벨>` | 작업 깊이 설정 (low/medium/high) |
-| `--settings <파일>` | 커스텀 설정 파일 경로 |
+대시보드에서 **각 세션(행)에 접속하면** 그 대화로 들어가서 직접 대화할 수 있고, `←` 키를 누르면 다시 목록으로 돌아와요. 터미널을 닫아도 백그라운드 세션은 계속 실행 중이에요. `[공]`
 
-<div class="note-circle">
-○ 리서치 프리뷰 단계입니다. 기능이 계속 발전 중이에요.
-</div>
+새 세션을 시작할 때도 플래그를 붙일 수 있어요:
+
+```bash
+# 특정 설정·모델로 백그라운드 세션 실행
+claude agents --model claude-opus-4-7 --settings ./team.json
+```
 
 ---
 
-## 2️⃣ /goal — "이게 될 때까지 알아서 해줘"
-
-### 어떤 기능인가요?
+### 2️⃣ /goal — "조건 충족될 때까지 계속 작업해"
 
 ```
-> /goal 테스트 디렉터리의 모든 auth 테스트가 통과하고 lint가 깨끗한 상태
+/goal all tests in test/auth pass and the lint step is clean
 ```
 
-이렇게 **완료 조건**을 말하면, Claude가 그 조건을 달성할 때까지 **자동으로 여러 턴을 진행**합니다.
+> 🍱 **비유**: "숙제 다 할 때까지 나오지 마"라고 방에 들여보내면 아이가 스스로 끝낼 때까지 반복하는 것처럼, Claude도 목표 조건을 주면 **조건이 충족될 때까지 스스로 계속 작업**해요.
 
-🍱 **비유**: 내비게이션처럼요. "목적지: 부산"을 입력하면, 신호등·주유·우회로 상황을 알아서 처리하고 도착할 때까지 안내합니다. 중간마다 "이제 어디로 갈까요?"라고 묻지 않아요.
-
-### 사용 예시
+**사용법:**
 
 ```
-> /goal auth 테스트 전체 통과 + lint 에러 없음
+/goal 달성 조건을 영어로 씁니다
 ```
 
-→ Claude가 알아서 테스트 실행 → 실패 분석 → 코드 수정 → 재실행 ... 목표 달성 시 자동 종료
+예시:
 
 ```
-> /goal 로그인 페이지 TypeScript 에러 없이 빌드 성공
+# 로그인 테스트 전체 통과할 때까지
+/goal all tests in test/auth pass
+
+# 린트(코드 스타일 검사) 오류 0개까지
+/goal npm run lint returns zero errors
+
+# 빌드 결과물이 생성될 때까지
+/goal dist/bundle.js exists
 ```
 
-→ tsc 실행 → 에러 수정 → 재빌드 ... 완료 시 "목표 달성" 알림
+매 작업 턴이 끝날 때마다 **빠른 모델이 조건 충족 여부를 자동 확인**해요. 아직 안 됐으면 다음 작업을 시작하고, 충족되면 멈춰요. `[공]`
 
-### 어디서 쓸 수 있나요?
+**언제 유용할까요?**
 
-- 일반 대화 중 (`/goal` 명령어)
-- `claude -p` 비대화 모드
-- Remote Control (모바일에서 지시)
-
-<div class="note-star">
-★ <strong>목표 달성 판단 방식</strong>: 매 턴이 끝날 때마다 빠른 판단 모델이 조건 충족 여부를 확인합니다. 목표 클리어 시 자동으로 종료돼요. <code>[공식]</code>
-</div>
+- 테스트 전체를 통과시켜야 할 때 (코드 고침 → 실행 → 실패 → 다시 고침... 반복)
+- 린트 오류를 모두 없애야 할 때
+- 특정 파일이나 폴더가 만들어질 때까지 기다려야 할 때
 
 ---
 
-## 3️⃣ Fast 모드 → Opus 4.7 기본값
+### 3️⃣ Fast Mode → Opus 4.7 기본값으로 업그레이드
 
-### 무엇이 바뀌었나요?
+`/fast`를 켜면 이제 **Opus 4.7** (이전: Opus 4.6)로 실행돼요.
 
-`/fast` 명령어를 켰을 때 이제 **Opus 4.7**이 기본으로 실행됩니다. (이전엔 Opus 4.6)
+> 🍱 **비유**: 같은 요금으로 예전엔 작년 모델 렌터카를 줬다면, 이제 올해 최신 모델을 빌려줘요. 가격은 그대로인데 차가 더 좋아졌어요.
+
+```
+/fast       ← 이제 Opus 4.7 빠른 버전으로 실행돼요
+```
+
+**변경된 내용:**
 
 | 항목 | 이전 | 이후 |
-|---|---|---|
-| Fast 모드 기본 모델 | Opus 4.6 | **Opus 4.7** |
-| 속도 | 2.5배 빠름 | 동일 (2.5배 빠름) |
-| 요금 | $30/$150 per MTok | **동일** (변경 없음) |
+|------|------|------|
+| `/fast` 기본 모델 | Opus 4.6 | **Opus 4.7** |
+| 속도 | 약 2.5배 빠름 | 동일 (약 2.5배) |
+| 가격 | $30/$150 per MTok | **동일** |
 
-### Opus 4.6으로 고정하고 싶다면?
+Opus 4.6으로 고정하고 싶으면 환경변수를 설정하면 돼요:
 
 ```bash
-# 환경변수 설정으로 Opus 4.6 고속 모드 유지
 export CLAUDE_CODE_OPUS_4_6_FAST_MODE_OVERRIDE=1
 ```
 
-<div class="note-circle">
-○ 요금은 그대로입니다. 더 좋은 모델로 같은 가격에 업그레이드된 셈이에요. 🎉
-</div>
+`[공]`
 
 ---
 
-## 그 외 소소한 개선들
+## 기타 소소한 개선들
 
-<details>
-<summary>자세히 보기 (기술 사용자용)</summary>
-
-| 항목 | 내용 |
-|---|---|
-| **Rewind에 "여기까지 요약"** | 오래된 컨텍스트를 압축하면서도 최근 대화는 보존 |
-| **Hook args 배열 형식** | `args: string[]` 형태로 작성하면 쉘 없이 직접 실행 (경로에 공백 있어도 안전) |
-| **PostToolUse `continueOnBlock`** | 훅이 거부해도 이유를 Claude에게 알려주고 턴 계속 진행 |
-| **`terminalSequence` 출력** | 훅이 터미널 알림·창 제목·벨 소리를 보낼 수 있게 됨 |
-| **MCP에 `CLAUDE_PROJECT_DIR`** | MCP stdio 서버도 현재 프로젝트 디렉터리 경로를 환경변수로 받음 |
-| **API Key 설정 시 일부 기능 비활성화** | `ANTHROPIC_API_KEY` 등 설정 시 Remote Control·/schedule·Claude.ai MCP 커넥터 자동 비활성화 |
-| **`claude plugin details <이름>`** | 플러그인 컴포넌트 목록 + 세션당 예상 토큰 비용 표시 |
-| **/feedback 범위 확장** | 최근 24시간 또는 7일 세션을 포함해서 신고 가능 |
-
-</details>
+| 기능 | 내용 |
+|------|------|
+| **`claude agents` 실행 옵션** | `--add-dir`, `--settings`, `--mcp-config`, `--model`, `--effort` 등으로 백그라운드 세션 세부 설정 가능 |
+| **훅 — 쉘 없이 직접 실행** | `args: string[]` 형식으로 셸을 거치지 않고 명령어를 직접 실행, 경로에 따옴표 불필요 |
+| **훅 — 차단 시 대화 계속** | `continueOnBlock` 옵션을 켜면 훅이 거절해도 이유를 Claude에게 전달하고 대화를 이어가요 |
+| **Rewind — "여기까지 요약"** | 대화를 되감을 때 오래된 부분은 요약하고 최근 것만 남길 수 있어요 |
+| **API 키 사용 시 일부 기능 비활성화** | `ANTHROPIC_API_KEY`를 설정하면 Remote Control, `/schedule`, claude.ai MCP 커넥터 자동 비활성화 |
+| **MCP — 프로젝트 경로 자동 전달** | MCP 서버에 `CLAUDE_PROJECT_DIR` 환경변수가 자동으로 전달돼요 |
+| **플러그인 상세 보기** | `claude plugin details <이름>` 명령어로 플러그인 구성과 예상 토큰 비용 확인 가능 |
+| **/feedback 히스토리 포함** | 피드백 보낼 때 최근 24시간이나 7일간의 세션도 포함 가능 |
+| **에이전트 타입 대소문자 무시** | `"Code Reviewer"` → `code-reviewer` 자동 변환돼요 |
 
 ---
 
-## 한 줄 요약
+## 버전 정보
 
-> **Agent View**로 여러 작업을 한눈에 → **`/goal`**로 달성 조건만 주고 기다리기 → **Fast 모드**는 이제 Opus 4.7로 더 스마트하게.
+이번 주 업데이트: **v2.1.139 → v2.1.142** `[공]`
 
----
-
-## 더 알아보기
-
-- [Agent View 공식 문서](https://code.claude.com/docs/en/agent-view) `[공]`
-- [/goal 명령어 문서](https://code.claude.com/docs/en/goal) `[공]`
-- [Fast 모드 문서](https://code.claude.com/docs/en/fast-mode) `[공]`
-- [이 ebook의 Agent View 문서](/docs/advanced/agent-view)
-- [이 ebook의 /goal 명령어 문서](/docs/commands/goal-command)
+버전 확인:
+```bash
+claude --version
+```
