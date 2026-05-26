@@ -1,9 +1,9 @@
 {
   "_meta": {
     "created": "2026-04-20",
-    "updated": "2026-05-05",
+    "updated": "2026-05-14",
     "source_url": "https://www.anthropic.com/news",
-    "note": "2026-05-05 12차 실행: 신규 블로그 2건. 'Agents for financial services'(May 5) → content/docs/next/agents-financial-services.md 신규 생성. 'Building a new enterprise AI services company...'(May 4) → 비즈니스/투자 뉴스 콘텐츠 생성 스킵.",
+    "note": "2026-05-14 17차 실행: 신규 블로그 1개 감지. gates-foundation-partnership (May 14). 비즈니스 파트너십 뉴스, 코딩 ebook 직접 관련 낮아 콘텐츠 생성 스킵.",
     "fetch_status": "ga-blog.txt 수신"
   },
   "seen": [
@@ -162,6 +162,14 @@
       "confirmed": false,
       "note": "URL 추정 — 금융 서비스 AI 에이전트 공식 발표. Blackstone·Goldman Sachs 파트너십 연계 발표. 콘텐츠 생성: content/docs/next/agents-financial-services.md",
       "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/gates-foundation-partnership",
+      "title": "Anthropic forms $200 million partnership with the Gates Foundation",
+      "date": "2026-05-14",
+      "confirmed": false,
+      "note": "URL 추정 — Gates Foundation과 $200M 파트너십. 비즈니스/비영리 협력 뉴스. 코딩 입문 ebook과 직접 관련 낮아 콘텐츠 생성 스킵.",
+      "content_written": false
     }
   ]
 }
