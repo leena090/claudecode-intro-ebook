@@ -1,9 +1,9 @@
 {
   "_meta": {
     "created": "2026-04-20",
-    "updated": "2026-05-21",
+    "updated": "2026-05-22",
     "source_url": "https://code.claude.com/docs/llms.txt",
-    "note": "2026-05-21 17차 실행: 신규 URL 9개 감지. agent-sdk/session-storage, desktop-changelog, managed-mcp, plugin-hints, prompt-caching, prompt-library, sandbox-environments, sessions(top-level), whats-new/2026-w20. 총 140개. llms.txt 200 OK 정상 수신.",
+    "note": "2026-05-22 17차 실행: 신규 URL 9개 감지. sessions, prompt-library, managed-mcp, sandbox-environments, prompt-caching, plugin-hints, desktop-changelog, agent-sdk/session-storage, whats-new/2026-w20 신규 등록. 총 140개 URL.",
     "fetch_status": "200_ok"
   },
   "https://code.claude.com/docs/en/overview": "SNAPSHOT_2026-04-20",
@@ -137,13 +137,13 @@
   "https://code.claude.com/docs/en/whats-new/2026-w18": "SNAPSHOT_2026-05-12",
   "https://code.claude.com/docs/en/whats-new/2026-w19": "SNAPSHOT_2026-05-12",
   "https://code.claude.com/docs/en/worktrees": "SNAPSHOT_2026-05-12",
-  "https://code.claude.com/docs/en/agent-sdk/session-storage": "SNAPSHOT_2026-05-21",
-  "https://code.claude.com/docs/en/desktop-changelog": "SNAPSHOT_2026-05-21",
-  "https://code.claude.com/docs/en/managed-mcp": "SNAPSHOT_2026-05-21",
-  "https://code.claude.com/docs/en/plugin-hints": "SNAPSHOT_2026-05-21",
-  "https://code.claude.com/docs/en/prompt-caching": "SNAPSHOT_2026-05-21",
-  "https://code.claude.com/docs/en/prompt-library": "SNAPSHOT_2026-05-21",
-  "https://code.claude.com/docs/en/sandbox-environments": "SNAPSHOT_2026-05-21",
-  "https://code.claude.com/docs/en/sessions": "SNAPSHOT_2026-05-21",
-  "https://code.claude.com/docs/en/whats-new/2026-w20": "SNAPSHOT_2026-05-21"
+  "https://code.claude.com/docs/en/agent-sdk/session-storage": "SNAPSHOT_2026-05-22",
+  "https://code.claude.com/docs/en/managed-mcp": "SNAPSHOT_2026-05-22",
+  "https://code.claude.com/docs/en/sessions": "SNAPSHOT_2026-05-22",
+  "https://code.claude.com/docs/en/sandbox-environments": "SNAPSHOT_2026-05-22",
+  "https://code.claude.com/docs/en/prompt-caching": "SNAPSHOT_2026-05-22",
+  "https://code.claude.com/docs/en/plugin-hints": "SNAPSHOT_2026-05-22",
+  "https://code.claude.com/docs/en/prompt-library": "SNAPSHOT_2026-05-22",
+  "https://code.claude.com/docs/en/desktop-changelog": "SNAPSHOT_2026-05-22",
+  "https://code.claude.com/docs/en/whats-new/2026-w20": "SNAPSHOT_2026-05-22"
 }

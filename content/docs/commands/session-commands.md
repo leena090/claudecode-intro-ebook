@@ -3,8 +3,8 @@ title: "세션 관리 명령어"
 description: "Claude Code와의 대화를 제어하는 모든 방법 + 컨텍스트 위생 3종 세트 (/btw, /fork, /rewind)"
 category: "commands"
 order: 2
-tags: ["세션", "대화관리", "명령어", "컨텍스트위생"]
-lastUpdated: "2026-04-08"
+tags: ["세션", "대화관리", "명령어", "컨텍스트위생", "resume", "세션피커"]
+lastUpdated: "2026-05-22"
 ---
 
 ## 세션이란?
@@ -17,6 +17,60 @@ Claude Code와 나누는 **한 번의 연속된 대화**를 의미합니다. 처
 ○ <strong>2026-04-08 최신화</strong>: <code>/btw</code>·<code>/fork</code>·<code>/rewind</code>는 <strong>컨텍스트 위생 3종 세트</strong>로 함께 쓰는 걸 권장합니다. <a href="/docs/tips/btw-side-questions">자세한 가이드</a>에서 조합 사용법을 확인하세요.
 <br />○ <strong>Transcript 검색</strong>: 전사(transcript) 모드에서 <code>/</code>키를 누르면 단어 검색이 되고, <code>n</code>/<code>N</code>로 결과 사이를 오갈 수 있어요. (v2.1.83~)
 <br />○ <code>/resume</code> 세션 재개가 <strong>45% 빨라졌어요</strong> (v2.1.77~) + 메모리 사용도 100~150MB 줄었습니다.
+</div>
+
+---
+
+## 🚀 시작할 때 쓰는 CLI 플래그 — "Claude를 켜는 순간 바로 이어서"
+
+Claude Code를 **처음 실행할 때** 옵션을 붙이면, 이전 대화를 바로 이어서 시작할 수 있어요.
+
+마치 노트북을 열자마자 "어제 하던 작업 파일 자동으로 열기"처럼요. 🍱
+
+| 플래그 | 설명 | 예시 |
+|---|---|---|
+| `claude --continue` | 이 폴더에서 가장 최근 세션 바로 이어가기 | `claude --continue` |
+| `claude --resume` | 세션 목록(피커) 열기 | `claude --resume` |
+| `claude --resume <이름>` | 이름으로 특정 세션 바로 열기 | `claude --resume auth-refactor` |
+| `claude --from-pr <번호>` | 특정 PR과 연결된 세션 이어가기 | `claude --from-pr 42` |
+| `claude -n <이름>` | 새 세션을 이름 붙여 시작하기 | `claude -n "로그인 버그 수정"` |
+
+**사용 예시:**
+
+```bash
+# 어제 하던 auth 작업 그대로 이어서
+claude --continue
+
+# "결제 모듈" 세션 바로 재개
+claude --resume "결제 모듈"
+
+# PR #42 를 만들었던 그 세션으로 돌아가기
+claude --from-pr 42
+
+# 오늘 새 작업 세션에 이름 붙여 시작
+claude -n "회원가입 페이지 리뉴얼"
+```
+
+---
+
+## 🗂️ 세션 피커(Session Picker) — 목록에서 골라 재개하기
+
+`/resume` (또는 `claude --resume`)을 누르면 **세션 목록 화면**이 열립니다. 파인더처럼 대화를 골라서 이어할 수 있어요. `[공식]`
+
+| 단축키 | 기능 |
+|---|---|
+| `↑` / `↓` | 목록 이동 |
+| `Enter` | 선택한 세션 재개 |
+| `Space` | 세션 내용 미리보기 |
+| `Ctrl+R` | 세션 이름 바꾸기 |
+| `/` 또는 글자 입력 | 검색 모드 (PR URL 붙여넣기로도 검색 가능) |
+| `Ctrl+A` | 이 컴퓨터의 **모든 프로젝트** 세션 보기 |
+| `Ctrl+W` | 같은 저장소의 **모든 워크트리** 세션 보기 |
+| `Ctrl+B` | **현재 git 브랜치**의 세션만 필터링 |
+| `Esc` | 피커 닫기 |
+
+<div class="note-circle">
+○ <code>claude -p</code>나 Agent SDK로 만든 세션은 피커에 안 나타납니다. 세션 ID를 알면 <code>claude --resume &lt;세션ID&gt;</code>로 재개할 수 있어요.
 </div>
 
 ---
