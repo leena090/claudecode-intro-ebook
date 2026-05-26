@@ -1,9 +1,9 @@
 {
   "_meta": {
     "created": "2026-04-20",
-    "updated": "2026-05-25",
+    "updated": "2026-05-26",
     "source_url": "https://www.anthropic.com/news",
-    "note": "2026-05-25 17차 실행: 신규 블로그 7개 감지. 콘텐츠 생성: content/docs/next/stainless-acquisition.md (new) for Stainless 인수. 나머지 6개는 비즈니스/파트너십/정치 주제로 코딩 ebook과 직접 관련 낮아 스킵.",
+    "note": "2026-05-26 18차 실행: 신규 블로그 1개 감지 (이전 회차 누락분). higher-usage-limits-spacex (May 6). 비즈니스/인프라 뉴스로 코딩 ebook과 직접 관련 낮아 콘텐츠 생성 스킵. blog-seen.json에 추가 완료.",
     "fetch_status": "ga-blog.txt 수신"
   },
   "seen": [
@@ -217,6 +217,14 @@
       "date": "2026-05-25",
       "confirmed": false,
       "note": "URL 추정 — 종교/철학 주제. 코딩 ebook과 무관하여 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/higher-usage-limits-spacex-compute",
+      "title": "Higher usage limits for Claude and a compute deal with SpaceX",
+      "date": "2026-05-06",
+      "confirmed": false,
+      "note": "URL 추정 — 이전 회차에서 누락됨. Claude 사용량 한도 증가 + SpaceX 컴퓨팅 인프라 계약. 사용량 한도 상승은 Claude Code 사용자에게 간접 관련이 있으나, 비즈니스/인프라 주제가 주요 내용이므로 콘텐츠 생성 스킵. 2026-05-26 발견·처리.",
       "content_written": false
     }
   ]
