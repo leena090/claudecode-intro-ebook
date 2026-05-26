@@ -1,9 +1,9 @@
 {
   "_meta": {
     "created": "2026-04-20",
-    "updated": "2026-05-09",
+    "updated": "2026-05-10",
     "source_url": "https://code.claude.com/docs/llms.txt",
-    "note": "2026-05-09 15차 실행: 신규 URL 2개 감지 (whats-new/2026-w18, whats-new/2026-w19). 총 126개 URL. 한국어 문서 생성: content/docs/next/whats-new-w18.md, content/docs/next/whats-new-w19.md",
+    "note": "2026-05-10 15차 실행: 신규 URL 2개 감지 (2026-w18, 2026-w19). 총 126개 URL. 콘텐츠 생성: content/docs/commands/week18-windows-project-commands.md (new), content/docs/advanced/week19-plugin-url-history-autodeny.md (new).",
     "fetch_status": "200_ok"
   },
   "https://code.claude.com/docs/en/overview": "SNAPSHOT_2026-04-20",
@@ -130,6 +130,6 @@
   "https://code.claude.com/docs/en/whats-new/2026-w16": "SNAPSHOT_2026-04-28",
   "https://code.claude.com/docs/en/whats-new/2026-w17": "SNAPSHOT_2026-04-28",
   "https://code.claude.com/docs/en/deep-links": "SNAPSHOT_2026-05-06",
-  "https://code.claude.com/docs/en/whats-new/2026-w18": "SNAPSHOT_2026-05-09",
-  "https://code.claude.com/docs/en/whats-new/2026-w19": "SNAPSHOT_2026-05-09"
+  "https://code.claude.com/docs/en/whats-new/2026-w18": "SNAPSHOT_2026-05-10",
+  "https://code.claude.com/docs/en/whats-new/2026-w19": "SNAPSHOT_2026-05-10"
 }
