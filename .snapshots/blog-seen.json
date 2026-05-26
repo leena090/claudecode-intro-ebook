@@ -1,9 +1,9 @@
 {
   "_meta": {
     "created": "2026-04-20",
-    "updated": "2026-05-02",
+    "updated": "2026-05-04",
     "source_url": "https://www.anthropic.com/news",
-    "note": "2026-05-02 12차 실행: 신규 블로그 없음. 총 19개 항목 유지. 현재 ga-blog.txt 기준 최신 포스트: 'Claude for Creative Work'(Apr 28).",
+    "note": "2026-05-04 12차 실행: 신규 블로그 1건 감지 — 'Building a new enterprise AI services company with Blackstone, Hellman & Friedman, and Goldman Sachs'(May 4). 금융 파트너십/비즈니스 뉴스, 코딩 ebook과 직접 관련 낮아 콘텐츠 생성 스킵.",
     "fetch_status": "ga-blog.txt 수신"
   },
   "seen": [
@@ -137,6 +137,14 @@
       "date": "2026-04-27",
       "confirmed": false,
       "note": "URL 추정 — 호주·뉴질랜드 GM 임명 + 시드니 오피스 오픈. 비즈니스 뉴스, 한국어 코딩 ebook과 직접 연관 낮아 콘텐츠 생성 스킵",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/enterprise-ai-services-blackstone",
+      "title": "Building a new enterprise AI services company with Blackstone, Hellman & Friedman, and Goldman Sachs",
+      "date": "2026-05-04",
+      "confirmed": false,
+      "note": "URL 추정 — 블랙스톤·HF·골드만 삭스와 엔터프라이즈 AI 서비스 회사 설립 발표. 금융/투자 비즈니스 뉴스, 코딩 ebook과 직접 관련 낮아 콘텐츠 생성 스킵.",
       "content_written": false
     }
   ]
