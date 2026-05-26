@@ -98,4 +98,4 @@
 - 2026-05-08 14차: **[변경 감지]** Features nav "Claude for Excel·Word·PowerPoint" → "Claude for Microsoft 365" 통합. content/docs/cowork/claude-for-m365.md 신규 생성.
 - 2026-05-12 15차: **[변경 감지]** Solutions nav "Legal" 신규 추가. nav 반영 완료 (콘텐츠 생성 스킵 — 법률 서비스는 코딩 입문 ebook 범위 외).
 - 2026-05-13 16차: **[변경 감지]** Solutions nav "Small business" 신규 추가. 동일자 Anthropic 블로그 "Introducing Claude for Small Business" 발표와 연동. 블로그 콘텐츠 생성: content/docs/next/claude-for-small-business.md (new).
-- 2026-05-20 17차: **[변경 없음]** 요금제·모델·기능·nav 항목 모두 이전 스냅샷과 동일. ga-marketing.txt 전체 비교 완료. FAQ의 모델 목록("Opus 4.6" 기재)은 스테일 텍스트로 판단 — 플랜 섹션은 여전히 Sonnet 4.6 + Opus 4.7 명시. 의미있는 변경으로 처리하지 않음.
+- 2026-05-21 17차: **[변경 없음]** 요금제·모델·기능·nav 항목 모두 이전 스냅샷과 동일. Fast mode 설명에서 /fast이 이제 Opus 4.7로 동작하는 변경은 공식 docs(whats-new/2026-w20)에서 확인됨 — 마케팅 페이지 텍스트 자체는 미반영. ga-marketing.txt 전체 비교 완료.
