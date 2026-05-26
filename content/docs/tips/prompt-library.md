@@ -1,156 +1,87 @@
 ---
-title: "[공] 공식 프롬프트 라이브러리 — 바로 복붙하는 황금 명령어 모음"
-description: "Anthropic이 공식 공개한 Claude Code 프롬프트 라이브러리. 업무 단계별로 바로 복사해서 쓸 수 있는 실전 프롬프트 모음집입니다."
-tags: ["자동생성", "프롬프트", "prompt library", "황금명령어", "복붙", "입문", "실전"]
+title: "[공] 공식 프롬프트 라이브러리 — 역할별 복붙 프롬프트 모음"
+description: "Anthropic이 공식으로 제공하는 Claude Code 프롬프트 모음이에요. 역할·작업별로 바로 붙여넣을 수 있어요."
+tags: ["팁", "프롬프트", "prompt-library", "복붙", "역할별", "자동생성"]
 category: "tips"
-order: 11
-lastUpdated: "2026-05-18"
+order: 10
+lastUpdated: "2026-05-20"
 ---
 
 <div class="note-star">
-★ 출처: <a href="https://code.claude.com/docs/en/prompt-library">code.claude.com/docs/en/prompt-library</a> [공]<br />
-★ Anthropic이 공식 제공하는 복붙용 프롬프트 모음집
+★ <strong>[공] 공식 제공</strong> — <a href="https://code.claude.com/docs/en/prompt-library" target="_blank">code.claude.com/docs/en/prompt-library</a>에서 직접 확인하고 복사할 수 있어요.
 </div>
 
-## 프롬프트 라이브러리란?
+## 공식 프롬프트 라이브러리가 뭔가요?
 
-Anthropic이 **Claude Code에서 실제로 효과가 좋은 프롬프트**를 모아 공개한 페이지예요.
+Anthropic이 Claude Code에 최적화된 **검증된 프롬프트들을 역할·작업별로 묶어 공개**한 페이지예요.
 
-> 📚 **비유로 설명하면**: 처음 요리를 배울 때 요리책 레시피를 보고 따라하는 것처럼, Claude Code를 처음 쓸 때 이 프롬프트들을 그대로 복사해서 쓰면 돼요. `{중괄호}` 안의 단어만 내 상황에 맞게 바꾸면 됩니다.
-
-공식 페이지: [code.claude.com/docs/en/prompt-library](https://code.claude.com/docs/en/prompt-library)
+> 🍱 **비유로 설명하면**: 요리책에 "닭볶음탕", "된장찌개", "비빔밥" 레시피가 정리된 것처럼, 개발 상황별로 "이 문장을 쓰면 잘 됩니다"를 모아둔 모음집이에요.
 
 ---
 
-## 단계별 황금 프롬프트 모음
+## 어떻게 쓰나요?
 
-업무 흐름(소프트웨어 개발 생애주기)에 따라 단계별로 정리했어요.
+1. **공식 페이지 방문** → [code.claude.com/docs/en/prompt-library](https://code.claude.com/docs/en/prompt-library)
+2. **역할이나 작업 태그로 필터링**
+3. **복사 버튼 클릭 후 Claude Code에 붙여넣기**
 
-### 🔍 1단계: 코드베이스 파악 (Onboard · Understand)
+---
 
-처음 프로젝트를 맡거나, 오래된 코드를 이해해야 할 때 쓰는 프롬프트예요.
+## 주요 프롬프트 유형
 
-| 목적 | 프롬프트 |
+공식 라이브러리에는 이런 상황별 프롬프트들이 포함되어 있어요:
+
+| 상황 | 예시 프롬프트 용도 |
 |---|---|
-| 전체 구조 파악 | `give me an overview of this codebase: architecture, key directories, and how the pieces connect` |
-| 특정 파일 이해 | `explain what {파일경로} does and how data flows through it. write it up as {형식}` |
-| 기능 위치 찾기 | `where do we {기능}?` |
-| 삭제 영향 파악 | `what would break if I deleted {대상}?` |
-| 변경 이력 추적 | `look through the commit history of {파일경로} and summarize how it evolved and why` |
-| 수정 파일 예측 | `which files would I need to touch to {변경내용}?` |
-| 비개발자용 설명 | `I am a {역할}. walk me through what happens when a user {행동}, from the UI down to the result` |
+| 🐛 버그 찾기 | "이 함수에서 엣지 케이스 버그를 찾아줘" |
+| 📖 코드 설명 | "이 클래스를 초보자에게 설명해줘" |
+| ✅ 테스트 작성 | "이 함수의 단위 테스트 5개 작성해줘" |
+| 🔄 리팩토링 | "이 코드를 더 읽기 쉽게 개선해줘" |
+| 📝 문서화 | "이 API 엔드포인트 README 작성해줘" |
+| 🔍 코드 리뷰 | "PR 전에 이 코드 보안 관점으로 점검해줘" |
 
-**활용 예시:**
-```
-where do we validate uploaded file types?
-
-explain what src/payment/checkout.ts does and how data flows through it.
-write it up as an HTML page with a diagram, then open it in my browser
-
-I am a PM. walk me through what happens when a user clicks Export to PDF,
-from the UI down to the result
-```
+<div class="note-star">
+★ 이 목록은 예시예요. 공식 페이지에 더 많은 프롬프트가 있고 꾸준히 추가돼요. <code>[공]</code>
+</div>
 
 ---
 
-### 📐 2단계: 계획 세우기 (Plan)
+## 왜 내 프롬프트 대신 이걸 쓰나요?
 
-수정하기 전에 **먼저 계획을 세우게** 하는 프롬프트예요.  
-Claude가 파일을 건드리지 않고 계획만 세우도록 명시하는 게 포인트예요.
+자유롭게 써도 되지만, 공식 프롬프트는 두 가지 장점이 있어요:
 
-| 목적 | 프롬프트 |
-|---|---|
-| 리팩토링 계획 | `plan how to refactor the {대상} to {목표}. list the files you would change, but don't edit anything yet` |
-| 기능 기획 인터뷰 | `I want to build {기능}. interview me about implementation, UX, edge cases, and tradeoffs until we have covered everything, then write the spec to SPEC.md` |
+**1. Anthropic 팀이 직접 검증**
+수천 번 테스트해서 Claude Code에서 가장 잘 작동하는 표현으로 정제됐어요.
 
-**활용 예시:**
-```
-plan how to refactor the payment module to support multiple currencies.
-list the files you would change, but don't edit anything yet
-
-I want to build a user notification system.
-interview me about implementation, UX, edge cases, and tradeoffs
-until we have covered everything, then write the spec to SPEC.md
-```
-
-> 💡 **팁**: 계획 단계에서 `don't edit anything yet` 을 꼭 넣으면 Claude가 먼저 분석하고 물어봐요. 예상치 못한 파일 수정을 방지할 수 있어요.
+**2. 상황별로 태그 분류**
+"나는 지금 리팩토링 중"이면 리팩토링 태그만 보면 돼요. 매번 어떻게 써야 할지 고민하지 않아도 돼요.
 
 ---
 
-### 🔨 3단계: 구현 (Build)
+## 나만의 프롬프트 모음 만들기
 
-실제 코드를 작성하거나 기능을 만들 때 쓰는 프롬프트예요.
+공식 라이브러리 외에, 자주 쓰는 프롬프트는 **CLAUDE.md 파일**에 직접 넣어두면 자동으로 불러와요.
 
-**기본 구현 프롬프트 패턴:**
+```markdown
+<!-- .claude/CLAUDE.md 예시 -->
+## 자주 쓰는 프롬프트
+
+### 버그 리포트 받았을 때
+"에러 메시지를 보고 원인을 단계적으로 추론해줘.
+확실하지 않으면 '추정'이라고 명시해줘."
+
+### PR 올리기 전
+"이 변경사항의 보안 취약점, 성능 영향, 엣지 케이스를 확인해줘."
 ```
-implement {기능}. focus on {핵심포인트} first, then add {추가사항}
 
-add {새기능} to {파일/모듈}.
-follow the existing pattern in {참고파일}
-```
+> 🍱 **비유로 설명하면**: 냉장고에 자주 쓰는 양념들을 눈에 잘 띄는 앞줄에 두는 것과 같아요.
 
-> 🎯 **팁**: 구현할 때는 **참고할 기존 코드 파일**을 함께 알려주면 Claude가 프로젝트 스타일에 맞게 작성해줘요.
+자세한 내용 → 📄 [CLAUDE.md 설정 가이드](/docs/config/debug-your-config)
 
 ---
 
-### 🧪 4단계: 테스트 (Test)
+## 함께 보면 좋아요
 
-코드 품질을 높이는 테스트 관련 프롬프트예요.
-
-```
-write tests for {파일경로}. focus on edge cases and error handling
-
-what test cases are we missing for {기능}?
-
-run the test suite and fix any failures you find
-```
-
----
-
-### 🔍 5단계: 코드 리뷰 (Review)
-
-PR(풀 리퀘스트)이나 코드를 검토할 때 쓰는 프롬프트예요.
-
-```
-review the changes in this PR for correctness, style, and potential issues
-
-what are the security implications of {변경사항}?
-
-does this implementation follow our existing patterns in {참고파일}?
-```
-
----
-
-## `{중괄호}` 사용법
-
-프롬프트의 `{중괄호}` 는 **내 상황에 맞게 바꿔 넣는 빈칸**이에요.
-
-| 원래 프롬프트 | 내 상황에 맞게 수정 |
-|---|---|
-| `what would break if I deleted {target}?` | `what would break if I deleted the retryWithBackoff helper?` |
-| `where do we {behavior}?` | `where do we validate uploaded file types?` |
-| `I am a {role}.` | `I am a PM.` |
-
----
-
-## 처음 쓸 때 추천 순서
-
-Claude Code를 처음 접한 프로젝트라면 이 순서로 써보세요:
-
-1. **전체 파악** → `give me an overview of this codebase...`
-2. **궁금한 부분 파고들기** → `explain what {파일} does...`
-3. **수정 전 계획** → `plan how to refactor... don't edit anything yet`
-4. **구현** → 계획 확인 후 실행
-5. **테스트** → `run the test suite and fix any failures`
-
-> 🍱 **비유로 설명하면**: 새 동네로 이사 왔을 때 ① 지도로 전체 파악, ② 자주 갈 곳 찾기, ③ 장 볼 목록 작성, ④ 실제로 장보기, ⑤ 냉장고 확인 — 이 순서처럼 Claude와 일하면 훨씬 자연스러워요.
-
----
-
-## 공식 라이브러리 직접 보기
-
-Anthropic이 계속 업데이트하는 라이브러리 원본은 여기서 확인하세요:
-
-🔗 **[code.claude.com/docs/en/prompt-library](https://code.claude.com/docs/en/prompt-library)**
-
-역할별(PM, 디자이너, 개발자)로 필터링하거나, 업무 단계별로 분류해서 볼 수 있어요.
+- 📄 [자주 쓰는 팁 모음](/docs/tips/useful-tips) — 실전 꿀팁
+- 📄 [thinking 동사 모음](/docs/tips/thinking-verbs) — 더 좋은 답변 끌어내기
+- 📄 [공통 워크플로 가이드](/docs/tips/common-workflows) — 상황별 작업 흐름

@@ -1,9 +1,9 @@
 {
   "_meta": {
     "created": "2026-04-20",
-    "updated": "2026-05-19",
+    "updated": "2026-05-20",
     "source_url": "https://www.anthropic.com/news",
-    "note": "2026-05-19 17차 실행: 신규 블로그 4개 감지. KPMG 파트너십(5/19, 스킵), Stainless 인수(5/18, 콘텐츠 생성), PwC 파트너십(5/14, 스킵), Gates Foundation(5/14, 스킵). 콘텐츠 생성: content/docs/next/anthropic-stainless.md (new).",
+    "note": "2026-05-20 17차 실행: 신규 블로그 4개 감지. KPMG 파트너십(May 19), Stainless 인수(May 18), PwC 파트너십(May 14), Gates Foundation $200M(May 14). 전부 기업 파트너십 — 코딩 입문 ebook 범위 외. 콘텐츠 생성 스킵.",
     "fetch_status": "ga-blog.txt 수신"
   },
   "seen": [
@@ -164,11 +164,11 @@
       "content_written": true
     },
     {
-      "url": "https://www.anthropic.com/news/anthropic-forms-gates-foundation-partnership",
+      "url": "https://www.anthropic.com/news/anthropic-forms-200m-gates-foundation",
       "title": "Anthropic forms $200 million partnership with the Gates Foundation",
       "date": "2026-05-14",
       "confirmed": false,
-      "note": "URL 추정 — 게이츠 재단과 2억 달러 파트너십. 자선/사회적 AI 활용. 코딩 ebook 직접 관련 낮아 콘텐츠 생성 스킵.",
+      "note": "URL 추정 — 게이츠 재단 $2억 파트너십. 자선/연구 파트너십. 코딩 ebook 직접 관련 없어 콘텐츠 생성 스킵.",
       "content_written": false
     },
     {
@@ -176,7 +176,7 @@
       "title": "PwC is deploying Claude to build technology, execute deals, and reinvent enterprise functions for clients",
       "date": "2026-05-14",
       "confirmed": false,
-      "note": "URL 추정 — PwC 엔터프라이즈 컨설팅 AI 도입. 업종 특화 내용으로 일반 코딩 입문 ebook과 직접 관련 낮아 콘텐츠 생성 스킵.",
+      "note": "URL 추정 — PwC 엔터프라이즈 파트너십. 기업 전략 뉴스. 코딩 입문 ebook 범위 외, 스킵.",
       "content_written": false
     },
     {
@@ -184,15 +184,15 @@
       "title": "Anthropic acquires Stainless",
       "date": "2026-05-18",
       "confirmed": false,
-      "note": "URL 추정 — SDK 자동생성 전문회사 Stainless 인수. Claude Python/TypeScript SDK를 빌드한 팀이 내부로 합류. 개발자 도구 생태계에 직접 영향. 콘텐츠 생성: content/docs/next/anthropic-stainless.md (new).",
-      "content_written": true
+      "note": "URL 추정 — Stainless(SDK 자동 생성 도구 회사) 인수. API/SDK 개발자에게 장기적으로 관련. 입문자 ebook 즉시 영향 없어 이번 회차 스킵. 향후 Claude API SDK 변경 시 재검토.",
+      "content_written": false
     },
     {
       "url": "https://www.anthropic.com/news/kpmg-claude-strategic-alliance",
       "title": "KPMG integrates Claude across its core business and workforce of more than 276,000 in strategic alliance",
       "date": "2026-05-19",
       "confirmed": false,
-      "note": "URL 추정 — KPMG 전사 Claude 도입 전략적 제휴. 엔터프라이즈 파트너십 뉴스. 코딩 입문 ebook과 직접 관련 낮아 콘텐츠 생성 스킵.",
+      "note": "URL 추정 — KPMG 27만6천 임직원 Claude 도입 전략적 제휴. 대기업 파트너십. 코딩 입문 ebook 범위 외, 스킵.",
       "content_written": false
     }
   ]
