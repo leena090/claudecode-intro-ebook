@@ -1,9 +1,9 @@
 {
   "_meta": {
     "created": "2026-04-20",
-    "updated": "2026-05-16",
+    "updated": "2026-05-17",
     "source_url": "https://code.claude.com/docs/llms.txt",
-    "note": "2026-05-16 17차 실행: 신규 URL 1개 감지. desktop-changelog (신규). 총 132개 URL. whats-new/2026-w20 미등재(아직 미발행). llms.txt 200 OK 정상 수신.",
+    "note": "2026-05-17 17차 실행: 신규 URL 1개 감지 — desktop-changelog. 총 132개 URL. whats-new/2026-w20 미등재. llms.txt 200 OK 정상 수신. 콘텐츠 생성: content/docs/advanced/desktop-changelog-may2026.md (new).",
     "fetch_status": "200_ok"
   },
   "https://code.claude.com/docs/en/overview": "SNAPSHOT_2026-04-20",
@@ -137,5 +137,5 @@
   "https://code.claude.com/docs/en/whats-new/2026-w18": "SNAPSHOT_2026-05-12",
   "https://code.claude.com/docs/en/whats-new/2026-w19": "SNAPSHOT_2026-05-12",
   "https://code.claude.com/docs/en/worktrees": "SNAPSHOT_2026-05-12",
-  "https://code.claude.com/docs/en/desktop-changelog": "SNAPSHOT_2026-05-16"
+  "https://code.claude.com/docs/en/desktop-changelog": "SNAPSHOT_2026-05-17"
 }

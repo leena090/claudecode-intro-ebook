@@ -1,9 +1,9 @@
 {
   "_meta": {
     "created": "2026-04-20",
-    "updated": "2026-05-16",
+    "updated": "2026-05-17",
     "source_url": "https://www.anthropic.com/news",
-    "note": "2026-05-16 17차 실행: 신규 블로그 2개 감지. PwC 파트너십 (May 14), Gates Foundation 파트너십 (May 14). 모두 엔터프라이즈·자선 파트너십으로 코딩 ebook 범위 외 → 콘텐츠 생성 스킵.",
+    "note": "2026-05-17 17차 실행: 신규 블로그 2개 감지. PwC deploying Claude (May 14), Gates Foundation $200M (May 14). 코딩 ebook 직접 연관 낮아 콘텐츠 생성 스킵.",
     "fetch_status": "ga-blog.txt 수신"
   },
   "seen": [
@@ -164,11 +164,11 @@
       "content_written": true
     },
     {
-      "url": "https://www.anthropic.com/news/pwc-claude-deployment",
+      "url": "https://www.anthropic.com/news/pwc-deploying-claude",
       "title": "PwC is deploying Claude to build technology, execute deals, and reinvent enterprise functions for clients",
       "date": "2026-05-14",
       "confirmed": false,
-      "note": "URL 추정 — PwC 엔터프라이즈 배포 파트너십 발표. 대형 컨설팅 기업 사례. 코딩 ebook 직접 관련 낮아 콘텐츠 생성 스킵.",
+      "note": "URL 추정 — PwC 전사 Claude 도입 사례. 엔터프라이즈 배포 케이스스터디이나 Claude Code 특화 내용 불명확. 코딩 입문 ebook 직접 관련 낮아 콘텐츠 생성 스킵.",
       "content_written": false
     },
     {
@@ -176,7 +176,7 @@
       "title": "Anthropic forms $200 million partnership with the Gates Foundation",
       "date": "2026-05-14",
       "confirmed": false,
-      "note": "URL 추정 — Gates Foundation과 2억 달러 파트너십. 글로벌 보건·교육 분야 AI 적용 목적으로 추정. 코딩 ebook과 무관하여 콘텐츠 생성 스킵.",
+      "note": "URL 추정 — 게이츠 재단 $2억 파트너십. 교육·AI 안전 연구 목적. 코딩 입문 ebook과 직접 연관 없어 콘텐츠 생성 스킵.",
       "content_written": false
     }
   ]
