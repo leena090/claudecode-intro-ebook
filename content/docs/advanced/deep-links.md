@@ -1,163 +1,129 @@
 ---
-title: "[공] 딥링크(Deep Link)로 Claude Code 세션 한 번에 열기"
-description: "claude-cli:// URL을 클릭하면 지정한 저장소·프롬프트로 Claude Code 터미널이 바로 열리는 딥링크 기능 (v2.1.91+)"
-tags: ["자동생성", "딥링크", "자동화", "런북", "URL스킴", "v2.1.91"]
+title: "[공] 딥링크(Deep Link) — 링크 하나로 Claude Code 세션 바로 열기"
+description: "claude-cli:// URL로 특정 프로젝트와 프롬프트가 미리 입력된 Claude Code 세션을 링크 하나로 열 수 있어요 (v2.1.91+)"
+tags: ["자동생성", "딥링크", "deep-link", "자동화", "runbook", "URL", "v2.1.91"]
 category: "advanced"
 order: 22
-lastUpdated: "2026-05-04"
+lastUpdated: "2026-05-05"
 ---
 
 <div class="note-star">
-★ <strong>Claude Code v2.1.91</strong> 이상에서 사용 가능해요.<br />
+★ <strong>Claude Code v2.1.91</strong> 이상에서 사용 가능한 기능이에요.<br />
 ★ <strong>공식 문서</strong>: <a href="https://code.claude.com/docs/en/deep-links">code.claude.com/docs/en/deep-links</a>
 </div>
 
-## 딥링크(Deep Link)란?
+## 딥링크란?
 
-**URL 하나를 클릭하면, 내 컴퓨터에서 Claude Code 터미널이 자동으로 열리는 기능**이에요.
+**클릭 하나로 특정 프로젝트·특정 지시가 미리 준비된 Claude Code 세션을 여는 특별한 URL**이에요.
 
-> 🔗 **비유로 설명하면**: 식당 메뉴판 QR코드를 찍으면 해당 메뉴 페이지가 바로 뜨는 것처럼요. `claude-cli://open?repo=…` 주소를 클릭하면, "이 저장소 폴더에서, 이 질문을 입력한 상태로" Claude Code 창이 짠! 열립니다. 직접 터미널을 열고, 폴더 이동하고, 타이핑하는 세 단계가 클릭 한 번으로 줄어드는 거예요.
+> 🔗 **비유로 설명하면**: 카페 앱에서 QR 코드를 찍으면 내가 자주 주문하는 음료 주문 화면이 바로 열리는 것처럼요. `claude-cli://` 링크를 클릭하면 "이 폴더에서, 이 지시문으로" 세션이 즉시 열려요. 주소 창에 타이핑하거나 폴더 찾아갈 필요 없이요.
 
----
+딥링크는 `claude-cli://open` 으로 시작하는 URL이에요. 이 URL은 어디든 붙여넣을 수 있어요:
 
-## 어떤 상황에서 써요?
-
-| 상황 | 딥링크 없이 | 딥링크 있으면 |
-|------|------------|-------------|
-| 장애 발생 — 서버 로그 조사 | 터미널 열고 → 폴더 이동 → 프롬프트 직접 작성 | 런북(Runbook) 링크 클릭 한 번으로 바로 조사 시작 |
-| 신입 팀원 온보딩 | README 읽고 폴더 찾고 Claude 실행 | 준비된 링크 클릭 → 프롬프트 자동 입력 상태로 시작 |
-| 모니터링 대시보드 이상 감지 | 알림 확인 → 수동 연결 | 대시보드 링크 클릭 → 해당 저장소에서 진단 시작 |
-| CI 실패 알림 | 실패 로그 보고 → Claude에 복붙 | 알림 링크 클릭 → 실패 내용 프롬프트에 자동 입력 |
-
-> 💡 딥링크는 **문서, Slack 메시지, 위키, 대시보드** 등 링크를 넣을 수 있는 곳 어디에나 심을 수 있어요.
+| 어디에 붙여넣나요? | 어떻게 활용해요? |
+|-------------------|--------------------|
+| 장애 대응 가이드 (런북) | 경보 발생 → 클릭 → 관련 프로젝트에서 원인 조사 시작 |
+| 모니터링 대시보드 | 이상 지표 클릭 → 해당 서비스 코드에서 바로 분석 |
+| 프로젝트 README | 신규 팀원이 클릭 → 온보딩 안내 프롬프트 자동 입력 |
+| Slack 메시지 | CI 실패 알림 → 클릭 → 실패한 테스트명 미리 입력 |
 
 ---
 
-## 작동 원리
+## 어떻게 작동하나요?
 
-```
-브라우저/앱에서 클릭
-  ↓
-운영체제가 claude-cli:// 접두사 인식
-  ↓
-내 컴퓨터의 Claude Code 실행
-  ↓
-지정한 폴더에서 터미널 창 열림
-  ↓
-프롬프트 입력란에 텍스트 자동 입력 (전송 안 됨)
-  ↓
-사용자가 확인 후 Enter 눌러 실제 실행
-```
+1. 링크를 클릭하면 OS(운영체제)가 `claude-cli://` 접두사를 인식해요
+2. Claude Code가 새 터미널 창에서 열려요
+3. 링크가 지정한 폴더에서, 링크에 적힌 지시문이 입력 칸에 미리 채워져 있어요
+4. **자동으로 실행되지 않아요** — 내가 확인하고 Enter를 눌러야 해요
 
-> ⚠️ **중요**: 딥링크는 **프롬프트를 채워줄 뿐, 자동으로 실행하지 않아요**. 내용을 확인하고 직접 Enter를 눌러야 Claude가 답변을 시작합니다. 모르는 링크를 클릭해도 내 코드가 자동으로 바뀌지 않으니 안심하세요.
+> 🛡️ **안전 설계**: 링크가 악의적인 내용을 담고 있어도, 직접 Enter를 누르기 전까지는 아무것도 실행되지 않아요. 1,000자 이상의 긴 프롬프트는 "꼭 내용 확인 후 전송하세요"라는 안내 배너도 뜨고요.
 
 ---
 
-## 딥링크 만드는 법
+## 링크 만드는 법
 
-### 기본 구조
+기본 형식은 아래와 같아요:
 
 ```text
-claude-cli://open?파라미터=값&파라미터=값
+claude-cli://open
 ```
 
-### 파라미터 3가지
+여기에 파라미터(매개변수)를 붙여서 세부 설정을 해요:
 
-| 파라미터 | 설명 | 예시 |
-|---------|------|------|
-| `q` | 프롬프트 상자에 미리 채울 텍스트 (최대 5,000자) | `q=버그%20조사해줘` |
-| `cwd` | 열 폴더의 절대 경로 | `cwd=/Users/kim/myproject` |
-| `repo` | GitHub 저장소 이름 (`소유자/이름` 형식) | `repo=myteam/api-server` |
+| 파라미터 | 설명 |
+|---------|------|
+| `q` | 입력 칸에 미리 채울 지시문 텍스트. URL 인코딩 필요 (한글·특수문자 변환). 줄바꿈은 `%0A`. 최대 5,000자. |
+| `cwd` | 절대 경로로 시작 폴더 지정. 예: `/Users/kim/myproject` |
+| `repo` | GitHub 저장소 슬러그. 예: `honggildong/my-shop`. 내 컴퓨터에 클론된 경로를 자동으로 찾아줘요. |
 
-> 💡 `cwd`와 `repo`를 둘 다 넣으면 **`cwd`가 우선**이에요. `repo`는 무시됩니다.
+`cwd`와 `repo` 두 가지 모두 쓰면 `cwd`가 우선이에요.
 
-### 예시: 런북 링크
+### `cwd` vs `repo` — 뭘 써야 해요?
 
-```text
-claude-cli://open?repo=myteam/payments&q=결제%20서버%205xx%20에러%20발생.%20최근%2030분%20로그와%20배포%20이력%20확인해줘.
-```
+| 상황 | 추천 파라미터 |
+|------|-------------|
+| 팀원 모두 같은 경로에 프로젝트가 있어요 (회사 표준 개발환경, devcontainer) | `cwd` |
+| 팀원마다 프로젝트 위치가 달라요 (각자 다른 곳에 클론) | `repo` |
 
-클릭하면:
-- `myteam/payments` 저장소 폴더에서 Claude Code 열림
-- 프롬프트에 "결제 서버 5xx 에러 발생. 최근 30분 로그와 배포 이력 확인해줘." 자동 입력
-- Enter 눌러 조사 시작
-
-> 📌 **URL 인코딩**: 한국어와 공백은 URL에 그대로 못 씁니다. 공백은 `%20`, 줄바꿈은 `%0A`로 바꾸거나 브라우저 콘솔에서 `encodeURIComponent("텍스트")` 명령으로 변환하세요.
-
----
-
-## `cwd` vs `repo` — 뭘 쓰나요?
-
-| | `cwd` (경로 지정) | `repo` (저장소 이름) |
-|---|---|---|
-| **언제** | 모든 팀원이 같은 경로 사용 (예: 공용 VM) | 각자 다른 위치에 클론한 경우 |
-| **조건** | 해당 경로가 실제로 존재해야 함 | 내 컴퓨터에서 한 번이라도 `claude` 실행한 폴더여야 함 |
-| **실패 시** | 홈 디렉토리에서 열림 | 홈 디렉토리에서 열림 |
-
-> 🗂️ **`repo` 작동 방식**: Claude Code를 특정 Git 저장소 폴더에서 실행하면, 그 경로를 GitHub 저장소 이름과 연결해서 기억해요. 이후 딥링크가 오면, 가장 최근에 사용한 클론 폴더로 바로 이동합니다.
+`repo`를 쓰면 Claude Code가 가장 최근에 `claude` 명령어를 실행했던 클론 경로를 자동으로 찾아줘요.
 
 ---
 
 ## 실전 예시
 
-### 1. 문서(Markdown)에 링크 넣기
+### 예시 1 — 장애 대응 런북에 넣기
+
+장애가 났을 때 팀원이 관련 저장소를 바로 열 수 있도록 런북에 링크를 넣어요.
 
 ```markdown
-## 결제 서버 장애 대응 런북
+## 결제 서버 5xx 오류 대응
 
-1. PagerDuty에서 알림 확인
-2. [Claude Code로 바로 조사 시작](claude-cli://open?repo=myteam/payments&q=5xx%20에러%20조사%3A%20최근%20배포%2C%20에러%20로그%2C%20오픈%20이슈%20확인)
-3. #incident 채널에 초기 분석 공유
+1. PagerDuty(페이저듀티)에서 경보를 확인해요.
+2. [Claude Code로 결제 서버 조사 시작](claude-cli://open?repo=mycompany/payments-api&q=%EA%B2%B0%EC%A0%9C%20%EC%84%9C%EB%B2%84%205xx%20%EC%98%A4%EB%A5%98%20%EC%A1%B0%EC%82%AC.%20%EC%B5%9C%EA%B7%BC%2030%EB%B6%84%20%EC%97%90%EB%9F%AC%20%EB%A1%9C%EA%B7%B8%EB%A5%BC%20%ED%99%95%EC%9D%B8%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94.)
+3. 초기 결과를 #인시던트 채널에 공유해요.
 ```
 
-> ⚠️ **GitHub README 주의**: GitHub은 `http://`와 `https://`만 허용해요. `claude-cli://`로 시작하는 링크는 클릭이 안 되고 텍스트만 보입니다. GitHub 외 위키나 사내 문서 도구에서 사용하세요. GitHub에서는 코드 블록으로 URL을 보여주고 복사해서 사용하도록 안내하세요.
+> ⚠️ **주의**: GitHub의 README, 이슈, PR, 위키에서는 `claude-cli://` 링크가 보안상 자동으로 비활성화돼요 (클릭 불가, 텍스트만 표시). 이런 경우엔 코드 블록에 URL을 넣어서 복사할 수 있게 해주세요.
 
-### 2. 터미널 명령으로 열기
+### 예시 2 — 터미널(쉘)에서 바로 열기
 
-운영체제별로 딥링크를 직접 실행할 수 있어요.
+스크립트나 별칭(alias)에서 사용할 때는 각 OS별로 아래 명령어를 써요:
 
-**macOS (터미널)**
+**macOS:**
 ```bash
-open "claude-cli://open?repo=myteam/api&q=최근%20커밋%20검토해줘"
+open "claude-cli://open?repo=mycompany/payments-api&q=PR%20%EB%A6%AC%EB%B7%B0%ED%95%B4%EC%A4%98"
 ```
 
-**Linux (터미널)**
+**Linux:**
 ```bash
-xdg-open "claude-cli://open?repo=myteam/api&q=최근%20커밋%20검토해줘"
+xdg-open "claude-cli://open?repo=mycompany/payments-api&q=PR%20%EB%A6%AC%EB%B7%B0%ED%95%B4%EC%A4%98"
 ```
 
-**Windows (PowerShell)**
+**Windows PowerShell:**
 ```powershell
-Start-Process "claude-cli://open?repo=myteam/api&q=최근%20커밋%20검토해줘"
+Start-Process "claude-cli://open?repo=mycompany/payments-api&q=PR%20%EB%A6%AC%EB%B7%B0%ED%95%B4%EC%A4%98"
 ```
 
 ---
 
-## 어떤 터미널이 열리나요?
+## 자동 등록 — 따로 설치 없어요
 
-딥링크 클릭 시, Claude Code는 설치된 터미널 에뮬레이터(터미널 앱)를 자동 감지해서 열어요.
+Claude Code를 처음 실행하면 `claude-cli://` URL 핸들러가 자동으로 내 컴퓨터에 등록돼요.
 
-| 운영체제 | 지원 터미널 |
-|---------|-----------|
-| macOS | 마지막으로 쓴 터미널 기억 (iTerm2, Ghostty, kitty, Alacritty, WezTerm, Terminal.app) |
-| Linux | `$TERMINAL` 환경 변수 → `x-terminal-emulator` → 일반 에뮬레이터 순서로 탐색 |
-| Windows | Windows Terminal → PowerShell → cmd.exe 순서 |
-
----
-
-## 등록 위치 (자동 등록)
-
-Claude Code를 처음 대화형(interactive)으로 실행하면, 운영체제에 `claude-cli://` 핸들러가 **자동으로 등록**됩니다. 별도 설치 명령어 필요 없어요.
-
-| 운영체제 | 등록 위치 |
-|---------|---------|
+| OS | 등록 위치 |
+|----|----------|
 | macOS | `~/Applications/Claude Code URL Handler.app` |
 | Linux | `~/.local/share/applications/claude-code-url-handler.desktop` |
-| Windows | `HKEY_CURRENT_USER\Software\Classes\claude-cli` |
+| Windows | 레지스트리 `HKEY_CURRENT_USER\Software\Classes\claude-cli` |
 
-### 딥링크 등록 끄기 (비활성화)
+링크를 클릭했을 때 어떤 터미널 앱이 열리는지도 자동으로 감지해요:
+- **macOS**: iTerm2, Ghostty, kitty, Alacritty, WezTerm, Terminal.app 지원
+- **Linux**: `$TERMINAL` 환경변수 → `x-terminal-emulator` → 공통 터미널 앱 순서
+- **Windows**: Windows Terminal → PowerShell → cmd.exe 순서
 
-보안 정책 등으로 등록을 막고 싶다면 `settings.json`에 추가하세요:
+### 딥링크 기능 끄기
+
+딥링크가 필요 없으면 `settings.json`에 아래 항목을 추가하면 돼요:
 
 ```json
 {
@@ -165,39 +131,36 @@ Claude Code를 처음 대화형(interactive)으로 실행하면, 운영체제에
 }
 ```
 
-팀 전체에 강제 적용하려면 [관리형 설정(Managed Settings)](/docs/advanced/server-managed-settings)에 넣으면 돼요.
+회사 전체에서 끄고 싶다면 [관리형 설정(managed settings)](/docs/config/admin-setup-guide)으로 설정하면 직원들이 다시 켤 수 없어요.
 
 ---
 
-## VS Code에서 열기
+## VS Code 확장 프로그램은 별도 URL
 
-VS Code 확장(extension)은 별도 핸들러를 등록해요:
+VS Code(브이에스코드) 확장 프로그램은 `claude-cli://` 대신 아래 URL 형식을 써요:
 
 ```text
 vscode://anthropic.claude-code/open
 ```
 
-터미널 창 대신 VS Code 에디터 탭이 열립니다. 파라미터는 공식 VS Code 문서를 확인하세요.
+터미널 창 대신 VS Code 에디터 탭으로 열려요. VS Code 확장 문서에서 파라미터 형식을 확인하세요.
 
 ---
 
-## 문제 해결
+## ⚠️ 주의사항 & 자주 있는 문제
 
-| 증상 | 원인 | 해결책 |
-|------|------|--------|
-| 클릭해도 아무것도 안 열려요 | 핸들러 미등록 상태 | `claude` 한 번 실행 후 재시도 |
-| 홈 디렉토리에서 열려요 | `repo` 저장소를 Claude가 모름 | 해당 폴더에서 `claude` 한 번 실행 후 재시도 |
-| 링크가 텍스트로만 보여요 | GitHub 등 일부 렌더러가 URL 차단 | 코드 블록으로 URL 표시 후 복사 안내 |
-| 다른 터미널이 열려요 | 기본 터미널 설정 문제 | macOS: 원하는 터미널에서 `claude` 실행. Linux: `$TERMINAL` 환경변수 설정 |
-
----
-
-## 함께 쓰면 좋은 기능
-
-- **[Skills(슬래시 커맨드)](/docs/advanced/skill-evaluation)**: 자주 쓰는 긴 프롬프트를 `/skill`로 저장 → 딥링크의 `q`에 짧은 이름만 넣어도 됨
-- **[Headless 모드](/docs/advanced/remote-control)**: 터미널 창 없이 스크립트에서 실행하고 결과만 받을 때
-- **[Routines(루틴)](/docs/advanced/routines)**: 반복 작업은 루틴으로 설정 → 딥링크로 원클릭 트리거
+| 증상 | 원인 & 해결 |
+|------|------------|
+| 클릭해도 아무 일 없음 | 핸들러 미등록. `claude` 명령어 한 번 실행 후 재시도 |
+| GitHub에서 링크 텍스트만 보임 | GitHub Markdown은 `claude-cli://` 차단. 코드 블록에 URL 넣기 |
+| 지정한 폴더가 아닌 홈 폴더에서 열림 | `repo` 파라미터는 한 번이라도 해당 폴더에서 `claude` 실행한 적 있어야 함 |
+| 다른 터미널 앱으로 열림 | macOS: 원하는 터미널에서 `claude` 한 번 실행 / Linux: `$TERMINAL` 환경변수 설정 |
 
 ---
 
-> 📌 **요약**: `claude-cli://open?repo=저장소이름&q=질문` 형식의 URL을 런북이나 대시보드에 넣어두면, 팀원 누구나 클릭 한 번으로 올바른 저장소에서 준비된 질문으로 Claude Code를 시작할 수 있어요. 프롬프트는 자동 실행되지 않으니 확인 후 Enter를 누르면 됩니다.
+## 다음 단계
+
+딥링크를 이해했다면:
+- **[스킬(Skills)](/docs/config/skills-guide)** — 긴 런북 지시문을 `/스킬명`으로 저장하면 딥링크의 `q` 파라미터를 짧게 줄일 수 있어요
+- **[루틴(Routines)](/docs/advanced/routines)** — 스케줄이나 API 호출로 자동 실행하는 자동화
+- **[원격 제어(Remote Control)](/docs/advanced/remote-control)** — 모바일에서 세션 이어가기
