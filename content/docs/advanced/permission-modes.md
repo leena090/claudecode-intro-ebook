@@ -4,7 +4,7 @@ description: "Shift+Tab 한 번이면 클로드의 작업 스타일이 바뀐다
 tags: ["고급", "permission mode", "권한 모드", "auto", "오토 모드", "acceptEdits", "plan mode", "bypassPermissions", "shift+tab", "dangerously skip"]
 category: "advanced"
 order: 20
-lastUpdated: "2026-04-20"
+lastUpdated: "2026-04-27"
 ---
 
 <div class="note-star">
@@ -148,6 +148,10 @@ claude --permission-mode plan
 - **관리자**: Team·Enterprise는 관리자가 먼저 활성화해야 함
 - **모델**: Sonnet 4.6 / Opus 4.6 / Opus 4.7 (Max는 **Opus 4.7만**)
 - **제공자**: Anthropic API만 (Bedrock·Vertex·Foundry 불가)
+
+<div class="note-star">
+★ <strong>v2.1.113 업데이트</strong>: Max 구독자가 Opus 4.7 모델을 사용할 때는 <code>--enable-auto-mode</code> 플래그를 따로 넣지 않아도 auto 모드를 쓸 수 있어요. 이전에는 플래그를 직접 붙여야 했지만 이제 Shift+Tab으로 바로 전환됩니다.
+</div>
 
 **대화 속 경계선도 지켜줘요**: "push 하지 마", "배포는 내가 검토한 후에" 같은 말을 전체 전환 기록에서 재확인해서 막아줍니다.
 

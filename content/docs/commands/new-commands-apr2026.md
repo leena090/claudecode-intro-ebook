@@ -4,7 +4,7 @@ description: "최근 추가된 14개 슬래시 명령어를 한눈에 — 왕초
 tags: ["명령어", "신규", "2026", "슬래시", "업데이트"]
 category: "commands"
 order: 7
-lastUpdated: "2026-04-20"
+lastUpdated: "2026-04-27"
 ---
 
 ## 이런 게 새로 생겼어요!
@@ -60,7 +60,7 @@ Claude Code는 계속 진화합니다. 최근 몇 주 사이에 편리한 명령
 
 ---
 
-### `/recap` — 지금까지 작업 요약
+### `/recap` — 지금까지 작업 요약 (자동 기능 추가!)
 
 ```bash
 /recap
@@ -78,8 +78,14 @@ Claude Code는 계속 진화합니다. 최근 몇 주 사이에 편리한 명령
 → "지금까지 auth 모듈 수정, 테스트 3개 통과, 1개 실패 중"
 ```
 
+<div class="note-star">
+★ <strong>v2.1.114 자동 recap 기능 추가!</strong><br />
+세션을 열어둔 채로 다른 일을 하다가 <strong>터미널 탭으로 돌아오면 자동으로 1줄 요약</strong>이 표시돼요. 여러 세션을 동시에 돌릴 때 흐름을 잃지 않게 해줍니다.<br />
+자동 recap이 필요 없으면: <code>/config</code>에서 끌 수 있어요.
+</div>
+
 <div class="note-circle">
-○ v2.1.108에 추가됐어요.
+○ v2.1.108에 추가됐어요. 자동 기능은 v2.1.114부터.
 </div>
 
 ---
@@ -166,12 +172,14 @@ Claude Code는 계속 진화합니다. 최근 몇 주 사이에 편리한 명령
 
 ---
 
-### `/effort low|medium|high` — 작업 깊이 조절
+### `/effort low|medium|high|xhigh` — 작업 깊이 조절 (슬라이더 기능 추가!)
 
 ```bash
 /effort low
 /effort medium
 /effort high
+/effort xhigh    # Opus 4.7 전용
+/effort          # 인자 없이 입력 → 인터랙티브 슬라이더 표시!
 ```
 
 > 🍱 **비유로 설명하면**: 택시 기본요금 vs 모범택시예요. 간단한 거 물어볼 땐 `low`로 빠르게, 중요한 코드 짤 땐 `high`로 꼼꼼하게, Opus 4.7에서는 `xhigh`(초고)도 가능.
@@ -179,9 +187,9 @@ Claude Code는 계속 진화합니다. 최근 몇 주 사이에 편리한 명령
 | 레벨 | 특징 | 언제 쓰나요? |
 |------|------|-------------|
 | `low` | 빠르고 간결 | 간단한 질문, 짧은 수정 |
-| `medium` | 기본값 | 일반적인 작업 대부분 |
+| `medium` | 중간 | 일반 작업 |
 | `high` | 깊고 꼼꼼 | 결제 시스템, 보안 코드 등 중요한 작업 |
-| `xhigh` | 초고 수준 (Opus 4.7) | high와 max 사이, 최대급 정밀 작업 |
+| `xhigh` | 초고 수준 (Opus 4.7만 사용 가능) | high와 max 사이, 최대급 정밀 작업 |
 
 **사용 예시:**
 ```
@@ -190,14 +198,21 @@ Claude Code는 계속 진화합니다. 최근 몇 주 사이에 편리한 명령
 
 /effort low
 → "이 단어 영어로 뭐야?" 같은 간단한 질문
+
+/effort (인자 없이)
+→ 화살표 키로 조절하는 슬라이더 표시
+   ◀ low ── medium ── [high] ── xhigh ▶
+   → Enter 누르면 선택!
 ```
 
 <div class="note-star">
-★ v2.1.94(2026-04-07)부터 기본값이 <code>high</code>로 올라갔어요. 예전엔 <code>medium</code>이었지만 이제 기본이 <code>high</code>입니다.
+★ <strong>v2.1.105 슬라이더 기능 추가!</strong> <code>/effort</code>를 인자 없이 실행하면 레벨 이름을 외우지 않아도 화살표 키로 직관적으로 조절할 수 있어요.<br />
+★ v2.1.94(2026-04-07)부터 기본값이 <code>high</code>로 올라갔어요 (예전엔 <code>medium</code>).<br />
+★ Pro/Max 구독자 Opus 4.6·Sonnet 4.6 기본값도 v2.1.114부터 <code>high</code>로 올라갔습니다.
 </div>
 
 <div class="note-circle">
-○ v2.1.76에 추가됐어요.
+○ v2.1.76에 추가됐어요. xhigh 레벨은 Opus 4.7 사용 시에만 선택 가능.
 </div>
 
 ---
@@ -468,6 +483,25 @@ git push origin my-feature  # 브랜치 푸시
 
 <div class="note-circle">
 ○ v2.1.92(2026-04-06)에 추가됐어요. Web에서만 됐던 기능을 이제 CLI에서도 사용 가능합니다.
+</div>
+
+---
+
+---
+
+### 알아두면 편한 별칭 (Alias)
+
+Claude Code는 자주 쓰는 긴 명령어에 짧은 별칭을 제공해요.
+
+| 별칭 | 원래 명령어 | 설명 |
+|------|------------|------|
+| `/undo` | `/rewind` | 마지막 변경 되돌리기 |
+| `/proactive` | `/loop` | 주기적 반복 실행 |
+
+> 🍱 **비유로 설명하면**: 스마트폰의 단축어(Siri Shortcuts) 같아요. `/rewind`가 기억 안 나도 `/undo`로 쉽게 실행할 수 있어요.
+
+<div class="note-circle">
+○ v2.1.105부터 지원돼요. 원래 명령어와 완전히 동일하게 작동합니다.
 </div>
 
 ---

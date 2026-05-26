@@ -1,9 +1,9 @@
 {
   "_meta": {
     "created": "2026-04-20",
-    "updated": "2026-05-13",
+    "updated": "2026-04-27",
     "source_url": "https://www.anthropic.com/news",
-    "note": "2026-05-13 16차 실행: 신규 블로그 1개 감지. claude-for-small-business (May 13). 콘텐츠 생성: content/docs/next/claude-for-small-business.md (new).",
+    "note": "2026-04-27 7차 실행: 신규 블로그 1건 감지 — 호주·뉴질랜드 GM 임명 + 시드니 오피스 오픈(Apr 27). 비즈니스 뉴스로 콘텐츠 생성 스킵.",
     "fetch_status": "ga-blog.txt 수신"
   },
   "seen": [
@@ -132,52 +132,12 @@
       "content_written": false
     },
     {
-      "url": "https://www.anthropic.com/news/anthropic-theo-hourmouzis-australia-new-zealand",
+      "url": "https://www.anthropic.com/news/theo-hourmouzis-australia-new-zealand-gm",
       "title": "Anthropic names Theo Hourmouzis General Manager of Australia & New Zealand and officially opens Sydney office",
       "date": "2026-04-27",
       "confirmed": false,
-      "note": "URL 추정 — AU/NZ GM 취임 및 시드니 오피스 공식 오픈. 비즈니스/인사 뉴스, 코딩 ebook과 직접 관련 낮아 콘텐츠 생성 스킵",
+      "note": "URL 추정 — 호주·뉴질랜드 GM 임명 + 시드니 오피스 오픈. 비즈니스 뉴스, 한국어 코딩 ebook과 직접 연관 낮아 콘텐츠 생성 스킵",
       "content_written": false
-    },
-    {
-      "url": "https://www.anthropic.com/news/claude-for-creative-work",
-      "title": "Claude for Creative Work",
-      "date": "2026-04-28",
-      "confirmed": false,
-      "note": "URL 추정 — 창작 작업용 Claude 관련 발표. 제목만 확인됨. 코딩 전용 ebook과의 직접 관련 불명확하여 이번 회차 콘텐츠 생성 스킵. 다음 회차에 내용 확인 후 재검토.",
-      "content_written": false
-    },
-    {
-      "url": "https://www.anthropic.com/news/higher-usage-limits-spacex-compute",
-      "title": "Higher usage limits for Claude and a compute deal with SpaceX",
-      "date": "2026-05-06",
-      "confirmed": false,
-      "note": "URL 추정 — 사용 한도 증가 + SpaceX 컴퓨팅 딜. Claude Code 사용자에게 직접 영향. 콘텐츠 생성: content/docs/next/usage-limits-increase.md",
-      "content_written": true
-    },
-    {
-      "url": "https://www.anthropic.com/news/agents-for-financial-services",
-      "title": "Agents for financial services",
-      "date": "2026-05-05",
-      "confirmed": false,
-      "note": "URL 추정 — 금융 서비스 에이전트 특화 발표. 업종 특화 내용으로 일반 입문 ebook과 직접 관련 낮아 콘텐츠 생성 스킵.",
-      "content_written": false
-    },
-    {
-      "url": "https://www.anthropic.com/news/enterprise-ai-services-blackstone",
-      "title": "Building a new enterprise AI services company with Blackstone, Hellman & Friedman, and Goldman Sachs",
-      "date": "2026-05-04",
-      "confirmed": false,
-      "note": "URL 추정 — 엔터프라이즈 AI 서비스 회사 설립 투자 뉴스. 비즈니스/투자 뉴스, 코딩 ebook과 무관하여 콘텐츠 생성 스킵.",
-      "content_written": false
-    },
-    {
-      "url": "https://www.anthropic.com/news/claude-for-small-business",
-      "title": "Introducing Claude for Small Business",
-      "date": "2026-05-13",
-      "confirmed": false,
-      "note": "URL 추정 — 소규모 사업장 전용 Claude 솔루션 발표. 마케팅 Solutions nav에 'Small business' 항목 동시 추가. ebook 핵심 타깃(40~60대 소사업주)과 직접 관련. 콘텐츠 생성: content/docs/next/claude-for-small-business.md (new).",
-      "content_written": true
     }
   ]
 }
