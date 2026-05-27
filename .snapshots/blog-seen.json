@@ -1,9 +1,9 @@
 {
   "_meta": {
     "created": "2026-04-20",
-    "updated": "2026-05-25",
+    "updated": "2026-05-27",
     "source_url": "https://www.anthropic.com/news",
-    "note": "2026-05-25 17차 실행: 신규 블로그 7개 감지. 콘텐츠 생성: content/docs/next/stainless-acquisition.md (new) for Stainless 인수. 나머지 6개는 비즈니스/파트너십/정치 주제로 코딩 ebook과 직접 관련 낮아 스킵.",
+    "note": "2026-05-27 18차 실행: blog-seen.json에 누락된 2개 항목 추가. claude-for-small-business (2026-05-13, 16차 실행 시 콘텐츠 생성됐으나 미기록), higher-usage-limits-spacex (2026-05-06, 이전 실행 시 콘텐츠 생성됐으나 미기록). ga-blog.txt 신규 항목 없음.",
     "fetch_status": "ga-blog.txt 수신"
   },
   "seen": [
@@ -218,6 +218,22 @@
       "confirmed": false,
       "note": "URL 추정 — 종교/철학 주제. 코딩 ebook과 무관하여 콘텐츠 생성 스킵.",
       "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/introducing-claude-for-small-business",
+      "title": "Introducing Claude for Small Business",
+      "date": "2026-05-13",
+      "confirmed": false,
+      "note": "URL 추정 — 16차 실행(2026-05-13)에 콘텐츠 생성됐으나 blog-seen.json 기록 누락. 콘텐츠: content/docs/next/claude-for-small-business.md.",
+      "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/higher-usage-limits-claude-spacex",
+      "title": "Higher usage limits for Claude and a compute deal with SpaceX",
+      "date": "2026-05-06",
+      "confirmed": false,
+      "note": "URL 추정 — 이전 실행에서 콘텐츠 생성됐으나 blog-seen.json 기록 누락. 콘텐츠: content/docs/next/usage-limits-increase.md.",
+      "content_written": true
     }
   ]
 }
