@@ -1,9 +1,9 @@
 {
   "_meta": {
     "created": "2026-04-20",
-    "updated": "2026-05-25",
+    "updated": "2026-05-30",
     "source_url": "https://www.anthropic.com/news",
-    "note": "2026-05-25 17차 실행: 신규 블로그 7개 감지. 콘텐츠 생성: content/docs/next/stainless-acquisition.md (new) for Stainless 인수. 나머지 6개는 비즈니스/파트너십/정치 주제로 코딩 ebook과 직접 관련 낮아 스킵.",
+    "note": "2026-05-30 18차 실행: 신규 블로그 4개 감지. 콘텐츠 생성: content/docs/next/claude-opus-4-8.md (new) for Opus 4.8 출시. 나머지 3개 (Series H $65B, Milan office, KiYoung Choi Korea 대표이사) 비즈니스/인사 뉴스로 스킵.",
     "fetch_status": "ga-blog.txt 수신"
   },
   "seen": [
@@ -217,6 +217,38 @@
       "date": "2026-05-25",
       "confirmed": false,
       "note": "URL 추정 — 종교/철학 주제. 코딩 ebook과 무관하여 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/anthropic-ki-young-choi-korea",
+      "title": "Anthropic appoints KiYoung Choi as Representative Director of Korea ahead of Seoul office opening",
+      "date": "2026-05-26",
+      "confirmed": false,
+      "note": "URL 추정 — 한국 대표이사 임명 + 서울 오피스 준비 발표. 한국어 ebook이지만 비즈니스/인사 뉴스로 코딩 직접 관련 낮아 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/anthropic-milan-office",
+      "title": "Anthropic opens Milan office to support Italian enterprise, research, and developers",
+      "date": "2026-05-27",
+      "confirmed": false,
+      "note": "URL 추정 — 밀라노 오피스 오픈. 비즈니스 뉴스, 코딩 ebook과 무관하여 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/claude-opus-4-8",
+      "title": "Introducing Claude Opus 4.8",
+      "date": "2026-05-28",
+      "confirmed": true,
+      "note": "코딩·에이전트 작업·장시간 실행 성능 향상. Fast Mode Opus 4.8 기본 ($10/$50). 콘텐츠 생성: content/docs/next/claude-opus-4-8.md (new).",
+      "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/anthropic-series-h",
+      "title": "Anthropic raises $65B in Series H funding at $965B post-money valuation",
+      "date": "2026-05-28",
+      "confirmed": false,
+      "note": "URL 추정 — $65B 시리즈 H 펀딩, 기업가치 $965B. 투자/비즈니스 뉴스, 코딩 ebook과 직접 관련 낮아 콘텐츠 생성 스킵.",
       "content_written": false
     }
   ]

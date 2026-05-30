@@ -1,9 +1,9 @@
 {
   "_meta": {
     "created": "2026-04-20",
-    "updated": "2026-05-25",
+    "updated": "2026-05-30",
     "source_url": "https://code.claude.com/docs/llms.txt",
-    "note": "2026-05-25 17차 실행: 신규 URL 9개 감지. agent-sdk/session-storage, desktop-changelog, managed-mcp, plugin-hints, prompt-caching, prompt-library, sandbox-environments, sessions, whats-new/2026-w20. 총 140개 URL. 콘텐츠 생성: next/whats-new-w20.md (new), tips/prompt-library.md (new), advanced/prompt-caching.md (new), commands/session-commands.md (edit: --continue/--from-pr 추가). sandbox-environments 스킵(advanced/sandbox-security.md 중복), managed-mcp 스킵(기업관리자용), desktop-changelog 스킵(changelog류), plugin-hints 스킵(플러그인개발자용), agent-sdk/session-storage 스킵(SDK고급).",
+    "note": "2026-05-30 18차 실행: 신규 URL 5개 감지. whats-new/2026-w21, whats-new/2026-w22, workflows, large-codebases, security-guidance. 총 154개 URL. 콘텐츠 생성: next/whats-new-w21.md (new), next/whats-new-w22.md (new), advanced/dynamic-workflows.md (new), next/claude-opus-4-8.md (new). large-codebases 스킵(입문 ebook 범위 외), security-guidance 스킵(w22 요약에서 언급).",
     "fetch_status": "200_ok"
   },
   "https://code.claude.com/docs/en/overview": "SNAPSHOT_2026-04-20",
@@ -145,5 +145,10 @@
   "https://code.claude.com/docs/en/prompt-library": "SNAPSHOT_2026-05-25",
   "https://code.claude.com/docs/en/sandbox-environments": "SNAPSHOT_2026-05-25",
   "https://code.claude.com/docs/en/sessions": "SNAPSHOT_2026-05-25",
-  "https://code.claude.com/docs/en/whats-new/2026-w20": "SNAPSHOT_2026-05-25"
+  "https://code.claude.com/docs/en/whats-new/2026-w20": "SNAPSHOT_2026-05-25",
+  "https://code.claude.com/docs/en/whats-new/2026-w21": "SNAPSHOT_2026-05-30",
+  "https://code.claude.com/docs/en/whats-new/2026-w22": "SNAPSHOT_2026-05-30",
+  "https://code.claude.com/docs/en/workflows": "SNAPSHOT_2026-05-30",
+  "https://code.claude.com/docs/en/large-codebases": "SNAPSHOT_2026-05-30",
+  "https://code.claude.com/docs/en/security-guidance": "SNAPSHOT_2026-05-30"
 }
