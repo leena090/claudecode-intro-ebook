@@ -1,7 +1,7 @@
-# SNAPSHOT - 2026-04-23 (5차 실행 검증완료)
+# SNAPSHOT - 2026-05-31 (18차 실행 검증완료)
 # 소스: https://claude.com/claude-code (마케팅 공식 페이지)
-# 상태: ga-marketing.txt 정상 수신 (2026-04-21 GitHub Actions 실행분)
-# 4차 실행 확인: 신규 변경 없음. 요금제·모델·기능·nav 항목 모두 이전 스냅샷과 동일.
+# 상태: ga-marketing.txt 정상 수신 (2026-05-31 GitHub Actions 실행분)
+# 18차 실행 확인: Opus 4.7 → Opus 4.8 모델 변경 감지. Fast Mode Opus 4.8 기준 $10/$50 (w22 changelog 기준).
 
 ## 최신 기능 하이라이트 (2026-04-20 기준)
 - Routines: 한 번 설정하면 스케줄, API 호출, 이벤트 반응으로 자동 실행 (Apr 14, 2026)
@@ -18,24 +18,28 @@
 
 ## 요금제 (공식 발표 기준)
 - Pro: $17/월 (연간 선납, $200/년) 또는 $20/월 (월납)
-  - Sonnet 4.6 + Opus 4.7 포함
+  - Sonnet 4.6 + Opus 4.8 포함
 - Max 5x: $100/월
 - Max 20x: $200/월
 - Team: $20/인원/월 (5~150명, 연간)
-  - Sonnet 4.6 + Opus 4.7 포함
+  - Sonnet 4.6 + Opus 4.8 포함
 - Enterprise: 별도 문의
 - Claude API: 토큰 기반 과금 (개발자용)
 
 ## 지원 모델
-- claude-opus-4-7 (최신 Opus)
+- claude-opus-4-8 (최신 Opus) ← 2026-05-28 업데이트
 - claude-sonnet-4-6 (기본 균형형)
 - claude-haiku-4-5-20251001 (경량)
 
 ## Fast Mode
-- ~~Opus 4.6~~ → **Opus 4.7** 고속 실행 버전 (w20, 2026-05-19 변경)
+- ~~Opus 4.6~~ → ~~Opus 4.7~~ → **Opus 4.8** 기본 적용 (w22, 2026-05-25 변경)
 - 2.5배 빠름, 토큰당 비용 높음
-- 요금: $30/$150 per million tokens (입출력)
+- 요금 (w22 changelog 기준):
+  - Opus 4.8: **$10/$50** per million tokens (신규 기본, 가격 인하)
+  - Opus 4.7: $30/$150 per million tokens (유지)
+  - Opus 4.6: deprecated
 - Pro/Max 리서치 프리뷰 / 소비 기반 플랜 적용
+- ⚠️ 마케팅 페이지 FAQ는 $30/$150 표기 유지 중 (업데이트 지연 추정)
 
 ## 주요 기능 (공식 문서 기반 확인)
 - /focus 명령어
@@ -99,3 +103,4 @@
 - 2026-05-12 15차: **[변경 감지]** Solutions nav "Legal" 신규 추가. nav 반영 완료 (콘텐츠 생성 스킵 — 법률 서비스는 코딩 입문 ebook 범위 외).
 - 2026-05-13 16차: **[변경 감지]** Solutions nav "Small business" 신규 추가. 동일자 Anthropic 블로그 "Introducing Claude for Small Business" 발표와 연동. 블로그 콘텐츠 생성: content/docs/next/claude-for-small-business.md (new).
 - 2026-05-25 17차: **[변경 없음]** 요금제·모델·기능·nav 항목 모두 이전 스냅샷과 동일. ga-marketing.txt 전체 비교 완료. Fast Mode FAQ가 "Opus 4.6" 표기 유지 중 (marketing page 미반영, docs Week 20에서는 Opus 4.7로 전환 발표).
+- 2026-05-31 18차: **[변경 감지]** 모델명 Opus 4.7 → Opus 4.8 교체 (ga-marketing.txt 반영). Fast Mode도 Opus 4.8 기준으로 업데이트. 마케팅 페이지 FAQ는 여전히 $30/$150 표기 중 (changelog 기준 Opus 4.8은 $10/$50). 콘텐츠: next/whats-new-w22.md (new)에 반영.
