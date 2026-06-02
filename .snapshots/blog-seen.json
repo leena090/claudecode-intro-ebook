@@ -1,9 +1,9 @@
 {
   "_meta": {
     "created": "2026-04-20",
-    "updated": "2026-05-25",
+    "updated": "2026-06-02",
     "source_url": "https://www.anthropic.com/news",
-    "note": "2026-05-25 17차 실행: 신규 블로그 7개 감지. 콘텐츠 생성: content/docs/next/stainless-acquisition.md (new) for Stainless 인수. 나머지 6개는 비즈니스/파트너십/정치 주제로 코딩 ebook과 직접 관련 낮아 스킵.",
+    "note": "2026-06-02 18차 실행: 신규 블로그 5개 감지. Introducing Claude Opus 4.8 (5/28) → whats-new-w21-w22.md에 통합 서술. 나머지 4개(서울 대표이사, 시리즈H 투자, 밀라노 오피스, S-1 제출)는 코딩 ebook과 직접 관련 낮아 콘텐츠 생성 스킵.",
     "fetch_status": "ga-blog.txt 수신"
   },
   "seen": [
@@ -217,6 +217,46 @@
       "date": "2026-05-25",
       "confirmed": false,
       "note": "URL 추정 — 종교/철학 주제. 코딩 ebook과 무관하여 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/claude-opus-4-8",
+      "title": "Introducing Claude Opus 4.8",
+      "date": "2026-05-28",
+      "confirmed": false,
+      "note": "URL 추정 — Opus 4.8 출시 발표. Claude Code 기본 모델 변경. 콘텐츠 생성: content/docs/next/whats-new-w21-w22.md (new, W21+W22 통합)에 포함.",
+      "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/anthropic-kiYoung-choi-korea",
+      "title": "Anthropic appoints KiYoung Choi as Representative Director of Korea ahead of Seoul office opening",
+      "date": "2026-05-26",
+      "confirmed": false,
+      "note": "URL 추정 — 한국 법인 설립 및 대표이사 임명. 한국어 ebook 사용자에게 의미 있는 소식이나 코딩 직접 관련 낮아 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/anthropic-series-h",
+      "title": "Anthropic raises $65B in Series H funding at $965B post-money valuation",
+      "date": "2026-05-28",
+      "confirmed": false,
+      "note": "URL 추정 — 6.5조 달러 시리즈H 투자 유치. 기업 가치 9,650억 달러. 재무/투자 뉴스, 코딩 ebook 직접 관련 낮아 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/anthropic-milan-office",
+      "title": "Anthropic opens Milan office to support Italian enterprise, research, and developers",
+      "date": "2026-05-27",
+      "confirmed": false,
+      "note": "URL 추정 — 밀라노 오피스 개설. 비즈니스 뉴스, 코딩 ebook 직접 관련 낮아 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/anthropic-sec-s1",
+      "title": "Anthropic confidentially submits draft S-1 to the SEC",
+      "date": "2026-06-01",
+      "confirmed": false,
+      "note": "URL 추정 — IPO를 위한 S-1 비공개 제출. 재무/투자 뉴스, 코딩 ebook 직접 관련 낮아 콘텐츠 생성 스킵.",
       "content_written": false
     }
   ]
