@@ -4,7 +4,7 @@ description: "Model Context Protocol로 GitHub, Notion, Slack 등 외부 서비�
 category: "config"
 order: 5
 tags: ["외부연결", "MCP", "설정"]
-lastUpdated: "2026-04-13"
+lastUpdated: "2026-06-03"
 ---
 
 ## MCP (Model Context Protocol)란?
@@ -652,6 +652,49 @@ MCP 서버를 연결하면 Claude는 **매 대화마다** 그 서버가 어떤 �
 | 파일 검색 | Filesystem MCP | `find`, `grep` | **CLI 압승** |
 
 > 🍱 **비유로 설명하면**: 택시(MCP)는 편하지만 매번 기본 요금이 붙어요. 걸어서(CLI) 갈 수 있는 거리면 걸어가는 게 돈 아껴요.
+
+---
+
+## 처음 MCP 연결하기 — CLI 한 줄 빠른 시작 (2026-05 신규)
+
+> 👉 공식 문서 신규 추가: [mcp-quickstart](https://code.claude.com/docs/en/mcp-quickstart) `[공]`
+
+MCP 서버를 처음 연결할 때 가장 쉬운 방법은 `claude mcp add` 명령어예요.
+
+### 연결 상태 표시 의미
+
+```bash
+claude mcp list   # 연결된 서버 목록 + 상태 확인
+```
+
+| 상태 표시 | 의미 |
+|---|---|
+| `✓ Connected` | 정상 연결됨 |
+| `! Needs authentication` | 브라우저 로그인 필요 |
+| `✗ Failed to connect` | 연결 실패 (트러블슈팅 필요) |
+| `⏸ Pending approval` | 프로젝트 범위 서버, 아직 미승인 |
+
+### 범위(Scope) 설정
+
+| 범위 | 저장 위치 | 적용 범위 |
+|---|---|---|
+| `local` (기본) | `~/.claude.json` (프로젝트별) | 나 혼자, 이 프로젝트만 |
+| `project` | `.mcp.json` (프로젝트 루트) | 이 저장소 클론한 팀원 모두 |
+| `user` | `~/.claude.json` (전역) | 나 혼자, 모든 프로젝트 |
+
+```bash
+# 모든 프로젝트에서 쓰고 싶다면 --scope user
+claude mcp add --scope user --transport http my-server https://my-mcp.example.com
+
+# 팀원과 공유하려면 --scope project (.mcp.json 생성, git에 커밋)
+claude mcp add --scope project --transport http my-server https://my-mcp.example.com
+```
+
+### 첫 연결 문제 해결 팁
+
+- 연결이 안 될 때: `curl -I https://서버주소`로 서버가 살아있는지 먼저 확인
+- stdio 서버라면: 터미널에서 직접 명령어 실행해서 에러 메시지 확인
+- 시작 시간 초과(30초): `MCP_TIMEOUT=60000 claude`로 시간 연장
 
 ### 4. 언제 MCP를 제거해야 하나? (체크리스트)
 
