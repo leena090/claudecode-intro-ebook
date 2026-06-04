@@ -1,9 +1,9 @@
 {
   "_meta": {
     "created": "2026-04-20",
-    "updated": "2026-05-25",
+    "updated": "2026-06-04",
     "source_url": "https://www.anthropic.com/news",
-    "note": "2026-05-25 17차 실행: 신규 블로그 7개 감지. 콘텐츠 생성: content/docs/next/stainless-acquisition.md (new) for Stainless 인수. 나머지 6개는 비즈니스/파트너십/정치 주제로 코딩 ebook과 직접 관련 낮아 스킵.",
+    "note": "2026-06-04 18차 실행: 신규 블로그 8개 감지. 콘텐츠 생성: next/korea-office.md (new, [블]) for 한국 법인 설립. Opus 4.8 출시는 next/whats-new-w22.md에서 함께 다룸. 나머지 6개는 비즈니스/IPO/보안정책 주제로 코딩 ebook과 직접 관련 낮아 스킵.",
     "fetch_status": "ga-blog.txt 수신"
   },
   "seen": [
@@ -217,6 +217,70 @@
       "date": "2026-05-25",
       "confirmed": false,
       "note": "URL 추정 — 종교/철학 주제. 코딩 ebook과 무관하여 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/anthropic-korea-kiYoung-choi",
+      "title": "Anthropic appoints KiYoung Choi as Representative Director of Korea ahead of Seoul office opening",
+      "date": "2026-05-26",
+      "confirmed": false,
+      "note": "URL 추정 — 한국 법인 설립·서울 사무소 오픈 예정. 한국어 ebook 독자에게 매우 관련 높음. 콘텐츠 생성: content/docs/next/korea-office.md (new).",
+      "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/anthropic-milan-office",
+      "title": "Anthropic opens Milan office to support Italian enterprise, research, and developers",
+      "date": "2026-05-27",
+      "confirmed": false,
+      "note": "URL 추정 — 밀라노 오피스 오픈. 비즈니스 뉴스, 한국어 코딩 ebook 직접 관련 낮아 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/claude-opus-4-8",
+      "title": "Introducing Claude Opus 4.8",
+      "date": "2026-05-28",
+      "confirmed": false,
+      "note": "URL 추정 — Claude Opus 4.8 공식 출시 발표. content/docs/next/whats-new-w22.md에서 함께 다룸.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/anthropic-series-h-65b",
+      "title": "Anthropic raises $65B in Series H funding at $965B post-money valuation",
+      "date": "2026-05-28",
+      "confirmed": false,
+      "note": "URL 추정 — Series H $65B 투자 유치. 비즈니스/투자 뉴스, 코딩 ebook 직접 관련 낮아 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/project-glasswing-expanding",
+      "title": "Expanding Project Glasswing",
+      "date": "2026-06-02",
+      "confirmed": false,
+      "note": "URL 추정 — Project Glasswing 확장. 소프트웨어 보안 이니셔티브. 코딩 ebook과 직접 관련 낮아 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/anthropic-sec-s1",
+      "title": "Anthropic confidentially submits draft S-1 to the SEC",
+      "date": "2026-06-03",
+      "confirmed": false,
+      "note": "URL 추정 — SEC S-1 비공개 제출 (IPO 준비). 금융/비즈니스 뉴스, 코딩 ebook 직접 관련 낮아 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/claude-partner-network-services-track",
+      "title": "Introducing the Services Track and Partner Hub of the Claude Partner Network",
+      "date": "2026-06-03",
+      "confirmed": false,
+      "note": "URL 추정 — Claude Partner Network 서비스 트랙 출시. 파트너십/비즈니스 뉴스, 코딩 ebook 직접 관련 낮아 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/ai-enabled-cyber-threats-2025",
+      "title": "What we learned mapping a year's worth of AI-enabled cyber threats",
+      "date": "2026-06-03",
+      "confirmed": false,
+      "note": "URL 추정 — AI 사이버 위협 1년 매핑 연구. 보안 정책 연구 주제, 코딩 입문 ebook 직접 관련 낮아 콘텐츠 생성 스킵.",
       "content_written": false
     }
   ]
