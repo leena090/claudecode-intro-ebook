@@ -1,9 +1,9 @@
 {
   "_meta": {
     "created": "2026-04-20",
-    "updated": "2026-05-25",
+    "updated": "2026-06-12",
     "source_url": "https://www.anthropic.com/news",
-    "note": "2026-05-25 17차 실행: 신규 블로그 7개 감지. 콘텐츠 생성: content/docs/next/stainless-acquisition.md (new) for Stainless 인수. 나머지 6개는 비즈니스/파트너십/정치 주제로 코딩 ebook과 직접 관련 낮아 스킵.",
+    "note": "2026-06-12 18차 실행: 신규 블로그 11개 감지. 콘텐츠 생성: next/fable5-opus48-update.md (new, Fable 5 + Opus 4.8 통합). 나머지: 비즈니스/파트너십/정책/사무소 주제로 코딩 ebook과 직접 관련 낮아 스킵.",
     "fetch_status": "ga-blog.txt 수신"
   },
   "seen": [
@@ -217,6 +217,94 @@
       "date": "2026-05-25",
       "confirmed": false,
       "note": "URL 추정 — 종교/철학 주제. 코딩 ebook과 무관하여 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/claude-opus-4-8",
+      "title": "Introducing Claude Opus 4.8",
+      "date": "2026-05-28",
+      "confirmed": false,
+      "note": "URL 추정 — Opus 4.8 출시 발표. 콘텐츠 생성: next/fable5-opus48-update.md (Fable 5와 통합).",
+      "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/anthropic-raises-65b-series-h",
+      "title": "Anthropic raises $65B in Series H funding at $965B post-money valuation",
+      "date": "2026-05-28",
+      "confirmed": false,
+      "note": "URL 추정 — 투자/기업가치 뉴스. 코딩 ebook과 직접 관련 낮아 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/anthropic-s1-sec",
+      "title": "Anthropic confidentially submits draft S-1 to the SEC",
+      "date": "2026-06-01",
+      "confirmed": false,
+      "note": "URL 추정 — IPO 준비 뉴스. 코딩 ebook과 무관하여 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/expanding-project-glasswing",
+      "title": "Expanding Project Glasswing",
+      "date": "2026-06-02",
+      "confirmed": false,
+      "note": "URL 추정 — 소프트웨어 보안 이니셔티브 확장. 코딩 ebook과 직접 관련 낮아 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/services-track-partner-hub",
+      "title": "Introducing the Services Track and Partner Hub of the Claude Partner Network",
+      "date": "2026-06-03",
+      "confirmed": false,
+      "note": "URL 추정 — 파트너 프로그램. 코딩 ebook과 직접 관련 낮아 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/ai-cyber-threats-mapping",
+      "title": "What we learned mapping a year's worth of AI-enabled cyber threats",
+      "date": "2026-06-03",
+      "confirmed": false,
+      "note": "URL 추정 — 보안 인텔리전스 연구. 코딩 ebook과 직접 관련 낮아 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+      "title": "Claude Fable 5 and Claude Mythos 5",
+      "date": "2026-06-09",
+      "confirmed": false,
+      "note": "URL 추정 — Fable 5 & Mythos 5 신규 모델 발표. 개발자 직접 관련. 콘텐츠 생성: next/fable5-opus48-update.md (Opus 4.8과 통합).",
+      "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/policy-ai-exponential",
+      "title": "Policy on the AI Exponential",
+      "date": "2026-06-10",
+      "confirmed": false,
+      "note": "URL 추정 — AI 정책 제안. 코딩 ebook과 무관하여 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/introducing-claude-corps",
+      "title": "Introducing Claude Corps",
+      "date": "2026-06-11",
+      "confirmed": false,
+      "note": "URL 추정 — 미국 AI 커리어 펠로우십 프로그램. 코딩 ebook과 직접 관련 낮아 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/dxc-claude-integration",
+      "title": "DXC will integrate Claude into the systems banks, airlines, and other regulated industries rely on",
+      "date": "2026-06-11",
+      "confirmed": false,
+      "note": "URL 추정 — 엔터프라이즈 파트너십. 코딩 ebook과 직접 관련 낮아 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/anthropic-opens-milan-office",
+      "title": "Anthropic opens Milan office to support Italian enterprise, research, and developers",
+      "date": "2026-05-27",
+      "confirmed": false,
+      "note": "URL 추정 — 밀라노 오피스 오픈. 사무소 뉴스, 코딩 ebook과 직접 관련 낮아 콘텐츠 생성 스킵.",
       "content_written": false
     }
   ]
