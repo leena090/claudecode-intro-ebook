@@ -27,15 +27,19 @@
 - Claude API: 토큰 기반 과금 (개발자용)
 
 ## 지원 모델
-- claude-opus-4-7 (최신 Opus)
+- **claude-fable-5** (최고급, 현재 접근 중단 — 2026-06-12 미국 정부 수출 규제)
+- claude-opus-4-8 (최신 Opus, 새 기본 모델)
 - claude-sonnet-4-6 (기본 균형형)
-- claude-haiku-4-5-20251001 (경량)
+- claude-haiku-4-5 (경량)
+- ~~claude-opus-4-7~~ (Opus 4.8로 대체됨)
 
 ## Fast Mode
-- ~~Opus 4.6~~ → **Opus 4.7** 고속 실행 버전 (w20, 2026-05-19 변경)
-- 2.5배 빠름, 토큰당 비용 높음
-- 요금: $30/$150 per million tokens (입출력)
+- ~~Opus 4.6~~ → ~~Opus 4.7~~ → **Opus 4.8** 고속 실행 버전 (w22, 2026-05-29 변경)
+- 2.5배 빠름, Opus 4.8 기준 **$10/$50 per million tokens** (대폭 인하)
+- Opus 4.7·4.6 fast mode: 기존 $30/$150 per million tokens 유지
+- Opus 4.6 fast mode: **지원 종료(Deprecated)**
 - Pro/Max 리서치 프리뷰 / 소비 기반 플랜 적용
+- ⚠️ 마케팅 페이지(ga-marketing.txt)는 여전히 $30/$150 표기 중 — 공식 문서(w22) 기준으로 $10/$50 적용
 
 ## 주요 기능 (공식 문서 기반 확인)
 - /focus 명령어
@@ -99,3 +103,4 @@
 - 2026-05-12 15차: **[변경 감지]** Solutions nav "Legal" 신규 추가. nav 반영 완료 (콘텐츠 생성 스킵 — 법률 서비스는 코딩 입문 ebook 범위 외).
 - 2026-05-13 16차: **[변경 감지]** Solutions nav "Small business" 신규 추가. 동일자 Anthropic 블로그 "Introducing Claude for Small Business" 발표와 연동. 블로그 콘텐츠 생성: content/docs/next/claude-for-small-business.md (new).
 - 2026-05-25 17차: **[변경 없음]** 요금제·모델·기능·nav 항목 모두 이전 스냅샷과 동일. ga-marketing.txt 전체 비교 완료. Fast Mode FAQ가 "Opus 4.6" 표기 유지 중 (marketing page 미반영, docs Week 20에서는 Opus 4.7로 전환 발표).
+- 2026-06-14 18차: **[변경 감지]** 지원 모델 목록 변경. FAQ "Which models does Claude Code use?" 내용이 "Fable 5, Opus 4.8, Sonnet 4.6, Haiku 4.5"로 업데이트됨. Fable 5 추가, Opus 4.7 → 4.8 교체. Fast Mode 설명도 "Opus 4.8" 기준으로 업데이트. 단, Fast Mode 요금은 마케팅 페이지에서 여전히 $30/$150 표기 (공식 문서 w22 기준 $10/$50로 인하). 모델 변경 내용 marketing.txt 반영 완료.

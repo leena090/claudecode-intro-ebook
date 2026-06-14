@@ -1,9 +1,9 @@
 {
   "_meta": {
     "created": "2026-04-20",
-    "updated": "2026-05-25",
+    "updated": "2026-06-14",
     "source_url": "https://www.anthropic.com/news",
-    "note": "2026-05-25 17차 실행: 신규 블로그 7개 감지. 콘텐츠 생성: content/docs/next/stainless-acquisition.md (new) for Stainless 인수. 나머지 6개는 비즈니스/파트너십/정치 주제로 코딩 ebook과 직접 관련 낮아 스킵.",
+    "note": "2026-06-14 18차 실행: 신규 블로그 11개 감지. 콘텐츠 생성: next/whats-new-w22.md (Opus 4.8 포함), next/claude-fable5-mythos5.md (Fable 5 발표 + 수출 규제). 나머지 9개는 비즈니스/정책/기업 파트너십 주제로 코딩 ebook과 직접 관련 낮아 스킵. Fable 5·Mythos 5는 2026-06-12 미국 정부 수출 규제로 접근 중단 상태.",
     "fetch_status": "ga-blog.txt 수신"
   },
   "seen": [
@@ -217,6 +217,94 @@
       "date": "2026-05-25",
       "confirmed": false,
       "note": "URL 추정 — 종교/철학 주제. 코딩 ebook과 무관하여 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/claude-opus-4-8",
+      "title": "Introducing Claude Opus 4.8",
+      "date": "2026-05-28",
+      "confirmed": false,
+      "note": "URL 추정 — Opus 4.8 신규 모델 발표. 코딩 ebook 관련성 높음. 내용은 next/whats-new-w22.md에 반영.",
+      "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/anthropic-s1-sec",
+      "title": "Anthropic confidentially submits draft S-1 to the SEC",
+      "date": "2026-06-01",
+      "confirmed": false,
+      "note": "URL 추정 — 기업 공개(IPO) 관련 비즈니스 뉴스. 코딩 ebook과 무관하여 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/project-glasswing-expanding",
+      "title": "Expanding Project Glasswing",
+      "date": "2026-06-02",
+      "confirmed": false,
+      "note": "URL 추정 — 150개 이상 기관으로 소프트웨어 보안 이니셔티브 확장. 코딩 ebook과 직접 관련 낮아 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/ai-enabled-cyber-threats",
+      "title": "What we learned mapping a year's worth of AI-enabled cyber threats",
+      "date": "2026-06-03",
+      "confirmed": false,
+      "note": "URL 추정 — AI 활용 사이버 위협 1년치 분석 보고서. 정책/보안 연구, 코딩 ebook과 직접 관련 낮아 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/claude-partner-network-services-track",
+      "title": "Introducing the Services Track and Partner Hub of the Claude Partner Network",
+      "date": "2026-06-03",
+      "confirmed": false,
+      "note": "URL 추정 — Claude 파트너 네트워크 서비스 트랙 신설. 비즈니스 발표, 코딩 ebook과 직접 관련 낮아 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+      "title": "Claude Fable 5 and Claude Mythos 5",
+      "date": "2026-06-09",
+      "confirmed": false,
+      "note": "URL 추정 — 새 최고급 모델 Fable 5·Mythos 5 발표. 코딩 ebook 관련성 매우 높음. 콘텐츠 생성: next/claude-fable5-mythos5.md (new). 단, 2026-06-12 미국 정부 수출 규제로 접근 중단됨.",
+      "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/dxc-claude-integration",
+      "title": "DXC will integrate Claude into the systems banks, airlines, and other regulated industries rely on",
+      "date": "2026-06-11",
+      "confirmed": false,
+      "note": "URL 추정 — DXC 엔터프라이즈 통합. 비즈니스 뉴스, 코딩 ebook과 직접 관련 낮아 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/claude-corps",
+      "title": "Introducing Claude Corps",
+      "date": "2026-06-11",
+      "confirmed": false,
+      "note": "URL 추정 — Claude Corps 국가 펠로십 프로그램 발표. 사회공헌/교육 주제, 코딩 ebook과 직접 관련 낮아 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/fable5-mythos5-us-government-suspension",
+      "title": "Statement on the US government directive to suspend access to Fable 5 and Mythos 5",
+      "date": "2026-06-12",
+      "confirmed": false,
+      "note": "URL 추정 — 미국 정부 수출 규제로 Fable 5·Mythos 5 접근 중단 공식 발표. 코딩 ebook 관련성 높음 (모델 접근 변경). next/claude-fable5-mythos5.md에 포함.",
+      "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/anthropic-public-record-results",
+      "title": "Results from the first Anthropic Public Record",
+      "date": "2026-06-12",
+      "confirmed": false,
+      "note": "URL 추정 — Anthropic 첫 번째 공개 기록 결과. 투명성 보고서, 코딩 ebook과 직접 관련 낮아 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/tcs-anthropic-regulated-industries",
+      "title": "TCS and Anthropic partner to bring Claude to regulated industries",
+      "date": "2026-06-12",
+      "confirmed": false,
+      "note": "URL 추정 — TCS 엔터프라이즈 파트너십. 비즈니스 뉴스, 코딩 ebook과 직접 관련 낮아 스킵.",
       "content_written": false
     }
   ]
