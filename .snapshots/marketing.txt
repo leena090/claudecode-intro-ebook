@@ -1,8 +1,11 @@
-# SNAPSHOT - 2026-06-15 (18차 실행)
+# SNAPSHOT - 2026-06-17 (19차 실행)
 # 소스: https://claude.com/claude-code (마케팅 공식 페이지)
-# 상태: ga-marketing.txt 정상 수신 (2026-06-15 GitHub Actions 실행분)
+# 상태: ga-marketing.txt 정상 수신 (2026-06-17 GitHub Actions 실행분)
+# 19차 실행: [변경 감지] Fast Mode 가격 — 이전 스냅샷($10/$50) vs 현재 마케팅 페이지($30/$150).
+#   ⚠️ 가능한 원인: 18차 에이전트가 docs 기준으로 $10/$50를 스냅샷에 기록했을 수 있음.
+#   현재 마케팅 페이지 실제 표시: $30/$150 per million tokens (확인됨).
+#   기존 콘텐츠(whats-new-w22.md, new-models-2026-06.md)에 $10/$50 기재 — PR 검수 필요.
 # 18차 실행: [변경 감지] 모델 라인업 변경 — Fable 5 신규 추가, Opus 4.7 → Opus 4.8 교체.
-#   Fast Mode 가격 Opus 4.8 기준으로 변경($10/$50 per MTok).
 #   콘텐츠 생성: next/new-models-2026-06.md (new)
 
 ## 최신 기능 하이라이트 (2026-04-20 기준)
@@ -37,7 +40,7 @@
 ## Fast Mode (2026-06-15 업데이트)
 - ~~Opus 4.6~~ → ~~Opus 4.7~~ → **Opus 4.8** 고속 실행 버전 (w22, 2026-05-28 변경)
 - 2.5배 빠름
-- 요금: **$10/$50 per million tokens** (입/출력) — 이전 Opus 4.7 Fast의 1/3 가격!
+- 요금: **$30/$150 per million tokens** (입/출력) — 마케팅 페이지 기재 (2026-06-17 확인)
 - Opus 4.6 Fast Mode: Deprecated(지원 종료 예정)
 - Pro/Max 리서치 프리뷰 / 소비 기반 플랜 적용
 
@@ -104,4 +107,5 @@
 - 2026-05-12 15차: **[변경 감지]** Solutions nav "Legal" 신규 추가. nav 반영 완료 (콘텐츠 생성 스킵 — 법률 서비스는 코딩 입문 ebook 범위 외).
 - 2026-05-13 16차: **[변경 감지]** Solutions nav "Small business" 신규 추가. 동일자 Anthropic 블로그 "Introducing Claude for Small Business" 발표와 연동. 블로그 콘텐츠 생성: content/docs/next/claude-for-small-business.md (new).
 - 2026-05-25 17차: **[변경 없음]** 요금제·모델·기능·nav 항목 모두 이전 스냅샷과 동일. ga-marketing.txt 전체 비교 완료. Fast Mode FAQ가 "Opus 4.6" 표기 유지 중 (marketing page 미반영, docs Week 20에서는 Opus 4.7로 전환 발표).
-- 2026-06-15 18차: **[변경 감지]** 모델 FAQ Fable 5·Opus 4.8 추가, Opus 4.7 제거. Fast Mode 기준 Opus 4.8·$10/$50 변경. ga-marketing.txt 전체 비교 완료.
+- 2026-06-15 18차: **[변경 감지]** 모델 FAQ Fable 5·Opus 4.8 추가, Opus 4.7 제거. Fast Mode 기준 Opus 4.8 전환 감지. ga-marketing.txt 전체 비교 완료.
+- 2026-06-17 19차: **[변경 감지]** Fast Mode 요금 — 이전 스냅샷 $10/$50 vs 현재 마케팅 페이지 $30/$150 불일치. 마케팅 페이지 실제 값 $30/$150로 스냅샷 수정. ⚠️ 18차 에이전트가 docs 기준으로 잘못 기록했을 가능성 있음 — PR 검수 필요. 그 외 변경 없음(모델·요금제·기능·nav 동일).

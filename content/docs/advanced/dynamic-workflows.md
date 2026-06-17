@@ -9,6 +9,7 @@ lastUpdated: "2026-06-15"
 
 <div class="note-star">
 ★ <strong>공식 문서 기준</strong> — 리서치 프리뷰(research preview). Claude Code Week 22 (2026-05-25). <code>[공]</code><br />
+⚠️ <strong>Week 23 변경</strong> — 명시적 키워드가 <code>workflow</code> → <strong><code>ultracode</code></strong>로 바뀌었어요 (2026-06-01). 자연어 요청은 여전히 작동해요.<br />
 👉 <a href="https://code.claude.com/docs/en/workflows" target="_blank">공식 문서: code.claude.com/docs/en/workflows</a>
 </div>
 
@@ -42,10 +43,10 @@ lastUpdated: "2026-06-15"
 그냥 **자연어로 큰 작업을 요청**하면 돼요. Claude가 판단해서 워크플로를 제안해줘요.
 
 ```bash
-# 예시 1: 전체 fetch() 호출 마이그레이션
-> create a workflow that migrates every internal fetch() call to the new HttpClient wrapper
+# ultracode 키워드로 명시적으로 요청 (Week 23~, 키워드 보라색 강조 표시)
+> ultracode — 모든 내부 fetch() 호출을 HttpClient로 마이그레이션해줘
 
-# 예시 2: 코드베이스 보안 감사
+# 자연어로도 여전히 작동해요 (키워드 없어도 됨)
 > 전체 코드베이스에서 SQL 인젝션 취약점을 찾아 수정하는 워크플로 만들어줘
 
 # 예시 3: 대규모 타입 오류 수정
@@ -53,6 +54,10 @@ lastUpdated: "2026-06-15"
 ```
 
 Claude Code 화면에 `Dynamic workflow requested` 표시가 뜨면 워크플로가 시작된 거예요.
+
+<div class="note-circle">
+⚠️ <strong>키워드 변경 (Week 23, 2026-06-01)</strong> — 이전 키워드 <code>workflow</code> → 현재 <code>ultracode</code>. 자연어 요청은 그대로 작동해요.
+</div>
 
 ### 실행 중인 워크플로 확인
 

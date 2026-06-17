@@ -1,9 +1,9 @@
 {
   "_meta": {
     "created": "2026-04-20",
-    "updated": "2026-06-15",
+    "updated": "2026-06-17",
     "source_url": "https://www.anthropic.com/news",
-    "note": "2026-06-15 18차 실행: 신규 블로그 11개 감지. 콘텐츠 생성: content/docs/next/new-models-2026-06.md (new) — Opus 4.8·Fable 5·Mythos 5·수출통제 통합. 나머지 9개는 비즈니스/파트너십/정책 주제로 코딩 ebook과 직접 관련 낮아 스킵.",
+    "note": "2026-06-17 19차 실행: 신규 블로그 1개 감지. 'Policy on the AI Exponential' (Jun 10, 2026) — AI 정책/거버넌스 주제, 코딩 ebook 직접 관련 낮아 콘텐츠 생성 스킵. | 이전 18차 (2026-06-15): 신규 블로그 11개 감지. new-models-2026-06.md (new).",
     "fetch_status": "ga-blog.txt 수신"
   },
   "seen": [
@@ -306,6 +306,14 @@
       "confirmed": false,
       "note": "URL 추정 — 미국 정부 수출통제로 Fable 5·Mythos 5 접근 일시 정지 공식 발표. 한국 사용자에게 중요한 정보 — new-models-2026-06.md에 경고로 포함.",
       "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/policy-on-the-ai-exponential",
+      "title": "Policy on the AI Exponential",
+      "date": "2026-06-10",
+      "confirmed": false,
+      "note": "URL 추정 — AI 지수적 발전과 정책 입안 시스템의 대응 필요성. 정책/거버넌스 주제, 코딩 ebook과 직접 관련 낮아 콘텐츠 생성 스킵.",
+      "content_written": false
     }
   ]
 }
