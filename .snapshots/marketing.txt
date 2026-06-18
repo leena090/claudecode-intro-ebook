@@ -34,11 +34,11 @@
 - claude-sonnet-4-6 (기본 균형형)
 - claude-haiku-4-5-20251001 (경량)
 
-## Fast Mode (2026-06-15 업데이트)
-- ~~Opus 4.6~~ → ~~Opus 4.7~~ → **Opus 4.8** 고속 실행 버전 (w22, 2026-05-28 변경)
+## Fast Mode (2026-06-18 업데이트)
+- ~~Opus 4.6~~ → ~~Opus 4.7~~ → **Opus 4.8** 고속 실행 버전
 - 2.5배 빠름
-- 요금: **$10/$50 per million tokens** (입/출력) — 이전 Opus 4.7 Fast의 1/3 가격!
-- Opus 4.6 Fast Mode: Deprecated(지원 종료 예정)
+- 요금: **$30/$150 per million tokens** (입/출력) — 마케팅 페이지 현재 기준
+  ⚠️ 주의: 18차(2026-06-15)에서 $10/$50로 기록했으나 현재 ga-marketing.txt는 $30/$150 표시. 이전 기록 오류 또는 가격 변동 가능성 있음. 공식 발표 기준으로 확인 필요.
 - Pro/Max 리서치 프리뷰 / 소비 기반 플랜 적용
 
 ## 주요 기능 (공식 문서 기반 확인)
@@ -73,11 +73,14 @@
 - Claude Design: 시각적 디자인 협업 도구 (Apr 17, 2026)
   - 디자인, 프로토타입, 슬라이드, 원페이저 제작
 
-## 블로그 링크 (마케팅 페이지 기재)
-- "Redesigned Desktop app" - 블로그
+## 블로그 링크 (마케팅 페이지 기재) (2026-06-18 업데이트)
+- "Dynamic workflows: Tackle the most challenging tasks..." - 블로그 (May 28, 2026) ← 신규
+- "Agent view: One place to manage all your Claude Code sessions." - 블로그 (May 28, 2026) ← 신규
 - "Routines: Configure a routine once..." (Apr 14, 2026) - 블로그
-- "Auto mode: A safer long-running alternative..." (Mar 24, 2026) - 블로그
-- "Improving frontend design through Skills" - 블로그
+- "Computer use: Claude now opens your apps..." (Mar 23, 2026) - 블로그 ← 신규
+- ~~Redesigned Desktop app~~ (제거됨)
+- ~~Auto mode: A safer long-running alternative...~~ (제거됨)
+- ~~Improving frontend design through Skills~~ (제거됨)
 
 ## 공식 nav 등재 제품·기능 (2026-05-08 업데이트)
 - Products: Claude, Claude Code, Claude Code for Enterprise, **Claude Cowork**, Claude Security, Pro/Max/Team/Enterprise plan
@@ -105,3 +108,4 @@
 - 2026-05-13 16차: **[변경 감지]** Solutions nav "Small business" 신규 추가. 동일자 Anthropic 블로그 "Introducing Claude for Small Business" 발표와 연동. 블로그 콘텐츠 생성: content/docs/next/claude-for-small-business.md (new).
 - 2026-05-25 17차: **[변경 없음]** 요금제·모델·기능·nav 항목 모두 이전 스냅샷과 동일. ga-marketing.txt 전체 비교 완료. Fast Mode FAQ가 "Opus 4.6" 표기 유지 중 (marketing page 미반영, docs Week 20에서는 Opus 4.7로 전환 발표).
 - 2026-06-15 18차: **[변경 감지]** 모델 FAQ Fable 5·Opus 4.8 추가, Opus 4.7 제거. Fast Mode 기준 Opus 4.8·$10/$50 변경. ga-marketing.txt 전체 비교 완료.
+- 2026-06-18 19차: **[변경 감지]** Fast Mode 가격 표기 $10/$50 → $30/$150 (ga-marketing.txt 현재 기준). 기능 발표 섹션: Dynamic workflows·Agent view 추가, Redesigned Desktop app·Auto mode·Skills 제거. 블로그 섹션 업데이트 완료.

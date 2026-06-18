@@ -1,9 +1,9 @@
 {
   "_meta": {
     "created": "2026-04-20",
-    "updated": "2026-06-15",
+    "updated": "2026-06-18",
     "source_url": "https://www.anthropic.com/news",
-    "note": "2026-06-15 18차 실행: 신규 블로그 11개 감지. 콘텐츠 생성: content/docs/next/new-models-2026-06.md (new) — Opus 4.8·Fable 5·Mythos 5·수출통제 통합. 나머지 9개는 비즈니스/파트너십/정책 주제로 코딩 ebook과 직접 관련 낮아 스킵.",
+    "note": "2026-06-18 19차 실행: 신규 블로그 1개 감지. '서울 오피스 오픈 + 한국 AI 파트너십' (Jun 17). 한국어 ebook 직결 — content/docs/next/anthropic-seoul-office.md (new).",
     "fetch_status": "ga-blog.txt 수신"
   },
   "seen": [
@@ -305,6 +305,14 @@
       "date": "2026-06-12",
       "confirmed": false,
       "note": "URL 추정 — 미국 정부 수출통제로 Fable 5·Mythos 5 접근 일시 정지 공식 발표. 한국 사용자에게 중요한 정보 — new-models-2026-06.md에 경고로 포함.",
+      "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/anthropic-seoul-office",
+      "title": "Anthropic opens Seoul office and announces new partnerships across the Korean AI ecosystem",
+      "date": "2026-06-17",
+      "confirmed": false,
+      "note": "URL 추정 — 앤스로픽 서울 오피스 공식 오픈 + 한국 AI 생태계 파트너십 발표. 한국어 ebook 독자에게 직결. 콘텐츠 생성: content/docs/next/anthropic-seoul-office.md (new).",
       "content_written": true
     }
   ]

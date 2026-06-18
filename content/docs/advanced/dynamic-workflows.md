@@ -12,6 +12,13 @@ lastUpdated: "2026-06-15"
 👉 <a href="https://code.claude.com/docs/en/workflows" target="_blank">공식 문서: code.claude.com/docs/en/workflows</a>
 </div>
 
+<div class="note-star" style="background: #fff3cd; border-color: #ffc107;">
+⚠️ <strong>Week 23 변경 (2026-06-01)</strong> — 트리거 키워드가 바뀌었어요!<br />
+❌ 이전: 프롬프트에 <code>workflow</code> 단어 → 워크플로 시작<br />
+✅ 지금: 프롬프트에 <strong><code>ultracode</code></strong> 단어 → 워크플로 시작<br />
+자연어로 요청해도 Claude가 알아서 판단해줘요. UI에서 보라색으로 강조 표시.
+</div>
+
 ## Dynamic Workflows가 뭔가요?
 
 **Dynamic Workflows(다이나믹 워크플로)** 는 Claude가 복잡한 대규모 작업을 처리할 때 직접 **계획서(workflow)를 짜고**, 그 계획을 **여러 서브에이전트에게 나눠서 동시에 실행**하는 기능이에요.
