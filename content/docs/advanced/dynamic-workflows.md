@@ -54,6 +54,16 @@ lastUpdated: "2026-06-15"
 
 Claude Code 화면에 `Dynamic workflow requested` 표시가 뜨면 워크플로가 시작된 거예요.
 
+<div class="note-star">
+★ <strong>2026-06-01 (Week 23) 키워드 변경</strong> — 트리거 키워드가 <code>workflow</code>에서 <strong><code>ultracode</code></strong>로 변경됐어요.<br />
+자연어 요청은 그대로 작동하며, <code>ultracode</code>를 명시적으로 쓰면 프롬프트에서 <strong>보라색(violet)으로 강조</strong>돼 워크플로 모드가 활성화됐음을 바로 알 수 있어요.
+
+```text
+# 키워드를 앞에 붙여 즉시 워크플로 시작
+> ultracode — 전체 코드베이스 SQL 인젝션 취약점 감사해줘
+```
+</div>
+
 ### 실행 중인 워크플로 확인
 
 ```bash

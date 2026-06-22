@@ -1,15 +1,15 @@
-# SNAPSHOT - 2026-06-15 (18차 실행)
+# SNAPSHOT - 2026-06-22 (19차 실행)
 # 소스: https://claude.com/claude-code (마케팅 공식 페이지)
-# 상태: ga-marketing.txt 정상 수신 (2026-06-15 GitHub Actions 실행분)
-# 18차 실행: [변경 감지] 모델 라인업 변경 — Fable 5 신규 추가, Opus 4.7 → Opus 4.8 교체.
-#   Fast Mode 가격 Opus 4.8 기준으로 변경($10/$50 per MTok).
-#   콘텐츠 생성: next/new-models-2026-06.md (new)
+# 상태: ga-marketing.txt 정상 수신 (2026-06-22 GitHub Actions 실행분)
+# 19차 실행: [변경 감지] 최신 기능 하이라이트 변경 — Dynamic workflows (May 28), Agent view (May 11) 신규 추가.
+#   Fast Mode 가격 마케팅 페이지에서 $30/$150 표기 확인 (이전 기록 $10/$50와 불일치 — 공식 docs W22 기준은 $10/$50).
+#   콘텐츠 업데이트 없음 (가격 불일치는 마케팅 페이지 FAQ 미반영으로 추정).
 
-## 최신 기능 하이라이트 (2026-04-20 기준)
+## 최신 기능 하이라이트 (2026-06-22 기준 마케팅 페이지)
+- Dynamic workflows: 수십~수백 개의 병렬 서브에이전트로 가장 어려운 작업 처리 (May 28, 2026)
+- Agent view: 모든 Claude Code 세션을 한 곳에서 관리 (May 11, 2026)
 - Routines: 한 번 설정하면 스케줄, API 호출, 이벤트 반응으로 자동 실행 (Apr 14, 2026)
-- Auto mode: --dangerously-skip-permissions의 더 안전한 대안 (Mar 24, 2026)
-- 데스크톱 앱 리디자인: 여러 Claude Code 작업을 동시에 실행하기 위한 새 UI
-- 모바일 Dispatch (리서치 프리뷰): 폰에서 지시 → 내 로컬 PC에서 실행 → PR 생성
+- Computer use: Claude가 앱을 열고 브라우저를 탐색하며 개발 도구를 실행 (Mar 23, 2026)
 
 ## 지원 플랫폼
 - 데스크톱 (Desktop App)
@@ -20,30 +20,29 @@
 
 ## 요금제 (공식 발표 기준)
 - Pro: $17/월 (연간 선납, $200/년) 또는 $20/월 (월납)
-  - Sonnet 4.6 + Opus 4.7 포함
+  - Sonnet 4.6 + Opus 포함
 - Max 5x: $100/월
 - Max 20x: $200/월
 - Team: $20/인원/월 (5~150명, 연간)
-  - Sonnet 4.6 + Opus 4.7 포함
 - Enterprise: 별도 문의
 - Claude API: 토큰 기반 과금 (개발자용)
 
-## 지원 모델 (2026-06-15 업데이트)
-- claude-fable-5 (최상위 신규 ⚠️ 수출통제로 접근 일시 정지)
+## 지원 모델 (2026-06-22 기준)
+- claude-fable-5 (최상위 ⚠️ 수출통제로 접근 일시 정지)
 - claude-opus-4-8 (최신 Opus — 기본 모델)
 - claude-sonnet-4-6 (기본 균형형)
 - claude-haiku-4-5-20251001 (경량)
 
-## Fast Mode (2026-06-15 업데이트)
-- ~~Opus 4.6~~ → ~~Opus 4.7~~ → **Opus 4.8** 고속 실행 버전 (w22, 2026-05-28 변경)
-- 2.5배 빠름
-- 요금: **$10/$50 per million tokens** (입/출력) — 이전 Opus 4.7 Fast의 1/3 가격!
-- Opus 4.6 Fast Mode: Deprecated(지원 종료 예정)
-- Pro/Max 리서치 프리뷰 / 소비 기반 플랜 적용
+## Fast Mode (2026-06-22 마케팅 페이지 기준)
+- Opus 4.8 고속 실행 버전 (2.5배 빠름)
+- 마케팅 페이지 FAQ 표기 요금: **$30/$150 per million tokens**
+  ⚠️ 주의: 공식 문서 Week 22(2026-05-28) 기준으로는 $10/$50로 기재됨.
+     마케팅 페이지 FAQ가 아직 미반영된 것으로 추정. 공식 문서 기준 $10/$50 우선 신뢰.
+- 리서치 프리뷰 / 소비 기반 플랜 적용
 
 ## 주요 기능 (공식 문서 기반 확인)
 - /focus 명령어
-- Ctrl+O (verbose/normal 전환 / flicker-free mode)
+- Ctrl+O (verbose/normal 전환)
 - Ctrl+G (에디터에 마지막 응답 컨텍스트 삽입)
 - Routines (반복 자동화, 스케줄 실행, API 트리거, GitHub 이벤트)
 - Code Review (AI 에이전트 기반 PR 리뷰)
@@ -51,16 +50,18 @@
 - /ultraplan (클라우드 플래닝)
 - /autofix-pr (PR 자동 수정 활성화)
 - Monitor tool (백그라운드 이벤트 감시)
-- /loop self-pacing (간격 생략 시 Claude가 타이밍 결정)
+- /loop self-pacing
 - Remote Control (모바일·브라우저에서 세션 이어가기)
 - Desktop App (멀티세션 사이드바, 드래그 앤 드롭, 미리보기)
 - /tui 풀스크린 렌더링
-- 모바일 Dispatch 푸시 알림 (리서치 프리뷰)
 - Plugin Marketplace
-- /team-onboarding (팀원 온보딩 가이드 자동 생성)
+- /team-onboarding
 - Voice dictation (/voice, push-to-talk, 20개 언어)
 - Computer Use (CLI에서 macOS 앱 조작)
 - Auto mode (백그라운드 안전 classifier 포함)
+- Dynamic Workflows (수십~수백 병렬 서브에이전트)
+- Agent View (세션 통합 관리)
+- Artifacts (Team/Enterprise: 결과물 브라우저 링크 공유, 베타)
 
 ## 성과 지표 (마케팅 페이지 공개)
 - 7.6x 더 잦은 배포 (Claude Code 팀 평균)
@@ -69,39 +70,31 @@
 - 2x 빠른 기능/수정 실행 속도
 - 89% AI 채택률 (전 직원 기준)
 
-## 신규 제품 (Anthropic Labs)
-- Claude Design: 시각적 디자인 협업 도구 (Apr 17, 2026)
-  - 디자인, 프로토타입, 슬라이드, 원페이저 제작
-
-## 블로그 링크 (마케팅 페이지 기재)
-- "Redesigned Desktop app" - 블로그
-- "Routines: Configure a routine once..." (Apr 14, 2026) - 블로그
-- "Auto mode: A safer long-running alternative..." (Mar 24, 2026) - 블로그
-- "Improving frontend design through Skills" - 블로그
-
 ## 공식 nav 등재 제품·기능 (2026-05-08 업데이트)
-- Products: Claude, Claude Code, Claude Code for Enterprise, **Claude Cowork**, Claude Security, Pro/Max/Team/Enterprise plan
-- Features: Claude for Chrome, Claude for Slack, **Claude for Microsoft 365** *(← 이전: Claude for Excel·Word·PowerPoint 3개 → 1개로 통합)*, Skills
-- Models: **Mythos preview**, Opus, Sonnet, Haiku
+- Products: Claude, Claude Code, Claude Code for Enterprise, Claude Cowork, Claude Security, Pro/Max/Team/Enterprise plan
+- Features: Claude for Chrome, Claude for Slack, Claude for Microsoft 365, Skills
+- Models: Mythos preview, Opus, Sonnet, Haiku
 - Resources: Plugins, Connectors, Plugin Marketplace 포함
-- Solutions: AI agents, Code modernization, Coding, Customer support, Education, Financial services, Government, Healthcare, **Legal** *(← 2026-05-12 신규 추가)*, Life sciences, Nonprofits, Security, **Small business** *(← 2026-05-13 신규 추가)*
+- Solutions: AI agents, Code modernization, Coding, Customer support, Education, Financial services, Government, Healthcare, Legal, Life sciences, Nonprofits, Security, Small business
 
 ## 변경 이력
-- 2026-05-08: **[변경]** Features nav에서 "Claude for Excel", "Claude for PowerPoint", "Claude for Word" 3개 → "Claude for Microsoft 365" 1개로 통합 감지. 콘텐츠 생성: content/docs/cowork/claude-for-m365.md (new)
-- 2026-06-15: **[변경]** 모델 라인업 변경. Fable 5 신규 추가, Opus 4.7 → Opus 4.8 교체. Fast Mode 가격 $30/$150(Opus 4.7) → $10/$50(Opus 4.8). 콘텐츠 생성: content/docs/next/new-models-2026-06.md (new)
+- 2026-05-08: **[변경]** Features nav "Claude for Excel·Word·PowerPoint" → "Claude for Microsoft 365" 통합. content/docs/cowork/claude-for-m365.md 신규 생성.
+- 2026-06-15: **[변경]** 모델 라인업 변경. Fable 5 신규 추가, Opus 4.7 → Opus 4.8 교체. Fast Mode 기준 Opus 4.8 변경. content/docs/next/new-models-2026-06.md (new)
+- 2026-06-22: **[변경]** 최신 기능 하이라이트 변경 (Dynamic workflows·Agent view 신규, Auto mode·Mobile Dispatch 제거). Fast Mode 마케팅 페이지 $30/$150 표기 확인 (docs 기준 $10/$50와 불일치 — 추정: 마케팅 페이지 미반영).
 
 ## fetch_log
 - 2026-04-20 이전: 403 Forbidden (2회)
 - 2026-04-20: ga-marketing.txt 통해 정상 수신
-- 2026-04-20 3차: 신규 변경 없음 확인. nav 항목 명시적으로 기록 완료.
-- 2026-04-21 4차: 신규 변경 없음 확인. 전체 ga-marketing.txt 비교 완료.
-- 2026-04-23 5차: 신규 변경 없음 확인. ga-marketing.txt 전체 비교 완료.
-- 2026-04-28 9차: 신규 변경 없음 확인. 요금제·모델·기능·nav 항목 모두 이전 스냅샷과 동일. ga-marketing.txt 전체 비교 완료.
-- 2026-04-30 10차: 신규 변경 없음 확인. ga-marketing.txt 전체 비교 완료.
-- 2026-05-06 12차: 신규 변경 없음 확인. 요금제·모델·기능·nav 항목 모두 이전 스냅샷과 동일. ga-marketing.txt 전체 비교 완료.
-- 2026-05-07 13차: 신규 변경 없음 확인. 요금제·모델·기능·nav 항목 모두 이전 스냅샷과 동일. ga-marketing.txt 전체 비교 완료.
-- 2026-05-08 14차: **[변경 감지]** Features nav "Claude for Excel·Word·PowerPoint" → "Claude for Microsoft 365" 통합. content/docs/cowork/claude-for-m365.md 신규 생성.
-- 2026-05-12 15차: **[변경 감지]** Solutions nav "Legal" 신규 추가. nav 반영 완료 (콘텐츠 생성 스킵 — 법률 서비스는 코딩 입문 ebook 범위 외).
-- 2026-05-13 16차: **[변경 감지]** Solutions nav "Small business" 신규 추가. 동일자 Anthropic 블로그 "Introducing Claude for Small Business" 발표와 연동. 블로그 콘텐츠 생성: content/docs/next/claude-for-small-business.md (new).
-- 2026-05-25 17차: **[변경 없음]** 요금제·모델·기능·nav 항목 모두 이전 스냅샷과 동일. ga-marketing.txt 전체 비교 완료. Fast Mode FAQ가 "Opus 4.6" 표기 유지 중 (marketing page 미반영, docs Week 20에서는 Opus 4.7로 전환 발표).
-- 2026-06-15 18차: **[변경 감지]** 모델 FAQ Fable 5·Opus 4.8 추가, Opus 4.7 제거. Fast Mode 기준 Opus 4.8·$10/$50 변경. ga-marketing.txt 전체 비교 완료.
+- 2026-04-20 3차: 신규 변경 없음 확인.
+- 2026-04-21 4차: 신규 변경 없음 확인.
+- 2026-04-23 5차: 신규 변경 없음 확인.
+- 2026-04-28 9차: 신규 변경 없음 확인.
+- 2026-04-30 10차: 신규 변경 없음 확인.
+- 2026-05-06 12차: 신규 변경 없음 확인.
+- 2026-05-07 13차: 신규 변경 없음 확인.
+- 2026-05-08 14차: **[변경 감지]** Features nav Microsoft 365 통합.
+- 2026-05-12 15차: **[변경 감지]** Solutions nav "Legal" 신규 추가.
+- 2026-05-13 16차: **[변경 감지]** Solutions nav "Small business" 신규 추가.
+- 2026-05-25 17차: **[변경 없음]**
+- 2026-06-15 18차: **[변경 감지]** 모델 라인업 변경 (Fable 5, Opus 4.8).
+- 2026-06-22 19차: **[변경 감지]** 기능 하이라이트 교체 (Dynamic workflows·Agent view), Fast Mode 가격 불일치 확인.
