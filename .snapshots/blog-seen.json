@@ -1,9 +1,9 @@
 {
   "_meta": {
     "created": "2026-04-20",
-    "updated": "2026-06-15",
+    "updated": "2026-06-25",
     "source_url": "https://www.anthropic.com/news",
-    "note": "2026-06-15 18차 실행: 신규 블로그 11개 감지. 콘텐츠 생성: content/docs/next/new-models-2026-06.md (new) — Opus 4.8·Fable 5·Mythos 5·수출통제 통합. 나머지 9개는 비즈니스/파트너십/정책 주제로 코딩 ebook과 직접 관련 낮아 스킵.",
+    "note": "2026-06-25 19차 실행: 신규 블로그 2개 감지. 콘텐츠 생성: next/seoul-office-2026.md (new) — 한국 독자 직접 관련, next/claude-tag.md (new) — 세부 불확실, 제목+설명 기반 작성.",
     "fetch_status": "ga-blog.txt 수신"
   },
   "seen": [
@@ -305,6 +305,22 @@
       "date": "2026-06-12",
       "confirmed": false,
       "note": "URL 추정 — 미국 정부 수출통제로 Fable 5·Mythos 5 접근 일시 정지 공식 발표. 한국 사용자에게 중요한 정보 — new-models-2026-06.md에 경고로 포함.",
+      "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/anthropic-seoul-office-2026",
+      "title": "Anthropic opens Seoul office and announces new partnerships across the Korean AI ecosystem",
+      "date": "2026-06-17",
+      "confirmed": false,
+      "note": "URL 추정 — 서울 오피스 공식 개설 + 한국 AI 파트너십 발표. 한국어 ebook 독자에게 매우 관련성 높음. 콘텐츠 생성: content/docs/next/seoul-office-2026.md (new).",
+      "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/claude-tag",
+      "title": "Introducing Claude Tag",
+      "date": "2026-06-23",
+      "confirmed": false,
+      "note": "URL 추정 — 팀 협업용 새 Claude 기능. 세부 기능 불확실. 제목+간략 설명 기반으로 콘텐츠 작성: content/docs/next/claude-tag.md (new). 추정 명시.",
       "content_written": true
     }
   ]
