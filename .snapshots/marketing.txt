@@ -1,9 +1,11 @@
-# SNAPSHOT - 2026-06-15 (18차 실행)
+# SNAPSHOT - 2026-06-26 (19차 실행)
 # 소스: https://claude.com/claude-code (마케팅 공식 페이지)
-# 상태: ga-marketing.txt 정상 수신 (2026-06-15 GitHub Actions 실행분)
-# 18차 실행: [변경 감지] 모델 라인업 변경 — Fable 5 신규 추가, Opus 4.7 → Opus 4.8 교체.
-#   Fast Mode 가격 Opus 4.8 기준으로 변경($10/$50 per MTok).
-#   콘텐츠 생성: next/new-models-2026-06.md (new)
+# 상태: ga-marketing.txt 정상 수신 (2026-06-26 GitHub Actions 실행분)
+# 19차 실행: [변경 없음] 마케팅 페이지 주요 내용 변경 없음.
+#   ⚠️ 불일치 감지: 마케팅 FAQ에서 Fast Mode 가격이 "$30/$150"로 표시됨.
+#   그러나 공식 week 22 릴리즈 노트는 Opus 4.8 Fast=$10/$50 명시.
+#   → 마케팅 페이지 FAQ가 미업데이트된 것으로 추정. 수동 확인 권장.
+#   콘텐츠 생성 없음 (변경사항 없음)
 
 ## 최신 기능 하이라이트 (2026-04-20 기준)
 - Routines: 한 번 설정하면 스케줄, API 호출, 이벤트 반응으로 자동 실행 (Apr 14, 2026)
@@ -105,3 +107,4 @@
 - 2026-05-13 16차: **[변경 감지]** Solutions nav "Small business" 신규 추가. 동일자 Anthropic 블로그 "Introducing Claude for Small Business" 발표와 연동. 블로그 콘텐츠 생성: content/docs/next/claude-for-small-business.md (new).
 - 2026-05-25 17차: **[변경 없음]** 요금제·모델·기능·nav 항목 모두 이전 스냅샷과 동일. ga-marketing.txt 전체 비교 완료. Fast Mode FAQ가 "Opus 4.6" 표기 유지 중 (marketing page 미반영, docs Week 20에서는 Opus 4.7로 전환 발표).
 - 2026-06-15 18차: **[변경 감지]** 모델 FAQ Fable 5·Opus 4.8 추가, Opus 4.7 제거. Fast Mode 기준 Opus 4.8·$10/$50 변경. ga-marketing.txt 전체 비교 완료.
+- 2026-06-26 19차: **[변경 없음]** 마케팅 페이지 구조·내용 변동 없음. ⚠️ FAQ Fast Mode 가격 표기 $30/$150로 표시됨(week 22 공식 릴리즈 노트의 Opus 4.8 Fast $10/$50와 불일치 — 마케팅 페이지 FAQ 미업데이트 추정). ga-marketing.txt 전체 비교 완료.

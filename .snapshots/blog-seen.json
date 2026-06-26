@@ -1,9 +1,9 @@
 {
   "_meta": {
     "created": "2026-04-20",
-    "updated": "2026-06-15",
+    "updated": "2026-06-26",
     "source_url": "https://www.anthropic.com/news",
-    "note": "2026-06-15 18차 실행: 신규 블로그 11개 감지. 콘텐츠 생성: content/docs/next/new-models-2026-06.md (new) — Opus 4.8·Fable 5·Mythos 5·수출통제 통합. 나머지 9개는 비즈니스/파트너십/정책 주제로 코딩 ebook과 직접 관련 낮아 스킵.",
+    "note": "2026-06-26 19차 실행: 신규 블로그 3개 감지. Claude Tag (Jun 23, 콘텐츠 생성), 서울 오피스 (Jun 17, 콘텐츠 생성), AI 지수적 성장 정책 (Jun 10, 스킵). 콘텐츠 생성: next/claude-tag.md (new), next/seoul-office.md (new).",
     "fetch_status": "ga-blog.txt 수신"
   },
   "seen": [
@@ -305,6 +305,30 @@
       "date": "2026-06-12",
       "confirmed": false,
       "note": "URL 추정 — 미국 정부 수출통제로 Fable 5·Mythos 5 접근 일시 정지 공식 발표. 한국 사용자에게 중요한 정보 — new-models-2026-06.md에 경고로 포함.",
+      "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/ai-exponential-policy",
+      "title": "Policy on the AI Exponential",
+      "date": "2026-06-10",
+      "confirmed": false,
+      "note": "URL 추정 — AI 지수적 발전 속도에 맞춘 정책 제안. 정책/AI 거버넌스 주제, 코딩 ebook과 직접 관련 낮아 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/anthropic-seoul-office",
+      "title": "Anthropic opens Seoul office and announces new partnerships across the Korean AI ecosystem",
+      "date": "2026-06-17",
+      "confirmed": false,
+      "note": "URL 추정 — 한국 서울 오피스 개설 및 한국 AI 생태계 파트너십 발표. 한국어 독자에게 매우 관련성 높음. 콘텐츠 생성: next/seoul-office.md (new).",
+      "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/claude-tag",
+      "title": "Introducing Claude Tag",
+      "date": "2026-06-23",
+      "confirmed": false,
+      "note": "URL 추정 — 팀 협업을 위한 신규 제품 Claude Tag 발표 (Product 카테고리). 공개 정보 제한적. 콘텐츠 생성: next/claude-tag.md (new — 신중하게 발표 내용만 반영).",
       "content_written": true
     }
   ]
