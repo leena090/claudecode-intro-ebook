@@ -111,3 +111,4 @@
 - 2026-05-25 17차: **[변경 없음]** 요금제·모델·기능·nav 항목 모두 이전 스냅샷과 동일. ga-marketing.txt 전체 비교 완료. Fast Mode FAQ가 "Opus 4.6" 표기 유지 중 (marketing page 미반영, docs Week 20에서는 Opus 4.7로 전환 발표).
 - 2026-06-15 18차: **[변경 감지]** 모델 FAQ Fable 5·Opus 4.8 추가, Opus 4.7 제거. Fast Mode 기준 Opus 4.8·$10/$50 변경. ga-marketing.txt 전체 비교 완료.
 - 2026-06-25 19차: **[변경 감지]** Fast Mode 가격 표기 불일치 — 마케팅 페이지 $30/$150(현재) vs $10/$50(이전 스냅샷, w22 공식 문서). 가격 정책 확인 필요. 블로그 신규 2건: "Introducing Claude Tag"(6/23), "서울 오피스 오픈"(6/17). 콘텐츠 생성: next/seoul-office-2026.md (new), next/claude-tag.md (new).
+- 2026-06-27 20차: **[변경 없음]** 요금제·모델·기능·nav 항목·피처드 블로그 모두 이전 스냅샷(19차)과 동일. Fast Mode $30/$150 유지 중 (공식 문서와 불일치 지속 모니터링). ga-marketing.txt 전체 비교 완료.

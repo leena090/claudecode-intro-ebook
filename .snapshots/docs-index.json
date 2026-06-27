@@ -1,9 +1,9 @@
 {
   "_meta": {
     "created": "2026-04-20",
-    "updated": "2026-06-25",
+    "updated": "2026-06-27",
     "source_url": "https://code.claude.com/docs/llms.txt",
-    "note": "2026-06-25 19차 실행: 신규 URL 8개 감지. artifacts, feature-availability, llm-gateway-connect, llm-gateway-protocol, llm-gateway-rollout, plugin-relevance, whats-new/2026-w23, whats-new/2026-w24. 총 164개 URL. 콘텐츠 생성: next/whats-new-w23.md (new), next/whats-new-w24.md (new), next/claude-code-artifacts.md (new). llm-gateway-connect/protocol/rollout 스킵(기업 전용, ebook 범위 초과). feature-availability 스킵(정보 페이지, 별도 콘텐츠 불필요). plugin-relevance 스킵(플러그인 내부 동작, 입문자 범위 초과).",
+    "note": "2026-06-27 20차 실행: 신규 URL 2개 감지. whats-new/2026-w25, whats-new/2026-w26. 총 166개 URL. 콘텐츠 생성: next/whats-new-w25.md (new), next/whats-new-w26.md (new). W25 주요 기능: Artifacts 링크 공유(Team/Enterprise 베타), 권한 규칙 파라미터 매칭, /config key=value. W26 주요 기능: claude mcp login, ! 접두어 자동 응답, /rewind 강화.",
     "fetch_status": "200_ok"
   },
   "https://code.claude.com/docs/en/overview": "SNAPSHOT_2026-04-20",
@@ -160,5 +160,7 @@
   "https://code.claude.com/docs/en/llm-gateway-rollout": "SNAPSHOT_2026-06-25",
   "https://code.claude.com/docs/en/plugin-relevance": "SNAPSHOT_2026-06-25",
   "https://code.claude.com/docs/en/whats-new/2026-w23": "SNAPSHOT_2026-06-25",
-  "https://code.claude.com/docs/en/whats-new/2026-w24": "SNAPSHOT_2026-06-25"
+  "https://code.claude.com/docs/en/whats-new/2026-w24": "SNAPSHOT_2026-06-25",
+  "https://code.claude.com/docs/en/whats-new/2026-w25": "SNAPSHOT_2026-06-27",
+  "https://code.claude.com/docs/en/whats-new/2026-w26": "SNAPSHOT_2026-06-27"
 }
