@@ -1,9 +1,9 @@
 {
   "_meta": {
     "created": "2026-04-20",
-    "updated": "2026-06-25",
+    "updated": "2026-06-28",
     "source_url": "https://www.anthropic.com/news",
-    "note": "2026-06-25 19차 실행: 신규 블로그 2개 감지. 콘텐츠 생성: next/seoul-office-2026.md (new) — 한국 독자 직접 관련, next/claude-tag.md (new) — 세부 불확실, 제목+설명 기반 작성.",
+    "note": "2026-06-28 20차 실행: 신규 블로그 없음. ga-blog.txt 최신 글은 Jun 23, 2026 'Introducing Claude Tag' (이미 처리됨).",
     "fetch_status": "ga-blog.txt 수신"
   },
   "seen": [
