@@ -1,15 +1,16 @@
 ---
-title: "[블] 신규 모델 총정리: Opus 4.8, Fable 5, Mythos 5 (2026년 5~6월)"
-description: "Opus 4.8 정식 출시, 그리고 Opus보다 강력한 새 모델 티어 Fable 5·Mythos 5 발표. 미국 수출 통제 상황까지 한 번에 정리"
-tags: ["모델", "opus-4-8", "fable5", "mythos5", "2026", "자동생성"]
+title: "[블] 신규 모델 총정리: Opus 4.8, Fable 5, Mythos 5, Sonnet 5 (2026년 5~7월)"
+description: "Opus 4.8, Fable 5·Mythos 5 발표, 수출통제 후 Fable 5 재배포, 그리고 Claude Sonnet 5 출시까지 한 번에 정리"
+tags: ["모델", "opus-4-8", "fable5", "mythos5", "sonnet5", "2026", "자동생성"]
 category: "next"
 order: 10
-lastUpdated: "2026-06-15"
+lastUpdated: "2026-07-02"
 ---
 
 <div class="note-star">
-★ <strong>블로그 공식 발표 기준</strong> — Opus 4.8 (2026-05-28), Fable 5·Mythos 5 (2026-06-09). <code>[블]</code><br />
-⚠️ <strong>중요 알림</strong> — 2026-06-12 미국 정부 수출통제 지시로 <strong>Fable 5·Mythos 5 접근이 일시 정지</strong>됐어요. 아래 자세히 설명합니다.
+★ <strong>블로그 공식 발표 기준</strong> — Opus 4.8 (2026-05-28), Fable 5·Mythos 5 (2026-06-09), Fable 5 재배포 (2026-06-30), Sonnet 5 출시 (2026-06-30). <code>[블]</code><br />
+✅ <strong>최신 알림 (2026-06-30)</strong> — Fable 5가 전 세계 재배포됐어요! 수출통제가 해소됐어요.<br />
+🆕 <strong>Sonnet 5 출시</strong> — 코딩·에이전트·전문 업무에서 최전선 성능을 대규모로 제공하는 새 모델이에요.
 </div>
 
 ## 한 달 새 모델이 3개나? 무슨 일이죠?
@@ -93,45 +94,71 @@ claude update
 
 ---
 
-## ⚠️ 중요: 미국 정부 수출 통제 (2026년 6월 12일)
+## 3. Claude Fable 5 재배포 (2026년 6월 30일) `[블]`
 
 <div class="note-star">
-⚠️ <strong>주의</strong> — 2026년 6월 12일, 미국 정부가 Fable 5·Mythos 5에 대한 수출통제 지시를 발령했어요. 현재 이 모델들에 대한 <strong>접근이 일시 정지</strong>된 상태예요.
+✅ <strong>재배포 완료</strong> — 2026년 6월 30일, Fable 5가 전 세계에 재배포됐어요. 수출통제 이슈가 해소됐습니다!
 </div>
 
-### 상황 요약
+2026년 6월 12일에 미국 정부 수출통제로 일시 정지됐던 Fable 5가 **6월 30일 전 세계 사용자에게 다시 배포**됐어요. Anthropic은 Amazon, Microsoft, Google, Glasswing 파트너들과 함께 **업계 전반의 취약점 심각도 점수 체계(jailbreak severity scoring framework)**도 제안했어요.
+
+```bash
+# 이제 Fable 5 다시 사용 가능!
+/model fable
+
+# 또는 Advisor로
+/advisor fable
+```
+
+---
+
+## 4. Claude Sonnet 5 출시 (2026년 6월 30일) `[블]`
+
+Anthropic이 새 모델 **Claude Sonnet 5**를 발표했어요. Sonnet 계열이지만, **코딩·에이전트·전문 업무에서 최전선(frontier) 성능을 대규모로** 제공하는 게 특징이에요.
+
+> 🍱 **비유**: 이전까지 "Sonnet"이 "균형 잡힌 중급 세단"이었다면, Sonnet 5는 **스포츠 모드가 탑재된 럭셔리 세단** — 가격 대비 성능비가 크게 올라간 느낌이에요.
+
+### Sonnet 5의 강점
 
 | 항목 | 내용 |
 |------|------|
-| 발령 기관 | 미국 정부 (수출통제 지시) |
-| 대상 모델 | Fable 5, Mythos 5 |
-| 현재 상태 | 접근 일시 정지 |
-| 영향 범위 | 미국 외 국가 포함 (공식 발표 기준) |
+| 코딩 성능 | 최전선 수준 |
+| 에이전트 작업 | 최전선 수준 |
+| 전문 업무 처리 | 대규모 스케일에서 강점 |
+| 위치 | Opus와 Sonnet 기존 사이 (또는 동등 이상) |
 
-**Anthropic 공식 입장** (2026-06-12 발표):
-> 미국 정부의 수출통제 지시를 준수하여 Fable 5·Mythos 5에 대한 모든 접근을 일시 정지합니다.
-
-### 한국 사용자는 어떻게 하나요?
-
-현재로선 **Opus 4.8을 사용**하시는 것을 권장해요:
-- Opus 4.8은 수출통제 영향을 받지 않아요
-- 코딩 작업에서는 Opus 4.8도 충분히 강력해요
-- 수출통제 상황이 해소되면 Fable 5 접근이 재개될 수 있어요
+```bash
+# Claude Code에서 Sonnet 5 사용
+/model claude-sonnet-5
+```
 
 <div class="note-circle">
-○ 상황이 변경될 수 있어요 — Anthropic 공식 뉴스룸에서 최신 정보 확인하세요<br />
-○ "추정"이 아닌 공식 발표 기준 정보예요 <code>[공식 발표 기준]</code>
+○ 정확한 모델 ID는 공식 문서에서 확인 필요 (<code>claude-sonnet-5</code> 추정)<br />
+○ 가격·API 사용 가능 여부는 추후 공식 확인 필요 <code>[공식 발표 기준]</code>
 </div>
 
 ---
 
-## 전체 모델 현황 (2026-06-15 기준)
+## ⚠️ 이전 수출 통제 경과 (2026년 6월 12일 → 6월 30일 해소)
+
+| 날짜 | 내용 |
+|------|------|
+| 2026-06-09 | Fable 5·Mythos 5 출시 |
+| 2026-06-12 | 미국 정부 수출통제 지시 — Fable 5·Mythos 5 접근 일시 정지 |
+| 2026-06-30 | **Fable 5 전 세계 재배포** ✅ 수출통제 해소 |
+
+Mythos 5에 대한 재배포 공식 발표는 현재 확인되지 않아요 (추정).
+
+---
+
+## 전체 모델 현황 (2026-07-02 기준)
 
 | 모델 | 강점 | 현재 상태 | Claude Code 사용 가능? |
 |------|------|----------|----------------------|
-| Fable 5 | 최상위 성능 | ⚠️ 접근 일시 정지 | 제한적 |
-| Mythos 5 | 최상위 성능 (특화) | ⚠️ 접근 일시 정지 | 제한적 |
-| **Opus 4.8** | 코딩·에이전트 최강 | ✅ 정상 | ✅ 기본 모델 |
+| Fable 5 | 최상위 성능 | ✅ 재배포 완료 (2026-06-30) | ✅ |
+| Mythos 5 | 최상위 성능 (특화) | ⚠️ 상태 미확인 (추정) | 미확인 |
+| **Sonnet 5** | 코딩·에이전트 최전선 | ✅ 출시 (2026-06-30) | ✅ (추정) |
+| **Opus 4.8** | 코딩·에이전트 강력 | ✅ 정상 | ✅ 기본 모델 |
 | Sonnet 4.6 | 균형형 | ✅ 정상 | ✅ |
 | Haiku 4.5 | 경량·빠름 | ✅ 정상 | ✅ |
 
@@ -142,9 +169,9 @@ claude update
 공식 Claude Code 마케팅 페이지(claude.com/claude-code)에서도 모델 정보가 업데이트됐어요:
 
 - **"Which models does Claude Code use?"** FAQ가 Fable 5, Opus 4.8, Sonnet 4.6, Haiku 4.5로 업데이트
-- Fast Mode FAQ가 Opus 4.8 기준으로 변경 (가격: $10/$50 per MTok)
+- Fast Mode FAQ가 Opus 4.8 기준으로 변경 (가격: $30/$150 per MTok — 공식 문서 $10/$50와 불일치, 모니터링 중)
 
 <div class="note-circle">
 ○ 마케팅 페이지 변경 감지: 2026-06-15 (이전: Opus 4.7 기준이었음)<br />
-○ Fable 5 접근 정지 상황은 마케팅 페이지에 별도 공지 없음 — Anthropic 뉴스룸 참조
+○ Fable 5 재배포(2026-06-30) 이후 마케팅 페이지 업데이트는 모니터링 필요
 </div>

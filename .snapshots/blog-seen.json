@@ -1,9 +1,9 @@
 {
   "_meta": {
     "created": "2026-04-20",
-    "updated": "2026-06-25",
+    "updated": "2026-07-02",
     "source_url": "https://www.anthropic.com/news",
-    "note": "2026-06-25 19차 실행: 신규 블로그 2개 감지. 콘텐츠 생성: next/seoul-office-2026.md (new) — 한국 독자 직접 관련, next/claude-tag.md (new) — 세부 불확실, 제목+설명 기반 작성.",
+    "note": "2026-07-02 20차 실행: 신규 블로그 3개 감지 (Jun 30, 2026). 'Redeploying Fable 5' — next/new-models-2026-06.md 업데이트(Fable 5 재배포 섹션 추가). 'Introducing Claude Sonnet 5' — next/new-models-2026-06.md 업데이트(Sonnet 5 섹션 추가). 'Claude Science, an AI workbench for scientists' — 스킵(과학 연구 플랫폼, 코딩 ebook 범위 외).",
     "fetch_status": "ga-blog.txt 수신"
   },
   "seen": [
@@ -322,6 +322,30 @@
       "confirmed": false,
       "note": "URL 추정 — 팀 협업용 새 Claude 기능. 세부 기능 불확실. 제목+간략 설명 기반으로 콘텐츠 작성: content/docs/next/claude-tag.md (new). 추정 명시.",
       "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/redeploying-fable-5",
+      "title": "Redeploying Fable 5",
+      "date": "2026-06-30",
+      "confirmed": false,
+      "note": "URL 추정 — Fable 5 전 세계 재배포 발표. 2026-06-12 수출통제 해소. Amazon·Microsoft·Google·Glasswing과 jailbreak severity scoring framework 제안. next/new-models-2026-06.md에 재배포 섹션 추가.",
+      "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/claude-sonnet-5",
+      "title": "Introducing Claude Sonnet 5",
+      "date": "2026-06-30",
+      "confirmed": false,
+      "note": "URL 추정 — Claude Sonnet 5 출시. 코딩·에이전트·전문 업무에서 최전선 성능을 대규모로 제공. next/new-models-2026-06.md에 Sonnet 5 섹션 추가.",
+      "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/claude-science",
+      "title": "Claude Science, an AI workbench for scientists, is now available",
+      "date": "2026-06-30",
+      "confirmed": false,
+      "note": "URL 추정 — 과학 연구자용 AI 워크벤치. 도구·패키지 통합, 감사 가능 아티팩트, 컴퓨팅 자원 제공. 과학 연구 특화 플랫폼으로 코딩 입문 ebook 범위 외. 콘텐츠 생성 스킵.",
+      "content_written": false
     }
   ]
 }
