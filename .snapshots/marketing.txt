@@ -1,16 +1,19 @@
-# SNAPSHOT - 2026-06-25 (19차 실행)
+# SNAPSHOT - 2026-07-03 (20차 실행)
 # 소스: https://claude.com/claude-code (마케팅 공식 페이지)
-# 상태: ga-marketing.txt 정상 수신 (2026-06-25 GitHub Actions 실행분)
-# 19차 실행: [변경 감지] Fast Mode 가격 표기 변동 — 이전 스냅샷($10/$50 Opus 4.8) →
-#   현재 마케팅 페이지($30/$150 Opus 4.8). w22 공식 문서는 $10/$50 기재 유지 중.
-#   가격 인상인지 마케팅 페이지 수정 오류인지 불확실 — "추정" 처리. 모니터링 계속.
+# 상태: ga-marketing.txt 정상 수신 (2026-07-03 GitHub Actions 실행분)
+# 20차 실행: [변경 감지 — 마이너] "Latest feature announcements" 섹션 업데이트.
+#   이전: Routines, Auto mode, Redesigned Desktop, Mobile Dispatch 등 피처드
+#   현재: Dynamic workflows (May 28), Agent view (May 11), Routines (Apr 14), Computer use (Mar 23)
+#   Fast Mode 가격 $30/$150 — 19차와 동일. w22 공식 문서 $10/$50과 불일치 지속.
+#   Claude Sonnet 5 (2026-06-30 발표)는 아직 마케팅 페이지에 미반영.
+#   콘텐츠 생성 없음 (마케팅 페이지 피처드 섹션 변경은 정보성 업데이트, 별도 문서 불필요).
 #   콘텐츠 생성 없음 (가격 불확실로 보류, 기존 whats-new-w22.md 주석 추가 고려)
 
-## 최신 기능 하이라이트 (2026-04-20 기준)
-- Routines: 한 번 설정하면 스케줄, API 호출, 이벤트 반응으로 자동 실행 (Apr 14, 2026)
-- Auto mode: --dangerously-skip-permissions의 더 안전한 대안 (Mar 24, 2026)
-- 데스크톱 앱 리디자인: 여러 Claude Code 작업을 동시에 실행하기 위한 새 UI
-- 모바일 Dispatch (리서치 프리뷰): 폰에서 지시 → 내 로컬 PC에서 실행 → PR 생성
+## 최신 기능 하이라이트 (2026-07-03 기준 — 마케팅 페이지 "Latest feature announcements")
+- Dynamic workflows: 10~100개의 병렬 서브에이전트로 복잡한 작업 처리 (Blog May 28, 2026)
+- Agent view: 모든 Claude Code 세션을 한 화면에서 관리 (Blog May 11, 2026)
+- Routines: 한 번 설정하면 스케줄, API 호출, 이벤트 반응으로 자동 실행 (Blog Apr 14, 2026)
+- Computer use: Claude가 앱 열고, 브라우저 탐색, 개발 도구 실행 (Blog Mar 23, 2026)
 
 ## 지원 플랫폼
 - 데스크톱 (Desktop App)
@@ -111,3 +114,4 @@
 - 2026-05-25 17차: **[변경 없음]** 요금제·모델·기능·nav 항목 모두 이전 스냅샷과 동일. ga-marketing.txt 전체 비교 완료. Fast Mode FAQ가 "Opus 4.6" 표기 유지 중 (marketing page 미반영, docs Week 20에서는 Opus 4.7로 전환 발표).
 - 2026-06-15 18차: **[변경 감지]** 모델 FAQ Fable 5·Opus 4.8 추가, Opus 4.7 제거. Fast Mode 기준 Opus 4.8·$10/$50 변경. ga-marketing.txt 전체 비교 완료.
 - 2026-06-25 19차: **[변경 감지]** Fast Mode 가격 표기 불일치 — 마케팅 페이지 $30/$150(현재) vs $10/$50(이전 스냅샷, w22 공식 문서). 가격 정책 확인 필요. 블로그 신규 2건: "Introducing Claude Tag"(6/23), "서울 오피스 오픈"(6/17). 콘텐츠 생성: next/seoul-office-2026.md (new), next/claude-tag.md (new).
+- 2026-07-03 20차: **[마이너 변경]** "Latest feature announcements" 섹션이 Dynamic workflows·Agent view·Routines·Computer use로 업데이트됨. Fast Mode $30/$150 유지 (19차와 동일). Claude Sonnet 5 아직 미반영. 콘텐츠 생성 없음 (피처드 섹션 변경은 정보성).
