@@ -1,9 +1,9 @@
 {
   "_meta": {
     "created": "2026-04-20",
-    "updated": "2026-06-25",
+    "updated": "2026-07-05",
     "source_url": "https://www.anthropic.com/news",
-    "note": "2026-06-25 19차 실행: 신규 블로그 2개 감지. 콘텐츠 생성: next/seoul-office-2026.md (new) — 한국 독자 직접 관련, next/claude-tag.md (new) — 세부 불확실, 제목+설명 기반 작성.",
+    "note": "2026-07-05 20차 실행: 신규 블로그 4개 감지. Claude Sonnet 5(6/30), Redeploying Fable 5(6/30), Claude Science(6/30), Fable 5 jailbreak framework(7/2). 콘텐츠: next/new-models-2026-06.md 업데이트(Sonnet 5 + Fable 5 재배포 섹션 추가). Claude Science 스킵(과학 전용). Fable 5 jailbreak framework 스킵(보안/정책, ebook 범위 밖).",
     "fetch_status": "ga-blog.txt 수신"
   },
   "seen": [
@@ -322,6 +322,38 @@
       "confirmed": false,
       "note": "URL 추정 — 팀 협업용 새 Claude 기능. 세부 기능 불확실. 제목+간략 설명 기반으로 콘텐츠 작성: content/docs/next/claude-tag.md (new). 추정 명시.",
       "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/claude-sonnet-5",
+      "title": "Introducing Claude Sonnet 5",
+      "date": "2026-06-30",
+      "confirmed": false,
+      "note": "URL 추정 — Sonnet 5 출시 발표. 코딩·에이전트·전문 업무에서 최전선 성능. 코딩 ebook 직접 관련. 콘텐츠: content/docs/next/new-models-2026-06.md 업데이트(Sonnet 5 섹션 추가).",
+      "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/redeploying-fable-5",
+      "title": "Redeploying Fable 5",
+      "date": "2026-06-30",
+      "confirmed": false,
+      "note": "URL 추정 — 2026-06-12 수출통제로 일시 정지됐던 Fable 5가 2026-07-01 전 세계 재배포. 한국 사용자 직접 관련. 콘텐츠: content/docs/next/new-models-2026-06.md 업데이트(Fable 5 재배포 섹션 추가).",
+      "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/claude-science",
+      "title": "Claude Science, an AI workbench for scientists, is now available",
+      "date": "2026-06-30",
+      "confirmed": false,
+      "note": "URL 추정 — 과학자 전용 AI 워크벤치. 연구도구·패키지 통합, 감사 가능 아티팩트, 유연한 컴퓨팅 자원. 코딩 입문 ebook 범위 밖(과학 연구 전용) — 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/fable-5-cyber-safeguards-jailbreak-framework",
+      "title": "More details on Fable 5's cyber safeguards and our jailbreak framework",
+      "date": "2026-07-02",
+      "confirmed": false,
+      "note": "URL 추정 — Fable 5 보안 안전장치 세부 발표. Amazon, Microsoft, Google 등과 잼브레이크 심각도 평가 프레임워크 제안(Glasswing 파트너십). 보안/정책 주제, 코딩 ebook 직접 관련 낮음 — 콘텐츠 생성 스킵. new-models-2026-06.md에 간략 언급 포함.",
+      "content_written": false
     }
   ]
 }

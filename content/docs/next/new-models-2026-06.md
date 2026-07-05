@@ -1,20 +1,20 @@
 ---
-title: "[블] 신규 모델 총정리: Opus 4.8, Fable 5, Mythos 5 (2026년 5~6월)"
-description: "Opus 4.8 정식 출시, 그리고 Opus보다 강력한 새 모델 티어 Fable 5·Mythos 5 발표. 미국 수출 통제 상황까지 한 번에 정리"
-tags: ["모델", "opus-4-8", "fable5", "mythos5", "2026", "자동생성"]
+title: "[블] 신규 모델 총정리: Opus 4.8, Fable 5, Mythos 5, Sonnet 5 (2026년 5~7월)"
+description: "Opus 4.8, Fable 5·Mythos 5, 그리고 Claude Sonnet 5 출시. Fable 5 수출통제 해제 재배포까지 한 번에 정리"
+tags: ["모델", "opus-4-8", "fable5", "mythos5", "sonnet5", "2026", "자동생성"]
 category: "next"
 order: 10
-lastUpdated: "2026-06-15"
+lastUpdated: "2026-07-05"
 ---
 
 <div class="note-star">
-★ <strong>블로그 공식 발표 기준</strong> — Opus 4.8 (2026-05-28), Fable 5·Mythos 5 (2026-06-09). <code>[블]</code><br />
-⚠️ <strong>중요 알림</strong> — 2026-06-12 미국 정부 수출통제 지시로 <strong>Fable 5·Mythos 5 접근이 일시 정지</strong>됐어요. 아래 자세히 설명합니다.
+★ <strong>블로그 공식 발표 기준</strong> — Opus 4.8 (2026-05-28), Fable 5·Mythos 5 (2026-06-09), Sonnet 5 (2026-06-30). <code>[블]</code><br />
+🔔 <strong>최신 업데이트</strong> — 2026-06-30 Fable 5가 <strong>재배포</strong>됐어요 (수출통제 해제). Claude Sonnet 5도 동시 출시!
 </div>
 
-## 한 달 새 모델이 3개나? 무슨 일이죠?
+## 두 달 새 모델이 4개나? 무슨 일이죠?
 
-2026년 5~6월 사이에 Anthropic이 새 모델 3종을 연달아 발표했어요. 하나씩 정리할게요.
+2026년 5~7월 사이에 Anthropic이 새 모델을 연달아 발표했어요. 하나씩 정리할게요.
 
 ---
 
@@ -125,13 +125,83 @@ claude update
 
 ---
 
-## 전체 모델 현황 (2026-06-15 기준)
+---
+
+## 3. Claude Sonnet 5 (2026년 6월 30일) `[블]`
+
+<div class="note-star">
+🆕 <strong>신규 출시</strong> — 공식 발표 기준 (2026-06-30). <code>[블]</code>
+</div>
+
+### 무엇이 달라졌나요?
+
+Claude Sonnet 5는 **코딩·에이전트·전문 업무 전반에서 최전선(frontier) 성능**을 대규모로 제공하는 모델이에요.
+
+> 🍱 **비유**: Opus가 "고급 전문가"라면, Sonnet 5는 **"빠르고 유능한 시니어 엔지니어"** 예요. 성능은 최고 수준이면서도 대규모로 쓸 수 있는 균형을 잡았어요.
+
+| 항목 | Sonnet 4.6 (이전) | Sonnet 5 (신규) |
+|------|------------------|----------------|
+| 코딩 성능 | 강력함 | 최전선 수준 |
+| 에이전트 작업 | 좋음 | 크게 향상 |
+| 전문 업무 | 좋음 | 대규모 처리 가능 |
+| 위치 | 균형형 | 고성능 균형형 |
+
+### Claude Code에서 사용하기
+
+```bash
+# 최신 버전 업데이트
+claude update
+
+# Sonnet 5 선택
+/model claude-sonnet-5
+```
+
+<div class="note-circle">
+○ 공식 블로그 발표 기준 — 세부 성능 수치는 공식 문서 참조<br />
+○ 기존 Sonnet 4.6보다 코딩과 에이전트 작업에서 큰 향상
+</div>
+
+---
+
+## 4. Fable 5 재배포 — 수출통제 해제 (2026년 6월 30일~7월 1일) `[블]`
+
+<div class="note-star">
+🔔 <strong>중요 업데이트</strong> — 2026-06-12에 일시 정지됐던 Fable 5가 <strong>2026-07-01에 전 세계 재배포</strong>됐어요. <code>[블]</code>
+</div>
+
+### 무슨 일이 있었나요?
+
+```
+2026-06-09  Fable 5 & Mythos 5 발표
+2026-06-12  미국 정부 수출통제 → 접근 일시 정지 ⚠️
+2026-06-30  Anthropic "Fable 5 재배포" 공식 발표
+2026-07-01  전 세계 재배포 완료 ✅
+```
+
+> 🍱 **비유**: 해외 출시됐던 최신 스마트폰이 세관 통관 문제로 잠깐 판매 중지됐다가, 문제가 해결돼서 다시 살 수 있게 된 상황이에요.
+
+### 보안 프레임워크 발표 (2026-07-02)
+
+Fable 5 재배포와 함께 **Anthropic이 Amazon, Microsoft, Google 등과 함께 잼브레이크(jailbreak) 심각도 평가 프레임워크**를 제안했어요.
+
+- 업계 공통 기준으로 AI 보안 취약점 심각도를 수치화하는 틀
+- Glasswing 파트너들과 함께 표준화 추진 중 (공식 발표 기준)
+
+<div class="note-circle">
+○ Fable 5 접근이 복원됐으니 이제 정상 사용 가능해요<br />
+○ 잼브레이크 프레임워크는 개발자·사용자보다 정책 관련 내용이에요 — 직접 영향은 없어요
+</div>
+
+---
+
+## 전체 모델 현황 (2026-07-05 기준)
 
 | 모델 | 강점 | 현재 상태 | Claude Code 사용 가능? |
 |------|------|----------|----------------------|
-| Fable 5 | 최상위 성능 | ⚠️ 접근 일시 정지 | 제한적 |
-| Mythos 5 | 최상위 성능 (특화) | ⚠️ 접근 일시 정지 | 제한적 |
-| **Opus 4.8** | 코딩·에이전트 최강 | ✅ 정상 | ✅ 기본 모델 |
+| **Fable 5** | 최상위 성능 | ✅ 재배포 (2026-07-01) | ✅ |
+| Mythos 5 | 최상위 성능 (특화) | 공식 상태 확인 필요 | 확인 필요 |
+| **Sonnet 5** | 최전선 균형형 | ✅ 신규 출시 | ✅ |
+| **Opus 4.8** | 코딩·에이전트 최강 | ✅ 정상 | ✅ |
 | Sonnet 4.6 | 균형형 | ✅ 정상 | ✅ |
 | Haiku 4.5 | 경량·빠름 | ✅ 정상 | ✅ |
 
@@ -142,9 +212,9 @@ claude update
 공식 Claude Code 마케팅 페이지(claude.com/claude-code)에서도 모델 정보가 업데이트됐어요:
 
 - **"Which models does Claude Code use?"** FAQ가 Fable 5, Opus 4.8, Sonnet 4.6, Haiku 4.5로 업데이트
-- Fast Mode FAQ가 Opus 4.8 기준으로 변경 (가격: $10/$50 per MTok)
+- Fast Mode FAQ가 Opus 4.8 기준으로 변경 (가격: $30/$150 per MTok — 마케팅 페이지 표기)
 
 <div class="note-circle">
-○ 마케팅 페이지 변경 감지: 2026-06-15 (이전: Opus 4.7 기준이었음)<br />
-○ Fable 5 접근 정지 상황은 마케팅 페이지에 별도 공지 없음 — Anthropic 뉴스룸 참조
+○ Fast Mode 가격: 공식 문서(code.claude.com)는 $10/$50, 마케팅 페이지는 $30/$150로 표기 불일치 상태 — 최신 공식 발표 기준으로 확인 필요<br />
+○ Fable 5는 2026-07-01 재배포 완료
 </div>
