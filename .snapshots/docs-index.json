@@ -1,9 +1,9 @@
 {
   "_meta": {
     "created": "2026-04-20",
-    "updated": "2026-06-25",
+    "updated": "2026-07-06",
     "source_url": "https://code.claude.com/docs/llms.txt",
-    "note": "2026-06-25 19차 실행: 신규 URL 8개 감지. artifacts, feature-availability, llm-gateway-connect, llm-gateway-protocol, llm-gateway-rollout, plugin-relevance, whats-new/2026-w23, whats-new/2026-w24. 총 164개 URL. 콘텐츠 생성: next/whats-new-w23.md (new), next/whats-new-w24.md (new), next/claude-code-artifacts.md (new). llm-gateway-connect/protocol/rollout 스킵(기업 전용, ebook 범위 초과). feature-availability 스킵(정보 페이지, 별도 콘텐츠 불필요). plugin-relevance 스킵(플러그인 내부 동작, 입문자 범위 초과).",
+    "note": "2026-07-06 20차 실행: 신규 URL 9개 감지. claude-apps-gateway, claude-apps-gateway-config, claude-apps-gateway-deploy, claude-apps-gateway-on-gcp, claude-apps-gateway-spend-limits, desktop-linux, gateways, whats-new/2026-w25, whats-new/2026-w26. 총 173개 URL. 콘텐츠 생성: next/whats-new-w25.md (new), next/whats-new-w26.md (new), next/sonnet5-release.md (new), setup/desktop-linux.md (new). claude-apps-gateway* 스킵(기업 게이트웨이 상세, 입문서 범위 외). gateways 스킵(기업 게이트웨이 개요, 입문자 범위 외).",
     "fetch_status": "200_ok"
   },
   "https://code.claude.com/docs/en/overview": "SNAPSHOT_2026-04-20",
@@ -160,5 +160,14 @@
   "https://code.claude.com/docs/en/llm-gateway-rollout": "SNAPSHOT_2026-06-25",
   "https://code.claude.com/docs/en/plugin-relevance": "SNAPSHOT_2026-06-25",
   "https://code.claude.com/docs/en/whats-new/2026-w23": "SNAPSHOT_2026-06-25",
-  "https://code.claude.com/docs/en/whats-new/2026-w24": "SNAPSHOT_2026-06-25"
+  "https://code.claude.com/docs/en/whats-new/2026-w24": "SNAPSHOT_2026-06-25",
+  "https://code.claude.com/docs/en/claude-apps-gateway": "SNAPSHOT_2026-07-06",
+  "https://code.claude.com/docs/en/claude-apps-gateway-config": "SNAPSHOT_2026-07-06",
+  "https://code.claude.com/docs/en/claude-apps-gateway-deploy": "SNAPSHOT_2026-07-06",
+  "https://code.claude.com/docs/en/claude-apps-gateway-on-gcp": "SNAPSHOT_2026-07-06",
+  "https://code.claude.com/docs/en/claude-apps-gateway-spend-limits": "SNAPSHOT_2026-07-06",
+  "https://code.claude.com/docs/en/desktop-linux": "SNAPSHOT_2026-07-06",
+  "https://code.claude.com/docs/en/gateways": "SNAPSHOT_2026-07-06",
+  "https://code.claude.com/docs/en/whats-new/2026-w25": "SNAPSHOT_2026-07-06",
+  "https://code.claude.com/docs/en/whats-new/2026-w26": "SNAPSHOT_2026-07-06"
 }
