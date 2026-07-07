@@ -1,9 +1,9 @@
 {
   "_meta": {
     "created": "2026-04-20",
-    "updated": "2026-06-25",
+    "updated": "2026-07-07",
     "source_url": "https://www.anthropic.com/news",
-    "note": "2026-06-25 19차 실행: 신규 블로그 2개 감지. 콘텐츠 생성: next/seoul-office-2026.md (new) — 한국 독자 직접 관련, next/claude-tag.md (new) — 세부 불확실, 제목+설명 기반 작성.",
+    "note": "2026-07-07 20차 실행: 신규 블로그 6개 감지. 콘텐츠 생성: next/sonnet-5-july2026.md (new — Sonnet 5 출시 + Fable 5 재개), next/making-of-claude-code.md (new — 개발 비화). Claude Science 스킵(과학자용 워크벤치, 코딩 ebook 범위 낮음). Government of Alberta 케이스스터디 스킵(정부 사례, 범위 외).",
     "fetch_status": "ga-blog.txt 수신"
   },
   "seen": [
@@ -321,6 +321,54 @@
       "date": "2026-06-23",
       "confirmed": false,
       "note": "URL 추정 — 팀 협업용 새 Claude 기능. 세부 기능 불확실. 제목+간략 설명 기반으로 콘텐츠 작성: content/docs/next/claude-tag.md (new). 추정 명시.",
+      "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/redeploying-fable-5",
+      "title": "Redeploying Fable 5",
+      "date": "2026-06-30",
+      "confirmed": false,
+      "note": "URL 추정 — Fable 5 전 세계 재개(7월 1일). Amazon·Microsoft·Google과 함께 탈옥 심각도 프레임워크 발표. 콘텐츠 생성: content/docs/next/sonnet-5-july2026.md (new, Sonnet 5와 통합).",
+      "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/claude-sonnet-5",
+      "title": "Introducing Claude Sonnet 5",
+      "date": "2026-06-30",
+      "confirmed": false,
+      "note": "URL 추정 — Sonnet 5: 코딩·에이전트·전문가 업무 최전선 성능. 콘텐츠 생성: content/docs/next/sonnet-5-july2026.md (new).",
+      "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/claude-science",
+      "title": "Claude Science, an AI workbench for scientists, is now available",
+      "date": "2026-06-30",
+      "confirmed": false,
+      "note": "URL 추정 — 과학자 전용 AI 워크벤치. 연구 도구·감사 가능 아티팩트·컴퓨팅 자원 제공. 코딩 입문 ebook 범위와 거리가 있어 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/fable-5-safeguards-jailbreak-framework",
+      "title": "More details on Fable 5's cyber safeguards and our jailbreak framework",
+      "date": "2026-07-02",
+      "confirmed": false,
+      "note": "URL 추정 — Fable 5 사이버 보안 장치 및 탈옥 프레임워크 세부 설명. sonnet-5-july2026.md에서 간략 언급.",
+      "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/alberta-government-claude-security",
+      "title": "Government of Alberta uses Claude to find and fix cybersecurity vulnerabilities across government systems",
+      "date": "2026-07-02",
+      "confirmed": false,
+      "note": "URL 추정 — 앨버타 주 정부 사이버보안 케이스스터디. 정부 기관 사례, 코딩 입문 ebook 범위 외 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/the-making-of-claude-code",
+      "title": "The Making of Claude Code",
+      "date": "2026-07-06",
+      "confirmed": false,
+      "note": "URL 추정 — Claude Code 개발 비화. 내부 CLI에서 코딩 에이전트로의 성장 스토리. 콘텐츠 생성: content/docs/next/making-of-claude-code.md (new).",
       "content_written": true
     }
   ]
