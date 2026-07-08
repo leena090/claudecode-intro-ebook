@@ -1,9 +1,9 @@
 {
   "_meta": {
     "created": "2026-04-20",
-    "updated": "2026-06-25",
+    "updated": "2026-07-08",
     "source_url": "https://www.anthropic.com/news",
-    "note": "2026-06-25 19차 실행: 신규 블로그 2개 감지. 콘텐츠 생성: next/seoul-office-2026.md (new) — 한국 독자 직접 관련, next/claude-tag.md (new) — 세부 불확실, 제목+설명 기반 작성.",
+    "note": "2026-07-08 20차 실행: 신규 블로그 6개 감지. The Making of Claude Code (07/06), Redeploying Fable 5 (06/30), Introducing Claude Sonnet 5 (06/30), Claude Science (06/30), Government of Alberta case study (07/06), Fable 5 cyber safeguards details (07/02). 콘텐츠 생성: next/the-making-of-claude-code.md (new), next/claude-sonnet-5.md (new). Redeploying Fable 5·Fable 5 safeguards 스킵(정책/보안). Claude Science 스킵(과학자용, ebook 범위 외). Alberta 사례 스킵(사례 연구, ebook 범위 외).",
     "fetch_status": "ga-blog.txt 수신"
   },
   "seen": [
@@ -322,6 +322,62 @@
       "confirmed": false,
       "note": "URL 추정 — 팀 협업용 새 Claude 기능. 세부 기능 불확실. 제목+간략 설명 기반으로 콘텐츠 작성: content/docs/next/claude-tag.md (new). 추정 명시.",
       "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/anthropic-seoul-korean-partnerships",
+      "title": "Anthropic opens Seoul office and announces new partnerships across the Korean AI ecosystem",
+      "date": "2026-06-17",
+      "confirmed": false,
+      "note": "URL 추정 — 서울 오피스 공식 개설 + 한국 AI 파트너십. 이미 19차에 처리됨.",
+      "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/the-making-of-claude-code",
+      "title": "The Making of Claude Code",
+      "date": "2026-07-06",
+      "confirmed": false,
+      "note": "URL 추정 — Claude Code 제작기. 연구원·엔지니어·초기 사용자 이야기. 내부 CLI에서 공식 코딩 에이전트가 되기까지. 콘텐츠 생성: content/docs/next/the-making-of-claude-code.md (new).",
+      "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/redeploying-fable-5",
+      "title": "Redeploying Fable 5",
+      "date": "2026-06-30",
+      "confirmed": false,
+      "note": "URL 추정 — Fable 5 글로벌 재배포 (수출통제 해제) + 업계 jailbreak 심각도 프레임워크 제안 (Amazon·Microsoft·Google·Glasswing 참여). 정책/보안 주제, 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/claude-sonnet-5",
+      "title": "Introducing Claude Sonnet 5",
+      "date": "2026-06-30",
+      "confirmed": false,
+      "note": "URL 추정 — Sonnet 5 출시. 코딩·에이전트·전문 업무 최전선 성능. 모델 ID: claude-sonnet-5. 콘텐츠 생성: content/docs/next/claude-sonnet-5.md (new).",
+      "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/claude-science",
+      "title": "Claude Science, an AI workbench for scientists, is now available",
+      "date": "2026-06-30",
+      "confirmed": false,
+      "note": "URL 추정 — 과학자용 AI 워크벤치. 연구 도구·패키지 통합, 감사 가능한 아티팩트, 컴퓨팅 리소스 접근. 코딩 ebook 범위 외, 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/fable-5-cyber-safeguards",
+      "title": "More details on Fable 5's cyber safeguards and our jailbreak framework",
+      "date": "2026-07-02",
+      "confirmed": false,
+      "note": "URL 추정 — Fable 5 사이버 안전장치 세부 사항 + jailbreak 프레임워크 공동 발표. 정책/보안 주제, 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/alberta-cybersecurity",
+      "title": "Government of Alberta uses Claude to find and fix cybersecurity vulnerabilities across government systems",
+      "date": "2026-07-06",
+      "confirmed": false,
+      "note": "URL 추정 — 알버타 정부 사이버보안 사례 연구. 사례 연구, 코딩 ebook 범위 외, 콘텐츠 생성 스킵.",
+      "content_written": false
     }
   ]
 }
