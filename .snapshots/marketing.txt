@@ -1,10 +1,14 @@
-# SNAPSHOT - 2026-06-25 (19차 실행)
+# SNAPSHOT - 2026-07-11 (20차 실행)
 # 소스: https://claude.com/claude-code (마케팅 공식 페이지)
-# 상태: ga-marketing.txt 정상 수신 (2026-06-25 GitHub Actions 실행분)
-# 19차 실행: [변경 감지] Fast Mode 가격 표기 변동 — 이전 스냅샷($10/$50 Opus 4.8) →
-#   현재 마케팅 페이지($30/$150 Opus 4.8). w22 공식 문서는 $10/$50 기재 유지 중.
-#   가격 인상인지 마케팅 페이지 수정 오류인지 불확실 — "추정" 처리. 모니터링 계속.
-#   콘텐츠 생성 없음 (가격 불확실로 보류, 기존 whats-new-w22.md 주석 추가 고려)
+# 상태: ga-marketing.txt 정상 수신 (2026-07-11 GitHub Actions 실행분)
+# 20차 실행: [변경 감지]
+#   1. Android 지원 추가 — "Other ways to use Claude Code"에 Android 링크 새로 등재
+#      (이전: iOS·Web 리서치 프리뷰 → 현재: iOS·Android 정식 등재)
+#   2. "Latest feature announcements" 섹션 변경 —
+#      이전(4/20 스냅샷): "Redesigned Desktop", "Routines", "Auto mode", "Skills"
+#      현재: "Dynamic workflows"(5/28), "Agent view"(5/11), "Routines"(4/14), "Computer use"(3/23)
+#   3. Fast Mode $30/$150 — 이전 회차(19차)에서 이미 감지·기록됨. 변경 없음.
+#   콘텐츠 생성 없음 (Android 지원은 플랫폼 확대 사실만, 별도 문서 불필요)
 
 ## 최신 기능 하이라이트 (2026-04-20 기준)
 - Routines: 한 번 설정하면 스케줄, API 호출, 이벤트 반응으로 자동 실행 (Apr 14, 2026)
@@ -12,11 +16,14 @@
 - 데스크톱 앱 리디자인: 여러 Claude Code 작업을 동시에 실행하기 위한 새 UI
 - 모바일 Dispatch (리서치 프리뷰): 폰에서 지시 → 내 로컬 PC에서 실행 → PR 생성
 
-## 지원 플랫폼
-- 데스크톱 (Desktop App)
+## 지원 플랫폼 (2026-07-11 업데이트)
+- 데스크탑 (Desktop App)
 - 터미널 (Terminal/CLI)
 - VS Code / JetBrains IDE
-- 웹 & iOS (리서치 프리뷰)
+- 웹 (Web)
+- iOS
+- **Android** ← 2026-07-11 신규 등재
+- GitHub
 - Slack
 
 ## 요금제 (공식 발표 기준)
@@ -78,11 +85,16 @@
 - Claude Design: 시각적 디자인 협업 도구 (Apr 17, 2026)
   - 디자인, 프로토타입, 슬라이드, 원페이저 제작
 
-## 블로그 링크 (마케팅 페이지 기재)
-- "Redesigned Desktop app" - 블로그
-- "Routines: Configure a routine once..." (Apr 14, 2026) - 블로그
-- "Auto mode: A safer long-running alternative..." (Mar 24, 2026) - 블로그
-- "Improving frontend design through Skills" - 블로그
+## 최신 기능 발표 섹션 (2026-07-11 업데이트)
+- "Dynamic workflows: ..." (May 28, 2026) - 블로그 ← 신규
+- "Agent view: ..." (May 11, 2026) - 블로그 ← 신규
+- "Routines: Configure a routine once..." (Apr 14, 2026) - 블로그 (유지)
+- "Computer use: ..." (Mar 23, 2026) - 블로그 ← 신규
+
+## (이전) 블로그 링크 (19차까지 기재됐던 항목)
+- "Redesigned Desktop app" - 블로그 (제거됨)
+- "Auto mode: A safer long-running alternative..." (Mar 24, 2026) - 블로그 (제거됨)
+- "Improving frontend design through Skills" - 블로그 (제거됨)
 
 ## 공식 nav 등재 제품·기능 (2026-05-08 업데이트)
 - Products: Claude, Claude Code, Claude Code for Enterprise, **Claude Cowork**, Claude Security, Pro/Max/Team/Enterprise plan
@@ -94,6 +106,7 @@
 ## 변경 이력
 - 2026-05-08: **[변경]** Features nav에서 "Claude for Excel", "Claude for PowerPoint", "Claude for Word" 3개 → "Claude for Microsoft 365" 1개로 통합 감지. 콘텐츠 생성: content/docs/cowork/claude-for-m365.md (new)
 - 2026-06-15: **[변경]** 모델 라인업 변경. Fable 5 신규 추가, Opus 4.7 → Opus 4.8 교체. Fast Mode 가격 $30/$150(Opus 4.7) → $10/$50(Opus 4.8). 콘텐츠 생성: content/docs/next/new-models-2026-06.md (new)
+- 2026-07-11: **[변경]** Android 지원 등재. 기능 발표 섹션 업데이트(Dynamic workflows·Agent view·Computer use 추가, Desktop redesign·Auto mode·Skills 제거). 콘텐츠 생성 없음.
 
 ## fetch_log
 - 2026-04-20 이전: 403 Forbidden (2회)

@@ -1,9 +1,9 @@
 {
   "_meta": {
     "created": "2026-04-20",
-    "updated": "2026-06-25",
+    "updated": "2026-07-11",
     "source_url": "https://www.anthropic.com/news",
-    "note": "2026-06-25 19차 실행: 신규 블로그 2개 감지. 콘텐츠 생성: next/seoul-office-2026.md (new) — 한국 독자 직접 관련, next/claude-tag.md (new) — 세부 불확실, 제목+설명 기반 작성.",
+    "note": "2026-07-11 20차 실행: 신규 블로그 10건 감지. 콘텐츠 생성: next/new-models-2026-06.md (edit: Sonnet 5·Fable 5 복귀), next/making-of-claude-code.md (new). 스킵: Inviting hard questions(정책), UST physical AI(케이스스터디), Ben Bernanke(거버넌스), 'reflect on how you use Claude'(일반 Claude 기능), Government of Alberta(케이스스터디), Claude Science(과학 연구도구). 기록: 'More details on Fable 5 jailbreak framework'(Fable 5 복귀 문서에 포함).",
     "fetch_status": "ga-blog.txt 수신"
   },
   "seen": [
@@ -322,6 +322,86 @@
       "confirmed": false,
       "note": "URL 추정 — 팀 협업용 새 Claude 기능. 세부 기능 불확실. 제목+간략 설명 기반으로 콘텐츠 작성: content/docs/next/claude-tag.md (new). 추정 명시.",
       "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/redeploying-fable-5",
+      "title": "Redeploying Fable 5",
+      "date": "2026-06-30",
+      "confirmed": false,
+      "note": "URL 추정 — Fable 5 글로벌 복귀(7/1). Glasswing 파트너와 잼브레이크 심각도 평가 프레임워크 제안. new-models-2026-06.md 수출통제 섹션 → 복귀 섹션으로 업데이트.",
+      "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/claude-sonnet-5",
+      "title": "Introducing Claude Sonnet 5",
+      "date": "2026-06-30",
+      "confirmed": false,
+      "note": "URL 추정 — Sonnet 5 발표. Pro·Team·Enterprise 기본 모델 전환, 1M 컨텍스트, API $2/$10 홍보가. new-models-2026-06.md에 Sonnet 5 섹션 추가.",
+      "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/claude-science",
+      "title": "Claude Science, an AI workbench for scientists, is now available",
+      "date": "2026-06-30",
+      "confirmed": false,
+      "note": "URL 추정 — 과학 연구자용 Claude 워크벤치. 코딩 입문 ebook과 직접 관련 낮아 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/fable-5-jailbreak-framework",
+      "title": "More details on Fable 5's cyber safeguards and our jailbreak framework",
+      "date": "2026-07-02",
+      "confirmed": false,
+      "note": "URL 추정 — Fable 5 보안 세이프가드·잼브레이크 평가 프레임워크 상세. Fable 5 복귀 문서에 간략 언급 포함. 별도 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/the-making-of-claude-code",
+      "title": "The Making of Claude Code",
+      "date": "2026-07-06",
+      "confirmed": false,
+      "note": "URL 추정 — Claude Code 탄생 비화. 내부 CLI에서 코딩 에이전트가 된 과정. 한국어 ebook 독자에게 매우 관련성 높음. 콘텐츠 생성: next/making-of-claude-code.md (new). 블로그 본문 접근 불가로 제목·부제 기반 작성, 추정 명시.",
+      "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/inviting-hard-questions",
+      "title": "Inviting hard questions",
+      "date": "2026-07-09",
+      "confirmed": false,
+      "note": "URL 추정 — AI에 관한 어려운 질문 공개 요청. 정책/투명성 주제, 코딩 ebook과 직접 관련 낮아 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/ust-physical-ai",
+      "title": "UST is bringing Claude to physical AI",
+      "date": "2026-07-09",
+      "confirmed": false,
+      "note": "URL 추정 — UST 파트너십 케이스스터디. 코딩 ebook과 직접 관련 낮아 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/ben-bernanke-ltbt",
+      "title": "Ben Bernanke appointed to Anthropic's Long-Term Benefit Trust",
+      "date": "2026-07-09",
+      "confirmed": false,
+      "note": "URL 추정 — 거버넌스 인사 발표. 코딩 ebook과 무관하여 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/reflect-on-how-you-use-claude",
+      "title": "Introducing a way to reflect on how you use Claude",
+      "date": "2026-07-09",
+      "confirmed": false,
+      "note": "URL 추정 — Claude 사용 패턴 성찰 기능. 일반 Claude(코딩 외) 기능으로 ebook 직접 범위 밖. 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/government-of-alberta-cybersecurity",
+      "title": "Government of Alberta uses Claude to find and fix cybersecurity vulnerabilities across government systems",
+      "date": "2026-07-06",
+      "confirmed": false,
+      "note": "URL 추정 — 정부 케이스스터디. 보안 자동화 관련이지만 입문 ebook 직접 범위 밖. 스킵.",
+      "content_written": false
     }
   ]
 }
