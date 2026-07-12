@@ -1,9 +1,9 @@
 {
   "_meta": {
     "created": "2026-04-20",
-    "updated": "2026-06-25",
+    "updated": "2026-07-12",
     "source_url": "https://www.anthropic.com/news",
-    "note": "2026-06-25 19차 실행: 신규 블로그 2개 감지. 콘텐츠 생성: next/seoul-office-2026.md (new) — 한국 독자 직접 관련, next/claude-tag.md (new) — 세부 불확실, 제목+설명 기반 작성.",
+    "note": "2026-07-12 20차 실행: 신규 블로그 10개 감지. 콘텐츠 생성: next/new-models-2026-07.md (new — Sonnet 5 + Fable 5 복귀). next/new-models-2026-06.md (edit — 복귀 알림 추가). Claude Science/The Making of Claude Code/Reflections/Alberta/UST/Bernanke/Inviting hard questions 스킵.",
     "fetch_status": "ga-blog.txt 수신"
   },
   "seen": [
@@ -322,6 +322,86 @@
       "confirmed": false,
       "note": "URL 추정 — 팀 협업용 새 Claude 기능. 세부 기능 불확실. 제목+간략 설명 기반으로 콘텐츠 작성: content/docs/next/claude-tag.md (new). 추정 명시.",
       "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/redeploying-fable-5",
+      "title": "Redeploying Fable 5",
+      "date": "2026-06-30",
+      "confirmed": false,
+      "note": "URL 추정 — Fable 5 전 세계 7월 1일 복귀. 잼브레이크 심각도 프레임워크 제안(Amazon·Microsoft·Google·Glasswing 파트너). 콘텐츠 생성: next/new-models-2026-07.md (new), next/new-models-2026-06.md (edit).",
+      "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/claude-sonnet-5",
+      "title": "Introducing Claude Sonnet 5",
+      "date": "2026-06-30",
+      "confirmed": false,
+      "note": "URL 추정 — 새 모델 Sonnet 5 출시. 기본 모델 전환. 콘텐츠 생성: next/new-models-2026-07.md (new).",
+      "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/claude-science",
+      "title": "Claude Science, an AI workbench for scientists, is now available",
+      "date": "2026-06-30",
+      "confirmed": false,
+      "note": "URL 추정 — 과학자용 AI 워크벤치. 연구 도구·컴퓨팅 자원 통합. 코딩 입문 ebook 범위 외. 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/fable-5-cyber-safeguards-jailbreak-framework",
+      "title": "More details on Fable 5's cyber safeguards and our jailbreak framework",
+      "date": "2026-07-02",
+      "confirmed": false,
+      "note": "URL 추정 — Fable 5 보안 장치 세부 내용 + 잼브레이크 프레임워크 상세. next/new-models-2026-07.md에 요약 포함. 별도 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/the-making-of-claude-code",
+      "title": "The Making of Claude Code",
+      "date": "2026-07-06",
+      "confirmed": false,
+      "note": "URL 추정 — Claude Code 탄생 내막. 연구자·엔지니어·초기 사용자 증언. 입문 ebook stories 카테고리에 적합하나, fetch 불가로 실제 내용 확인 불가. 다음 회차에서 재시도 예정. 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/ust-physical-ai",
+      "title": "UST is bringing Claude to physical AI",
+      "date": "2026-07-09",
+      "confirmed": false,
+      "note": "URL 추정 — 케이스 스터디. 피지컬 AI 분야 사례. 코딩 입문 ebook 범위 외. 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/ben-bernanke-ltbt",
+      "title": "Ben Bernanke appointed to Anthropic's Long-Term Benefit Trust",
+      "date": "2026-07-09",
+      "confirmed": false,
+      "note": "URL 추정 — 이사회 인사 뉴스. 코딩 ebook과 무관. 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/introducing-reflections",
+      "title": "Introducing a way to reflect on how you use Claude",
+      "date": "2026-07-09",
+      "confirmed": false,
+      "note": "URL 추정 — Claude 사용 패턴 반영/회고 기능(Reflections?). 제목만 확인됨, 세부 불명확. 기능 파악 후 다음 회차에 콘텐츠 작성 검토. 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/government-of-alberta-cybersecurity",
+      "title": "Government of Alberta uses Claude to find and fix cybersecurity vulnerabilities across government systems",
+      "date": "2026-07-09",
+      "confirmed": false,
+      "note": "URL 추정 — 공공기관 케이스 스터디. 코딩 입문 ebook 범위 외. 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/inviting-hard-questions",
+      "title": "Inviting hard questions",
+      "date": "2026-07-09",
+      "confirmed": false,
+      "note": "URL 추정 — AI에 관한 어려운 질문 공개 요청 이니셔티브. 정책/투명성 주제. 코딩 ebook과 직접 관련 낮아 콘텐츠 생성 스킵.",
+      "content_written": false
     }
   ]
 }

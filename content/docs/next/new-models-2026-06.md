@@ -9,7 +9,7 @@ lastUpdated: "2026-06-15"
 
 <div class="note-star">
 ★ <strong>블로그 공식 발표 기준</strong> — Opus 4.8 (2026-05-28), Fable 5·Mythos 5 (2026-06-09). <code>[블]</code><br />
-⚠️ <strong>중요 알림</strong> — 2026-06-12 미국 정부 수출통제 지시로 <strong>Fable 5·Mythos 5 접근이 일시 정지</strong>됐어요. 아래 자세히 설명합니다.
+✅ <strong>업데이트 (2026-07-01)</strong> — Fable 5·Mythos 5가 보안 프레임워크 마련 후 <strong>전 세계 복귀</strong>했어요! 최신 모델 정보는 <a href="/docs/next/new-models-2026-07">소네트 5 & Fable 5 복귀 문서</a>를 확인하세요.
 </div>
 
 ## 한 달 새 모델이 3개나? 무슨 일이죠?
@@ -93,10 +93,11 @@ claude update
 
 ---
 
-## ⚠️ 중요: 미국 정부 수출 통제 (2026년 6월 12일)
+## ⚠️ 미국 정부 수출 통제 (2026년 6월 12일) → ✅ 2026년 7월 1일 복귀
 
 <div class="note-star">
-⚠️ <strong>주의</strong> — 2026년 6월 12일, 미국 정부가 Fable 5·Mythos 5에 대한 수출통제 지시를 발령했어요. 현재 이 모델들에 대한 <strong>접근이 일시 정지</strong>된 상태예요.
+✅ <strong>복귀 완료</strong> — Fable 5·Mythos 5가 2026년 7월 1일 전 세계에 복귀했어요! Anthropic이 업계 공동 보안 프레임워크(Amazon·Microsoft·Google 참여)를 마련하고 추가 사이버 보안 장치를 갖춘 후 재개됐어요.<br />
+아래는 6월 12일~30일 사이 수출통제 기간의 기록이에요.
 </div>
 
 ### 상황 요약
@@ -129,8 +130,8 @@ claude update
 
 | 모델 | 강점 | 현재 상태 | Claude Code 사용 가능? |
 |------|------|----------|----------------------|
-| Fable 5 | 최상위 성능 | ⚠️ 접근 일시 정지 | 제한적 |
-| Mythos 5 | 최상위 성능 (특화) | ⚠️ 접근 일시 정지 | 제한적 |
+| Fable 5 | 최상위 성능 | ✅ 2026-07-01 복귀 | ✅ |
+| Mythos 5 | 최상위 성능 (특화) | ✅ 2026-07-01 복귀 | ✅ |
 | **Opus 4.8** | 코딩·에이전트 최강 | ✅ 정상 | ✅ 기본 모델 |
 | Sonnet 4.6 | 균형형 | ✅ 정상 | ✅ |
 | Haiku 4.5 | 경량·빠름 | ✅ 정상 | ✅ |
