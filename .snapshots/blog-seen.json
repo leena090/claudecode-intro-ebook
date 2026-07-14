@@ -1,9 +1,9 @@
 {
   "_meta": {
     "created": "2026-04-20",
-    "updated": "2026-06-25",
+    "updated": "2026-07-14",
     "source_url": "https://www.anthropic.com/news",
-    "note": "2026-06-25 19차 실행: 신규 블로그 2개 감지. 콘텐츠 생성: next/seoul-office-2026.md (new) — 한국 독자 직접 관련, next/claude-tag.md (new) — 세부 불확실, 제목+설명 기반 작성.",
+    "note": "2026-07-14 20차 실행: 신규 블로그 12개 감지 (Jun 30 ~ Jul 14). 콘텐츠 생성: next/claude-sonnet-5.md (new) — Sonnet 5 출시 + Fable 5 재배포, next/claude-making-of.md (new) — Claude Code 탄생 비화. Claude Science/Quebec research 스킵(ebook 범위 외). Ben Bernanke/reflect/Alberta/UST/Teachers 스킵(비개발 뉴스 또는 ebook 범위 외).",
     "fetch_status": "ga-blog.txt 수신"
   },
   "seen": [
@@ -322,6 +322,102 @@
       "confirmed": false,
       "note": "URL 추정 — 팀 협업용 새 Claude 기능. 세부 기능 불확실. 제목+간략 설명 기반으로 콘텐츠 작성: content/docs/next/claude-tag.md (new). 추정 명시.",
       "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/redeploying-fable-5",
+      "title": "Redeploying Fable 5",
+      "date": "2026-06-30",
+      "confirmed": true,
+      "note": "Fable 5 7월 1일 전 세계 재배포 + 잭브레이크 심각도 프레임워크 제안. 콘텐츠 생성: content/docs/next/claude-sonnet-5.md에 통합 (Sonnet 5와 함께).",
+      "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/claude-sonnet-5",
+      "title": "Introducing Claude Sonnet 5",
+      "date": "2026-06-30",
+      "confirmed": true,
+      "note": "Sonnet 5 출시 — 코딩·에이전트 최상위 성능, 1M 컨텍스트, $2/$10/MTok 프로모션. 콘텐츠 생성: content/docs/next/claude-sonnet-5.md (new).",
+      "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/claude-science",
+      "title": "Claude Science, an AI workbench for scientists, is now available",
+      "date": "2026-06-30",
+      "confirmed": false,
+      "note": "URL 추정 — 과학자용 AI 워크벤치 출시. 과학/연구 도구, 코딩 ebook과 직접 관련 낮아 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/fable-5-cyber-safeguards",
+      "title": "More details on Fable 5's cyber safeguards and our jailbreak framework",
+      "date": "2026-07-02",
+      "confirmed": false,
+      "note": "URL 추정 — Fable 5 사이버 보안 분석 세부 내용 + 잭브레이크 프레임워크. claude-sonnet-5.md에서 간략 언급 포함.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/the-making-of-claude-code",
+      "title": "The Making of Claude Code",
+      "date": "2026-07-06",
+      "confirmed": false,
+      "note": "URL 추정 — Claude Code 탄생 비화. ebook 핵심 주제와 직접 연관. 콘텐츠 생성: content/docs/next/claude-making-of.md (new).",
+      "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/alberta-cybersecurity",
+      "title": "Government of Alberta uses Claude to find and fix cybersecurity vulnerabilities across government systems",
+      "date": "2026-07-06",
+      "confirmed": false,
+      "note": "URL 추정 — 앨버타주 정부 사이버보안 케이스스터디. 코딩 ebook과 직접 관련 낮아 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/inviting-hard-questions",
+      "title": "Inviting hard questions",
+      "date": "2026-07-09",
+      "confirmed": false,
+      "note": "URL 추정 — AI에 관한 어려운 질문을 공개 모집. 정책/투명성 주제, 코딩 ebook과 무관하여 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/ben-bernanke-lbt",
+      "title": "Ben Bernanke appointed to Anthropic's Long-Term Benefit Trust",
+      "date": "2026-07-09",
+      "confirmed": false,
+      "note": "URL 추정 — 전 Fed 의장 이사 선임. 거버넌스 뉴스, 코딩 ebook과 무관하여 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/reflect-how-you-use-claude",
+      "title": "Introducing a way to reflect on how you use Claude",
+      "date": "2026-07-09",
+      "confirmed": false,
+      "note": "URL 추정 — Claude 사용 패턴 돌아보기 기능. 사용 습관 분석 도구, 코딩 ebook과 직접 관련 낮아 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/ust-physical-ai",
+      "title": "UST is bringing Claude to physical AI",
+      "date": "2026-07-09",
+      "confirmed": false,
+      "note": "URL 추정 — UST의 물리적 AI 파트너십. 비즈니스/케이스스터디, 코딩 ebook과 직접 관련 낮아 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/claude-for-teachers",
+      "title": "Introducing Claude for Teachers",
+      "date": "2026-07-14",
+      "confirmed": false,
+      "note": "URL 추정 — 교사용 Claude 제품 출시. 교육 특화 기능, 코딩 입문 ebook과 간접 관련 — 추후 교육 카테고리 확장 시 참조 가능. 현재 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/anthropic-canada-research",
+      "title": "Anthropic commits $10 million to Canadian AI research",
+      "date": "2026-07-14",
+      "confirmed": false,
+      "note": "URL 추정 — 캐나다 AI 연구 투자. 학술/정책 뉴스, 코딩 ebook과 무관하여 스킵.",
+      "content_written": false
     }
   ]
 }

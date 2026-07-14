@@ -1,16 +1,20 @@
-# SNAPSHOT - 2026-06-25 (19차 실행)
+# SNAPSHOT - 2026-07-14 (20차 실행)
 # 소스: https://claude.com/claude-code (마케팅 공식 페이지)
-# 상태: ga-marketing.txt 정상 수신 (2026-06-25 GitHub Actions 실행분)
-# 19차 실행: [변경 감지] Fast Mode 가격 표기 변동 — 이전 스냅샷($10/$50 Opus 4.8) →
-#   현재 마케팅 페이지($30/$150 Opus 4.8). w22 공식 문서는 $10/$50 기재 유지 중.
-#   가격 인상인지 마케팅 페이지 수정 오류인지 불확실 — "추정" 처리. 모니터링 계속.
-#   콘텐츠 생성 없음 (가격 불확실로 보류, 기존 whats-new-w22.md 주석 추가 고려)
+# 상태: ga-marketing.txt 정상 수신 (2026-07-14 GitHub Actions 실행분)
+# 20차 실행: [변경 감지] 최신 기능 하이라이트 갱신 —
+#   이전(19차): Routines, Auto mode, Desktop redesign, Mobile Dispatch
+#   현재(20차): Dynamic workflows (May 28), Agent view (May 11), Routines (Apr 14), Computer use (Mar 23)
+#   → "Dynamic workflows"와 "Agent view"가 새로 Featured 섹션에 추가됨
+#   → 기존 content/docs/advanced/ 에 이미 관련 문서 존재 (dynamic-workflows.md, agent-view.md)
+#   → 별도 신규 콘텐츠 생성 없음 (기존 문서 커버)
+# Fast Mode 가격: $30/$150 (Opus 4.8) — 19차에서 감지한 이후 동일. 공식 가격으로 확정 추정.
+# Sonnet 5가 기본 모델로 전환됨 (w27 업데이트 기반, 마케팅 페이지 반영 여부 불명확)
 
-## 최신 기능 하이라이트 (2026-04-20 기준)
+## 최신 기능 하이라이트 (2026-07-14 기준)
+- Dynamic workflows: 수십~수백 병렬 서브에이전트로 복잡한 작업 처리 (May 28, 2026)
+- Agent view: 모든 Claude Code 세션을 한 곳에서 관리 (May 11, 2026)
 - Routines: 한 번 설정하면 스케줄, API 호출, 이벤트 반응으로 자동 실행 (Apr 14, 2026)
-- Auto mode: --dangerously-skip-permissions의 더 안전한 대안 (Mar 24, 2026)
-- 데스크톱 앱 리디자인: 여러 Claude Code 작업을 동시에 실행하기 위한 새 UI
-- 모바일 Dispatch (리서치 프리뷰): 폰에서 지시 → 내 로컬 PC에서 실행 → PR 생성
+- Computer use: Claude가 앱을 열고 브라우저를 탐색하고 개발 도구를 실행 (Mar 23, 2026)
 
 ## 지원 플랫폼
 - 데스크톱 (Desktop App)
@@ -94,6 +98,7 @@
 ## 변경 이력
 - 2026-05-08: **[변경]** Features nav에서 "Claude for Excel", "Claude for PowerPoint", "Claude for Word" 3개 → "Claude for Microsoft 365" 1개로 통합 감지. 콘텐츠 생성: content/docs/cowork/claude-for-m365.md (new)
 - 2026-06-15: **[변경]** 모델 라인업 변경. Fable 5 신규 추가, Opus 4.7 → Opus 4.8 교체. Fast Mode 가격 $30/$150(Opus 4.7) → $10/$50(Opus 4.8). 콘텐츠 생성: content/docs/next/new-models-2026-06.md (new)
+- 2026-07-14: **[변경]** 최신 기능 하이라이트 갱신. "Dynamic workflows"(May 28), "Agent view"(May 11) 추가. "Auto mode", "Desktop redesign" 제거. 기존 문서로 커버, 신규 콘텐츠 없음.
 
 ## fetch_log
 - 2026-04-20 이전: 403 Forbidden (2회)
