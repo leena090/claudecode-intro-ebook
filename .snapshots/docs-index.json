@@ -1,9 +1,9 @@
 {
   "_meta": {
     "created": "2026-04-20",
-    "updated": "2026-06-25",
+    "updated": "2026-07-15",
     "source_url": "https://code.claude.com/docs/llms.txt",
-    "note": "2026-06-25 19차 실행: 신규 URL 8개 감지. artifacts, feature-availability, llm-gateway-connect, llm-gateway-protocol, llm-gateway-rollout, plugin-relevance, whats-new/2026-w23, whats-new/2026-w24. 총 164개 URL. 콘텐츠 생성: next/whats-new-w23.md (new), next/whats-new-w24.md (new), next/claude-code-artifacts.md (new). llm-gateway-connect/protocol/rollout 스킵(기업 전용, ebook 범위 초과). feature-availability 스킵(정보 페이지, 별도 콘텐츠 불필요). plugin-relevance 스킵(플러그인 내부 동작, 입문자 범위 초과).",
+    "note": "2026-07-15 20차 실행: 신규 URL 13개 감지. accessibility, claude-apps-gateway (5종), desktop-linux, desktop-wsl, gateways, whats-new/2026-w25~w28. 총 177개 URL. 콘텐츠 생성: next/whats-new-w25-w28.md (new), next/making-of-claude-code.md (new), advanced/desktop-linux-wsl.md (new). 기존 파일 편집: next/new-models-2026-06.md (Sonnet 5 추가, Fable 5 재배포 업데이트). claude-apps-gateway 5개·gateways 스킵(기업 전용, 입문자 범위 초과).",
     "fetch_status": "200_ok"
   },
   "https://code.claude.com/docs/en/overview": "SNAPSHOT_2026-04-20",
@@ -160,5 +160,18 @@
   "https://code.claude.com/docs/en/llm-gateway-rollout": "SNAPSHOT_2026-06-25",
   "https://code.claude.com/docs/en/plugin-relevance": "SNAPSHOT_2026-06-25",
   "https://code.claude.com/docs/en/whats-new/2026-w23": "SNAPSHOT_2026-06-25",
-  "https://code.claude.com/docs/en/whats-new/2026-w24": "SNAPSHOT_2026-06-25"
+  "https://code.claude.com/docs/en/whats-new/2026-w24": "SNAPSHOT_2026-06-25",
+  "https://code.claude.com/docs/en/accessibility": "SNAPSHOT_2026-07-15",
+  "https://code.claude.com/docs/en/claude-apps-gateway": "SNAPSHOT_2026-07-15",
+  "https://code.claude.com/docs/en/claude-apps-gateway-config": "SNAPSHOT_2026-07-15",
+  "https://code.claude.com/docs/en/claude-apps-gateway-deploy": "SNAPSHOT_2026-07-15",
+  "https://code.claude.com/docs/en/claude-apps-gateway-on-gcp": "SNAPSHOT_2026-07-15",
+  "https://code.claude.com/docs/en/claude-apps-gateway-spend-limits": "SNAPSHOT_2026-07-15",
+  "https://code.claude.com/docs/en/desktop-linux": "SNAPSHOT_2026-07-15",
+  "https://code.claude.com/docs/en/desktop-wsl": "SNAPSHOT_2026-07-15",
+  "https://code.claude.com/docs/en/gateways": "SNAPSHOT_2026-07-15",
+  "https://code.claude.com/docs/en/whats-new/2026-w25": "SNAPSHOT_2026-07-15",
+  "https://code.claude.com/docs/en/whats-new/2026-w26": "SNAPSHOT_2026-07-15",
+  "https://code.claude.com/docs/en/whats-new/2026-w27": "SNAPSHOT_2026-07-15",
+  "https://code.claude.com/docs/en/whats-new/2026-w28": "SNAPSHOT_2026-07-15"
 }
