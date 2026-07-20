@@ -1,9 +1,9 @@
 {
   "_meta": {
     "created": "2026-04-20",
-    "updated": "2026-06-25",
+    "updated": "2026-07-20",
     "source_url": "https://www.anthropic.com/news",
-    "note": "2026-06-25 19차 실행: 신규 블로그 2개 감지. 콘텐츠 생성: next/seoul-office-2026.md (new) — 한국 독자 직접 관련, next/claude-tag.md (new) — 세부 불확실, 제목+설명 기반 작성.",
+    "note": "2026-07-20 21차 실행: 신규 블로그 1건 감지 (AI for Science 희귀질환 보조금, Jul 20). 코딩 ebook 무관 — 콘텐츠 생성 스킵, blog-seen.json만 업데이트. 20차(2026-07-18) 누락분 병합: claude-sonnet-5, redeploying-fable-5, claude-science, fable-5-jailbreak-framework, making-of-claude-code, alberta-cybersecurity, inviting-hard-questions, ben-bernanke, ust-physical-ai, claude-usage-reflection, claude-for-teachers, canadian-ai-research.",
     "fetch_status": "ga-blog.txt 수신"
   },
   "seen": [
@@ -417,6 +417,14 @@
       "date": "2026-07-14",
       "confirmed": false,
       "note": "URL 추정 — 캐나다 AI 연구 투자. 코딩 ebook과 무관하여 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/ai-for-science-rare-disease-grants",
+      "title": "Apply for Anthropic's AI for Science rare disease research grants",
+      "date": "2026-07-20",
+      "confirmed": false,
+      "note": "URL 추정 — 희귀 질환 연구를 위한 AI 과학 보조금 프로그램. 과학 연구 지원 주제로 Claude Code 코딩 입문 ebook과 직접 관련 없어 콘텐츠 생성 스킵.",
       "content_written": false
     }
   ]
