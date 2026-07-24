@@ -1,9 +1,9 @@
 {
   "_meta": {
     "created": "2026-04-20",
-    "updated": "2026-07-20",
+    "updated": "2026-07-24",
     "source_url": "https://www.anthropic.com/news",
-    "note": "2026-07-20 21차 실행: 신규 블로그 1건 감지 (AI for Science 희귀질환 보조금, Jul 20). 코딩 ebook 무관 — 콘텐츠 생성 스킵, blog-seen.json만 업데이트. 20차(2026-07-18) 누락분 병합: claude-sonnet-5, redeploying-fable-5, claude-science, fable-5-jailbreak-framework, making-of-claude-code, alberta-cybersecurity, inviting-hard-questions, ben-bernanke, ust-physical-ai, claude-usage-reflection, claude-for-teachers, canadian-ai-research.",
+    "note": "2026-07-24 22차 실행: 신규 블로그 4건 감지 (Claude Opus 5 Jul 24 — 콘텐츠 생성, Economic Futures Research Fund Jul 22 스킵, Ask Claude Economic Index Jul 22 스킵, Public First Action $20M Jul 21 스킵).",
     "fetch_status": "ga-blog.txt 수신"
   },
   "seen": [
@@ -426,6 +426,38 @@
       "confirmed": false,
       "note": "URL 추정 — 희귀 질환 연구를 위한 AI 과학 보조금 프로그램. 과학 연구 지원 주제로 Claude Code 코딩 입문 ebook과 직접 관련 없어 콘텐츠 생성 스킵.",
       "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/anthropic-donates-public-first-action",
+      "title": "Anthropic is donating another $20 million to Public First Action",
+      "date": "2026-07-21",
+      "confirmed": false,
+      "note": "URL 추정 — 공익 단체 기부 뉴스. 코딩 ebook과 무관하여 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/economic-futures-research-fund",
+      "title": "A research agenda for the Economic Futures Research Fund",
+      "date": "2026-07-22",
+      "confirmed": false,
+      "note": "URL 추정 — 경제 연구 어젠다. 코딩 ebook과 무관하여 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/ask-claude-economic-index",
+      "title": "Ask Claude about the Anthropic Economic Index",
+      "date": "2026-07-22",
+      "confirmed": false,
+      "note": "URL 추정 — 경제 지수 분석 기능. 코딩 ebook과 직접 관련 낮아 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/claude-opus-5",
+      "title": "Introducing Claude Opus 5",
+      "date": "2026-07-24",
+      "confirmed": false,
+      "note": "URL 추정 — Opus 5 공식 출시. 에이전트·코딩·전문 업무 한 단계 도약. Fast Mode도 Opus 5 기반으로 변경($10/$50). 한국어 ebook 독자에게 매우 관련성 높음. 콘텐츠 생성: content/docs/next/claude-opus5-july2026.md (new).",
+      "content_written": true
     }
   ]
 }
