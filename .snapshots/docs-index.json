@@ -1,9 +1,9 @@
 {
   "_meta": {
     "created": "2026-04-20",
-    "updated": "2026-07-20",
+    "updated": "2026-07-25",
     "source_url": "https://code.claude.com/docs/llms.txt",
-    "note": "2026-07-20 21차 실행: 신규 URL 없음. llms.txt 170개 URL 전체 기존 docs-index.json과 일치. 블로그 신규 1건(AI for Science 희귀질환 보조금). 마케팅 변경 없음. W30 what's-new 미게시.",
+    "note": "2026-07-25 22차 실행: 신규 URL 2개 감지 (claude-security, desktop-ios-simulator). llms.txt 192개 URL. 블로그 신규 1건(Claude Opus 5, Jul 24). 마케팅: Fast Mode Opus 4.8→Opus 5, $30/$150→$10/$50. W30 what's-new 미게시(404).",
     "fetch_status": "200_ok"
   },
   "https://code.claude.com/docs/en/overview": "SNAPSHOT_2026-04-20",
@@ -176,5 +176,7 @@
   "https://code.claude.com/docs/en/whats-new/2026-w26": "SNAPSHOT_2026-07-18",
   "https://code.claude.com/docs/en/whats-new/2026-w27": "SNAPSHOT_2026-07-18",
   "https://code.claude.com/docs/en/whats-new/2026-w28": "SNAPSHOT_2026-07-18",
-  "https://code.claude.com/docs/en/whats-new/2026-w29": "SNAPSHOT_2026-07-18"
+  "https://code.claude.com/docs/en/whats-new/2026-w29": "SNAPSHOT_2026-07-18",
+  "https://code.claude.com/docs/en/claude-security": "SNAPSHOT_2026-07-25",
+  "https://code.claude.com/docs/en/desktop-ios-simulator": "SNAPSHOT_2026-07-25"
 }
