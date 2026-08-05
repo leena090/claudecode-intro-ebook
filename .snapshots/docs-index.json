@@ -1,9 +1,9 @@
 {
   "_meta": {
     "created": "2026-04-20",
-    "updated": "2026-07-20",
+    "updated": "2026-08-05",
     "source_url": "https://code.claude.com/docs/llms.txt",
-    "note": "2026-07-20 21차 실행: 신규 URL 없음. llms.txt 170개 URL 전체 기존 docs-index.json과 일치. 블로그 신규 1건(AI for Science 희귀질환 보조금). 마케팅 변경 없음. W30 what's-new 미게시.",
+    "note": "2026-08-05 22차 실행: 신규 URL 6건 감지 (agent-sdk/troubleshooting, claude-apps-gateway-on-aws, claude-security, cloud-environments, desktop-ios-simulator, claude-tag). 제거 2건 (ultraplan, desktop-changelog). 블로그 신규: Claude Opus 5 출시 등. 마케팅: Fast mode Opus 4.8→Opus 5, 가격 $30/$150→$10/$50.",
     "fetch_status": "200_ok"
   },
   "https://code.claude.com/docs/en/overview": "SNAPSHOT_2026-04-20",
@@ -176,5 +176,11 @@
   "https://code.claude.com/docs/en/whats-new/2026-w26": "SNAPSHOT_2026-07-18",
   "https://code.claude.com/docs/en/whats-new/2026-w27": "SNAPSHOT_2026-07-18",
   "https://code.claude.com/docs/en/whats-new/2026-w28": "SNAPSHOT_2026-07-18",
-  "https://code.claude.com/docs/en/whats-new/2026-w29": "SNAPSHOT_2026-07-18"
+  "https://code.claude.com/docs/en/whats-new/2026-w29": "SNAPSHOT_2026-07-18",
+  "https://code.claude.com/docs/en/agent-sdk/troubleshooting": "SNAPSHOT_2026-08-05",
+  "https://code.claude.com/docs/en/claude-apps-gateway-on-aws": "SNAPSHOT_2026-08-05",
+  "https://code.claude.com/docs/en/claude-security": "SNAPSHOT_2026-08-05",
+  "https://code.claude.com/docs/en/cloud-environments": "SNAPSHOT_2026-08-05",
+  "https://code.claude.com/docs/en/desktop-ios-simulator": "SNAPSHOT_2026-08-05",
+  "https://code.claude.com/docs/en/claude-tag": "SNAPSHOT_2026-08-05"
 }
