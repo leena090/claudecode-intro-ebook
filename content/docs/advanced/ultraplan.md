@@ -13,6 +13,10 @@ lastUpdated: "2026-04-20"
 <br />★ <strong>공식 문서</strong>: <a href="https://code.claude.com/docs/en/ultraplan">code.claude.com/docs/en/ultraplan</a>
 </div>
 
+<div class="note-star" style="border-color: #e55;">
+⚠️ <strong>[자동감지 2026-08-07]</strong> — <code>/ultraplan</code> 공식 문서가 <strong>llms.txt에서 제거됐어요</strong> (Deprecated 또는 통합 가능성). 이 기능이 현재도 동작하는지 확인 필요. 최신 정보는 공식 문서에서 직접 확인하세요: <a href="https://code.claude.com/docs/en/">code.claude.com/docs/en/</a>
+</div>
+
 ## `/ultraplan`이 뭔가요?
 
 복잡한 계획을 세울 때 **로컬 터미널에서 플랜을 클라우드로 보내**, 브라우저의 Claude Code Web에서 **Opus 4.7이 더 깊이 있게 다듬도록** 한 뒤, 완성된 플랜을 **다시 내 로컬 터미널로 가져오는** 기능입니다.
