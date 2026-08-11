@@ -192,18 +192,22 @@ ultrathink 오타 수정해줘     # ← 낭비. 토큰만 써요.
 
 ---
 
-## `ultrathink` vs `/ultraplan` — 헷갈리지 마세요!
+## `ultrathink` vs `/plan` — 비교
 
-| 비교 | `ultrathink` (키워드) | `/ultraplan` (명령어) |
+<div class="note-star">
+⚠️ <strong>/ultraplan 제거됨</strong> — 2026년 8월 W32 업데이트에서 /ultraplan 리서치 프리뷰가 공식 종료됐어요. 대안으로 <strong>/plan</strong>을 사용하세요. <a href="/docs/advanced/ultraplan">자세히 보기</a>
+</div>
+
+| 비교 | `ultrathink` (키워드) | `/plan` (명령어) |
 |---|---|---|
-| **실행 위치** | 로컬 세션 | **클라우드 → 로컬** |
-| **사고 시간** | 증가 | **최대 30분** |
-| **UI** | 터미널 그대로 | **브라우저 인터랙티브** |
-| **대상 작업** | 답변 1회 깊게 | **대형 플래닝 작업** |
-| **비용** | 약간 증가 | 비쌈 |
-| **언제?** | 복잡한 질문 1개 | **레거시 마이그레이션 같은 큰 계획** |
+| **실행 위치** | 로컬 세션 | 로컬 세션 |
+| **사고 시간** | 증가 | 일반 |
+| **UI** | 터미널 그대로 | 터미널 그대로 |
+| **대상 작업** | 답변 1회 깊게 | **플래닝 작업** |
+| **비용** | 약간 증가 | 보통 |
+| **언제?** | 복잡한 질문 1개 | 단계별 계획이 필요할 때 |
 
-> 🍱 **비유로 설명하면**: `ultrathink`는 "**지금 이 요리 특별히 더 공들여 줘**"이고, `/ultraplan`은 "**이건 아예 호텔 총주방장한테 맡기자**"예요. 규모가 달라요.
+> 🍱 **비유로 설명하면**: `ultrathink`는 "**지금 이 요리 특별히 더 공들여 줘**"이고, `/plan`은 "**오늘 메뉴 전체 계획 세워줘**"예요.
 
 ---
 
@@ -218,6 +222,6 @@ ultrathink 오타 수정해줘     # ← 낭비. 토큰만 써요.
 ## 더 알아보기
 
 - [공식 문서 — Extended thinking mode](https://code.claude.com/docs/en/common-workflows#use-extended-thinking-thinking-mode)
-- [`/ultraplan` 문서](/docs/advanced/ultraplan) — 큰 플래닝은 여기로
+- [ultraplan 종료 안내](/docs/advanced/ultraplan) — ⚠️ 2026-08 제거됨, 대안 안내
 - [특수 명령어 모음](/docs/commands/special-commands) — `/effort` 상세
 - [settings.json 설정](/docs/config/settings-json) — `alwaysThinkingEnabled`, `showThinkingSummaries`
