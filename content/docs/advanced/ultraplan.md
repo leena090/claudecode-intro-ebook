@@ -7,10 +7,21 @@ order: 10
 lastUpdated: "2026-04-20"
 ---
 
+<div class="note-deprecated">
+⛔ <strong>[공] 기능 종료 — 2026년 8월 (v2.1.221부터)</strong><br />
+<code>/ultraplan</code> 명령어와 <code>ultraplan</code> 키워드가 <strong>공식적으로 제거됐습니다</strong>.<br />
+Research Preview가 종료되었으며, 현재 이 명령은 인식되지 않아요.<br /><br />
+<strong>대안</strong>:
+<ul>
+  <li>일반 플래닝 → <code>/plan</code> 명령어</li>
+  <li>클라우드 기반 플래닝 → <a href="https://claude.ai/code">Claude Code 웹(claude.ai/code)</a></li>
+</ul>
+이 페이지는 참고·역사 기록 목적으로 유지됩니다.
+</div>
+
 <div class="note-star">
-★ <strong>Research Preview</strong> — Claude Code v2.1.101 이상이 필수예요. 아직 실험 단계라 동작이 가끔 불안정할 수 있습니다.
-<br />★ <strong>v2.1.101 업데이트</strong>: 처음 실행 시 기본 클라우드 환경이 <strong>자동 생성</strong>됩니다 — 웹에서 미리 설정할 필요가 없어요!
-<br />★ <strong>공식 문서</strong>: <a href="https://code.claude.com/docs/en/ultraplan">code.claude.com/docs/en/ultraplan</a>
+★ <strong>[과거 기록]</strong> 아래 내용은 <code>/ultraplan</code>이 Research Preview였던 시기의 문서입니다.
+<br />★ <strong>제거 공지</strong>: <a href="https://code.claude.com/docs/en/whats-new/2026-w32">공식 W32 What's New</a> — "The Ultraplan research preview is removed, including the /ultraplan command and the ultraplan keyword; use plan mode or Claude Code on the web instead."
 </div>
 
 ## `/ultraplan`이 뭔가요?
