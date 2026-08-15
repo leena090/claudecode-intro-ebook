@@ -7,10 +7,15 @@ order: 10
 lastUpdated: "2026-04-20"
 ---
 
+<div class="note-star" style="background: #fff3cd; border-left: 4px solid #f5a623;">
+⚠️ <strong>[공] 2026-08-03 (v2.1.220) 종료됨</strong> — Ultraplan Research Preview가 제거됐습니다. <code>/ultraplan</code> 명령과 <code>ultraplan</code> 키워드가 비활성화됐어요.<br />
+✅ <strong>대안</strong>: <strong>Plan 모드</strong> 또는 <strong>Claude Code Web</strong>을 사용하세요.<br />
+📖 <a href="https://code.claude.com/docs/en/whats-new/2026-w32">What's New W32 원문 참조</a>
+</div>
+
 <div class="note-star">
-★ <strong>Research Preview</strong> — Claude Code v2.1.101 이상이 필수예요. 아직 실험 단계라 동작이 가끔 불안정할 수 있습니다.
-<br />★ <strong>v2.1.101 업데이트</strong>: 처음 실행 시 기본 클라우드 환경이 <strong>자동 생성</strong>됩니다 — 웹에서 미리 설정할 필요가 없어요!
-<br />★ <strong>공식 문서</strong>: <a href="https://code.claude.com/docs/en/ultraplan">code.claude.com/docs/en/ultraplan</a>
+★ <strong>아래 내용은 역사적 기록입니다</strong> — 현재 사용 불가능한 기능입니다.<br />
+★ <strong>이전 공식 문서</strong>: <a href="https://code.claude.com/docs/en/ultraplan">code.claude.com/docs/en/ultraplan</a> (현재 접근 불가)
 </div>
 
 ## `/ultraplan`이 뭔가요?
