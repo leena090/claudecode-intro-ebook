@@ -426,6 +426,86 @@
       "confirmed": false,
       "note": "URL 추정 — 희귀 질환 연구를 위한 AI 과학 보조금 프로그램. 과학 연구 지원 주제로 Claude Code 코딩 입문 ebook과 직접 관련 없어 콘텐츠 생성 스킵.",
       "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/anthropic-donates-public-first-action",
+      "title": "Anthropic is donating another $20 million to Public First Action",
+      "date": "2026-07-21",
+      "confirmed": false,
+      "note": "URL 추정 — 공익 단체 기부. 코딩 ebook과 무관하여 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/ask-claude-economic-index",
+      "title": "Ask Claude about the Anthropic Economic Index",
+      "date": "2026-07-22",
+      "confirmed": false,
+      "note": "URL 추정 — 경제 인덱스 기능. 코딩 ebook과 직접 관련 낮아 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/economic-futures-research-fund",
+      "title": "A research agenda for the Economic Futures Research Fund",
+      "date": "2026-07-22",
+      "confirmed": false,
+      "note": "URL 추정 — 경제 연구 어젠다. 코딩 ebook과 무관하여 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/claude-opus-5",
+      "title": "Introducing Claude Opus 5",
+      "date": "2026-07-24",
+      "confirmed": false,
+      "note": "URL 추정 — 새 최상위 모델 Opus 5 출시. 코딩 ebook 핵심 관련. 콘텐츠 생성: content/docs/next/claude-opus-5.md (new). Fast Mode Opus 5 전환·가격 인하($30/$150→$10/$50) 포함.",
+      "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/cognizant-anthropic-partnership",
+      "title": "Cognizant and Anthropic expand their partnership to bring Claude to enterprise clients",
+      "date": "2026-07-27",
+      "confirmed": false,
+      "note": "URL 추정 — 엔터프라이즈 파트너십. 코딩 ebook과 직접 관련 낮아 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/position-on-open-weights",
+      "title": "Our position on open-weights models",
+      "date": "2026-07-27",
+      "confirmed": false,
+      "note": "URL 추정 — 오픈웨이트 모델 포지션. 정책/연구 주제, 코딩 ebook과 직접 관련 낮아 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/cybersecurity-evaluations-incidents",
+      "title": "Investigating three real-world incidents in our cybersecurity evaluations",
+      "date": "2026-07-30",
+      "confirmed": false,
+      "note": "URL 추정 — 사이버보안 평가 사례 연구. 코딩 ebook과 직접 관련 낮아 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/tino-cuellar-chief-global-affairs",
+      "title": "Mariano-Florentino (Tino) Cuéllar to join Anthropic as Chief Global Affairs Officer",
+      "date": "2026-08-04",
+      "confirmed": false,
+      "note": "URL 추정 — 임원 인사. 코딩 ebook과 무관하여 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/fable-5-biology-safeguards",
+      "title": "Improving Fable 5's biology safeguards",
+      "date": "2026-08-07",
+      "confirmed": false,
+      "note": "URL 추정 — 생물 안전장치 개선. 보안 연구 주제, 코딩 ebook과 직접 관련 낮아 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/claude-text-watermark",
+      "title": "How Claude's text watermark works",
+      "date": "2026-08-14",
+      "confirmed": false,
+      "note": "URL 추정 — 텍스트 워터마크 기술 설명. 개발자 관련성 있으나 10파일 한도로 이번 회차 콘텐츠 생성 스킵. 다음 회차에서 처리 예정.",
+      "content_written": false
     }
   ]
 }
