@@ -7,10 +7,18 @@ order: 10
 lastUpdated: "2026-04-20"
 ---
 
+<div class="note-star" style="border-left: 4px solid #e53e3e; background: #fff5f5;">
+🚨 <strong>[공] 제거 공지 — 2026-08-07</strong><br />
+<code>/ultraplan</code> 명령어와 이 기능은 <strong>Claude Code v2.1.224 업데이트(W32)에서 완전히 제거</strong>됐습니다.<br />
+공식 발표: "The Ultraplan research preview is removed, including the /ultraplan command and the ultraplan keyword."<br /><br />
+<strong>대신 쓸 수 있는 기능:</strong><br />
+• <code>Shift+Tab</code>으로 <strong>plan mode</strong> 전환 (로컬에서 계획 모드)<br />
+• <strong>Claude Code on the web</strong> — <a href="https://claude.ai/code">claude.ai/code</a>에서 브라우저로 사용<br />
+</div>
+
 <div class="note-star">
-★ <strong>Research Preview</strong> — Claude Code v2.1.101 이상이 필수예요. 아직 실험 단계라 동작이 가끔 불안정할 수 있습니다.
-<br />★ <strong>v2.1.101 업데이트</strong>: 처음 실행 시 기본 클라우드 환경이 <strong>자동 생성</strong>됩니다 — 웹에서 미리 설정할 필요가 없어요!
-<br />★ <strong>공식 문서</strong>: <a href="https://code.claude.com/docs/en/ultraplan">code.claude.com/docs/en/ultraplan</a>
+★ <strong>⚠️ 아래 내용은 역사적 참고용</strong> — 현재는 작동하지 않는 기능입니다.
+<br />★ <strong>공식 문서</strong>: code.claude.com/docs/en/ultraplan (현재 접근 불가 — 제거됨)
 </div>
 
 ## `/ultraplan`이 뭔가요?

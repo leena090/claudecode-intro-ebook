@@ -1,10 +1,11 @@
 {
   "_meta": {
     "created": "2026-04-20",
-    "updated": "2026-07-20",
+    "updated": "2026-08-20",
     "source_url": "https://code.claude.com/docs/llms.txt",
-    "note": "2026-07-20 21차 실행: 신규 URL 없음. llms.txt 170개 URL 전체 기존 docs-index.json과 일치. 블로그 신규 1건(AI for Science 희귀질환 보조금). 마케팅 변경 없음. W30 what's-new 미게시.",
-    "fetch_status": "200_ok"
+    "note": "2026-08-20 22차 실행: 신규 URL 15개 감지(desktop-ios-simulator, claude-security, github-actions-cloud-providers, cross-session-messaging, cloud-environments, self-hosted-environments×6, claude-apps-gateway-on-aws, agent-sdk/examples, agent-sdk/troubleshooting, whats-new/2026-w30, whats-new/2026-w32). 제거: ultraplan, agent-sdk/slash-commands, desktop-changelog. Fast Mode Opus 5/$10/$50 확정. Auto mode 기본값 변경(2026-08-14~). W31 미게시(건너뜀). 콘텐츠 2건 작성(W30, W32)",
+    "fetch_status": "200_ok",
+    "removed_urls": ["https://code.claude.com/docs/en/ultraplan", "https://code.claude.com/docs/en/agent-sdk/slash-commands", "https://code.claude.com/docs/en/desktop-changelog"]
   },
   "https://code.claude.com/docs/en/overview": "SNAPSHOT_2026-04-20",
   "https://code.claude.com/docs/en/quickstart": "SNAPSHOT_2026-04-20",
@@ -176,5 +177,22 @@
   "https://code.claude.com/docs/en/whats-new/2026-w26": "SNAPSHOT_2026-07-18",
   "https://code.claude.com/docs/en/whats-new/2026-w27": "SNAPSHOT_2026-07-18",
   "https://code.claude.com/docs/en/whats-new/2026-w28": "SNAPSHOT_2026-07-18",
-  "https://code.claude.com/docs/en/whats-new/2026-w29": "SNAPSHOT_2026-07-18"
+  "https://code.claude.com/docs/en/whats-new/2026-w29": "SNAPSHOT_2026-07-18",
+  "https://code.claude.com/docs/en/desktop-ios-simulator": "SNAPSHOT_2026-08-20",
+  "https://code.claude.com/docs/en/claude-security": "SNAPSHOT_2026-08-20",
+  "https://code.claude.com/docs/en/github-actions-cloud-providers": "SNAPSHOT_2026-08-20",
+  "https://code.claude.com/docs/en/cross-session-messaging": "SNAPSHOT_2026-08-20",
+  "https://code.claude.com/docs/en/cloud-environments": "SNAPSHOT_2026-08-20",
+  "https://code.claude.com/docs/en/self-hosted-environments": "SNAPSHOT_2026-08-20",
+  "https://code.claude.com/docs/en/self-hosted-environments-quickstart": "SNAPSHOT_2026-08-20",
+  "https://code.claude.com/docs/en/self-hosted-environments-deploy": "SNAPSHOT_2026-08-20",
+  "https://code.claude.com/docs/en/self-hosted-environments-configuration": "SNAPSHOT_2026-08-20",
+  "https://code.claude.com/docs/en/self-hosted-environments-testing": "SNAPSHOT_2026-08-20",
+  "https://code.claude.com/docs/en/self-hosted-environments-reference": "SNAPSHOT_2026-08-20",
+  "https://code.claude.com/docs/en/self-hosted-environments-identity": "SNAPSHOT_2026-08-20",
+  "https://code.claude.com/docs/en/claude-apps-gateway-on-aws": "SNAPSHOT_2026-08-20",
+  "https://code.claude.com/docs/en/agent-sdk/examples": "SNAPSHOT_2026-08-20",
+  "https://code.claude.com/docs/en/agent-sdk/troubleshooting": "SNAPSHOT_2026-08-20",
+  "https://code.claude.com/docs/en/whats-new/2026-w30": "SNAPSHOT_2026-08-20",
+  "https://code.claude.com/docs/en/whats-new/2026-w32": "SNAPSHOT_2026-08-20"
 }

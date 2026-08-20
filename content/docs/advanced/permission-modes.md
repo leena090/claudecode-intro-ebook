@@ -7,9 +7,14 @@ order: 20
 lastUpdated: "2026-04-27"
 ---
 
+<div class="note-star" style="border-left: 4px solid #38a169; background: #f0fff4;">
+🆕 <strong>[공] 2026-08-14 중요 변경</strong> — <code>auto</code> 모드가 이제 <strong>기본 권한 모드</strong>가 됐어요!<br />
+Pro·Max·Team 플랜에서 새 세션이 auto mode로 시작합니다. 내가 직접 설정해둔 모드는 유지돼요. (W32 업데이트, v2.1.224)
+</div>
+
 <div class="note-star">
 ★ <strong>한 줄 요약</strong> — <code>Shift+Tab</code>으로 <strong>default → acceptEdits → plan</strong> 순환. 계정 조건을 만족하면 <strong>auto</strong>까지, 플래그로 켜면 <strong>bypassPermissions</strong>까지 나와요. <code>[공식]</code>
-<br />★ <strong>2026-04 신기능</strong> — <code>auto</code> 모드가 research preview로 추가됐어요. 오토면서도 안전 체크를 해주는 새 개념. (v2.1.83 이상 필요)
+<br />★ <strong>2026-08 업데이트</strong> — <code>auto</code> 모드가 이제 <strong>기본값</strong>이 됐어요! (2026-08-14~, Pro·Max·Team 플랜)
 <br />★ <strong>공식 문서</strong>: <a href="https://code.claude.com/docs/en/permission-modes">code.claude.com/docs/en/permission-modes</a>
 </div>
 
