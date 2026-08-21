@@ -1,10 +1,10 @@
-# SNAPSHOT - 2026-07-18 (20차 실행)
+# SNAPSHOT - 2026-08-21 (22차 실행)
 # 소스: https://claude.com/claude-code (마케팅 공식 페이지)
-# 상태: ga-marketing.txt 정상 수신 (2026-07-18 GitHub Actions 실행분)
-# 20차 실행: [변경 감지] 2건
-#   1. Android 앱이 공식 플랫폼 목록에 등재됨 (이전: iOS만 표시)
-#   2. 최신 기능 하이라이트 갱신: Dynamic workflows + Agent view 추가, Auto mode·모바일 Dispatch 제거
-#   Fast Mode $30/$150 (Opus 4.8) — 19차에서 감지된 금액 그대로 유지. 공식 가격으로 확정.
+# 상태: ga-marketing.txt 정상 수신 (2026-08-21 GitHub Actions 실행분)
+# 22차 실행: [변경 감지] 2건
+#   1. Fast Mode 대상 모델 변경: Opus 4.8 → Opus 5
+#   2. Fast Mode 가격 변경: $30/$150 → $10/$50 per million tokens
+#   (최신 기능 하이라이트·플랫폼·요금제는 이전 20차와 동일)
 
 ## 최신 기능 하이라이트 (2026-07-18 기준 ga-marketing.txt)
 - Dynamic workflows: 10~100개 병렬 서브에이전트 실행, 검토 후 결과 전달 (May 28, 2026)
@@ -36,11 +36,12 @@
 - claude-fable-5 (최상위 — 2026-07-01 글로벌 복귀)
 - claude-haiku-4-5-20251001 (경량)
 
-## Fast Mode (2026-07-18 확정)
-- 대상: **Opus 4.8** 고속 실행 버전 (w22, 2026-05-28 변경)
+## Fast Mode (2026-08-21 업데이트)
+- 대상: **Opus 5** 고속 실행 버전 (2026-07-24 Opus 5 출시 후 전환)
 - 2.5배 빠름
-- 요금: **$30/$150 per million tokens** (리서치 프리뷰, 소비 기반 플랜)
-  - 19차에서 불일치 감지됐던 금액 → 이번 확인으로 공식 가격 확정
+- 요금: **$10/$50 per million tokens** (리서치 프리뷰, 소비 기반 플랜)
+  - 22차 실행에서 ga-marketing.txt 직접 확인: "priced at $10/$50 per million tokens"
+  - 이전 $30/$150 (Opus 4.8 시절)에서 변경됨
 
 ## 주요 기능 (공식 문서 기반 확인)
 - /focus 명령어
@@ -87,7 +88,9 @@
 - 2026-06-15: 모델 라인업 변경 (Fable 5 추가, Opus 4.8 교체, Fast Mode 기준 변경)
 - 2026-06-25: Fast Mode 가격 불일치 감지 ($30/$150 vs $10/$50) — 모니터링 중
 - 2026-07-18: Android 앱 공식 등재, 최신 기능 하이라이트 갱신 (Dynamic workflows·Agent view 추가), Fast Mode $30/$150 공식 확정
+- 2026-08-21: Fast Mode 모델 Opus 4.8 → Opus 5 전환, 가격 $30/$150 → $10/$50 변경 확인
 
 ## fetch_log
 - (이전 기록 생략 — marketing.txt 변경 이력 참조)
 - 2026-07-18 20차: [변경 감지] Android 앱 등재, 최신 기능 하이라이트 갱신. marketing.txt 갱신 완료.
+- 2026-08-21 22차: [변경 감지] Fast Mode 모델·가격 변경 (Opus 5, $10/$50). marketing.txt 갱신 완료.
