@@ -3,16 +3,24 @@ title: "음성 입력 & Fast 모드"
 description: "손을 사용하지 않고 음성으로 지시하거나 빠르게 응답 받기 (v2.1.69~ 20개 언어 지원)"
 category: "advanced"
 order: 5
-tags: ["음성", "속도", "편의성", "20개언어", "Opus47"]
-lastUpdated: "2026-05-22"
+tags: ["음성", "속도", "편의성", "20개언어", "Opus47", "Opus5"]
+lastUpdated: "2026-08-23"
 ---
+
+<div class="note-star">
+🔄 <strong>[공] 2026-07~08 Fast 모드 업데이트</strong><br />
+• <strong>Opus 4.7 Fast 모드 완전 제거</strong> (2026-07-24, v2.1.219+)<br />
+• Fast 모드 기본 모델이 <strong>Opus 5</strong>로 변경됐어요<br />
+• 가격 정정: ~~$30/$150~~ → <strong>$10/$50 per MTok</strong> (입력/출력)<br />
+자세한 내용: <a href="./fast-mode-opus5.md">Fast 모드 업데이트 전용 문서</a>
+</div>
 
 ## 음성 입력 & Fast 모드란?
 
-**음성 입력**은 마이크로 말하기만 하면 AI가 이해하고 작업하는 기능입니다. **Fast 모드**는 Opus 모델을 2.5배 빠르게 실행하는 고속 설정이에요. 2026년 5월(Week 20)부터 **Opus 4.7이 기본 모델**로 적용돼요.
+**음성 입력**은 마이크로 말하기만 하면 AI가 이해하고 작업하는 기능입니다. **Fast 모드**는 Opus 모델을 2.5배 빠르게 실행하는 고속 설정이에요. 2026년 7월 이후 **Opus 5가 기본 모델**이에요 (Opus 4.8도 지원, Opus 4.7은 제거됨).
 
 <div class="note-star">
-★ <strong>[공] 2026-05-20 업데이트</strong>: Fast Mode가 이제 <strong>Opus 4.7</strong>을 기본으로 실행해요. 이전에는 Opus 4.6이었어요. 별도 설정 없이 자동 적용됩니다.
+★ <strong>[공] 2026-05-20 업데이트</strong>: Fast Mode가 Opus 4.7을 기본으로 실행했어요. 이후 2026-07 Opus 4.7 지원 중단 → 2026-08 <strong>Opus 5가 기본</strong>으로 전환됐습니다.
 </div>
 
 ---
@@ -106,7 +114,7 @@ claude --fast
 ### Fast 모드 vs 일반 모드
 
 <div class="note-star">
-★ <strong>2026-05-22 (Week 20) 업데이트</strong> — <code>/fast</code>가 이제 <strong>Opus 4.7</strong>을 기본으로 실행합니다 (이전: Opus 4.6). 요금은 동일하게 $30/$150 per MTok. Opus 4.6으로 고정하고 싶으면 환경변수 <code>CLAUDE_CODE_OPUS_4_6_FAST_MODE_OVERRIDE=1</code>을 설정하세요. <code>[공식]</code>
+★ <strong>[공] 2026-08 현재 기준</strong> — Fast 모드는 <strong>Opus 5</strong>(또는 Opus 4.8)를 2.5배 빠르게 실행합니다. Opus 4.7은 2026-07-24에 완전 제거됐어요. 가격은 <strong>$10/$50 per MTok</strong>입니다. <code>[공식]</code>
 </div>
 
 > **중요:** `/fast`는 Opus 모델을 **2.5배 빠른 속도**로 실행하는 고속 설정입니다. 같은 품질을 더 빠르게 — 단, 토큰당 비용이 더 높습니다.
@@ -114,9 +122,9 @@ claude --fast
 | 항목 | 일반 모드 | Fast 모드 |
 |------|---------|---------|
 | 응답 속도 | 보통 | ⚡ 약 2.5배 빠름 |
-| 사용 모델 | Opus 4.7 | Opus 4.7 (동일) |
+| 사용 모델 | Sonnet 5 (기본) | **Opus 5** (Fast 모드 기본) |
 | AI 품질 | 기본 | 동일 |
-| 비용 | 기준 | **높음** ($30/$150 per MTok) |
+| 비용 | 기준 | **높음** ($10/$50 per MTok) |
 | 용도 | 일반 작업 | 빠른 반복·실시간 디버깅 |
 
 ---
@@ -344,8 +352,8 @@ AI: (음성 + 텍스트 조합하여 이해)
 - **요금이 더 높음** (빠른 만큼 비용도)
 
 마찬가지로:
-- **일반 모드:** Opus 4.7 표준 속도, 표준 요금
-- **Fast 모드:** Opus 4.7 고속 실행 — 품질은 같고, 속도는 2.5배, 비용은 높음 ($30/$150 per MTok)
+- **일반 모드:** Sonnet 5 (기본), 표준 속도·요금
+- **Fast 모드:** Opus 5 고속 실행 — 품질은 같고, 속도는 2.5배, 비용은 높음 ($10/$50 per MTok)
 
 ---
 
