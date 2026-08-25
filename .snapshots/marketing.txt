@@ -1,24 +1,23 @@
-# SNAPSHOT - 2026-07-18 (20차 실행)
+# SNAPSHOT - 2026-08-25 (22차 실행)
 # 소스: https://claude.com/claude-code (마케팅 공식 페이지)
-# 상태: ga-marketing.txt 정상 수신 (2026-07-18 GitHub Actions 실행분)
-# 20차 실행: [변경 감지] 2건
-#   1. Android 앱이 공식 플랫폼 목록에 등재됨 (이전: iOS만 표시)
-#   2. 최신 기능 하이라이트 갱신: Dynamic workflows + Agent view 추가, Auto mode·모바일 Dispatch 제거
-#   Fast Mode $30/$150 (Opus 4.8) — 19차에서 감지된 금액 그대로 유지. 공식 가격으로 확정.
+# 상태: ga-marketing.txt 정상 수신 (2026-08-25 GitHub Actions 실행분)
+# 22차 실행: [변경 감지] 2건
+#   1. Fast Mode 모델 변경: Opus 4.8 → Opus 5 (W30 Jul 20-24 기준)
+#   2. Fast Mode 가격 변경: $30/$150 → $10/$50 per million tokens (70% 인하)
 
-## 최신 기능 하이라이트 (2026-07-18 기준 ga-marketing.txt)
+## 최신 기능 하이라이트 (2026-08-25 기준 ga-marketing.txt)
 - Dynamic workflows: 10~100개 병렬 서브에이전트 실행, 검토 후 결과 전달 (May 28, 2026)
 - Agent view: 모든 Claude Code 세션을 한 화면에서 관리 (May 11, 2026)
 - Routines: 스케줄, API 호출, 이벤트 반응으로 자동 실행 (Apr 14, 2026)
 - Computer use: 앱 열기, 브라우저 탐색, 개발 도구 실행 (Mar 23, 2026)
 
-## 지원 플랫폼 (2026-07-18 업데이트)
+## 지원 플랫폼 (2026-08-25 기준)
 - 데스크톱 앱 (macOS, Windows, Linux 베타)
 - 터미널 (Terminal/CLI)
 - VS Code (Cursor, Devin Desktop 포함) / JetBrains IDE
 - 웹 (claude.ai/code)
 - iOS (App Store)
-- **Android (Google Play) ← 2026-07-18 신규 확인**
+- Android (Google Play)
 - GitHub
 - Slack
 
@@ -30,17 +29,17 @@
 - Enterprise: 별도 문의
 - Claude API: 토큰 기반 과금 (개발자용)
 
-## 지원 모델 (2026-07-18 업데이트)
-- claude-sonnet-5 (기본 모델 — 2026-07-01 전환)
-- claude-opus-4-8
-- claude-fable-5 (최상위 — 2026-07-01 글로벌 복귀)
+## 지원 모델 (2026-08-25 기준)
+- claude-sonnet-5 (기본 모델)
+- claude-opus-5 (Opus 계열 기본 — 2026-07-24 전환) ← 2026-08-25 업데이트
+- claude-fable-5 (최상위)
 - claude-haiku-4-5-20251001 (경량)
 
-## Fast Mode (2026-07-18 확정)
-- 대상: **Opus 4.8** 고속 실행 버전 (w22, 2026-05-28 변경)
+## Fast Mode (2026-08-25 확정)
+- 대상: **Opus 5** 고속 실행 버전 ← 2026-08-25 업데이트 (이전: Opus 4.8)
 - 2.5배 빠름
-- 요금: **$30/$150 per million tokens** (리서치 프리뷰, 소비 기반 플랜)
-  - 19차에서 불일치 감지됐던 금액 → 이번 확인으로 공식 가격 확정
+- 요금: **$10/$50 per million tokens** (리서치 프리뷰, 소비 기반 플랜) ← 2026-08-25 업데이트 (이전: $30/$150)
+  - W30(Jul 20-24)에 Opus 5 전환과 함께 가격 대폭 인하 확인
 
 ## 주요 기능 (공식 문서 기반 확인)
 - /focus 명령어
@@ -48,21 +47,24 @@
 - Ctrl+G (에디터에 마지막 응답 컨텍스트 삽입)
 - Routines (반복 자동화, 스케줄 실행, API 트리거, GitHub 이벤트)
 - Code Review (AI 에이전트 기반 PR 리뷰)
-- /ultrareview (클라우드 멀티 에이전트 코드 리뷰)
-- /ultraplan (클라우드 플래닝)
-- /autofix-pr (PR 자동 수정 활성화)
+- /code-review = /review (별칭 추가됨)
 - Monitor tool (백그라운드 이벤트 감시)
 - /loop self-pacing
-- Remote Control (모바일·브라우저에서 세션 이어가기)
-- Desktop App (멀티세션 사이드바, 드래그 앤 드롭, 미리보기, Linux 베타)
+- Remote Control (모바일·브라우저에서 세션 이어가기 — GA 정식 출시)
+- Desktop App (멀티세션 사이드바, 드래그 앤 드롭, 미리보기, Linux 베타, iOS 시뮬레이터 패널)
 - Plugin Marketplace
 - Voice dictation (/voice, push-to-talk, 20개 언어)
 - Computer Use (CLI에서 macOS 앱 조작)
-- Auto mode (백그라운드 안전 classifier 포함)
+- Auto mode (기본 권한 모드 — 2026-08-14부터 Pro·Max·Team 기본값)
 - Artifacts (공유 가능한 라이브 페이지 발행)
 - Dynamic workflows (서브에이전트 대규모 병렬 실행)
 - Agent view (모든 세션 한 화면 관리)
 - Android 앱 지원 (Google Play)
+- /design 스킬 (UI 아트보드 자동 생성 — 리서치 프리뷰)
+- Concise 출력 스타일 (신규)
+- Cross-session messaging (세션 간 메시지)
+- Self-hosted environments (Team·Enterprise 공개 베타)
+- Fork mode (기본 ON — v2.1.232)
 
 ## 성과 지표 (마케팅 페이지 공개)
 - 7.6x 더 잦은 배포 (Claude Code 팀 평균)
@@ -75,19 +77,13 @@
 - Claude Design: 시각적 디자인 협업 도구 (Apr 17, 2026)
 - Claude Science: 과학자용 AI 워크벤치 (Jun 30, 2026)
 
-## 공식 nav 등재 제품·기능 (2026-07-18 기준)
-- Products: Claude, Claude Code, Claude Code for Enterprise, Claude Cowork, Claude Security, Pro/Max/Team/Enterprise plan
-- Features: Claude for Chrome (GA), Claude for Slack, Claude for Microsoft 365, Skills
-- Models: Fable 5 (복귀), Opus 4.8, Sonnet 5 (기본), Haiku 4.5
-- Resources: Plugins, Connectors, Plugin Marketplace
-- Solutions: AI agents, Code modernization, Coding, Customer support, Education, Financial services, Government, Healthcare, Legal, Life sciences, Nonprofits, Security, Small business
-
 ## 변경 이력
 - 2026-05-08: Features nav "Claude for Excel·Word·PowerPoint" → "Claude for Microsoft 365" 통합
 - 2026-06-15: 모델 라인업 변경 (Fable 5 추가, Opus 4.8 교체, Fast Mode 기준 변경)
 - 2026-06-25: Fast Mode 가격 불일치 감지 ($30/$150 vs $10/$50) — 모니터링 중
 - 2026-07-18: Android 앱 공식 등재, 최신 기능 하이라이트 갱신 (Dynamic workflows·Agent view 추가), Fast Mode $30/$150 공식 확정
+- 2026-08-25: **Fast Mode 모델 Opus5 전환 + 가격 $10/$50 확정** (W30 반영). Auto 모드 기본화(W32). /design·Concise 스타일 추가(W34).
 
 ## fetch_log
-- (이전 기록 생략 — marketing.txt 변경 이력 참조)
 - 2026-07-18 20차: [변경 감지] Android 앱 등재, 최신 기능 하이라이트 갱신. marketing.txt 갱신 완료.
+- 2026-08-25 22차: [변경 감지] Fast Mode Opus5 전환 + $10/$50 가격 인하 반영. marketing.txt 갱신 완료.
