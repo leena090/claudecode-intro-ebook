@@ -4,13 +4,20 @@ description: "Shift+Tab 한 번이면 클로드의 작업 스타일이 바뀐다
 tags: ["고급", "permission mode", "권한 모드", "auto", "오토 모드", "acceptEdits", "plan mode", "bypassPermissions", "shift+tab", "dangerously skip"]
 category: "advanced"
 order: 20
-lastUpdated: "2026-04-27"
+lastUpdated: "2026-08-26"
 ---
 
 <div class="note-star">
 ★ <strong>한 줄 요약</strong> — <code>Shift+Tab</code>으로 <strong>default → acceptEdits → plan</strong> 순환. 계정 조건을 만족하면 <strong>auto</strong>까지, 플래그로 켜면 <strong>bypassPermissions</strong>까지 나와요. <code>[공식]</code>
-<br />★ <strong>2026-04 신기능</strong> — <code>auto</code> 모드가 research preview로 추가됐어요. 오토면서도 안전 체크를 해주는 새 개념. (v2.1.83 이상 필요)
+<br />★ <strong>2026-08-14 중요 변경 🆕</strong> — <code>auto</code> 모드가 Pro·Max·Team 플랜에서 <strong>기본 권한 모드</strong>가 됐어요! 이제 새 세션을 시작하면 auto mode가 기본으로 켜져 있어요. <a href="https://code.claude.com/docs/en/whats-new/2026-w32">W32 공식 문서</a>
 <br />★ <strong>공식 문서</strong>: <a href="https://code.claude.com/docs/en/permission-modes">code.claude.com/docs/en/permission-modes</a>
+</div>
+
+<div class="note-star" style="border-color: #3182ce; background: #ebf8ff; margin-top: 8px;">
+🔔 <strong>[공] 2026-08-14부터 auto mode가 기본값</strong><br />
+이전에는 <code>default</code> 모드로 시작했지만, 이제 Pro·Max·Team 플랜의 새 세션은 <strong>auto mode</strong>로 시작해요.<br />
+이전에 직접 설정한 모드가 있으면 그대로 유지돼요. 조직 관리 설정도 유지.<br />
+auto mode의 AI 분류기 API 호출이 이제 <strong>사용량 한도에서 제외</strong>돼요.
 </div>
 
 ## 권한 모드가 뭔가요?
