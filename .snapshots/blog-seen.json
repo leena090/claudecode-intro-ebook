@@ -1,9 +1,9 @@
 {
   "_meta": {
     "created": "2026-04-20",
-    "updated": "2026-07-20",
+    "updated": "2026-08-28",
     "source_url": "https://www.anthropic.com/news",
-    "note": "2026-07-20 21차 실행: 신규 블로그 1건 감지 (AI for Science 희귀질환 보조금, Jul 20). 코딩 ebook 무관 — 콘텐츠 생성 스킵, blog-seen.json만 업데이트. 20차(2026-07-18) 누락분 병합: claude-sonnet-5, redeploying-fable-5, claude-science, fable-5-jailbreak-framework, making-of-claude-code, alberta-cybersecurity, inviting-hard-questions, ben-bernanke, ust-physical-ai, claude-usage-reflection, claude-for-teachers, canadian-ai-research.",
+    "note": "2026-08-28 22차 실행: 신규 블로그 11건 감지 (Claude Opus 5 등 Jul 24 ~ Aug 27). claude-opus-5.md 콘텐츠 생성. 나머지 10건 코딩 ebook 직접 관련 낮아 스킵.",
     "fetch_status": "ga-blog.txt 수신"
   },
   "seen": [
@@ -425,6 +425,86 @@
       "date": "2026-07-20",
       "confirmed": false,
       "note": "URL 추정 — 희귀 질환 연구를 위한 AI 과학 보조금 프로그램. 과학 연구 지원 주제로 Claude Code 코딩 입문 ebook과 직접 관련 없어 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/claude-opus-5",
+      "title": "Introducing Claude Opus 5",
+      "date": "2026-07-24",
+      "confirmed": false,
+      "note": "URL 추정 — Opus 5 공식 출시. 코딩·에이전트·전문 업무 한 단계 향상, 1M 토큰 컨텍스트. 코딩 ebook 직접 관련. 콘텐츠 생성: content/docs/next/claude-opus-5.md (new).",
+      "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/open-weights-position",
+      "title": "Our position on open-weights models",
+      "date": "2026-07-27",
+      "confirmed": false,
+      "note": "URL 추정 — 오픈 웨이트 모델에 대한 Anthropic 입장. 정책/전략 주제, 코딩 ebook 직접 관련 낮아 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/cognizant-partnership-enterprise",
+      "title": "Cognizant and Anthropic expand their partnership to bring Claude to enterprise clients",
+      "date": "2026-07-27",
+      "confirmed": false,
+      "note": "URL 추정 — 엔터프라이즈 파트너십. 비즈니스 뉴스, 코딩 ebook 직접 관련 낮아 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/investigating-cybersecurity-eval-incidents",
+      "title": "Investigating three real-world incidents in our cybersecurity evaluations",
+      "date": "2026-07-30",
+      "confirmed": false,
+      "note": "URL 추정 — 사이버보안 평가 실제 사례 연구. 보안 연구 주제, 코딩 ebook 직접 관련 낮아 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/tino-cuellar-chief-global-affairs",
+      "title": "Mariano-Florentino (Tino) Cuéllar to join Anthropic as Chief Global Affairs Officer",
+      "date": "2026-08-04",
+      "confirmed": false,
+      "note": "URL 추정 — 경영진 인사 발표. 코딩 ebook과 무관하여 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/fable-5-biology-safeguards",
+      "title": "Improving Fable 5's biology safeguards",
+      "date": "2026-08-07",
+      "confirmed": false,
+      "note": "URL 추정 — Fable 5 생물학 안전장치 개선. 안전 연구 주제, 코딩 ebook 직접 관련 낮아 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/claude-text-watermark",
+      "title": "How Claude's text watermark works",
+      "date": "2026-08-14",
+      "confirmed": false,
+      "note": "URL 추정 — 텍스트 워터마크 작동 방식 설명. 기술적으로 흥미로우나 Claude Code 코딩 ebook 핵심 주제와 직접 관련 낮아 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/ai-wellbeing-evaluations-funding",
+      "title": "Funding better evaluations of AI's impact on wellbeing",
+      "date": "2026-08-25",
+      "confirmed": false,
+      "note": "URL 추정 — AI 웰빙 평가 연구 자금 지원. 연구 주제, 코딩 ebook과 무관하여 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/expanding-scientist-support",
+      "title": "Expanding our support for scientists",
+      "date": "2026-08-27",
+      "confirmed": false,
+      "note": "URL 추정 — 과학자 지원 확대. Claude Science 관련, 코딩 ebook 직접 관련 낮아 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/model-hardware-standard",
+      "title": "Previewing the Model Hardware Standard",
+      "date": "2026-08-27",
+      "confirmed": false,
+      "note": "URL 추정 — AI 에이전트가 물리 장치를 안전하게 제어하는 공유 사양 MHS 리서치 프리뷰. 전문 개발자 대상, 입문 ebook과 직접 관련 낮아 콘텐츠 생성 스킵.",
       "content_written": false
     }
   ]

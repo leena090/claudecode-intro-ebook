@@ -1,16 +1,21 @@
 ---
-title: "/ultraplan — 클라우드 플랜 다듬기 (research preview)"
-description: "로컬 CLI에서 플랜을 클라우드의 강력한 Opus 4.7에 맡기고, 브라우저에서 다듬어 다시 로컬로 가져오는 새로운 워크플로우"
-tags: ["고급", "ultraplan", "플래닝", "클라우드", "research preview"]
+title: "/ultraplan — 클라우드 플랜 다듬기 (⚠️ 제거됨)"
+description: "로컬 CLI에서 플랜을 클라우드의 강력한 Opus 4.7에 맡기고, 브라우저에서 다듬어 다시 로컬로 가져오는 새로운 워크플로우 (v2.1.224부터 제거)"
+tags: ["고급", "ultraplan", "플래닝", "클라우드", "research preview", "deprecated"]
 category: "advanced"
 order: 10
-lastUpdated: "2026-04-20"
+lastUpdated: "2026-08-28"
 ---
 
+<div class="note-star" style="border-left: 4px solid #e53e3e; background: #fff5f5;">
+⚠️ <strong>[제거됨] Claude Code v2.1.224 (w32, 2026-08-07) 기준으로 /ultraplan 명령어와 ultraplan 키워드가 삭제되었습니다.</strong><br />
+대신 <strong>plan mode</strong> (<code>/plan</code> 또는 <code>Shift+Tab</code>으로 전환) 또는 <strong>Claude Code on the web</strong>(claude.ai/code)을 사용하세요.<br />
+공식 발표 기준 [공]: <a href="https://code.claude.com/docs/en/whats-new/2026-w32">whats-new/2026-w32</a>
+</div>
+
 <div class="note-star">
-★ <strong>Research Preview</strong> — Claude Code v2.1.101 이상이 필수예요. 아직 실험 단계라 동작이 가끔 불안정할 수 있습니다.
-<br />★ <strong>v2.1.101 업데이트</strong>: 처음 실행 시 기본 클라우드 환경이 <strong>자동 생성</strong>됩니다 — 웹에서 미리 설정할 필요가 없어요!
-<br />★ <strong>공식 문서</strong>: <a href="https://code.claude.com/docs/en/ultraplan">code.claude.com/docs/en/ultraplan</a>
+★ <del><strong>Research Preview</strong> — Claude Code v2.1.101 이상이 필수예요. 아직 실험 단계라 동작이 가끔 불안정할 수 있습니다.</del> (역사적 참고용)<br />
+★ <del><strong>공식 문서</strong>: code.claude.com/docs/en/ultraplan</del> (페이지 제거됨)
 </div>
 
 ## `/ultraplan`이 뭔가요?
