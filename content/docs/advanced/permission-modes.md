@@ -4,12 +4,13 @@ description: "Shift+Tab 한 번이면 클로드의 작업 스타일이 바뀐다
 tags: ["고급", "permission mode", "권한 모드", "auto", "오토 모드", "acceptEdits", "plan mode", "bypassPermissions", "shift+tab", "dangerously skip"]
 category: "advanced"
 order: 20
-lastUpdated: "2026-04-27"
+lastUpdated: "2026-08-31"
 ---
 
 <div class="note-star">
-★ <strong>한 줄 요약</strong> — <code>Shift+Tab</code>으로 <strong>default → acceptEdits → plan</strong> 순환. 계정 조건을 만족하면 <strong>auto</strong>까지, 플래그로 켜면 <strong>bypassPermissions</strong>까지 나와요. <code>[공식]</code>
-<br />★ <strong>2026-04 신기능</strong> — <code>auto</code> 모드가 research preview로 추가됐어요. 오토면서도 안전 체크를 해주는 새 개념. (v2.1.83 이상 필요)
+★ <strong>🆕 2026-08-14 중요 변경</strong> — <strong>Auto 모드가 이제 기본 모드</strong>입니다! Pro/Max/Team 플랜의 새 세션은 Auto 모드로 시작해요. 직접 설정한 모드가 있으면 그대로 유지됩니다. (<a href="https://code.claude.com/docs/en/whats-new/2026-w32">W32 공식 발표</a>)
+<br />★ Auto 모드의 분류기(classifier) 호출은 <strong>사용량 한도에서 제외</strong>돼요 — 더 자유롭게 사용 가능!
+<br />★ <strong>한 줄 요약</strong> — <code>Shift+Tab</code>으로 <strong>default → acceptEdits → plan</strong> 순환. 계정 조건을 만족하면 <strong>auto</strong>까지, 플래그로 켜면 <strong>bypassPermissions</strong>까지 나와요. <code>[공식]</code>
 <br />★ <strong>공식 문서</strong>: <a href="https://code.claude.com/docs/en/permission-modes">code.claude.com/docs/en/permission-modes</a>
 </div>
 
