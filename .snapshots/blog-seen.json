@@ -1,9 +1,9 @@
 {
   "_meta": {
     "created": "2026-04-20",
-    "updated": "2026-07-20",
+    "updated": "2026-09-14",
     "source_url": "https://www.anthropic.com/news",
-    "note": "2026-07-20 21차 실행: 신규 블로그 1건 감지 (AI for Science 희귀질환 보조금, Jul 20). 코딩 ebook 무관 — 콘텐츠 생성 스킵, blog-seen.json만 업데이트. 20차(2026-07-18) 누락분 병합: claude-sonnet-5, redeploying-fable-5, claude-science, fable-5-jailbreak-framework, making-of-claude-code, alberta-cybersecurity, inviting-hard-questions, ben-bernanke, ust-physical-ai, claude-usage-reflection, claude-for-teachers, canadian-ai-research.",
+    "note": "2026-09-14 22차 실행: 신규 블로그 13건 감지 (Opus 5, Fable 5.1/Mythos 5.1, 텍스트 워터마크, Model Hardware Standard, 사이버보안 사건 보고, 정렬·보안 개선 등). 주요 콘텐츠 생성: content/docs/next/opus5-fable51-sep2026.md (Opus 5 + Fable 5.1 통합). 나머지는 코딩 ebook 관련성 낮아 스킵.",
     "fetch_status": "ga-blog.txt 수신"
   },
   "seen": [
@@ -425,6 +425,110 @@
       "date": "2026-07-20",
       "confirmed": false,
       "note": "URL 추정 — 희귀 질환 연구를 위한 AI 과학 보조금 프로그램. 과학 연구 지원 주제로 Claude Code 코딩 입문 ebook과 직접 관련 없어 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/claude-opus-5",
+      "title": "Introducing Claude Opus 5",
+      "date": "2026-07-24",
+      "confirmed": false,
+      "note": "URL 추정 — Opus 5 공식 출시. 장기 에이전트·코딩·전문 업무 성능 대폭 강화. Claude Code 핵심 관련. 콘텐츠 생성: content/docs/next/opus5-fable51-sep2026.md.",
+      "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/our-position-on-open-weights-models",
+      "title": "Our position on open-weights models",
+      "date": "2026-07-27",
+      "confirmed": false,
+      "note": "URL 추정 — 오픈웨이트 모델에 대한 Anthropic 입장. 정책/철학 주제, 코딩 ebook과 직접 관련 낮아 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/investigating-cybersecurity-incidents",
+      "title": "Investigating three real-world incidents in our cybersecurity evaluations",
+      "date": "2026-07-30",
+      "confirmed": false,
+      "note": "URL 추정 — 사이버보안 평가 중 실제 사고 3건 조사 발표. 보안 정책/안전 주제, 코딩 ebook과 직접 관련 낮아 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/tino-cuellar-chief-global-affairs-officer",
+      "title": "Mariano-Florentino (Tino) Cuéllar to join Anthropic as Chief Global Affairs Officer",
+      "date": "2026-08-04",
+      "confirmed": false,
+      "note": "URL 추정 — 임원 인사 발표. 코딩 ebook과 무관하여 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/improving-fable-5-biology-safeguards",
+      "title": "Improving Fable 5's biology safeguards",
+      "date": "2026-08-07",
+      "confirmed": false,
+      "note": "URL 추정 — Fable 5 생물학 안전장치 개선. 안전/정책 주제, 코딩 ebook과 직접 관련 낮아 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/how-claude-text-watermark-works",
+      "title": "How Claude's text watermark works",
+      "date": "2026-08-14",
+      "confirmed": false,
+      "note": "URL 추정 — 클로드 텍스트 워터마크 작동 방식. 기술적 관심 있으나 Claude Code 사용에 직접 필요한 정보는 아님. 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/funding-better-evaluations-ai-wellbeing",
+      "title": "Funding better evaluations of AI's impact on wellbeing",
+      "date": "2026-08-25",
+      "confirmed": false,
+      "note": "URL 추정 — AI 복지 평가 연구 지원. 연구/철학 주제, 코딩 ebook과 무관하여 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/expanding-support-for-scientists",
+      "title": "Expanding our support for scientists",
+      "date": "2026-08-27",
+      "confirmed": false,
+      "note": "URL 추정 — 과학자 지원 확대. Claude Science 관련. 코딩 ebook과 직접 관련 낮아 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/model-hardware-standard",
+      "title": "Previewing the Model Hardware Standard (MHS)",
+      "date": "2026-08-27",
+      "confirmed": false,
+      "note": "URL 추정 — AI 에이전트가 물리 장치를 안전하게 작동하기 위한 공유 규격 리서치 프리뷰. 연구/기술 표준 주제. Claude Code 사용과 직접 관련 낮아 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/improving-alignment-security-efforts",
+      "title": "Improving our alignment and security efforts",
+      "date": "2026-08-31",
+      "confirmed": false,
+      "note": "URL 추정 — 정렬 및 보안 노력 개선 발표 (실제 컴퓨터 시스템 무단 접근 사건 후속 조치). 안전/정책 주제, 코딩 ebook과 직접 관련 낮아 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/claude-fable-5-1-mythos-5-1",
+      "title": "Introducing Claude Fable 5.1 and Claude Mythos 5.1",
+      "date": "2026-09-01",
+      "confirmed": false,
+      "note": "URL 추정 — Fable 5.1과 Mythos 5.1 공식 발표. 코딩·지식 작업 최고 성능 + 과학 연구 능력 첫 공개. 콘텐츠 생성: content/docs/next/opus5-fable51-sep2026.md (Opus 5와 통합).",
+      "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/enterprise-frontier-safeguards",
+      "title": "Developing Enterprise Frontier Safeguards with our customers",
+      "date": "2026-09-01",
+      "confirmed": false,
+      "note": "URL 추정 — 엔터프라이즈 최전선 안전장치 개발 공동 발표. 기업 보안/안전 정책 주제, 코딩 ebook과 직접 관련 낮아 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/detecting-countering-ai-misuse-september-2026",
+      "title": "Detecting and countering misuse of AI: September 2026",
+      "date": "2026-09-10",
+      "confirmed": false,
+      "note": "URL 추정 — AI 악용 탐지·대응 보고서 (2026년 9월). 위협 인텔리전스팀 케이스 스터디 포함. 보안/안전 연구 주제, 코딩 ebook과 직접 관련 낮아 스킵.",
       "content_written": false
     }
   ]
