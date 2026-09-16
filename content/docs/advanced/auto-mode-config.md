@@ -10,7 +10,8 @@ lastUpdated: "2026-04-27"
 <div class="note-star">
 ★ <strong>이 문서는 auto 모드를 이미 쓰고 있는 분을 위한 "고급 조정 가이드"예요.</strong><br />
 ★ auto 모드 자체가 처음이라면 먼저 <a href="/docs/advanced/permission-modes">권한 모드 완전 정리</a>를 읽어보세요.<br />
-★ <strong>v2.1.113 신규</strong>: Max 구독자 + Opus 4.7 조합에서는 이제 <code>--enable-auto-mode</code> 플래그 없이도 auto 모드가 자동 활성화됩니다.<br />
+★ <strong>🆕 2026년 8월 (W32) 변경</strong>: <strong>auto 모드가 모든 플랜의 기본 권한 모드가 됐어요.</strong> 새로 설치하면 auto 모드로 시작해요.<br />
+★ <strong>v2.1.113 이전 신규</strong>: Max 구독자 + Opus 4.7 조합에서는 <code>--enable-auto-mode</code> 플래그 없이도 auto 모드가 자동 활성화됐었어요.<br />
 ★ <strong>공식 문서</strong>: <a href="https://code.claude.com/docs/en/auto-mode-config">code.claude.com/docs/en/auto-mode-config</a>
 </div>
 
