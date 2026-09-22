@@ -1,9 +1,9 @@
 {
   "_meta": {
     "created": "2026-04-20",
-    "updated": "2026-07-20",
+    "updated": "2026-09-22",
     "source_url": "https://code.claude.com/docs/llms.txt",
-    "note": "2026-07-20 21차 실행: 신규 URL 없음. llms.txt 170개 URL 전체 기존 docs-index.json과 일치. 블로그 신규 1건(AI for Science 희귀질환 보조금). 마케팅 변경 없음. W30 what's-new 미게시.",
+    "note": "2026-09-22 22차 실행: W30~W37 신규 URL 9건 추가. 신규 docs: cross-session-messaging, self-hosted-environments-quickstart, desktop-ios-simulator, claude-security, plugin-evals. 마케팅: Opus 5 + Fast Mode $10/$50, Projects 기능 신규. 블로그: Fable 5.1/Mythos 5.1 등 신규 12건 감지.",
     "fetch_status": "200_ok"
   },
   "https://code.claude.com/docs/en/overview": "SNAPSHOT_2026-04-20",
@@ -176,5 +176,16 @@
   "https://code.claude.com/docs/en/whats-new/2026-w26": "SNAPSHOT_2026-07-18",
   "https://code.claude.com/docs/en/whats-new/2026-w27": "SNAPSHOT_2026-07-18",
   "https://code.claude.com/docs/en/whats-new/2026-w28": "SNAPSHOT_2026-07-18",
-  "https://code.claude.com/docs/en/whats-new/2026-w29": "SNAPSHOT_2026-07-18"
+  "https://code.claude.com/docs/en/whats-new/2026-w29": "SNAPSHOT_2026-07-18",
+  "https://code.claude.com/docs/en/whats-new/2026-w30": "SNAPSHOT_2026-09-22",
+  "https://code.claude.com/docs/en/whats-new/2026-w32": "SNAPSHOT_2026-09-22",
+  "https://code.claude.com/docs/en/whats-new/2026-w33": "SNAPSHOT_2026-09-22",
+  "https://code.claude.com/docs/en/whats-new/2026-w35": "SNAPSHOT_2026-09-22",
+  "https://code.claude.com/docs/en/whats-new/2026-w36": "SNAPSHOT_2026-09-22",
+  "https://code.claude.com/docs/en/whats-new/2026-w37": "SNAPSHOT_2026-09-22",
+  "https://code.claude.com/docs/en/cross-session-messaging": "SNAPSHOT_2026-09-22",
+  "https://code.claude.com/docs/en/self-hosted-environments-quickstart": "SNAPSHOT_2026-09-22",
+  "https://code.claude.com/docs/en/desktop-ios-simulator": "SNAPSHOT_2026-09-22",
+  "https://code.claude.com/docs/en/plugin-evals": "SNAPSHOT_2026-09-22",
+  "https://code.claude.com/docs/en/agent-sdk/typescript-v2-preview": "REMOVED_2026-09-22"
 }
