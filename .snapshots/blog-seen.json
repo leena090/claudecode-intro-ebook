@@ -1,9 +1,9 @@
 {
   "_meta": {
     "created": "2026-04-20",
-    "updated": "2026-07-20",
+    "updated": "2026-09-23",
     "source_url": "https://www.anthropic.com/news",
-    "note": "2026-07-20 21차 실행: 신규 블로그 1건 감지 (AI for Science 희귀질환 보조금, Jul 20). 코딩 ebook 무관 — 콘텐츠 생성 스킵, blog-seen.json만 업데이트. 20차(2026-07-18) 누락분 병합: claude-sonnet-5, redeploying-fable-5, claude-science, fable-5-jailbreak-framework, making-of-claude-code, alberta-cybersecurity, inviting-hard-questions, ben-bernanke, ust-physical-ai, claude-usage-reflection, claude-for-teachers, canadian-ai-research.",
+    "note": "2026-09-23 22차 실행: 신규 블로그 다수 감지. 주요: Claude Opus 5.5(Sep 22, content_written:true), Fable 5.1+Mythos 5.1(Sep 1, content_written:true). 기타 안전/연구/파트너십 글 다수(코딩 ebook 무관, content_written:false).",
     "fetch_status": "ga-blog.txt 수신"
   },
   "seen": [
@@ -426,6 +426,86 @@
       "confirmed": false,
       "note": "URL 추정 — 희귀 질환 연구를 위한 AI 과학 보조금 프로그램. 과학 연구 지원 주제로 Claude Code 코딩 입문 ebook과 직접 관련 없어 콘텐츠 생성 스킵.",
       "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/claude-fable-5-1",
+      "title": "Introducing Claude Fable 5.1 and Claude Mythos 5.1",
+      "date": "2026-09-01",
+      "confirmed": false,
+      "note": "URL 추정 — 최상위 모델 Fable 5.1·Mythos 5.1 출시. 코딩·지식 작업 최상위 성능. 코딩 ebook 직접 관련. 콘텐츠 생성: content/docs/next/opus55-fable51-september2026.md (new — Opus 5.5와 통합).",
+      "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/detecting-misuse-september-2026",
+      "title": "Detecting and countering misuse of AI: September 2026",
+      "date": "2026-09-10",
+      "confirmed": false,
+      "note": "URL 추정 — 위협 인텔리전스 보고서. 보안 연구 주제, 코딩 ebook과 직접 관련 낮아 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/improving-alignment-security",
+      "title": "Improving our alignment and security efforts",
+      "date": "2026-08-31",
+      "confirmed": false,
+      "note": "URL 추정 — Claude 모델 보안 인시던트 분석 및 개선. 정책/안전 주제, 코딩 ebook과 직접 관련 낮아 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/model-hardware-standard",
+      "title": "Previewing the Model Hardware Standard",
+      "date": "2026-08-27",
+      "confirmed": false,
+      "note": "URL 추정 — AI 에이전트 물리 장치 안전 운용 표준. 하드웨어/안전 연구 주제, 코딩 ebook과 직접 관련 낮아 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/enterprise-frontier-safeguards",
+      "title": "Developing Enterprise Frontier Safeguards with our customers",
+      "date": "2026-09-01",
+      "confirmed": false,
+      "note": "URL 추정 — 엔터프라이즈 프론티어 안전장치 개발. 기업 보안 주제, 코딩 ebook과 직접 관련 낮아 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/accenture-embedded-evaluation",
+      "title": "Partnering with Accenture on embedded evaluation",
+      "date": "2026-09-18",
+      "confirmed": false,
+      "note": "URL 추정 — 엔터프라이즈 평가 파트너십. 비즈니스 뉴스, 코딩 ebook과 직접 관련 낮아 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/life-sciences-verification",
+      "title": "Introducing the Life Sciences Verification Program",
+      "date": "2026-09-17",
+      "confirmed": false,
+      "note": "URL 추정 — 생명과학 검증 프로그램. 과학/의료 주제, 코딩 ebook과 직접 관련 낮아 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/expanding-support-scientists",
+      "title": "Expanding our support for scientists",
+      "date": "2026-08-27",
+      "confirmed": false,
+      "note": "URL 추정 — 과학자 지원 확대. 과학 주제, 코딩 ebook과 직접 관련 낮아 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/claude-text-watermark",
+      "title": "How Claude's text watermark works",
+      "date": "2026-08-14",
+      "confirmed": false,
+      "note": "URL 추정 — Claude 텍스트 워터마크 기술 설명. AI 안전/기술 주제. 코딩 ebook과 직접 관련 낮아 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/claude-opus-5-5",
+      "title": "Introducing Claude Opus 5.5",
+      "date": "2026-09-22",
+      "confirmed": true,
+      "note": "URL 확인 — Fable 5.1 수준 성능, Opus 5 대비 40% 저렴. 코딩 ebook 직접 관련. 콘텐츠 생성: content/docs/next/opus55-fable51-september2026.md (new — Fable 5.1과 통합).",
+      "content_written": true
     }
   ]
 }
