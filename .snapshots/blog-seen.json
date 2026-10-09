@@ -1,9 +1,9 @@
 {
   "_meta": {
     "created": "2026-04-20",
-    "updated": "2026-07-20",
+    "updated": "2026-10-09",
     "source_url": "https://www.anthropic.com/news",
-    "note": "2026-07-20 21차 실행: 신규 블로그 1건 감지 (AI for Science 희귀질환 보조금, Jul 20). 코딩 ebook 무관 — 콘텐츠 생성 스킵, blog-seen.json만 업데이트. 20차(2026-07-18) 누락분 병합: claude-sonnet-5, redeploying-fable-5, claude-science, fable-5-jailbreak-framework, making-of-claude-code, alberta-cybersecurity, inviting-hard-questions, ben-bernanke, ust-physical-ai, claude-usage-reflection, claude-for-teachers, canadian-ai-research.",
+    "note": "2026-10-09 22차 실행: 신규 블로그 14건 감지. 콘텐츠 생성: Claude Haiku5.5/Sonnet5.5/Opus5.5/Fable5.1은 new-models-oct2026.md에 통합. 나머지(Cyber Mission, Enterprise Safeguards, Accenture, Life Sciences, Scientific Discovery, Usage Policy, $100M 엔지니어 투자, Barclays, enzyme system) — 코딩 ebook 직접 관련 낮아 스킵.",
     "fetch_status": "ga-blog.txt 수신"
   },
   "seen": [
@@ -425,6 +425,110 @@
       "date": "2026-07-20",
       "confirmed": false,
       "note": "URL 추정 — 희귀 질환 연구를 위한 AI 과학 보조금 프로그램. 과학 연구 지원 주제로 Claude Code 코딩 입문 ebook과 직접 관련 없어 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/developing-enterprise-frontier-safeguards",
+      "title": "Developing Enterprise Frontier Safeguards with our customers",
+      "date": "2026-09-01",
+      "confirmed": false,
+      "note": "URL 추정 — 엔터프라이즈 안전장치 개발. 코딩 ebook과 직접 관련 낮아 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/life-sciences-verification-program",
+      "title": "Introducing the Life Sciences Verification Program",
+      "date": "2026-09-17",
+      "confirmed": false,
+      "note": "URL 추정 — 생명과학 검증 프로그램. 코딩 ebook과 직접 관련 낮아 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/partnering-accenture-embedded-evaluation",
+      "title": "Partnering with Accenture on embedded evaluation",
+      "date": "2026-09-18",
+      "confirmed": false,
+      "note": "URL 추정 — Accenture 파트너십. 비즈니스 뉴스, 코딩 ebook과 직접 관련 낮아 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme",
+      "title": "Claude discovers a novel enzyme system with CRISPR-like repeats",
+      "date": "2026-09-23",
+      "confirmed": false,
+      "note": "URL 추정 — 과학 연구 성과. 코딩 ebook과 직접 관련 낮아 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/claude-opus-5-5",
+      "title": "Introducing Claude Opus 5.5",
+      "date": "2026-09-22",
+      "confirmed": false,
+      "note": "URL 추정 — Opus 5.5 공식 출시. 코딩 ebook 직접 관련. 콘텐츠 생성: content/docs/next/new-models-oct2026.md (통합).",
+      "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/claude-sonnet-5-5",
+      "title": "Introducing Claude Sonnet 5.5",
+      "date": "2026-09-28",
+      "confirmed": false,
+      "note": "URL 추정 — Sonnet 5.5 공식 출시. 코딩 ebook 직접 관련. 콘텐츠 생성: content/docs/next/new-models-oct2026.md (통합).",
+      "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/barclays-claude",
+      "title": "Barclays scales Claude to upgrade operations and improve client experience",
+      "date": "2026-10-01",
+      "confirmed": false,
+      "note": "URL 추정 — 은행 엔터프라이즈 케이스 스터디. 코딩 ebook과 직접 관련 낮아 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/anthropic-100m-engineers",
+      "title": "Anthropic invests $100 million to train 10,000 engineers and tackle the enterprise AI talent gap",
+      "date": "2026-10-02",
+      "confirmed": false,
+      "note": "URL 추정 — AI 엔지니어 양성 투자. 개발자 커뮤니티 관련이나 ebook 직접 콘텐츠 불필요하여 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/expanding-cyber-verification-program",
+      "title": "Expanding the Cyber Verification Program",
+      "date": "2026-10-06",
+      "confirmed": false,
+      "note": "URL 추정 — 사이버 검증 프로그램 확장. 보안 연구자 대상. 코딩 입문 ebook과 직접 관련 낮아 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/claude-haiku-5-5",
+      "title": "Introducing Claude Haiku 5.5",
+      "date": "2026-10-07",
+      "confirmed": false,
+      "note": "URL 추정 — Haiku 5.5 공식 출시. 코딩 ebook 직접 관련. 콘텐츠 생성: content/docs/next/new-models-oct2026.md (통합).",
+      "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/2026-usage-policy-update",
+      "title": "2026 Usage Policy update",
+      "date": "2026-10-08",
+      "confirmed": false,
+      "note": "URL 추정 — 이용 약관 업데이트. 정책 주제, 코딩 ebook과 직접 관련 낮아 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/american-scientific-discovery",
+      "title": "Building on our commitment to American scientific discovery",
+      "date": "2026-10-08",
+      "confirmed": false,
+      "note": "URL 추정 — 과학 연구 투자. 코딩 ebook과 직접 관련 낮아 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/anthropic-cyber-mission",
+      "title": "Introducing the Anthropic Cyber Mission",
+      "date": "2026-10-08",
+      "confirmed": false,
+      "note": "URL 추정 — 사이버 보안 미션 발표. 보안 특화 주제, 코딩 입문 ebook과 직접 관련 낮아 스킵.",
       "content_written": false
     }
   ]
