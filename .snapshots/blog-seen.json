@@ -1,9 +1,9 @@
 {
   "_meta": {
     "created": "2026-04-20",
-    "updated": "2026-07-20",
+    "updated": "2026-10-10",
     "source_url": "https://www.anthropic.com/news",
-    "note": "2026-07-20 21차 실행: 신규 블로그 1건 감지 (AI for Science 희귀질환 보조금, Jul 20). 코딩 ebook 무관 — 콘텐츠 생성 스킵, blog-seen.json만 업데이트. 20차(2026-07-18) 누락분 병합: claude-sonnet-5, redeploying-fable-5, claude-science, fable-5-jailbreak-framework, making-of-claude-code, alberta-cybersecurity, inviting-hard-questions, ben-bernanke, ust-physical-ai, claude-usage-reflection, claude-for-teachers, canadian-ai-research.",
+    "note": "2026-10-10 22차 실행: 신규 블로그 15건 처리. 코딩 ebook 관련 4건 콘텐츠 생성 (self-hosted-environments, auto-mode-default, claude55-models 통합 3종). fetch_status: ga-blog.txt 수신",
     "fetch_status": "ga-blog.txt 수신"
   },
   "seen": [
@@ -425,6 +425,118 @@
       "date": "2026-07-20",
       "confirmed": false,
       "note": "URL 추정 — 희귀 질환 연구를 위한 AI 과학 보조금 프로그램. 과학 연구 지원 주제로 Claude Code 코딩 입문 ebook과 직접 관련 없어 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/self-hosted-environments",
+      "title": "Self-hosted environments: Run Claude Code sessions on your own infrastructure",
+      "date": "2026-08-07",
+      "confirmed": false,
+      "note": "URL 추정 — 자체 인프라에서 Claude Code 세션 실행 (퍼블릭 베타). 엔터프라이즈 사용자에게 매우 중요. 콘텐츠 생성: content/docs/advanced/self-hosted-environments.md (new).",
+      "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/auto-mode-by-default",
+      "title": "Auto mode by default: Claude Code now runs in auto mode by default on Pro, Max, and Team plans",
+      "date": "2026-09-17",
+      "confirmed": false,
+      "note": "URL 추정 — Auto mode 기본값 전환. Pro·Max·Team 플랜 사용자 모두에게 중요 변경사항. 콘텐츠 생성: content/docs/next/auto-mode-default.md (new).",
+      "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/introducing-the-life-sciences-verification-program",
+      "title": "Introducing the Life Sciences Verification Program",
+      "date": "2026-09-17",
+      "confirmed": false,
+      "note": "URL 추정 — 생명과학 분야 인증 프로그램. 전문 분야 콘텐츠, 코딩 입문 ebook 직접 관련 낮아 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/partnering-with-accenture",
+      "title": "Partnering with Accenture on embedded evaluation",
+      "date": "2026-09-18",
+      "confirmed": false,
+      "note": "URL 추정 — Accenture 엔터프라이즈 파트너십. 비즈니스 뉴스, 코딩 입문 ebook 직접 관련 낮아 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/introducing-claude-opus-5-5",
+      "title": "Introducing Claude Opus 5.5",
+      "date": "2026-09-22",
+      "confirmed": false,
+      "note": "URL 추정 — Opus 5.5 공식 출시. Fable 5.1 성능, Opus 5보다 40% 저렴. 코딩 ebook 직접 관련. 콘텐츠 생성: content/docs/next/claude55-models.md (new).",
+      "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme",
+      "title": "Claude discovers a novel enzyme system with CRISPR-like repeats",
+      "date": "2026-09-23",
+      "confirmed": false,
+      "note": "URL 추정 — 과학 연구 성과 발표. AI for Science 관련이나 코딩 입문 ebook과 직접 관련 없어 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/introducing-claude-sonnet-5-5",
+      "title": "Introducing Claude Sonnet 5.5",
+      "date": "2026-09-28",
+      "confirmed": false,
+      "note": "URL 추정 — Sonnet 5.5 공식 출시. 30% 빠름, 최대 30% 저렴. 코딩 ebook 직접 관련. 콘텐츠 생성: content/docs/next/claude55-models.md에 통합.",
+      "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/anthropic-invests-100-million-engineers",
+      "title": "Anthropic invests $100 million to train 10,000 engineers and tackle the enterprise AI talent gap",
+      "date": "2026-10-02",
+      "confirmed": false,
+      "note": "URL 추정 — AI 엔지니어 1만 명 양성 투자. 기업 AI 인재 육성 소식으로 국내 개발자 관련성 있으나 코딩 입문 ebook 핵심 주제와 거리 있어 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/barclays-scales-claude",
+      "title": "Barclays scales Claude to upgrade operations and improve client experience",
+      "date": "2026-10-01",
+      "confirmed": false,
+      "note": "URL 추정 — 바클레이즈 엔터프라이즈 배포 케이스 스터디. 금융 기업 도입 사례, 코딩 입문 ebook 직접 관련 낮아 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/expanding-the-cyber-verification-program",
+      "title": "Expanding the Cyber Verification Program",
+      "date": "2026-10-06",
+      "confirmed": false,
+      "note": "URL 추정 — 사이버 보안 전문가 인증 프로그램 확대. 보안 전문가 대상, 코딩 입문 ebook 일반 독자와 거리 있어 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/introducing-claude-haiku-5-5",
+      "title": "Introducing Claude Haiku 5.5",
+      "date": "2026-10-07",
+      "confirmed": false,
+      "note": "URL 추정 — Haiku 5.5 공식 출시. 가장 빠르고 저렴한 소형 모델. 코딩 ebook 직접 관련. 콘텐츠 생성: content/docs/next/claude55-models.md에 통합.",
+      "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/introducing-the-anthropic-cyber-mission",
+      "title": "Introducing the Anthropic Cyber Mission",
+      "date": "2026-10-08",
+      "confirmed": false,
+      "note": "URL 추정 — Anthropic의 사이버 보안 신사업 발표. 전문 보안 분야, 코딩 입문 ebook 독자와 거리 있어 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/2026-usage-policy-update",
+      "title": "2026 Usage Policy update",
+      "date": "2026-10-08",
+      "confirmed": false,
+      "note": "URL 추정 — 이용 정책 연간 업데이트. 정책 문서, 코딩 입문 ebook과 직접 관련 낮아 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/commitment-to-american-scientific-discovery",
+      "title": "Building on our commitment to American scientific discovery",
+      "date": "2026-10-08",
+      "confirmed": false,
+      "note": "URL 추정 — 미국 과학 발견 기여 발표. 정책/과학 주제, 코딩 입문 ebook과 무관하여 콘텐츠 생성 스킵.",
       "content_written": false
     }
   ]
