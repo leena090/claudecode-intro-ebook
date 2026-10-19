@@ -1,9 +1,9 @@
 {
   "_meta": {
     "created": "2026-04-20",
-    "updated": "2026-07-20",
+    "updated": "2026-10-19",
     "source_url": "https://www.anthropic.com/news",
-    "note": "2026-07-20 21차 실행: 신규 블로그 1건 감지 (AI for Science 희귀질환 보조금, Jul 20). 코딩 ebook 무관 — 콘텐츠 생성 스킵, blog-seen.json만 업데이트. 20차(2026-07-18) 누락분 병합: claude-sonnet-5, redeploying-fable-5, claude-science, fable-5-jailbreak-framework, making-of-claude-code, alberta-cybersecurity, inviting-hard-questions, ben-bernanke, ust-physical-ai, claude-usage-reflection, claude-for-teachers, canadian-ai-research.",
+    "note": "2026-10-19 22차 실행: 신규 블로그 다수 감지. 핵심: Claude Opus 5.5(9/22), Sonnet 5.5(9/28), Haiku 5.5(10/7) — 모델 발표 3건. 콘텐츠 생성: models-55-series.md (new). 기타: Auto mode default(9/17) → models-55-series.md 포함. Projects 기능 마케팅 등재. 스킵: 싱가포르 오피스, 사이버미션, 미국 과학발견, 선거, 투자, 미드텀 등.",
     "fetch_status": "ga-blog.txt 수신"
   },
   "seen": [
@@ -425,6 +425,78 @@
       "date": "2026-07-20",
       "confirmed": false,
       "note": "URL 추정 — 희귀 질환 연구를 위한 AI 과학 보조금 프로그램. 과학 연구 지원 주제로 Claude Code 코딩 입문 ebook과 직접 관련 없어 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/claude-opus-5-5",
+      "title": "Introducing Claude Opus 5.5",
+      "date": "2026-09-22",
+      "confirmed": false,
+      "note": "URL 추정 — Fable 5.1 수준 성능, Opus 5 대비 40% 저렴. Fast Mode 기준 모델 Opus 4.8→Opus 5.5 변경. 콘텐츠 생성: content/docs/next/models-55-series.md (new, Sonnet 5.5·Haiku 5.5 통합).",
+      "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/claude-sonnet-5-5",
+      "title": "Introducing Claude Sonnet 5.5",
+      "date": "2026-09-28",
+      "confirmed": false,
+      "note": "URL 추정 — Sonnet 5 대비 30% 빠름, 최대 30% 저렴. 콘텐츠 생성: models-55-series.md 통합.",
+      "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/claude-haiku-5-5",
+      "title": "Introducing Claude Haiku 5.5",
+      "date": "2026-10-07",
+      "confirmed": false,
+      "note": "URL 추정 — 가장 빠르고 저렴한 소형 모델. 대용량·비용 민감 작업용. 콘텐츠 생성: models-55-series.md 통합.",
+      "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/auto-mode-by-default",
+      "title": "Auto mode by default",
+      "date": "2026-09-17",
+      "confirmed": false,
+      "note": "URL 추정 — Pro·Max·Team 플랜에서 Auto mode 기본값 변경. 콘텐츠 생성: models-55-series.md에 섹션 포함.",
+      "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/self-hosted-environments-beta",
+      "title": "Self-hosted environments: public beta",
+      "date": "2026-08-07",
+      "confirmed": false,
+      "note": "URL 추정 — 사내 인프라에서 Claude Code 세션 실행. 공개 베타 시작. 콘텐츠 생성: content/docs/advanced/self-hosted-environments.md (new).",
+      "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/anthropic-singapore-office-mou",
+      "title": "Anthropic opens Singapore office and signs MOU with the Government of Singapore",
+      "date": "2026-10-14",
+      "confirmed": false,
+      "note": "URL 추정 — 싱가포르 오피스 개설 + 정부 MOU. 비즈니스 뉴스, 한국어 코딩 ebook 직접 관련 낮아 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/usage-policy-update-2026",
+      "title": "2026 Usage Policy update",
+      "date": "2026-10-08",
+      "confirmed": false,
+      "note": "URL 추정 — 이용 정책 업데이트. 정책 주제, 코딩 ebook과 직접 관련 낮아 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/anthropic-100m-engineers",
+      "title": "Anthropic invests $100 million to train 10,000 engineers and tackle the enterprise AI talent gap",
+      "date": "2026-10-02",
+      "confirmed": false,
+      "note": "URL 추정 — 엔지니어 양성 투자. 교육 관련이나 코딩 ebook과 직접 관련 낮아 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/cyber-verification-program-expansion",
+      "title": "Expanding the Cyber Verification Program",
+      "date": "2026-10-06",
+      "confirmed": false,
+      "note": "URL 추정 — 사이버 보안 검증 프로그램 확장. 보안 연구자 대상, 코딩 입문 ebook과 직접 관련 낮아 콘텐츠 생성 스킵.",
       "content_written": false
     }
   ]
