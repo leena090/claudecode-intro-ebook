@@ -1,53 +1,60 @@
-# SNAPSHOT - 2026-07-18 (20차 실행)
+# SNAPSHOT - 2026-10-29 (22차 실행)
 # 소스: https://claude.com/claude-code (마케팅 공식 페이지)
-# 상태: ga-marketing.txt 정상 수신 (2026-07-18 GitHub Actions 실행분)
-# 20차 실행: [변경 감지] 2건
-#   1. Android 앱이 공식 플랫폼 목록에 등재됨 (이전: iOS만 표시)
-#   2. 최신 기능 하이라이트 갱신: Dynamic workflows + Agent view 추가, Auto mode·모바일 Dispatch 제거
-#   Fast Mode $30/$150 (Opus 4.8) — 19차에서 감지된 금액 그대로 유지. 공식 가격으로 확정.
+# 상태: ga-marketing.txt 정상 수신 (2026-10-29 GitHub Actions 실행분)
+# 22차 실행: [변경 감지] 주요 변경 4건
+#   1. Fast Mode 대상 모델: Opus 4.8 → Opus 5.5, 가격 $30/$150 → $8/$40 per M tokens
+#   2. 최신 기능 하이라이트 전면 교체: Code Review GA, Projects, Auto mode by default, Self-hosted environments
+#   3. 모델 라인업 업데이트: Claude 5.5 패밀리 (Opus 5.5, Sonnet 5.5, Haiku 5.5)
+#   4. Team 플랜 상세 명시: $20/seat/month (연간), 2~150명
 
-## 최신 기능 하이라이트 (2026-07-18 기준 ga-marketing.txt)
-- Dynamic workflows: 10~100개 병렬 서브에이전트 실행, 검토 후 결과 전달 (May 28, 2026)
-- Agent view: 모든 Claude Code 세션을 한 화면에서 관리 (May 11, 2026)
-- Routines: 스케줄, API 호출, 이벤트 반응으로 자동 실행 (Apr 14, 2026)
-- Computer use: 앱 열기, 브라우저 탐색, 개발 도구 실행 (Mar 23, 2026)
+## 최신 기능 하이라이트 (2026-10-29 기준 ga-marketing.txt)
+- Code Review: 프로덕션 이전 버그를 더 많이 잡아줌. Team·Enterprise 정식 출시. (Oct 15, 2026)
+- Projects: 관련 코딩 세션 그룹화, 여러 Claude 에이전트 동시 감독. Claude Code Desktop 제공. (Sep 17, 2026)
+- Auto mode by default: Pro·Max·Team 플랜에서 자동(auto) 모드 기본값 설정. (Aug 7, 2026)
+- Self-hosted environments: 자체 인프라, 내부 네트워크, 사내 서비스 내에서 Claude Code 실행. 공개 베타. (Aug 6, 2026)
 
-## 지원 플랫폼 (2026-07-18 업데이트)
+## 지원 플랫폼 (2026-10-29 기준)
 - 데스크톱 앱 (macOS, Windows, Linux 베타)
 - 터미널 (Terminal/CLI)
 - VS Code (Cursor, Devin Desktop 포함) / JetBrains IDE
 - 웹 (claude.ai/code)
 - iOS (App Store)
-- **Android (Google Play) ← 2026-07-18 신규 확인**
+- Android (Google Play)
 - GitHub
 - Slack
 
 ## 요금제 (공식 발표 기준)
-- Pro: $17/월 (연간 선납, $200/년) 또는 $20/월 (월납)
+- Pro: $17/월 (연간 선납) 또는 $20/월 (월납)
 - Max 5x: $100/월
 - Max 20x: $200/월
-- Team: 별도 (연간)
-- Enterprise: 별도 문의
+- Team: **$20/seat/월** (연간 선납, 2~150명 팀)
+- Enterprise: 별도 문의 (Claude Security, ROI 분석, 역할 기반 접근, 지출 한도, 커스텀 데이터 제어 포함)
 - Claude API: 토큰 기반 과금 (개발자용)
 
-## 지원 모델 (2026-07-18 업데이트)
-- claude-sonnet-5 (기본 모델 — 2026-07-01 전환)
-- claude-opus-4-8
-- claude-fable-5 (최상위 — 2026-07-01 글로벌 복귀)
-- claude-haiku-4-5-20251001 (경량)
+## Team·Enterprise 전용 기능 (2026-10-29 기준)
+- Code Review (AI 에이전트 PR 리뷰)
+- Claude Code on web and mobile
+- Claude Cowork
+- Claude Design, Slides, Docs
 
-## Fast Mode (2026-07-18 확정)
-- 대상: **Opus 4.8** 고속 실행 버전 (w22, 2026-05-28 변경)
-- 2.5배 빠름
-- 요금: **$30/$150 per million tokens** (리서치 프리뷰, 소비 기반 플랜)
-  - 19차에서 불일치 감지됐던 금액 → 이번 확인으로 공식 가격 확정
+## 지원 모델 (2026-10-29 업데이트)
+- claude-opus-5-5 (고성능, 에이전트 코딩 최강)
+- claude-sonnet-5-5 (기본, 30%+ 빠름·30% 저렴)
+- claude-haiku-5-5 (경량, 고빈도 작업 최적화)
+- claude-fable-5 (최상위 — 글로벌 복귀)
+
+## Fast Mode (2026-10-29 업데이트 — 이전과 변경됨!)
+- 대상: **Opus 5.5** 고속 실행 버전 (이전: Opus 4.8)
+- 요금: **$8/$40 per million tokens** (이전: $30/$150)
+  → 가격이 크게 내려감 (연구 프리뷰, 소비 기반 플랜)
+- 소비 기반 플랜에서 사용 가능
 
 ## 주요 기능 (공식 문서 기반 확인)
 - /focus 명령어
 - Ctrl+O (verbose/normal 전환 / flicker-free mode)
 - Ctrl+G (에디터에 마지막 응답 컨텍스트 삽입)
 - Routines (반복 자동화, 스케줄 실행, API 트리거, GitHub 이벤트)
-- Code Review (AI 에이전트 기반 PR 리뷰)
+- Code Review (AI 에이전트 기반 PR 리뷰) ← GA 출시
 - /ultrareview (클라우드 멀티 에이전트 코드 리뷰)
 - /ultraplan (클라우드 플래닝)
 - /autofix-pr (PR 자동 수정 활성화)
@@ -58,11 +65,13 @@
 - Plugin Marketplace
 - Voice dictation (/voice, push-to-talk, 20개 언어)
 - Computer Use (CLI에서 macOS 앱 조작)
-- Auto mode (백그라운드 안전 classifier 포함)
+- Auto mode (기본값 설정 — Pro·Max·Team 플랜)
 - Artifacts (공유 가능한 라이브 페이지 발행)
 - Dynamic workflows (서브에이전트 대규모 병렬 실행)
 - Agent view (모든 세션 한 화면 관리)
 - Android 앱 지원 (Google Play)
+- **Projects** (관련 세션 그룹화, 여러 에이전트 동시 감독) ← 신규
+- **Self-hosted environments** (자체 인프라에서 실행, 공개 베타) ← 신규
 
 ## 성과 지표 (마케팅 페이지 공개)
 - 7.6x 더 잦은 배포 (Claude Code 팀 평균)
@@ -75,10 +84,10 @@
 - Claude Design: 시각적 디자인 협업 도구 (Apr 17, 2026)
 - Claude Science: 과학자용 AI 워크벤치 (Jun 30, 2026)
 
-## 공식 nav 등재 제품·기능 (2026-07-18 기준)
+## 공식 nav 등재 제품·기능 (2026-10-29 기준)
 - Products: Claude, Claude Code, Claude Code for Enterprise, Claude Cowork, Claude Security, Pro/Max/Team/Enterprise plan
 - Features: Claude for Chrome (GA), Claude for Slack, Claude for Microsoft 365, Skills
-- Models: Fable 5 (복귀), Opus 4.8, Sonnet 5 (기본), Haiku 4.5
+- Models: Fable 5, Opus 5.5, Sonnet 5.5 (기본), Haiku 5.5
 - Resources: Plugins, Connectors, Plugin Marketplace
 - Solutions: AI agents, Code modernization, Coding, Customer support, Education, Financial services, Government, Healthcare, Legal, Life sciences, Nonprofits, Security, Small business
 
@@ -87,7 +96,9 @@
 - 2026-06-15: 모델 라인업 변경 (Fable 5 추가, Opus 4.8 교체, Fast Mode 기준 변경)
 - 2026-06-25: Fast Mode 가격 불일치 감지 ($30/$150 vs $10/$50) — 모니터링 중
 - 2026-07-18: Android 앱 공식 등재, 최신 기능 하이라이트 갱신 (Dynamic workflows·Agent view 추가), Fast Mode $30/$150 공식 확정
+- 2026-10-29: **Fast Mode Opus 5.5로 변경, 가격 $8/$40 (이전 $30/$150). 최신 기능 하이라이트 전면 교체 (Code Review GA·Projects·Auto mode·Self-hosted). 모델 Claude 5.5 패밀리로 업데이트. Team 플랜 $20/seat 명시.**
 
 ## fetch_log
-- (이전 기록 생략 — marketing.txt 변경 이력 참조)
 - 2026-07-18 20차: [변경 감지] Android 앱 등재, 최신 기능 하이라이트 갱신. marketing.txt 갱신 완료.
+- 2026-07-20 21차: [변경 없음] marketing.txt 갱신 불필요.
+- 2026-10-29 22차: [변경 감지] Fast Mode 모델·가격 변경, 최신 기능 하이라이트 전면 교체, Claude 5.5 모델 라인업, Team 플랜 상세. marketing.txt 갱신 완료.
