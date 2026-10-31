@@ -426,6 +426,86 @@
       "confirmed": false,
       "note": "URL 추정 — 희귀 질환 연구를 위한 AI 과학 보조금 프로그램. 과학 연구 지원 주제로 Claude Code 코딩 입문 ebook과 직접 관련 없어 콘텐츠 생성 스킵.",
       "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/self-hosted-environments-beta",
+      "title": "Self-hosted environments: Run Claude Code sessions on your own infrastructure (public beta)",
+      "date": "2026-08-06",
+      "confirmed": false,
+      "note": "URL 추정 — 마케팅 페이지 기능 하이라이트 확인. Self-hosted environments 베타 출시. 콘텐츠 생성: content/docs/next/whats-new-w30-w37.md에서 언급.",
+      "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/auto-mode-default-2026",
+      "title": "Auto mode by default: Claude Code now runs in auto mode by default on Pro, Max, and Team plans",
+      "date": "2026-08-07",
+      "confirmed": false,
+      "note": "URL 추정 — 마케팅 페이지 기능 하이라이트 확인. Auto mode 기본값 전환. 콘텐츠 생성: content/docs/next/whats-new-w30-w37.md에서 언급.",
+      "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/claude-projects-2026",
+      "title": "Projects: Group related coding sessions so you can run and easily supervise multiple Claude agents at once",
+      "date": "2026-09-17",
+      "confirmed": false,
+      "note": "URL 추정 — 마케팅 페이지 기능 하이라이트 확인. Claude Projects 정식 출시. 콘텐츠 생성: content/docs/advanced/claude-projects.md (new).",
+      "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/claude-opus-5-5",
+      "title": "Introducing Claude Opus 5.5",
+      "date": "2026-09-22",
+      "confirmed": false,
+      "note": "URL 추정 — 에이전트 코딩·지식 업무 최강 모델. Opus 5 대비 40% 저렴. 콘텐츠 생성: content/docs/next/claude55-models.md (new).",
+      "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/claude-sonnet-5-5",
+      "title": "Introducing Claude Sonnet 5.5",
+      "date": "2026-09-28",
+      "confirmed": false,
+      "note": "URL 추정 — Sonnet 5 대비 30%↑빠름, 30%↓저렴. 콘텐츠 생성: content/docs/next/claude55-models.md (new).",
+      "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/claude-haiku-5-5",
+      "title": "Introducing Claude Haiku 5.5",
+      "date": "2026-10-07",
+      "confirmed": false,
+      "note": "URL 추정 — 가장 빠른 소형 모델. 대량 요약·서브에이전트·브라우저용. 콘텐츠 생성: content/docs/next/claude55-models.md (new).",
+      "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/code-review-ga",
+      "title": "Code Review: Catch more bugs before they reach production. Now generally available for Team and Enterprise.",
+      "date": "2026-10-15",
+      "confirmed": false,
+      "note": "URL 추정 — 마케팅 페이지 기능 하이라이트 확인. Code Review Team·Enterprise GA. 콘텐츠 생성: content/docs/advanced/code-review-ga.md (new).",
+      "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/donating-agent-skills-agentic-ai-foundation",
+      "title": "Donating Agent Skills to the Agentic AI Foundation",
+      "date": "2026-10-22",
+      "confirmed": false,
+      "note": "URL 추정 — 에이전트 스킬 오픈 스탠다드를 Agentic AI Foundation에 기부. ChatGPT·Cursor·GitHub Copilot·VS Code 등 70개 플랫폼 통합. 개발자 생태계 관련성 있으나 Claude Code 입문 ebook 핵심과 거리 있어 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/anthropic-s1-sec-public",
+      "title": "Anthropic files S-1 with the SEC for proposed initial public offering",
+      "date": "2026-10-26",
+      "confirmed": false,
+      "note": "URL 추정 — IPO 관련 재무 공시. 코딩 ebook과 무관하여 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/ai-for-science-foundations",
+      "title": "AI for Science expands to foundations and research institutions",
+      "date": "2026-10-28",
+      "confirmed": false,
+      "note": "URL 추정 — AI for Science 프로그램 확장. 과학 연구 주제, 코딩 ebook과 무관하여 콘텐츠 생성 스킵.",
+      "content_written": false
     }
   ]
 }
