@@ -426,6 +426,86 @@
       "confirmed": false,
       "note": "URL 추정 — 희귀 질환 연구를 위한 AI 과학 보조금 프로그램. 과학 연구 지원 주제로 Claude Code 코딩 입문 ebook과 직접 관련 없어 콘텐츠 생성 스킵.",
       "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/claude-opus-5",
+      "title": "Claude Opus 5",
+      "date": "2026-07-20",
+      "confirmed": false,
+      "note": "URL 추정 — w30 (Jul 20-24) What's New에서 Claude Opus 5가 기본 Opus 모델로 전환됨 확인. Fast Mode $10/$50 per MTok. 코딩 ebook 관련 — new-models-5-5.md에 포함.",
+      "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/claude-opus-5-5",
+      "title": "Introducing Claude Opus 5.5",
+      "date": "2026-09-22",
+      "confirmed": true,
+      "note": "공식 발표 확인 (ga-blog.txt). 에이전틱 코딩 1위, 비용 40% ↓. 콘텐츠 생성: content/docs/next/new-models-5-5.md (new).",
+      "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/claude-sonnet-5-5",
+      "title": "Introducing Claude Sonnet 5.5",
+      "date": "2026-09-28",
+      "confirmed": true,
+      "note": "공식 발표 확인 (ga-blog.txt). Sonnet 5 대비 30%+ 빠름, 최대 30% 저렴. 콘텐츠 생성: content/docs/next/new-models-5-5.md (통합).",
+      "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/claude-haiku-5-5",
+      "title": "Introducing Claude Haiku 5.5",
+      "date": "2026-10-07",
+      "confirmed": true,
+      "note": "공식 발표 확인 (ga-blog.txt). 가장 빠른 소형 모델, 서브에이전트·요약·브라우저 특화. 콘텐츠 생성: content/docs/next/new-models-5-5.md (통합).",
+      "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/donating-agent-skills-agentic-ai-foundation",
+      "title": "Donating Agent Skills to the Agentic AI Foundation",
+      "date": "2026-10-22",
+      "confirmed": true,
+      "note": "URL 추정. Agent Skills 오픈 표준을 Agentic AI Foundation에 기부. 70+ 플랫폼 통합 (ChatGPT, Cursor, GitHub Copilot, VS Code 등). 다음 회차 콘텐츠 생성 예정.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/anthropic-s1-ipo",
+      "title": "Anthropic files S-1 with the SEC for proposed initial public offering",
+      "date": "2026-10-26",
+      "confirmed": true,
+      "note": "공식 발표 확인 (ga-blog.txt). Anthropic IPO S-1 제출. 비즈니스 뉴스. 코딩 ebook 직접 관련 낮아 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/investing-in-public-benefit",
+      "title": "Investing in the public benefit",
+      "date": "2026-10-18",
+      "confirmed": true,
+      "note": "URL 추정. Anthropic Public Benefit Fund 설립 공약. 비즈니스 뉴스. 코딩 ebook 직접 관련 낮아 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/ai-for-science-expands-foundations",
+      "title": "AI for Science expands to foundations and research institutions",
+      "date": "2026-10-28",
+      "confirmed": true,
+      "note": "URL 추정. 과학 연구 기관 20곳 파트너십 확대. 과학 연구 주제. 코딩 ebook 직접 관련 낮아 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/life-sciences-verification-program",
+      "title": "Introducing the Life Sciences Verification Program",
+      "date": "2026-09-17",
+      "confirmed": true,
+      "note": "URL 추정. 생명과학 전문가용 검증 프로그램 (Claude Mythos 포함). 코딩 ebook 직접 관련 낮아 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/code-review-ga",
+      "title": "Code Review: Now generally available for Team and Enterprise",
+      "date": "2026-10-15",
+      "confirmed": false,
+      "note": "URL 추정 — 마케팅 페이지에서 GA 확인. 코딩 ebook 직접 관련 높음. 콘텐츠 생성: content/docs/next/code-review-ga.md (new).",
+      "content_written": true
     }
   ]
 }
