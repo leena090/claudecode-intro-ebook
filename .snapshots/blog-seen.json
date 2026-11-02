@@ -1,9 +1,9 @@
 {
   "_meta": {
     "created": "2026-04-20",
-    "updated": "2026-07-20",
+    "updated": "2026-11-02",
     "source_url": "https://www.anthropic.com/news",
-    "note": "2026-07-20 21차 실행: 신규 블로그 1건 감지 (AI for Science 희귀질환 보조금, Jul 20). 코딩 ebook 무관 — 콘텐츠 생성 스킵, blog-seen.json만 업데이트. 20차(2026-07-18) 누락분 병합: claude-sonnet-5, redeploying-fable-5, claude-science, fable-5-jailbreak-framework, making-of-claude-code, alberta-cybersecurity, inviting-hard-questions, ben-bernanke, ust-physical-ai, claude-usage-reflection, claude-for-teachers, canadian-ai-research.",
+    "note": "2026-11-02 22차 실행: 신규 블로그 다수 감지 (Claude 5.5 시리즈 3건, Agent Skills 오픈 표준화, Projects 기능, Anthropic IPO S-1 등). ebook 관련 4건 콘텐츠 생성. 나머지 스킵.",
     "fetch_status": "ga-blog.txt 수신"
   },
   "seen": [
@@ -425,6 +425,86 @@
       "date": "2026-07-20",
       "confirmed": false,
       "note": "URL 추정 — 희귀 질환 연구를 위한 AI 과학 보조금 프로그램. 과학 연구 지원 주제로 Claude Code 코딩 입문 ebook과 직접 관련 없어 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/claude-opus-5-5",
+      "title": "Introducing Claude Opus 5.5",
+      "date": "2026-09-22",
+      "confirmed": false,
+      "note": "URL 추정 — Opus 5.5 출시. 코딩 에이전트 최고 성능, Opus 5 대비 비용 40% 감소. 콘텐츠 생성: content/docs/reference/claude-55-models.md",
+      "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/claude-sonnet-5-5",
+      "title": "Introducing Claude Sonnet 5.5",
+      "date": "2026-09-28",
+      "confirmed": false,
+      "note": "URL 추정 — Sonnet 5.5 출시. 30% 빠르고 최대 30% 저렴. 콘텐츠 생성: content/docs/reference/claude-55-models.md",
+      "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/projects-claude-code",
+      "title": "Projects: Group related coding sessions",
+      "date": "2026-09-17",
+      "confirmed": false,
+      "note": "URL 추정 — Projects 기능 발표. 에이전트 세션 그룹화. Desktop 전용. 콘텐츠 생성: content/docs/advanced/projects-feature.md",
+      "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/claude-haiku-5-5",
+      "title": "Introducing Claude Haiku 5.5",
+      "date": "2026-10-07",
+      "confirmed": false,
+      "note": "URL 추정 — Haiku 5.5 출시. 고속 소형 모델, 서브에이전트·요약에 최적. 콘텐츠 생성: content/docs/reference/claude-55-models.md",
+      "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/anthropic-cyber-mission",
+      "title": "Introducing the Anthropic Cyber Mission",
+      "date": "2026-10-08",
+      "confirmed": false,
+      "note": "URL 추정 — 사이버 보안 이니셔티브 런칭. 코딩 ebook 직접 관련 낮아 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/claude-frontier-academy",
+      "title": "Anthropic invests $100 million to train 10,000 engineers",
+      "date": "2026-10-02",
+      "confirmed": false,
+      "note": "URL 추정 — Claude Frontier Academy. 엔지니어 양성 프로그램. 코딩 ebook 간접 관련이나 세부 내용 불확실하여 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/donating-agent-skills-agentic-ai-foundation",
+      "title": "Donating Agent Skills to the Agentic AI Foundation",
+      "date": "2026-10-22",
+      "confirmed": false,
+      "note": "URL 추정 — Agent Skills 오픈 표준 기증. 70+ 플랫폼 통합. 콘텐츠 생성: content/docs/next/agent-skills-open-standard.md",
+      "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/anthropic-s1-sec-filing",
+      "title": "Anthropic files S-1 with the SEC for proposed initial public offering",
+      "date": "2026-10-26",
+      "confirmed": false,
+      "note": "URL 추정 — Anthropic IPO S-1 공식 제출. 회사 주요 이벤트. 코딩 ebook과 직접 관련 낮아 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/ai-for-science-foundations-institutions",
+      "title": "AI for Science expands to foundations and research institutions",
+      "date": "2026-10-28",
+      "confirmed": false,
+      "note": "URL 추정 — AI 과학 프로그램 확장. 과학 연구 주제, 코딩 ebook과 직접 관련 낮아 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/drug-development-claude",
+      "title": "Early progress on accelerating drug development with Claude",
+      "date": "2026-10-27",
+      "confirmed": false,
+      "note": "URL 추정 — 신약 개발 AI 연구 파트너십. 과학 연구 주제, 코딩 ebook과 직접 관련 낮아 콘텐츠 생성 스킵.",
       "content_written": false
     }
   ]
