@@ -1,9 +1,9 @@
 {
   "_meta": {
     "created": "2026-04-20",
-    "updated": "2026-07-20",
+    "updated": "2026-11-08",
     "source_url": "https://code.claude.com/docs/llms.txt",
-    "note": "2026-07-20 21차 실행: 신규 URL 없음. llms.txt 170개 URL 전체 기존 docs-index.json과 일치. 블로그 신규 1건(AI for Science 희귀질환 보조금). 마케팅 변경 없음. W30 what's-new 미게시.",
+    "note": "2026-11-08 22차 실행: llms.txt 신규 URL 감지. whats-new w30~w37 (8개), settings-reference, code-review-local, plugins/ 하위 5개, managed-settings 추가. 블로그: 5.5 패밀리, Mods, Projects, Agent Skills, IPO 등 다수. marketing.txt: Fast Mode Opus 5.5 / $8/$40 대폭 변경.",
     "fetch_status": "200_ok"
   },
   "https://code.claude.com/docs/en/overview": "SNAPSHOT_2026-04-20",
@@ -176,5 +176,21 @@
   "https://code.claude.com/docs/en/whats-new/2026-w26": "SNAPSHOT_2026-07-18",
   "https://code.claude.com/docs/en/whats-new/2026-w27": "SNAPSHOT_2026-07-18",
   "https://code.claude.com/docs/en/whats-new/2026-w28": "SNAPSHOT_2026-07-18",
-  "https://code.claude.com/docs/en/whats-new/2026-w29": "SNAPSHOT_2026-07-18"
+  "https://code.claude.com/docs/en/whats-new/2026-w29": "SNAPSHOT_2026-07-18",
+  "https://code.claude.com/docs/en/whats-new/2026-w30": "SNAPSHOT_2026-11-08",
+  "https://code.claude.com/docs/en/whats-new/2026-w31": "SNAPSHOT_2026-11-08",
+  "https://code.claude.com/docs/en/whats-new/2026-w32": "SNAPSHOT_2026-11-08",
+  "https://code.claude.com/docs/en/whats-new/2026-w33": "SNAPSHOT_2026-11-08",
+  "https://code.claude.com/docs/en/whats-new/2026-w34": "SNAPSHOT_2026-11-08",
+  "https://code.claude.com/docs/en/whats-new/2026-w35": "SNAPSHOT_2026-11-08",
+  "https://code.claude.com/docs/en/whats-new/2026-w36": "SNAPSHOT_2026-11-08",
+  "https://code.claude.com/docs/en/whats-new/2026-w37": "SNAPSHOT_2026-11-08",
+  "https://code.claude.com/docs/en/settings-reference": "SNAPSHOT_2026-11-08",
+  "https://code.claude.com/docs/en/code-review-local": "SNAPSHOT_2026-11-08",
+  "https://code.claude.com/docs/en/plugins/overview": "SNAPSHOT_2026-11-08",
+  "https://code.claude.com/docs/en/plugins/install": "SNAPSHOT_2026-11-08",
+  "https://code.claude.com/docs/en/plugins/create": "SNAPSHOT_2026-11-08",
+  "https://code.claude.com/docs/en/plugins/create-marketplace": "SNAPSHOT_2026-11-08",
+  "https://code.claude.com/docs/en/plugins/manifest-reference": "SNAPSHOT_2026-11-08",
+  "https://code.claude.com/docs/en/managed-settings": "SNAPSHOT_2026-11-08"
 }
