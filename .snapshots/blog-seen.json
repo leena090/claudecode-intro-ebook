@@ -426,6 +426,86 @@
       "confirmed": false,
       "note": "URL 추정 — 희귀 질환 연구를 위한 AI 과학 보조금 프로그램. 과학 연구 지원 주제로 Claude Code 코딩 입문 ebook과 직접 관련 없어 콘텐츠 생성 스킵.",
       "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/claude-opus-5-5",
+      "title": "Introducing Claude Opus 5.5",
+      "date": "2026-09-22",
+      "confirmed": false,
+      "note": "URL 추정 — Opus 5.5: 에이전트 코딩·지식 작업 선도, Opus 5 대비 40% 비용 절감. 코딩 ebook 직접 관련. 콘텐츠 생성: content/docs/next/models-5-5-series.md (new, 통합)",
+      "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/claude-sonnet-5-5",
+      "title": "Introducing Claude Sonnet 5.5",
+      "date": "2026-09-28",
+      "confirmed": false,
+      "note": "URL 추정 — Sonnet 5.5: 30%+ 빠름, 최대 30% 저렴. 코딩 ebook 직접 관련. 콘텐츠 생성: models-5-5-series.md (통합)",
+      "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/barclays-claude",
+      "title": "Barclays scales Claude to upgrade operations and improve client experience",
+      "date": "2026-10-01",
+      "confirmed": false,
+      "note": "URL 추정 — Barclays 엔터프라이즈 확장. 비즈니스 뉴스, 코딩 ebook과 직접 관련 낮아 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/claude-haiku-5-5",
+      "title": "Introducing Claude Haiku 5.5",
+      "date": "2026-10-07",
+      "confirmed": false,
+      "note": "URL 추정 — Haiku 5.5: 가장 빠른 소형 모델. 대량 처리·서브에이전트 최적. 코딩 ebook 직접 관련. 콘텐츠 생성: models-5-5-series.md (통합)",
+      "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/anthropic-cyber-mission",
+      "title": "Introducing the Anthropic Cyber Mission",
+      "date": "2026-10-08",
+      "confirmed": false,
+      "note": "URL 추정 — Anthropic 사이버 보안 미션 런칭. 보안 연구 주제, 코딩 ebook과 직접 관련 낮아 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/donating-agent-skills-agentic-ai-foundation",
+      "title": "Donating Agent Skills to the Agentic AI Foundation",
+      "date": "2026-10-22",
+      "confirmed": false,
+      "note": "URL 추정 — Agent Skills 오픈 표준 기부. ChatGPT·Cursor·GitHub Copilot·VS Code 등 70개+ 채택. 코딩 ebook 관련성 높음. 콘텐츠 생성: content/docs/next/agent-skills-open-standard.md (new)",
+      "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/singapore-office-mou",
+      "title": "Anthropic opens Singapore office and signs MOU with the Government of Singapore",
+      "date": "2026-10-14",
+      "confirmed": false,
+      "note": "URL 추정 — 싱가포르 오피스 개설 및 MOU. 아시아 확장 뉴스, 코딩 ebook과 직접 관련 낮아 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/claude-frontier-academy",
+      "title": "Anthropic invests $100 million to train 10,000 engineers",
+      "date": "2026-10-02",
+      "confirmed": false,
+      "note": "URL 추정 — Claude Frontier Academy로 1만명 엔지니어 양성. 비즈니스/교육 뉴스, 코딩 ebook과 직접 관련 낮아 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/claude-fable-5-2-mythos-5-2",
+      "title": "Introducing Claude Fable 5.2 and Claude Mythos 5.2",
+      "date": "2026-11-09",
+      "confirmed": false,
+      "note": "URL 추정 — Fable 5.2·Mythos 5.2: 코딩·금융·과학 분야 최고 성능. 코딩 ebook 직접 관련. 콘텐츠 생성: models-5-5-series.md (통합)",
+      "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/anthropic-ipo-roadshow",
+      "title": "Anthropic launches roadshow for proposed initial public offering",
+      "date": "2026-11-10",
+      "confirmed": false,
+      "note": "URL 추정 — IPO 로드쇼 시작. 재무/투자 뉴스, 코딩 ebook과 무관하여 콘텐츠 생성 스킵.",
+      "content_written": false
     }
   ]
 }
