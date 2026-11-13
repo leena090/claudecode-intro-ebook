@@ -1,10 +1,10 @@
 {
   "_meta": {
     "created": "2026-04-20",
-    "updated": "2026-07-20",
+    "updated": "2026-11-13",
     "source_url": "https://code.claude.com/docs/llms.txt",
-    "note": "2026-07-20 21차 실행: 신규 URL 없음. llms.txt 170개 URL 전체 기존 docs-index.json과 일치. 블로그 신규 1건(AI for Science 희귀질환 보조금). 마케팅 변경 없음. W30 what's-new 미게시.",
-    "fetch_status": "200_ok"
+    "note": "2026-11-13 22차 실행: llms.txt WebFetch 요약본 비교. 신규 감지: settings-reference (새 설정 참조 페이지). 마케팅 주요 변경: 모델 5.5 시리즈, Fast Mode Opus 5.5 $8/$40, Code Review GA/Mods/Projects 신기능. 블로그 신규 다수. whats-new w30+ 존재 추정 (개별 fetch 미실시). 로컬라이즈된 _llms/ 인덱스 추가됨.",
+    "fetch_status": "200_ok (WebFetch 요약 기반)"
   },
   "https://code.claude.com/docs/en/overview": "SNAPSHOT_2026-04-20",
   "https://code.claude.com/docs/en/quickstart": "SNAPSHOT_2026-04-20",
@@ -176,5 +176,6 @@
   "https://code.claude.com/docs/en/whats-new/2026-w26": "SNAPSHOT_2026-07-18",
   "https://code.claude.com/docs/en/whats-new/2026-w27": "SNAPSHOT_2026-07-18",
   "https://code.claude.com/docs/en/whats-new/2026-w28": "SNAPSHOT_2026-07-18",
-  "https://code.claude.com/docs/en/whats-new/2026-w29": "SNAPSHOT_2026-07-18"
+  "https://code.claude.com/docs/en/whats-new/2026-w29": "SNAPSHOT_2026-07-18",
+  "https://code.claude.com/docs/en/settings-reference": "SNAPSHOT_2026-11-13"
 }
