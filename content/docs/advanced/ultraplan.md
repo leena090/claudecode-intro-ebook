@@ -8,9 +8,10 @@ lastUpdated: "2026-04-20"
 ---
 
 <div class="note-star">
+★ <strong>[⚠️ 주의] 2026-11-15 확인</strong>: 최신 공식 문서 목록(llms.txt)에서 <code>ultraplan</code> 페이지가 사라졌어요. 기능이 변경되거나 다른 명칭·경로로 통합됐을 가능성이 있어요.<br/>
+★ 아래 내용은 이전 공식 문서(2026-04-20 기준) 기반이에요. 현재 동작은 최신 버전에서 확인하세요.<br/>
 ★ <strong>Research Preview</strong> — Claude Code v2.1.101 이상이 필수예요. 아직 실험 단계라 동작이 가끔 불안정할 수 있습니다.
 <br />★ <strong>v2.1.101 업데이트</strong>: 처음 실행 시 기본 클라우드 환경이 <strong>자동 생성</strong>됩니다 — 웹에서 미리 설정할 필요가 없어요!
-<br />★ <strong>공식 문서</strong>: <a href="https://code.claude.com/docs/en/ultraplan">code.claude.com/docs/en/ultraplan</a>
 </div>
 
 ## `/ultraplan`이 뭔가요?
