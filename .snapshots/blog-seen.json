@@ -426,6 +426,109 @@
       "confirmed": false,
       "note": "URL 추정 — 희귀 질환 연구를 위한 AI 과학 보조금 프로그램. 과학 연구 지원 주제로 Claude Code 코딩 입문 ebook과 직접 관련 없어 콘텐츠 생성 스킵.",
       "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/claude-opus-5-5",
+      "title": "Introducing Claude Opus 5.5",
+      "date": "2026-09-22",
+      "confirmed": false,
+      "note": "URL 추정 — 에이전트 코딩·지식 업무 1위, Opus 5 대비 비용 40% 절감. 코딩 ebook 직접 관련. 콘텐츠 생성: content/docs/next/claude-55-models.md (new).",
+      "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/claude-sonnet-5-5",
+      "title": "Introducing Claude Sonnet 5.5",
+      "date": "2026-09-28",
+      "confirmed": false,
+      "note": "URL 추정 — Sonnet 5 대비 30%+ 빠름, 비용 최대 30% 절감. 콘텐츠 생성: claude-55-models.md (통합).",
+      "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/claude-haiku-5-5",
+      "title": "Introducing Claude Haiku 5.5",
+      "date": "2026-10-07",
+      "confirmed": false,
+      "note": "URL 추정 — 가장 빠른 소형 모델, 대량 처리·서브에이전트 특화. 콘텐츠 생성: claude-55-models.md (통합).",
+      "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/claude-fable-5-2-mythos-5-2",
+      "title": "Introducing Claude Fable 5.2 and Claude Mythos 5.2",
+      "date": "2026-11-09",
+      "confirmed": false,
+      "note": "URL 추정 — 코딩·금융·과학 분야 새 기준. 최상위 모델 업그레이드. 콘텐츠 생성: content/docs/next/fable-52-nov2026.md (new).",
+      "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/anthropic-prices-ipo",
+      "title": "Anthropic prices initial public offering",
+      "date": "2026-11-18",
+      "confirmed": false,
+      "note": "URL 추정 — IPO 가격 결정. 비즈니스/재무 뉴스, 코딩 ebook과 무관하여 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/anthropic-launches-ipo-roadshow",
+      "title": "Anthropic launches roadshow for proposed initial public offering",
+      "date": "2026-11-10",
+      "confirmed": false,
+      "note": "URL 추정 — IPO 로드쇼. 비즈니스 뉴스, 코딩 ebook과 무관하여 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/ai-for-science-foundations-expansion",
+      "title": "AI for Science expands to foundations and research institutions",
+      "date": "2026-10-28",
+      "confirmed": false,
+      "note": "URL 추정 — 과학 연구 프로그램 확대. 코딩 ebook과 직접 관련 낮아 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/anthropic-files-s1",
+      "title": "Anthropic files S-1 with the SEC for proposed initial public offering",
+      "date": "2026-10-26",
+      "confirmed": false,
+      "note": "URL 추정 — IPO S-1 제출. 재무 공시, 코딩 ebook과 무관하여 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/donating-agent-skills-agentic-ai-foundation",
+      "title": "Donating Agent Skills to the Agentic AI Foundation",
+      "date": "2026-10-22",
+      "confirmed": false,
+      "note": "URL 추정 — Agent Skills 오픈 표준을 Agentic AI Foundation에 기증. ChatGPT, Cursor, GitHub Copilot 등 70개+ 에이전트 플랫폼 통합. 개발자 관련성 있으나 claude-55-models.md에서 미처리. 다음 회차 고려.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/anthropic-singapore-office-mou",
+      "title": "Anthropic opens Singapore office and signs MOU with the Government of Singapore",
+      "date": "2026-10-14",
+      "confirmed": false,
+      "note": "URL 추정 — 싱가포르 오피스 개설. 비즈니스 뉴스, 코딩 ebook과 직접 관련 낮아 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/anthropic-cyber-mission",
+      "title": "Introducing the Anthropic Cyber Mission",
+      "date": "2026-10-08",
+      "confirmed": false,
+      "note": "URL 추정 — Anthropic 사이버 보안 장기 헌신 선언. 보안 주제, 코딩 ebook과 직접 관련 낮아 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/anthropic-frontier-academy",
+      "title": "Anthropic invests $100 million to train 10,000 engineers and tackle the enterprise AI talent gap",
+      "date": "2026-10-02",
+      "confirmed": false,
+      "note": "URL 추정 — Claude Frontier Academy, 1만 명 Frontier Deployed Engineer 양성. 교육 프로그램, 코딩 ebook과 직접 관련 낮아 콘텐츠 생성 스킵.",
+      "content_written": false
     }
-  ]
+  ],
+  "_meta": {
+    "created": "2026-04-20",
+    "updated": "2026-11-19",
+    "source_url": "https://www.anthropic.com/news",
+    "note": "2026-11-19 22차 실행: 신규 블로그 13건 감지. Claude 5.5 시리즈(Opus/Sonnet/Haiku 5.5), Fable 5.2·Mythos 5.2 콘텐츠 생성. IPO 관련·비즈니스 뉴스 스킵. blog-seen.json 업데이트.",
+    "fetch_status": "ga-blog.txt 수신"
+  }
 }
