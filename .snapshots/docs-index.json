@@ -1,10 +1,10 @@
 {
   "_meta": {
     "created": "2026-04-20",
-    "updated": "2026-07-20",
+    "updated": "2026-11-20",
     "source_url": "https://code.claude.com/docs/llms.txt",
-    "note": "2026-07-20 21차 실행: 신규 URL 없음. llms.txt 170개 URL 전체 기존 docs-index.json과 일치. 블로그 신규 1건(AI for Science 희귀질환 보조금). 마케팅 변경 없음. W30 what's-new 미게시.",
-    "fetch_status": "200_ok"
+    "note": "2026-11-20 22차 실행: llms.txt WebFetch가 URL 목록 대신 요약 반환 — 신규 URL 비교 불가. 약 205개 URL(한국어 로컬라이즈 기준) vs 현재 179개로 약 26개 미확인 신규 URL 존재 추정. 다음 실행 때 재확인 필요. 블로그 신규 23건(Sep-Nov 2026) 감지 — 5.5 모델 패밀리, Fable 5.2 등 ebook 관련 콘텐츠 2개 생성. 마케팅 변경 4건 감지.",
+    "fetch_status": "200_ok_summarized_only"
   },
   "https://code.claude.com/docs/en/overview": "SNAPSHOT_2026-04-20",
   "https://code.claude.com/docs/en/quickstart": "SNAPSHOT_2026-04-20",
