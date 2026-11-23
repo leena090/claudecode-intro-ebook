@@ -426,6 +426,198 @@
       "confirmed": false,
       "note": "URL 추정 — 희귀 질환 연구를 위한 AI 과학 보조금 프로그램. 과학 연구 지원 주제로 Claude Code 코딩 입문 ebook과 직접 관련 없어 콘텐츠 생성 스킵.",
       "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/claude-opus-5-5",
+      "title": "Introducing Claude Opus 5.5",
+      "date": "2026-09-22",
+      "confirmed": false,
+      "note": "URL 추정 — Opus 5.5 출시. 에이전트 코딩·지식 작업 1위, Opus 5 대비 40% 저렴. 콘텐츠 생성: content/docs/next/models-claude55-fable52.md (통합)",
+      "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/claude-sonnet-5-5",
+      "title": "Introducing Claude Sonnet 5.5",
+      "date": "2026-09-28",
+      "confirmed": false,
+      "note": "URL 추정 — Sonnet 5.5 출시. 30% 이상 빠르고 최대 30% 저렴. 콘텐츠 생성: content/docs/next/models-claude55-fable52.md (통합)",
+      "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/claude-haiku-5-5",
+      "title": "Introducing Claude Haiku 5.5",
+      "date": "2026-10-07",
+      "confirmed": false,
+      "note": "URL 추정 — Haiku 5.5 출시. 가장 빠른 소형 모델. 콘텐츠 생성: content/docs/next/models-claude55-fable52.md (통합)",
+      "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/barclays-claude",
+      "title": "Barclays scales Claude to upgrade operations and improve client experience",
+      "date": "2026-10-01",
+      "confirmed": false,
+      "note": "URL 추정 — 엔터프라이즈 케이스 스터디. 코딩 ebook과 직접 관련 낮아 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/anthropic-frontier-academy",
+      "title": "Anthropic invests $100 million to train 10,000 engineers and tackle the enterprise AI talent gap",
+      "date": "2026-10-02",
+      "confirmed": false,
+      "note": "URL 추정 — Claude Frontier Academy. 개발자 교육 투자. 코딩 ebook 간접 관련, 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/cyber-verification-program-expanded",
+      "title": "Expanding the Cyber Verification Program",
+      "date": "2026-10-06",
+      "confirmed": false,
+      "note": "URL 추정 — 보안 프로그램 확장. 코딩 ebook과 직접 관련 낮아 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/anthropic-cyber-mission",
+      "title": "Introducing the Anthropic Cyber Mission",
+      "date": "2026-10-08",
+      "confirmed": false,
+      "note": "URL 추정 — 사이버 보안 미션 발표. 코딩 ebook과 직접 관련 낮아 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/usage-policy-2026",
+      "title": "2026 Usage Policy update",
+      "date": "2026-10-08",
+      "confirmed": false,
+      "note": "URL 추정 — 사용 정책 업데이트. 코딩 ebook과 직접 관련 낮아 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/genesis-mission",
+      "title": "Building on our commitment to American scientific discovery",
+      "date": "2026-10-08",
+      "confirmed": false,
+      "note": "URL 추정 — Genesis Mission $150M 과학 투자. 코딩 ebook과 무관하여 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/distillation-defenses",
+      "title": "Strengthening our defenses against distillation attacks",
+      "date": "2026-10-12",
+      "confirmed": false,
+      "note": "URL 추정 — 증류 공격 방어. 보안 연구, 코딩 ebook과 직접 관련 낮아 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/singapore-office-mou",
+      "title": "Anthropic opens Singapore office and signs MOU with the Government of Singapore",
+      "date": "2026-10-14",
+      "confirmed": false,
+      "note": "URL 추정 — 싱가포르 오피스 개설. 비즈니스 뉴스, 코딩 ebook과 직접 관련 낮아 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/2026-midterms-safeguards",
+      "title": "Preparing for the 2026 US midterms",
+      "date": "2026-10-14",
+      "confirmed": false,
+      "note": "URL 추정 — 선거 안전 정책. 정치/정책, 코딩 ebook과 무관하여 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/independent-evaluators-update",
+      "title": "An update on independent evaluators",
+      "date": "2026-10-15",
+      "confirmed": false,
+      "note": "URL 추정 — METR 등 독립 평가 기관 업데이트. 안전 연구, 코딩 ebook과 직접 관련 낮아 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/anthropic-public-benefit-fund",
+      "title": "Investing in the public benefit",
+      "date": "2026-10-18",
+      "confirmed": false,
+      "note": "URL 추정 — Anthropic Public Benefit Fund 설립. 회사 뉴스, IPO와 연관. IPO 문서에 언급: content/docs/next/anthropic-ipo-2026.md",
+      "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/christopher-stubbs-ltbt",
+      "title": "Physicist Christopher Stubbs joins Anthropic's Long-Term Benefit Trust",
+      "date": "2026-10-21",
+      "confirmed": false,
+      "note": "URL 추정 — 이사회 인사. 코딩 ebook과 무관하여 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/agent-skills-agentic-ai-foundation",
+      "title": "Donating Agent Skills to the Agentic AI Foundation",
+      "date": "2026-10-22",
+      "confirmed": false,
+      "note": "URL 추정 — Agent Skills 오픈 표준을 Agentic AI Foundation에 기증. ChatGPT, Cursor, GitHub Copilot 등 70개 이상 플랫폼 통합. 코딩 ebook 간접 관련, 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/life-sciences-guest-investigators",
+      "title": "Open call for guest investigators in the life sciences",
+      "date": "2026-10-22",
+      "confirmed": false,
+      "note": "URL 추정 — 생명과학 연구 초청. 과학 연구, 코딩 ebook과 무관하여 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/gsa-partnership-government",
+      "title": "Expanding our partnership with GSA to bring Claude to all levels of government",
+      "date": "2026-10-27",
+      "confirmed": false,
+      "note": "URL 추정 — GSA 정부 파트너십 확대. 비즈니스 뉴스, 코딩 ebook과 직접 관련 낮아 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/ai-for-science-foundations",
+      "title": "AI for Science expands to foundations and research institutions",
+      "date": "2026-10-28",
+      "confirmed": false,
+      "note": "URL 추정 — AI for Science 프로그램 확장. 과학 연구, 코딩 ebook과 무관하여 콘텐츠 생성 스킵.",
+      "content_written": false
+    },
+    {
+      "url": "https://www.anthropic.com/news/claude-fable-5-2-mythos-5-2",
+      "title": "Introducing Claude Fable 5.2 and Claude Mythos 5.2",
+      "date": "2026-11-09",
+      "confirmed": false,
+      "note": "URL 추정 — Fable 5.2, Mythos 5.2 출시. 코딩·금융·과학 최상위 모델. 콘텐츠 생성: content/docs/next/models-claude55-fable52.md (통합)",
+      "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/anthropic-ipo-roadshow",
+      "title": "Anthropic launches roadshow for proposed initial public offering",
+      "date": "2026-11-10",
+      "confirmed": false,
+      "note": "URL 추정 — IPO 로드쇼 시작. 콘텐츠 생성: content/docs/next/anthropic-ipo-2026.md",
+      "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/anthropic-ipo-pricing",
+      "title": "Anthropic prices initial public offering",
+      "date": "2026-11-18",
+      "confirmed": false,
+      "note": "URL 추정 — IPO 공모가 $83 확정. 콘텐츠 생성: content/docs/next/anthropic-ipo-2026.md (통합)",
+      "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/anthropic-ipo-s1",
+      "title": "Anthropic files S-1 with the SEC for proposed initial public offering",
+      "date": "2026-10-26",
+      "confirmed": false,
+      "note": "URL 추정 — IPO S-1 SEC 제출. 콘텐츠 생성: content/docs/next/anthropic-ipo-2026.md (통합)",
+      "content_written": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/anthropic-ipo-closing",
+      "title": "Anthropic announces closing of initial public offering",
+      "date": "2026-11-20",
+      "confirmed": false,
+      "note": "URL 추정 — IPO 완료 (1,127,000,000주, $83/주). 콘텐츠 생성: content/docs/next/anthropic-ipo-2026.md (통합)",
+      "content_written": true
     }
   ]
 }
