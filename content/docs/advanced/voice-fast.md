@@ -3,16 +3,19 @@ title: "음성 입력 & Fast 모드"
 description: "손을 사용하지 않고 음성으로 지시하거나 빠르게 응답 받기 (v2.1.69~ 20개 언어 지원)"
 category: "advanced"
 order: 5
-tags: ["음성", "속도", "편의성", "20개언어", "Opus47"]
-lastUpdated: "2026-05-22"
+tags: ["음성", "속도", "편의성", "20개언어", "Opus47", "Opus55"]
+lastUpdated: "2026-11-27"
 ---
 
 ## 음성 입력 & Fast 모드란?
 
-**음성 입력**은 마이크로 말하기만 하면 AI가 이해하고 작업하는 기능입니다. **Fast 모드**는 Opus 모델을 2.5배 빠르게 실행하는 고속 설정이에요. 2026년 5월(Week 20)부터 **Opus 4.7이 기본 모델**로 적용돼요.
+**음성 입력**은 마이크로 말하기만 하면 AI가 이해하고 작업하는 기능입니다. **Fast 모드**는 Opus 모델을 빠르게 실행하는 고속 설정이에요.
 
 <div class="note-star">
-★ <strong>[공] 2026-05-20 업데이트</strong>: Fast Mode가 이제 <strong>Opus 4.7</strong>을 기본으로 실행해요. 이전에는 Opus 4.6이었어요. 별도 설정 없이 자동 적용됩니다.
+★ <strong>[공] 2026-11-27 업데이트</strong>: Fast Mode 기반 모델이 <strong>Opus 5.5</strong>로 업그레이드됐어요. 가격도 크게 내려갔습니다.<br />
+&nbsp;&nbsp;&nbsp;• 이전: Opus 4.8 기반, 입력 $30 / 출력 $150 per M 토큰<br />
+&nbsp;&nbsp;&nbsp;• <strong>현재: Opus 5.5 기반, 입력 $8 / 출력 $40 per M 토큰</strong><br />
+★ <strong>[공] 2026-05-20 업데이트</strong> (참고): Fast Mode가 Opus 4.7 기반으로 처음 전환됐을 때의 기록이에요.
 </div>
 
 ---
